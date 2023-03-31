@@ -1,7 +1,7 @@
 ---
 title: Mise en production des projets de data science
 subtitle: |
-  **[Romain Avouac, Lino Galiana]{.orange}**
+  [**[Romain Avouac, Lino Galiana]{.orange}**]{.orange}
 # date: 
 slide-number: true
 footer: |
@@ -19,6 +19,7 @@ format:
   # pick the light mode (onyxia-revealjs) or the dark mode (onyxia-dark-revealjs)
   onyxia-revealjs:
   #onyxia-dark-revealjs:
+    incremental: true 
     output-file: index.html
 controls: true
 css: custom.css
@@ -31,36 +32,26 @@ from: markdown+emoji
 
 - Contenu en construction : [https://linogaliana.github.io/ensae-reproductibilite-website/](https://linogaliana.github.io/ensae-reproductibilite-website/)
 
-. . .
-
 - Programme large
-
-. . .
 
 - Applications guidées
 
 ## Contexte
 
-::: {.incremental}
 - [**Qui sommes-nous ?**]{.orange}
     - des [**data scientists**]{.blue2} de l'Insee
     - frustrés par l'[**approche**]{.blue2} souvent purement [**technique**]{.blue2} de la data science
     - convaincus que les [**bonnes pratiques**]{.blue2} valent à être enseignées
 
 - <romain.avouac@insee.fr>, <lino.galiana@insee.fr>
-:::
 
 ## La notion de bonnes pratiques
 
 - [**Origine**]{.blue2} : communauté des développeurs logiciels
 
-::: {.incremental}
 - [**Constats**]{.blue2} :
     - le [_"code est plus souvent lu qu'écrit"_]{.green2} ([Guido Van Rossum](https://fr.wikipedia.org/wiki/Guido_van_Rossum))
     - la maintenance d'un code est très coûteuse
-:::
-
-. . .
 
 - [**Conséquence**]{.blue2} : un ensemble de [**règles informelles**]{.orange}, conventionnellement acceptées comme produisant des logiciels [**fiables**]{.orange}, [**évolutifs**]{.orange} et [**maintenables**]{.orange}
 
@@ -71,20 +62,12 @@ from: markdown+emoji
 
 L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
-. . .
-
 - projets [**intenses en code**]{.orange}
-
-. . .
 
 - [**projets collaboratifs**]{.orange} et de grande envergure
 
-. . .
-
 
 - [**complexification**]{.orange} des données et donc des [**infrastructures**]{.orange}
-
-. . .
 
 - [**déploiement**]{.orange} d'applications pour valoriser les analyses
 
@@ -96,7 +79,6 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 ## Contenu du cours
 
-::: {.incremental}
 - Voir le code comme un [**outil de communication**]{.orange}
     - [**Contrôle de version**]{.blue2} avec Git
     - [**Qualité**]{.blue2} du code
@@ -107,7 +89,6 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 - Maximiser la [**portabilité**]{.orange}
 
 - [**Déployer**]{.orange} et [**valoriser**]{.orange} un projet de data science
-:::
 
 
 
@@ -131,11 +112,9 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 __Que versionne-t-on ?__
 
-:::{.incremental}
 - Essentiellement du [**code source**]{.orange}
 - [__Pas d'outputs__]{.orange} (fichiers `.html`, `.pdf`, modèles...)
 - [__Pas de données__]{.orange}, d'informations locales ou sensibles
-:::
 
 :::{.callout-note}
 
@@ -159,14 +138,12 @@ __Format des commits__
 
 ::: {layout="[40,60]"}
 
-::: {.incremental}
 - [**Fréquence**]{.orange}
     - Aussi souvent que possible
     - Le lot de modifications doit "faire sens"
 - [**Messages**]{.orange}
     - Courts et informatifs (comme un titre de mail)
-    - Décrire **le pourquoi plutôt que le comment** dans le texte
-:::
+    - Décrire [**le pourquoi plutôt que le comment**]{.orange} dans le texte
 
 ![](img/titre-commit.png)
 
@@ -174,7 +151,6 @@ __Format des commits__
 
 ## En pratique
 
-::: {.incremental}
 - Git est un [**logiciel**]{.orange}
 
 - Utilisation en [**ligne de commande**]{.orange}
@@ -182,7 +158,6 @@ __Format des commits__
 - Ressources sur le site :
     - [Introduction au terminal Linux](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/linux101.html)
     - [Versionner son code et travailler collaborativement avec Git](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/git.html)
-:::
 
 
 
@@ -192,31 +167,25 @@ __Format des commits__
 
 ## Enjeux 
 
-::: {.incremental}
 - D'une vision utilitariste du code à une vision du code comme [**outil de communication**]{.orange}
 
 - Favoriser la [**lisibilité**]{.orange} et la [**maintenabilité**]{.orange}
 
 - Adopter les [**standards communautaires**]{.orange} du langage
-:::
 
 ## Standards communautaires
 
-::: {.incremental}
 - [**Python**]{.blue2} : [PEP8](https://peps.python.org/pep-0008/), [PEP 257](https://peps.python.org/pep-0257/)
 
 - La [**cohérence intra-projet**]{.orange} doit toujours primer
-:::
 
 ## Outils
 
-::: {.incremental}
 - [**Linters**]{.blue2} : diagnostic de qualité du code
     - [Pylint](https://github.com/PyCQA/pylint)
 
 - [**Formatters**]{.blue2} : application automatique des standards
     - [Black](https://github.com/psf/black)
-:::
 
 
 
@@ -225,7 +194,6 @@ __Format des commits__
 
 ## Enjeux
 
-::: {.incremental}
 - Favoriser la [**lisibilité**]{.orange} et la [**maintenabilité**]{.orange}
 
 - Enjeux spécifiques à la data science
@@ -234,11 +202,9 @@ __Format des commits__
     - [**Reproductibilité**]{.blue2}
 
 - Adopter les [**standards communautaires**]{.orange} du langage
-:::
 
 ## Principes généraux
 
-::: {.incremental}
 - Les données sont [**immuables**]{.orange}
     - Pas de modifications manuelles
     - [**Stockage externe**]{.blue2} (ex : S3)
@@ -251,19 +217,15 @@ __Format des commits__
   - Utiliser des [**fonctions**]{.blue2} contenues dans des [**modules**]{.blue2}
 
 - [**(Auto-)documenter**]{.orange} son projet
-:::
 
 ## Standards communautaires / outils
 
-::: {.incremental}
 - [**Python**]{.orange} : [**Cookiecutters**]{.blue2} ([Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/))
 
 - La [**cohérence intra-projet**]{.orange} doit toujours primer
-:::
 
 ## Les packages
 
-::: {.incremental}
 - Un *package* est la forme maximale de [**modularité**]{.orange}
   - Contient des [**fonctions**]{.blue2} rangées dans des [**modules**]{.blue2}
   - Contient également de la [**documentation**]{.blue2}, des [**tests**]{.blue2}, des (méta-)données... 
@@ -274,7 +236,6 @@ __Format des commits__
 
 - [**Inconvénients**]{.orange}
   - Coût de [**maintenance**]{.blue2} élevé
-:::
 
 
 
@@ -284,11 +245,9 @@ __Format des commits__
 
 ## "It works... on my machine"
 
-- On a construit un projet
-    - Lisible et bien structuré
-    - Versionné proprement avec Git
+- On a construit un projet [**lisible**]{.orange}, [**structuré**]{.orange} et [**versionné**]{.orange}
 
-- Peut-on partager notre projet ?
+- Peut-on [**partager**]{.orange} notre projet ?
     - En théorie, oui !
     - En pratique, c'est toujours plus compliqué...
 
@@ -296,49 +255,52 @@ __Format des commits__
 
 ## L'enjeu de la portabilité
 
-- Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses **adhérences**
-    - Des **dépendances** dans le langage du projet
+- Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses [**adhérences**]{.orange}
+    - Des [**dépendances**]{.orange} dans le langage du projet
     - Des dépendances dans d'autres langages
-    - Des **librairies système**
+    - Des [**librairies système**]{.orange}
 
-- Un code est **portable** s'il peut être exécuté dans un environnement différent que celui du développement
+- Un code est [**portable**]{.orange} s'il peut être exécuté dans un environnement différent que celui du développement
 
-- Il nous faut de **nouveaux outils** pour atteindre une portabilité forte
+- Besoin de [**nouveaux outils**]{.orange}
 
 ## Environnements virtuels : introduction
 
-- *Workflow* classique du data scientist qui commencerait ses premiers projets
+- [**Workflow**]{.orange} classique du data scientist qui commencerait ses premiers projets
     - Installer une distribution de `Python` sur son poste
     - Développer un projet en installant les packages nécessaires
     - Passer au projet suivant et ainsi de suite
 
-- Quels problèmes peuvent se poser ?
+- Quels [**problème**]{.orange} peuvent se poser ?
 
 ----
 
 ### Environnements virtuels : enjeux
 
-- **Conflits de version** : différents projets peuvent recquérir des versions différentes d'un même *package* ;
-- **Version de Python fixe**, celle de l'installation système ;
-- **Reproductibilité limitée** : difficile de dire quel projet nécessite quel package ;
-- **Portabilité limitée** : difficile de fixer dans un fichier les dépendances spécifiques à un projet.
+- [**Conflits de version**]{.orange} : différents projets peuvent recquérir des versions différentes d'un même *package*
+
+- [**Version de Python fixe**]{.orange}, celle de l'installation système
+
+- [**Reproductibilité limitée**]{.orange} : difficile de dire quel projet nécessite quel package
+
+- [**Portabilité limitée**]{.orange} : difficile de fixer dans un fichier les dépendances spécifiques à un projet
 
 ----
 
 ### Environnements virtuels : fonctionnement
 
-- **Dossier auto-suffisant** qui contient :
+- [**Dossier auto-suffisant**]{.orange} qui contient :
     - Une installation de `Python` pour une version donnée ;
     - Des packages additionnels
-et qui est **isolé** des autres environnements existants
+et qui est [**isolé**]{.orange} des autres environnements existants
 
-- Développer dans des environnements virtuels vierges en début de projet est une bonne pratique pour la **reproductibilité**
+- Développer dans un environnement virtuel vierge est une bonne pratique pour la [**reproductibilité**]{.orange}
 
 ----
 
 ### Environnements virtuels : implémentations
 
-- Différentes implémentations en Python
+- Différentes [**implémentations**]{.orange} en Python
     - L'implémentation standard est `venv`
     - L'implémentation la plus populaire en data science est `conda`
 
@@ -348,7 +310,7 @@ et qui est **isolé** des autres environnements existants
 
 ## Environnements virtuels : installation
 
-- `conda` est généralement installé dans le cadre de **distributions**
+- `conda` est généralement installé dans le cadre de [**distributions**]{.orange}
     - `Miniconda`
     - `Anaconda`
 
@@ -364,27 +326,25 @@ et qui est **isolé** des autres environnements existants
 
 ## Environnements virtuels : limites
 
-- Les **librairies système** ne sont pas gérées
+- Les [**librairies système**]{.orange} ne sont pas gérées
 
-- Difficile de gérer des projets faisant intervenir plusieurs langages de programmation
+- Difficile de gérer des projets [**multi-langages**]{.orange}
 
-- Lourdeur de la phase d'installation à chaque changement d'environnement
+- [**Lourdeur**]{.orange} de la phase d'installation à chaque changement d'environnement
 
-- Peu adaptés à un environnement de production
+- Peu adaptés à un environnement de [**production**]{.orange}
 
 ## Conteneurs : introduction
 
-- Idée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on **distribuer directement la bonne machine** ?
+- Idée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on [**distribuer directement la bonne machine**]{.orange} ?
 
-- On ne peut pas distribuer des **machines physiques**
+- On ne peut pas distribuer des [**machines physiques**]{.orange}
 
-- Les **machines virtuelles** sont coûteuses et complexes à redistribuer
+- Les [**machines virtuelles**]{.orange} sont coûteuses et complexes à redistribuer
 
-- Les **conteneurs** offrent un bon compromis
+- Les [**conteneurs**]{.orange} offrent un bon compromis
 
 ## Conteneurs vs. machines virtuelles
-
-- Idée : **empaqueter** complètement l’environnement qui permet de faire tourner une application
 
 ![](img/docker-vm.png)
 
@@ -424,57 +384,57 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ## Motivation
 
-- La **massification** et la **diversification** des données apportent de nombreux changements
+- La [**massification**]{.orange} et la [**diversification**]{.orange} des données apportent de nombreux changements
     - Le *Data Lake*
     - Le *Data Lab*
     - De nouveaux profils : *Data Scientist*, *Data Engineer*, *Data Architect*
 
-- La majorité des projets de data science ne sont **pas déployés**
+- La majorité des projets de data science [**ne sont pas déployés**]{.orange}
 
-- Besoin d'**industrialisation** qui nécessite de nouveaux outils
+- Besoin d'[**industrialisation**]{.orange} qui nécessite de nouveaux outils
 
 ## L'approche DevOps
 
-- Idée : **unifier** le développement (*dev*) et l'administration système (*ops*)
+- Idée : [**unifier**]{.orange} le développement (*dev*) et l'administration système (*ops*)
 
-- But : raccourcir le temps de développement en **déployant en continu** tout en maintenant la qualité
+- But : raccourcir le temps de développement en [**déployant en continu**]{.orange} tout en maintenant la qualité
 
 ![](img/devops.png)
 
 ## DevOps, DataOps, MLOps ?
 
-- Le ***DevOps*** n'intègre pas les spécificités liées à la data science
+- Le [***DevOps***]{.orange} n'intègre pas les spécificités liées à la data science
 
-- ***DataOps*** : déploiement et maintenance de **pipelines de données**
+- [***DataOps***]{.orange} : déploiement et maintenance de [**pipelines de données**]{.orange}
 
-- ***MLOps*** : déploiement et maintenance de **modèles de Machine Learning**
+- [***MLOps***]{.orange} : déploiement et maintenance de [**modèles de Machine Learning**]{.orange}
 
-- Idée générale : **bonnes pratiques** pour favoriser la collaboration et faciliter les déploiements
+- Les [**bonnes pratiques**]{.orange} favorisent la collaboration et facilitent les déploiements
 
 ## La mise en production
 
-- On a construit un projet de data science **reproductible** et conforme aux **standards** des bonnes pratiques
+- On a construit un projet de data science [**reproductible**]{.orange} et conforme aux [**standards**]{.orange} des bonnes pratiques
 
-- Pour **valoriser** le projet, il faut le **déployer** dans un environnement en lien avec les utilisateurs
-    - Quel est le **format** adapté pour le valoriser ?
-    - Quelle **infrastructure de production** ?
-    - Comment **automatiser** le processus de déploiement ?
+- Pour [**valoriser**]{.orange} le projet, il faut le [**déployer**]{.orange} dans un environnement en lien avec les utilisateurs
+    - Quel est le [**format**]{.orange} adapté pour le valoriser ?
+    - Quelle [**infrastructure de production**]{.orange} ?
+    - Comment [**automatiser**]{.orange} le processus de déploiement ?
 
 ## Format de valorisation
 
-- **Critères** à prendre en compte :
-    - Quels sont les utilisateurs potentiels ?
-    - Seulement de la mise à disposition, ou besoin d'interactivité ?
-    - Entraînement en *batch* ou *online* ?
-    - Besoin de *scalabilité* ?
+- [**Critères**]{.orange} à prendre en compte :
+    - Quels sont les [**utilisateurs**]{.blue2} potentiels ?
+    - Seulement de la [**mise à disposition**]{.blue2}, ou besoin d'[**interactivité**]{.blue2} ?
+    - Spécificités ML : entraînement en [**batch**]{.blue2} ou [**online**]{.blue2} ?
+    - Besoin de [**scalabilité**]{.blue2} ?
 
-- **Formats usuels** : API, application web, dashboard, site internet, rapport automatisé...
+- [**Formats usuels**]{.orange} : API, application web, dashboard, site internet, rapport automatisé...
 
 ## Exposer un modèle via une API REST
 
-- **API** : **interface** entre l'utilisateur (client) et le modèle entraîné
+- [**API** : **interface**]{.orange} entre l'utilisateur (client) et le modèle entraîné
 
-- **API REST** : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière *scalable*
+- [**API REST**]{.orange} : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière *scalable*
 
 ![](img/api-docker.png)
 
@@ -482,10 +442,10 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - Dépend essentiellement de l'infrastructure à disposition
 
-- Un **orchestrateur** de conteneurs répond à plusieurs besoins :
-    - Adapter les ressources (**scaler**) selon les besoins
-    - **Monitoring** de l'état de santé des applications
-    - Déploiements **reproductibles** et **automatisés**
+- Un [**orchestrateur**]{.orange} de conteneurs répond à plusieurs besoins :
+    - Adapter les ressources ([**scaler**]{.orange}) selon les besoins
+    - [**Monitoring**]{.orange} de l'état de santé des applications
+    - Déploiements [**reproductibles**]{.orange} et [**automatisés**]{.orange}
 
 ![](img/kubernetes-logo.png)
 
@@ -495,11 +455,11 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ## L'approche CI/CD : principes
 
-- **Intégration continue** (CI) : à chaque modification du code source, l'application est automatiquement testée et *released*
+- [**Intégration continue**]{.orange} (CI) : à chaque modification du code source, l'application est automatiquement [**tested, built and released**]{.blue2}
 
-- **Déploiement continu** (CD) : les nouvelles *releases* sont automatiquement déployées
+- [**Déploiement continu**]{.orange} (CD) : les nouvelles [**releases**]{.blue2} sont automatiquement déployées
 
-- **GitOps** : le processus est décrit sous formes de manifestes (.yaml), stockés sur un dépôt Git
+- [**GitOps**]{.orange} : le processus est décrit sous formes de [**manifestes**]{.blue2}, stockés sur un dépôt `Git`
 
 ## L'approche CI/CD : exemple
 
@@ -507,15 +467,15 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ## Pipeline complet
 
-- Les données d'entrée ne sont pas fixes, il faut les intégrer dans un **pipeline** complet de données
+- Les données d'entrée ne sont pas fixes, il faut les intégrer dans un [**pipeline**]{.orange} complet de données
 
-- La représentation est faite sous forme de graphes acycliques dirigés (DAG)
+- La représentation est faite sous forme de graphes acycliques dirigés ([**DAG**]{.orange})
 
 ![](img/pipeline.png)
 
 ## Conclusion
 
-- On a construit un pipeline **reproductible**, **automatisé** et **scalable**
+- On a construit un pipeline [**reproductible**]{.orange}, [**automatisé**]{.orange} et [**scalable**]{.orange}
 
 ![](img/devops.png)
 
