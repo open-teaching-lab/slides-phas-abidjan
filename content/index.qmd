@@ -276,9 +276,7 @@ __Format des commits__
 
 # Portabilité
 
-----
-
-### "It works... on my machine"
+## "It works... on my machine"
 
 - On a construit un projet
     - Lisible et bien structuré
@@ -290,9 +288,7 @@ __Format des commits__
 
 ![](img/IWOMM.jpg)
 
-----
-
-### L'enjeu de la portabilité
+## L'enjeu de la portabilité
 
 - Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses **adhérences**
     - Des **dépendances** dans le langage du projet
@@ -303,13 +299,7 @@ __Format des commits__
 
 - Il nous faut de **nouveaux outils** pour atteindre une portabilité forte
 
-----
-
-## Les environnements virtuels
-
-----
-
-### Introduction
+## Environnements virtuels : introduction
 
 - *Workflow* classique du data scientist qui commencerait ses premiers projets
     - Installer une distribution de `Python` sur son poste
@@ -320,7 +310,7 @@ __Format des commits__
 
 ----
 
-### Enjeux
+### Environnements virtuels : enjeux
 
 - **Conflits de version** : différents projets peuvent recquérir des versions différentes d'un même *package* ;
 - **Version de Python fixe**, celle de l'installation système ;
@@ -329,7 +319,7 @@ __Format des commits__
 
 ----
 
-### Fonctionnement
+### Environnements virtuels : fonctionnement
 
 - **Dossier auto-suffisant** qui contient :
     - Une installation de `Python` pour une version donnée ;
@@ -340,7 +330,7 @@ et qui est **isolé** des autres environnements existants
 
 ----
 
-### Implémentations
+### Environnements virtuels : implémentations
 
 - Différentes implémentations en Python
     - L'implémentation standard est `venv`
@@ -350,9 +340,7 @@ et qui est **isolé** des autres environnements existants
     - Un *package manager* (comme `pip`)
     - Un gestionnaire d'environnements virtuels
 
-----
-
-### Installation
+## Environnements virtuels : installation
 
 - `conda` est généralement installé dans le cadre de **distributions**
     - `Miniconda`
@@ -362,18 +350,13 @@ et qui est **isolé** des autres environnements existants
 
 [<img src="img/conda-eco.png" height="400"/>](img/conda-eco.png)
 
-
-----
-
-### En pratique
+## Environnements virtuels : en pratique
 
 - [Exercice guidé](https://ensae-reproductibilite.netlify.app/portability/#en-pratique)
 
 - [Aide-mémoire des principales commandes](https://ensae-reproductibilite.netlify.app/portability/#aide-m%c3%a9moire)
 
-----
-
-### Limites
+## Environnements virtuels : limites
 
 - Les **librairies système** ne sont pas gérées
 
@@ -383,13 +366,7 @@ et qui est **isolé** des autres environnements existants
 
 - Peu adaptés à un environnement de production
 
-----
-
-## Les conteneurs
-
-----
-
-### Introduction
+## Conteneurs : introduction
 
 - Idée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on **distribuer directement la bonne machine** ?
 
@@ -399,9 +376,7 @@ et qui est **isolé** des autres environnements existants
 
 - Les **conteneurs** offrent un bon compromis
 
-----
-
-### Conteneurs vs machine virtuelles
+## Conteneurs vs. machines virtuelles
 
 - Idée : **empaqueter** complètement l’environnement qui permet de faire tourner une application
 
@@ -409,17 +384,13 @@ et qui est **isolé** des autres environnements existants
 
 Source : [docker.com](https://www.docker.com/resources/what-container/)
 
-----
-
-### Implémentations
+## Conteneurs : implémentations
 
 - Plusieurs implémentations des conteneurs
 
 - `Docker` est largement prédominant
 
-----
-
-### Installation
+## Docker : installation
 
 - [Instructions](https://docs.docker.com/get-docker/) selon le système d'exploitation
 
@@ -427,29 +398,25 @@ Source : [docker.com](https://www.docker.com/resources/what-container/)
 
 - `Docker` est un outil en ligne de commandes (CLI)
 
-----
-
-### *Workflow*
+## Docker : fonctionnement
 
 ![](img/docker-workflow.png)
 
 Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)
 
-----
-
-### En pratique
+## Docker : en pratique
 
 - [Exercice guidé](https://ensae-reproductibilite.netlify.app/portability/#en-pratique-1)
 
 - [Aide-mémoire des principales commandes](https://ensae-reproductibilite.netlify.app/portability/#en-pratique-1)
 
----
+
+
+
 
 # Vers la mise en production
 
-----
-
-### Motivation
+## Motivation
 
 - La **massification** et la **diversification** des données apportent de nombreux changements
     - Le *Data Lake*
@@ -460,9 +427,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - Besoin d'**industrialisation** qui nécessite de nouveaux outils
 
-----
-
-### L'approche DevOps
+## L'approche DevOps
 
 - Idée : **unifier** le développement (*dev*) et l'administration système (*ops*)
 
@@ -470,9 +435,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 [<img src="img/devops.png" height="300"/>](img/devops.png)
 
-----
-
-### DevOps, DataOps, MLOps ?
+## DevOps, DataOps, MLOps ?
 
 - Le ***DevOps*** n'intègre pas les spécificités liées à la data science
 
@@ -482,9 +445,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - Idée générale : **bonnes pratiques** pour favoriser la collaboration et faciliter les déploiements
 
-----
-
-### La mise en production
+## La mise en production
 
 - On a construit un projet de data science **reproductible** et conforme aux **standards** des bonnes pratiques
 
@@ -493,9 +454,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
     - Quelle **infrastructure de production** ?
     - Comment **automatiser** le processus de déploiement ?
 
-----
-
-### Format de valorisation
+## Format de valorisation
 
 - **Critères** à prendre en compte :
     - Quels sont les utilisateurs potentiels ?
@@ -505,9 +464,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - **Formats usuels** : API, application web, dashboard, site internet, rapport automatisé...
 
-----
-
-### Exposer un modèle via une API REST
+## Exposer un modèle via une API REST
 
 - **API** : **interface** entre l'utilisateur (client) et le modèle entraîné
 
@@ -515,9 +472,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ![](img/api-docker.png)
 
-----
-
-### Environnement de production
+## Environnement de production
 
 - Dépend essentiellement de l'infrastructure à disposition
 
@@ -528,15 +483,11 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 [<img src="img/kubernetes-logo.png" height="100"/>](img/kubernetes-logo.png)
 
-----
-
-### Fonctionnement de Kubernetes
+## Fonctionnement de Kubernetes
 
 ![](img/kubernetes-archi.png)
 
-----
-
-### L'approche CI/CD : principes
+## L'approche CI/CD : principes
 
 - **Intégration continue** (CI) : à chaque modification du code source, l'application est automatiquement testée et *released*
 
@@ -544,15 +495,11 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - **GitOps** : le processus est décrit sous formes de manifestes (.yaml), stockés sur un dépôt Git
 
-----
-
-### L'approche CI/CD : exemple
+## L'approche CI/CD : exemple
 
 ![](img/ci-cd.png)
 
-----
-
-### Pipeline complet
+## Pipeline complet
 
 - Les données d'entrée ne sont pas fixes, il faut les intégrer dans un **pipeline** complet de données
 
@@ -560,23 +507,22 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ![](img/pipeline.png)
 
-----
-
-### Conclusion
+## Conclusion
 
 - On a construit un pipeline **reproductible**, **automatisé** et **scalable**
 
 [<img src="img/devops.png" height="300"/>](img/devops.png)
 
----
+
+
+
+
 
 # Application
 
-----
-
-### Exercice guidé
+## Exercice guidé
 
 - Dépôt GitHub : [https://github.com/avouacr/ensae-reproductibilite-projet](https://github.com/avouacr/ensae-reproductibilite-projet)
 
-- Consignes sur la page [Application](https://ensae-reproductibilite.netlify.app/application/) du cours
+- Consignes sur la page [Application](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html) du cours
 
