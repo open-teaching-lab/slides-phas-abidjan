@@ -1,5 +1,5 @@
 ---
-title: Bonnes pratiques pour la mise en production des projets de data science
+title: Mise en production des projets de data science
 subtitle: |
   **[Romain Avouac, Lino Galiana]{.orange}**
 # date: 
@@ -31,7 +31,11 @@ from: markdown+emoji
 
 - Contenu en construction : [https://linogaliana.github.io/ensae-reproductibilite-website/](https://linogaliana.github.io/ensae-reproductibilite-website/)
 
+. . .
+
 - Programme large
+
+. . .
 
 - Applications guidées
 
@@ -104,6 +108,83 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 - [**Déployer**]{.orange} et [**valoriser**]{.orange} un projet de data science
 :::
+
+
+
+
+
+# Git : rappels
+
+## Pourquoi utiliser Git ?
+
+![](img/timeline.png){fig-align="center" height=475}
+
+[Source](https://thinkr.fr/travailler-avec-git-via-rstudio-et-versionner-son-code/)
+
+## Concepts essentiels
+
+![](img/gitallinone.png){height="400" fig-align="center"}
+
+[Source](http://fabacademy.org/2021/labs/bhubaneswar/students/deepak-chaudhry/ia_PPFP.html)
+
+## Bonnes pratiques {auto-animate=true .smaller}
+
+__Que versionne-t-on ?__
+
+:::{.incremental}
+- Essentiellement du [**code source**]{.orange}
+- [__Pas d'outputs__]{.orange} (fichiers `.html`, `.pdf`, modèles...)
+- [__Pas de données__]{.orange}, d'informations locales ou sensibles
+:::
+
+:::{.callout-note}
+
+Pour définir des règles qui évitent de committer tel ou tel fichier, on utilise
+un fichier nommé __`.gitignore`__.
+
+Si on mélange du code et des éléments
+annexes (_output_, données...) dans un même dossier, il [__faut consacrer du temps à ce fichier__]{.orange}.
+
+Le site [`gitignore.io`](https://www.toptal.com/developers/gitignore) peut vous fournir
+des modèles.
+
+N'hésitez pas à y ajouter des règles conservatrices (par exemple `*.csv`), 
+comme cela est expliqué dans [la documentation `utilitR`](https://www.book.utilitr.org/git.html?q=gitignore#gitignore).
+
+:::
+
+## Bonnes pratiques {auto-animate=true .smaller}
+
+__Format des commits__
+
+::: {layout="[40,60]"}
+
+::: {.incremental}
+- [**Fréquence**]{.orange}
+    - Aussi souvent que possible
+    - Le lot de modifications doit "faire sens"
+- [**Messages**]{.orange}
+    - Courts et informatifs (comme un titre de mail)
+    - Décrire **le pourquoi plutôt que le comment** dans le texte
+:::
+
+![](img/titre-commit.png)
+
+:::
+
+## En pratique
+
+::: {.incremental}
+- Git est un [**logiciel**]{.orange}
+
+- Utilisation en [**ligne de commande**]{.orange}
+
+- Ressources sur le site :
+    - [Introduction au terminal Linux](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/linux101.html)
+    - [Versionner son code et travailler collaborativement avec Git](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/git.html)
+:::
+
+
 
 
 
@@ -199,81 +280,6 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 
 
-
-# Git : rappels
-
-## Pourquoi utiliser Git ?
-
-![](img/timeline.png){fig-align="center" height=475}
-
-[Source](https://thinkr.fr/travailler-avec-git-via-rstudio-et-versionner-son-code/)
-
-## Concepts essentiels
-
-![](img/gitallinone.png)
-
-[Source](http://fabacademy.org/2021/labs/bhubaneswar/students/deepak-chaudhry/ia_PPFP.html)
-
-## Bonnes pratiques {auto-animate=true .smaller}
-
-__Que versionne-t-on ?__
-
-:::{.incremental}
-- Essentiellement du [**code source**]{.orange}
-- [__Pas d'outputs__]{.orange} (fichiers `.html`, `.pdf`, modèles...)
-- [__Pas de données__]{.orange}, d'informations locales ou sensibles
-:::
-
-:::{.callout-note}
-
-Pour définir des règles qui évitent de committer tel ou tel fichier, on utilise
-un fichier nommé __`.gitignore`__.
-
-Si on mélange du code et des éléments
-annexes (_output_, données...) dans un même dossier, il [__faut consacrer du temps à ce fichier__]{.orange}.
-
-Le site [`gitignore.io`](https://www.toptal.com/developers/gitignore) peut vous fournir
-des modèles.
-
-N'hésitez pas à y ajouter des règles conservatrices (par exemple `*.csv`), 
-comme cela est expliqué dans [la documentation `utilitR`](https://www.book.utilitr.org/git.html?q=gitignore#gitignore).
-
-:::
-
-## Bonnes pratiques {auto-animate=true .smaller}
-
-__Format des commits__
-
-::: {layout="[40,60]"}
-
-::: {.incremental}
-- [**Fréquence**]{.orange}
-    - Aussi souvent que possible
-    - Le lot de modifications doit "faire sens"
-- [**Messages**]{.orange}
-    - Courts et informatifs (comme un titre de mail)
-    - Décrire **le pourquoi plutôt que le comment** dans le texte
-:::
-
-![](img/titre-commit.png)
-
-:::
-
-### En pratique
-
-- Git est un [**logiciel**]{.orange}
-
-- Utilisation en [**ligne de commande**]{.orange}
-
-- Ressources sur le site :
-    - [Introduction au terminal Linux](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/linux101.html)
-    - [Versionner son code et travailler collaborativement avec Git](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/git.html)
-
-
-
-
-
-
 # Portabilité
 
 ## "It works... on my machine"
@@ -286,7 +292,7 @@ __Format des commits__
     - En théorie, oui !
     - En pratique, c'est toujours plus compliqué...
 
-![](img/IWOMM.jpg)
+![](img/IWOMM.jpg){fig-align="center"}
 
 ## L'enjeu de la portabilité
 
@@ -348,7 +354,7 @@ et qui est **isolé** des autres environnements existants
 
 - `conda` est un outil en ligne de commandes (CLI)
 
-[<img src="img/conda-eco.png" height="400"/>](img/conda-eco.png)
+![](img/conda-eco.png)
 
 ## Environnements virtuels : en pratique
 
@@ -433,7 +439,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - But : raccourcir le temps de développement en **déployant en continu** tout en maintenant la qualité
 
-[<img src="img/devops.png" height="300"/>](img/devops.png)
+![](img/devops.png)
 
 ## DevOps, DataOps, MLOps ?
 
@@ -481,7 +487,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
     - **Monitoring** de l'état de santé des applications
     - Déploiements **reproductibles** et **automatisés**
 
-[<img src="img/kubernetes-logo.png" height="100"/>](img/kubernetes-logo.png)
+![](img/kubernetes-logo.png)
 
 ## Fonctionnement de Kubernetes
 
@@ -511,7 +517,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - On a construit un pipeline **reproductible**, **automatisé** et **scalable**
 
-[<img src="img/devops.png" height="300"/>](img/devops.png)
+![](img/devops.png)
 
 
 
@@ -525,4 +531,3 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 - Dépôt GitHub : [https://github.com/avouacr/ensae-reproductibilite-projet](https://github.com/avouacr/ensae-reproductibilite-projet)
 
 - Consignes sur la page [Application](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html) du cours
-
