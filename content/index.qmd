@@ -1,11 +1,11 @@
 ---
-title: Bonnes pratiques pour les projets de data science
+title: Bonnes pratiques pour la mise en production des projets de data science
 subtitle: |
   **[Romain Avouac, Lino Galiana]{.orange}**
 # date: 
 slide-number: true
 footer: |
-  Programme 10 %
+  Bonnes pratiques pour la mise en production des projets de data science
 # uncomment for French presentations:
 lang: fr-FR
 # for blind readers:
@@ -27,6 +27,14 @@ from: markdown+emoji
 
 # Introduction
 
+## Disclaimer
+
+- Contenu en construction : [https://linogaliana.github.io/ensae-reproductibilite-website/](https://linogaliana.github.io/ensae-reproductibilite-website/)
+
+- Programme large
+
+- Applications guidées
+
 ## Contexte
 
 ::: {.incremental}
@@ -34,8 +42,6 @@ from: markdown+emoji
     - des [**data scientists**]{.blue2} de l'Insee
     - frustrés par l'[**approche**]{.blue2} souvent purement [**technique**]{.blue2} de la data science
     - convaincus que les [**bonnes pratiques**]{.blue2} valent à être enseignées
-
-- [**Version introductive**]{.blue2} d'un [cours de 3A](https://linogaliana.github.io/ensae-reproductibilite-website/) donné à l'ENSAE
 
 - <romain.avouac@insee.fr>, <lino.galiana@insee.fr>
 :::
@@ -78,13 +84,19 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 - [**déploiement**]{.orange} d'applications pour valoriser les analyses
 
+## Bonnes pratiques et reproductibilité
+
+![](img/reprospectrum.png){height="200" fig-align="center"}
+
+**Source** : Peng R., Reproducible Research in Computational Science, Science (2011)
+
 ## Contenu du cours
 
 ::: {.incremental}
 - Voir le code comme un [**outil de communication**]{.orange}
+    - [**Contrôle de version**]{.blue2} avec Git
     - [**Qualité**]{.blue2} du code
     - [**Structure**]{.blue2} des projets
-    - [**Contrôle de version**]{.blue2} avec Git
 
 - [**Travail collaboratif**]{.orange} avec Git et GitHub
 
@@ -186,14 +198,385 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 
 
-# Conclusion
 
-## Conclusion
 
-- Favoriser la [**réutilisation**]{.orange} du code en le rendant [**lisible**]{.orange} et [**maintenable**]{.orange}
+# Git : rappels
 
-- Des [**outils**]{.orange} simples pour appliquer les [**standards communautaires**]{.orange}
+## Pourquoi utiliser Git ?
 
-- [**Coût limité**]{.orange} si appliqué dès le début des projets
+![](img/timeline.png){fig-align="center" height=475}
 
-- Préalable à la mise en production
+[Source](https://thinkr.fr/travailler-avec-git-via-rstudio-et-versionner-son-code/)
+
+## Concepts essentiels
+
+![](img/gitallinone.png)
+
+[Source](http://fabacademy.org/2021/labs/bhubaneswar/students/deepak-chaudhry/ia_PPFP.html)
+
+## Bonnes pratiques {auto-animate=true .smaller}
+
+__Que versionne-t-on ?__
+
+:::{.incremental}
+- Essentiellement du [**code source**]{.orange}
+- [__Pas d'outputs__]{.orange} (fichiers `.html`, `.pdf`, modèles...)
+- [__Pas de données__]{.orange}, d'informations locales ou sensibles
+:::
+
+:::{.callout-note}
+
+Pour définir des règles qui évitent de committer tel ou tel fichier, on utilise
+un fichier nommé __`.gitignore`__.
+
+Si on mélange du code et des éléments
+annexes (_output_, données...) dans un même dossier, il [__faut consacrer du temps à ce fichier__]{.orange}.
+
+Le site [`gitignore.io`](https://www.toptal.com/developers/gitignore) peut vous fournir
+des modèles.
+
+N'hésitez pas à y ajouter des règles conservatrices (par exemple `*.csv`), 
+comme cela est expliqué dans [la documentation `utilitR`](https://www.book.utilitr.org/git.html?q=gitignore#gitignore).
+
+:::
+
+## Bonnes pratiques {auto-animate=true .smaller}
+
+__Format des commits__
+
+::: {layout="[40,60]"}
+
+::: {.incremental}
+- [**Fréquence**]{.orange}
+    - Aussi souvent que possible
+    - Le lot de modifications doit "faire sens"
+- [**Messages**]{.orange}
+    - Courts et informatifs (comme un titre de mail)
+    - Décrire **le pourquoi plutôt que le comment** dans le texte
+:::
+
+![](img/titre-commit.png)
+
+:::
+
+### En pratique
+
+- Git est un [**logiciel**]{.orange}
+
+- Utilisation en [**ligne de commande**]{.orange}
+
+- Ressources sur le site :
+    - [Introduction au terminal Linux](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/linux101.html)
+    - [Versionner son code et travailler collaborativement avec Git](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/git.html)
+
+
+
+
+
+
+# Portabilité
+
+----
+
+### "It works... on my machine"
+
+- On a construit un projet
+    - Lisible et bien structuré
+    - Versionné proprement avec Git
+
+- Peut-on partager notre projet ?
+    - En théorie, oui !
+    - En pratique, c'est toujours plus compliqué...
+
+![](img/IWOMM.jpg)
+
+----
+
+### L'enjeu de la portabilité
+
+- Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses **adhérences**
+    - Des **dépendances** dans le langage du projet
+    - Des dépendances dans d'autres langages
+    - Des **librairies système**
+
+- Un code est **portable** s'il peut être exécuté dans un environnement différent que celui du développement
+
+- Il nous faut de **nouveaux outils** pour atteindre une portabilité forte
+
+----
+
+## Les environnements virtuels
+
+----
+
+### Introduction
+
+- *Workflow* classique du data scientist qui commencerait ses premiers projets
+    - Installer une distribution de `Python` sur son poste
+    - Développer un projet en installant les packages nécessaires
+    - Passer au projet suivant et ainsi de suite
+
+- Quels problèmes peuvent se poser ?
+
+----
+
+### Enjeux
+
+- **Conflits de version** : différents projets peuvent recquérir des versions différentes d'un même *package* ;
+- **Version de Python fixe**, celle de l'installation système ;
+- **Reproductibilité limitée** : difficile de dire quel projet nécessite quel package ;
+- **Portabilité limitée** : difficile de fixer dans un fichier les dépendances spécifiques à un projet.
+
+----
+
+### Fonctionnement
+
+- **Dossier auto-suffisant** qui contient :
+    - Une installation de `Python` pour une version donnée ;
+    - Des packages additionnels
+et qui est **isolé** des autres environnements existants
+
+- Développer dans des environnements virtuels vierges en début de projet est une bonne pratique pour la **reproductibilité**
+
+----
+
+### Implémentations
+
+- Différentes implémentations en Python
+    - L'implémentation standard est `venv`
+    - L'implémentation la plus populaire en data science est `conda`
+
+- `conda` est à la fois
+    - Un *package manager* (comme `pip`)
+    - Un gestionnaire d'environnements virtuels
+
+----
+
+### Installation
+
+- `conda` est généralement installé dans le cadre de **distributions**
+    - `Miniconda`
+    - `Anaconda`
+
+- `conda` est un outil en ligne de commandes (CLI)
+
+[<img src="img/conda-eco.png" height="400"/>](img/conda-eco.png)
+
+
+----
+
+### En pratique
+
+- [Exercice guidé](https://ensae-reproductibilite.netlify.app/portability/#en-pratique)
+
+- [Aide-mémoire des principales commandes](https://ensae-reproductibilite.netlify.app/portability/#aide-m%c3%a9moire)
+
+----
+
+### Limites
+
+- Les **librairies système** ne sont pas gérées
+
+- Difficile de gérer des projets faisant intervenir plusieurs langages de programmation
+
+- Lourdeur de la phase d'installation à chaque changement d'environnement
+
+- Peu adaptés à un environnement de production
+
+----
+
+## Les conteneurs
+
+----
+
+### Introduction
+
+- Idée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on **distribuer directement la bonne machine** ?
+
+- On ne peut pas distribuer des **machines physiques**
+
+- Les **machines virtuelles** sont coûteuses et complexes à redistribuer
+
+- Les **conteneurs** offrent un bon compromis
+
+----
+
+### Conteneurs vs machine virtuelles
+
+- Idée : **empaqueter** complètement l’environnement qui permet de faire tourner une application
+
+![](img/docker-vm.png)
+
+Source : [docker.com](https://www.docker.com/resources/what-container/)
+
+----
+
+### Implémentations
+
+- Plusieurs implémentations des conteneurs
+
+- `Docker` est largement prédominant
+
+----
+
+### Installation
+
+- [Instructions](https://docs.docker.com/get-docker/) selon le système d'exploitation
+
+- Environnement "bac à sable" : [Play with Docker](https://labs.play-with-docker.com/)
+
+- `Docker` est un outil en ligne de commandes (CLI)
+
+----
+
+### *Workflow*
+
+![](img/docker-workflow.png)
+
+Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)
+
+----
+
+### En pratique
+
+- [Exercice guidé](https://ensae-reproductibilite.netlify.app/portability/#en-pratique-1)
+
+- [Aide-mémoire des principales commandes](https://ensae-reproductibilite.netlify.app/portability/#en-pratique-1)
+
+---
+
+# Vers la mise en production
+
+----
+
+### Motivation
+
+- La **massification** et la **diversification** des données apportent de nombreux changements
+    - Le *Data Lake*
+    - Le *Data Lab*
+    - De nouveaux profils : *Data Scientist*, *Data Engineer*, *Data Architect*
+
+- La majorité des projets de data science ne sont **pas déployés**
+
+- Besoin d'**industrialisation** qui nécessite de nouveaux outils
+
+----
+
+### L'approche DevOps
+
+- Idée : **unifier** le développement (*dev*) et l'administration système (*ops*)
+
+- But : raccourcir le temps de développement en **déployant en continu** tout en maintenant la qualité
+
+[<img src="img/devops.png" height="300"/>](img/devops.png)
+
+----
+
+### DevOps, DataOps, MLOps ?
+
+- Le ***DevOps*** n'intègre pas les spécificités liées à la data science
+
+- ***DataOps*** : déploiement et maintenance de **pipelines de données**
+
+- ***MLOps*** : déploiement et maintenance de **modèles de Machine Learning**
+
+- Idée générale : **bonnes pratiques** pour favoriser la collaboration et faciliter les déploiements
+
+----
+
+### La mise en production
+
+- On a construit un projet de data science **reproductible** et conforme aux **standards** des bonnes pratiques
+
+- Pour **valoriser** le projet, il faut le **déployer** dans un environnement en lien avec les utilisateurs
+    - Quel est le **format** adapté pour le valoriser ?
+    - Quelle **infrastructure de production** ?
+    - Comment **automatiser** le processus de déploiement ?
+
+----
+
+### Format de valorisation
+
+- **Critères** à prendre en compte :
+    - Quels sont les utilisateurs potentiels ?
+    - Seulement de la mise à disposition, ou besoin d'interactivité ?
+    - Entraînement en *batch* ou *online* ?
+    - Besoin de *scalabilité* ?
+
+- **Formats usuels** : API, application web, dashboard, site internet, rapport automatisé...
+
+----
+
+### Exposer un modèle via une API REST
+
+- **API** : **interface** entre l'utilisateur (client) et le modèle entraîné
+
+- **API REST** : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière *scalable*
+
+![](img/api-docker.png)
+
+----
+
+### Environnement de production
+
+- Dépend essentiellement de l'infrastructure à disposition
+
+- Un **orchestrateur** de conteneurs répond à plusieurs besoins :
+    - Adapter les ressources (**scaler**) selon les besoins
+    - **Monitoring** de l'état de santé des applications
+    - Déploiements **reproductibles** et **automatisés**
+
+[<img src="img/kubernetes-logo.png" height="100"/>](img/kubernetes-logo.png)
+
+----
+
+### Fonctionnement de Kubernetes
+
+![](img/kubernetes-archi.png)
+
+----
+
+### L'approche CI/CD : principes
+
+- **Intégration continue** (CI) : à chaque modification du code source, l'application est automatiquement testée et *released*
+
+- **Déploiement continu** (CD) : les nouvelles *releases* sont automatiquement déployées
+
+- **GitOps** : le processus est décrit sous formes de manifestes (.yaml), stockés sur un dépôt Git
+
+----
+
+### L'approche CI/CD : exemple
+
+![](img/ci-cd.png)
+
+----
+
+### Pipeline complet
+
+- Les données d'entrée ne sont pas fixes, il faut les intégrer dans un **pipeline** complet de données
+
+- La représentation est faite sous forme de graphes acycliques dirigés (DAG)
+
+![](img/pipeline.png)
+
+----
+
+### Conclusion
+
+- On a construit un pipeline **reproductible**, **automatisé** et **scalable**
+
+[<img src="img/devops.png" height="300"/>](img/devops.png)
+
+---
+
+# Application
+
+----
+
+### Exercice guidé
+
+- Dépôt GitHub : [https://github.com/avouacr/ensae-reproductibilite-projet](https://github.com/avouacr/ensae-reproductibilite-projet)
+
+- Consignes sur la page [Application](https://ensae-reproductibilite.netlify.app/application/) du cours
+
