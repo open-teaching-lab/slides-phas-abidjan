@@ -56,7 +56,7 @@ from: markdown+emoji
 - [**Conséquence**]{.blue2} : un ensemble de [**règles informelles**]{.orange}, conventionnellement acceptées comme produisant des logiciels [**fiables**]{.orange}, [**évolutifs**]{.orange} et [**maintenables**]{.orange}
 
 
-## Pourquoi s'intéresser aux bonnes pratiques ? {.smaller}
+## Pourquoi s'intéresser aux bonnes pratiques ?
 
 <br>
 
@@ -67,7 +67,7 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 - [**projets collaboratifs**]{.orange} et de grande envergure
 
 
-- [**complexification**]{.orange} des données et donc des [**infrastructures**]{.orange}
+- [**complexification**]{.orange} des données et des [**infrastructures**]{.orange}
 
 - [**déploiement**]{.orange} d'applications pour valoriser les analyses
 
