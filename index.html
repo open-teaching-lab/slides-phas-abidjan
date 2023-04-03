@@ -647,8 +647,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="principes-généraux-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Principes généraux</h2>
 <ul>
-<li class="fragment"><p><span class="orange"><strong>Notebooks</strong></span> : pour l’<span class="orange"><strong>exploration</strong></span> et la <span class="orange"><strong>communication</strong></span></p></li>
-<li class="fragment"><p>Pour l’<span class="orange"><strong>industrialisation</strong></span> : adopter une <span class="orange"><strong>structure modulaire</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Notebooks</strong></span> : pour l’<span class="blue2"><strong>exploration</strong></span> et la <span class="blue2"><strong>communication</strong></span></p></li>
+<li class="fragment"><p>Pour l’<span class="orange"><strong>industrialisation</strong></span> : adopter une <span class="blue2"><strong>structure modulaire</strong></span></p></li>
 <li class="fragment"><p>Adopter les <span class="orange"><strong>standards communautaires</strong></span></p></li>
 <li class="fragment"><p><span class="orange"><strong>Documenter</strong></span> son projet</p></li>
 </ul>
@@ -672,7 +672,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="favoriser-une-structure-modulaire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="two">2️⃣</span> Favoriser une structure modulaire</h2>
 <ul>
-<li class="fragment"><p>Principe : <span class="orange"><strong>séparation</strong></span> des <span class="blue2"><strong>données</strong></span>, du <span class="blue2"><strong>code</strong></span> et de la <span class="blue2"><strong>configuration</strong></span></p></li>
+<li class="fragment"><p>Principe de <span class="orange"><strong>séparation</strong></span> des <span class="blue2"><strong>données</strong></span>, du <span class="blue2"><strong>code</strong></span> et de la <span class="blue2"><strong>configuration</strong></span></p></li>
 <li class="fragment"><p>Adopter une structure de <span class="orange"><strong>package</strong></span></p>
 <ul>
 <li class="fragment">Contient des <span class="blue2"><strong>fonctions</strong></span> rangées dans des <span class="blue2"><strong>modules</strong></span></li>
@@ -697,8 +697,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>Favoriser l’<span class="orange"><strong>auto-documentation</strong></span> via des nommages pertinents</p></li>
 <li class="fragment"><p>Inclure un fichier <code>README.md</code> à la racine du projet</p>
 <ul>
-<li class="fragment"><span class="orange"><strong>Carte d’identité</strong></span> et <span class="orange"><strong>vitrine</strong></span> du projet</li>
-<li class="fragment">Présente le <span class="orange"><strong>contexte</strong></span> et le <span class="orange"><strong>fonctionnement</strong></span> du projet</li>
+<li class="fragment"><span class="blue2"><strong>Carte d’identité</strong></span> et <span class="blue2"><strong>vitrine</strong></span> du projet</li>
+<li class="fragment">Présente le <span class="blue2"><strong>contexte</strong></span> et le <span class="blue2"><strong>fonctionnement</strong></span> du projet</li>
 </ul></li>
 </ul>
 </section></section>
@@ -728,13 +728,17 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="lenjeu-de-la-portabilité" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’enjeu de la portabilité</h2>
 <ul>
-<li class="fragment">Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses <span class="orange"><strong>adhérences</strong></span>
+<li class="fragment"><p>Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses <span class="orange"><strong>adhérences</strong></span></p>
 <ul>
-<li class="fragment">Des <span class="orange"><strong>dépendances</strong></span> dans le langage du projet</li>
-<li class="fragment">Des dépendances dans d’autres langages</li>
-<li class="fragment">Des <span class="orange"><strong>librairies système</strong></span></li>
+<li class="fragment">Des <span class="blue2"><strong>dépendances</strong></span></li>
+<li class="fragment">Des <span class="blue2"><strong>librairies système</strong></span></li>
 </ul></li>
-<li class="fragment">Un code est <span class="orange"><strong>portable</strong></span> s’il peut être exécuté dans un environnement différent que celui du développement</li>
+<li class="fragment"><p>Un code est <span class="orange"><strong>portable</strong></span> s’il peut être exécuté dans un environnement différent que celui du développement</p></li>
+<li class="fragment"><p>Besoin de nouveaux outils</p>
+<ul>
+<li class="fragment">Les <span class="blue2"><strong>environnements virtuels</strong></span></li>
+<li class="fragment">Les <span class="blue2"><strong>conteneurs</strong></span></li>
+</ul></li>
 </ul>
 </section>
 <section id="environnements-virtuels-introduction" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -901,9 +905,9 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="devops-dataops-mlops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>DevOps, DataOps, MLOps ?</h2>
 <ul>
-<li class="fragment"><p>Le <span class="orange"><strong><em>DevOps</em></strong></span> n’intègre pas les spécificités liées à la data science</p></li>
-<li class="fragment"><p><span class="orange"><strong><em>DataOps</em></strong></span> : déploiement et maintenance de <span class="orange"><strong>pipelines de données</strong></span></p></li>
-<li class="fragment"><p><span class="orange"><strong><em>MLOps</em></strong></span> : déploiement et maintenance de <span class="orange"><strong>modèles de Machine Learning</strong></span></p></li>
+<li class="fragment"><p>Le <span class="orange"><strong>DevOps</strong></span> n’intègre pas les spécificités liées à la data science</p></li>
+<li class="fragment"><p><span class="orange"><strong>DataOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>pipelines de données</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>MLOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>modèles de Machine Learning</strong></span></p></li>
 <li class="fragment"><p>Les <span class="orange"><strong>bonnes pratiques</strong></span> favorisent la collaboration et facilitent les déploiements</p></li>
 </ul>
 </section>
@@ -913,9 +917,9 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>On a construit un projet de data science <span class="orange"><strong>reproductible</strong></span> et conforme aux <span class="orange"><strong>standards</strong></span> des bonnes pratiques</p></li>
 <li class="fragment"><p>Pour <span class="orange"><strong>valoriser</strong></span> le projet, il faut le <span class="orange"><strong>déployer</strong></span> dans un environnement en lien avec les utilisateurs</p>
 <ul>
-<li class="fragment">Quel est le <span class="orange"><strong>format</strong></span> adapté pour le valoriser ?</li>
-<li class="fragment">Quelle <span class="orange"><strong>infrastructure de production</strong></span> ?</li>
-<li class="fragment">Comment <span class="orange"><strong>automatiser</strong></span> le processus de déploiement ?</li>
+<li class="fragment">Quel est le <span class="blue2"><strong>format</strong></span> adapté pour le valoriser ?</li>
+<li class="fragment">Quelle <span class="blue2"><strong>infrastructure de production</strong></span> ?</li>
+<li class="fragment">Comment <span class="blue2"><strong>automatiser</strong></span> le processus de déploiement ?</li>
 </ul></li>
 </ul>
 </section>
@@ -952,9 +956,9 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>Dépend essentiellement de l’infrastructure à disposition</p></li>
 <li class="fragment"><p>Un <span class="orange"><strong>orchestrateur</strong></span> de conteneurs répond à plusieurs besoins :</p>
 <ul>
-<li class="fragment">Adapter les ressources (<span class="orange"><strong>scaler</strong></span>) selon les besoins</li>
-<li class="fragment"><span class="orange"><strong>Monitoring</strong></span> de l’état de santé des applications</li>
-<li class="fragment">Déploiements <span class="orange"><strong>reproductibles</strong></span> et <span class="orange"><strong>automatisés</strong></span></li>
+<li class="fragment">Adapter les ressources (<span class="blue2"><strong>scaler</strong></span>) selon les besoins</li>
+<li class="fragment"><span class="blue2"><strong>Monitoring</strong></span> de l’état de santé des applications</li>
+<li class="fragment">Déploiements <span class="blue2"><strong>reproductibles</strong></span> et <span class="blue2"><strong>automatisés</strong></span></li>
 </ul></li>
 </ul>
 <div class="fragment">
