@@ -516,9 +516,11 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="principes-généraux" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Principes généraux</h2>
-<p><span class="emoji" data-emoji="one">1️⃣</span> Adopter les <span class="orange"><strong>standards communautaires</strong></span></p>
-<p><span class="emoji" data-emoji="two">2️⃣</span> Utiliser des <span class="orange"><strong>fonctions</strong></span></p>
-<p><span class="emoji" data-emoji="three">3️⃣</span> <span class="orange"><strong>Auto-documenter</strong></span> son code</p>
+<ul>
+<li class="fragment"><p>Adopter les <span class="orange"><strong>standards communautaires</strong></span></p></li>
+<li class="fragment"><p>Utiliser des <span class="orange"><strong>fonctions</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Auto-documenter</strong></span> son code</p></li>
+</ul>
 </section>
 <section id="standards-communautaires" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="one">1️⃣</span> Standards communautaires</h2>
@@ -644,10 +646,12 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="principes-généraux-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Principes généraux</h2>
-<p><span class="emoji" data-emoji="one">1️⃣</span> <span class="orange"><strong>Notebooks</strong></span> : pour l’<span class="orange"><strong>exploration</strong></span> et la <span class="orange"><strong>communication</strong></span></p>
-<p><span class="emoji" data-emoji="two">2️⃣</span> Pour l’<span class="orange"><strong>industrialisation</strong></span> : adopter une <span class="orange"><strong>structure modulaire</strong></span></p>
-<p><span class="emoji" data-emoji="three">3️⃣</span> Adopter les <span class="orange"><strong>standards communautaires</strong></span></p>
-<p><span class="emoji" data-emoji="four">4️⃣</span> <span class="orange"><strong>Documenter</strong></span> son projet</p>
+<ul>
+<li class="fragment"><p><span class="orange"><strong>Notebooks</strong></span> : pour l’<span class="orange"><strong>exploration</strong></span> et la <span class="orange"><strong>communication</strong></span></p></li>
+<li class="fragment"><p>Pour l’<span class="orange"><strong>industrialisation</strong></span> : adopter une <span class="orange"><strong>structure modulaire</strong></span></p></li>
+<li class="fragment"><p>Adopter les <span class="orange"><strong>standards communautaires</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Documenter</strong></span> son projet</p></li>
+</ul>
 </section>
 <section id="notebooks" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="one">1️⃣</span> Notebooks</h2>
@@ -713,8 +717,14 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment">En pratique, c’est toujours plus compliqué…</li>
 </ul></li>
 </ul>
-
-<img data-src="img/IWOMM.jpg" class="r-stretch quarto-figure-center"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/IWOMM.jpg"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="lenjeu-de-la-portabilité" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’enjeu de la portabilité</h2>
 <ul>
@@ -739,9 +749,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment">Quels <span class="orange"><strong>problème</strong></span> peuvent se poser ?</li>
 </ul>
 </section>
-<section class="slide level2">
-
-<h3 data-background-image="background.svg" data-background-size="contain" id="environnements-virtuels-enjeux">Environnements virtuels : enjeux</h3>
+<section id="environnements-virtuels-enjeux" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Environnements virtuels : enjeux</h2>
 <ul>
 <li class="fragment"><p><span class="orange"><strong>Conflits de version</strong></span> : différents projets peuvent recquérir des versions différentes d’un même <em>package</em></p></li>
 <li class="fragment"><p><span class="orange"><strong>Version de Python fixe</strong></span>, celle de l’installation système</p></li>
@@ -749,9 +758,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p><span class="orange"><strong>Portabilité limitée</strong></span> : difficile de fixer dans un fichier les dépendances spécifiques à un projet</p></li>
 </ul>
 </section>
-<section class="slide level2">
-
-<h3 data-background-image="background.svg" data-background-size="contain" id="environnements-virtuels-fonctionnement">Environnements virtuels : fonctionnement</h3>
+<section id="environnements-virtuels-fonctionnement" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Environnements virtuels : fonctionnement</h2>
 <ul>
 <li class="fragment"><span class="orange"><strong>Dossier auto-suffisant</strong></span> qui contient :
 <ul>
@@ -761,9 +769,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment">Développer dans un environnement virtuel vierge est une bonne pratique pour la <span class="orange"><strong>reproductibilité</strong></span></li>
 </ul>
 </section>
-<section class="slide level2">
-
-<h3 data-background-image="background.svg" data-background-size="contain" id="environnements-virtuels-implémentations">Environnements virtuels : implémentations</h3>
+<section id="environnements-virtuels-implémentations" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Environnements virtuels : implémentations</h2>
 <ul>
 <li class="fragment">Différentes <span class="orange"><strong>implémentations</strong></span> en Python
 <ul>
@@ -787,8 +794,14 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 <li class="fragment"><code>conda</code> est un outil en ligne de commandes (CLI)</li>
 </ul>
-
-<img data-src="img/conda-eco.png" class="r-stretch quarto-figure-center"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/conda-eco.png" height="200"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="environnements-virtuels-en-pratique" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Environnements virtuels : en pratique</h2>
 <ul>
@@ -825,6 +838,13 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>Plusieurs implémentations des conteneurs</p></li>
 <li class="fragment"><p><code>Docker</code> est largement prédominant</p></li>
 </ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/docker.png"></p>
+</figure>
+</div>
+</div>
 </section>
 <section id="docker-installation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Docker : installation</h2>
@@ -837,7 +857,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="docker-fonctionnement" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Docker : fonctionnement</h2>
 
-<img data-src="img/docker-workflow.png" class="r-stretch"><p>Source : <a href="https://k21academy.com/docker-kubernetes/docker-and-kubernetes/">k21academy.com</a></p>
+<img data-src="img/docker-workflow.png" class="r-stretch quarto-figure-center"><p>Source : <a href="https://k21academy.com/docker-kubernetes/docker-and-kubernetes/">k21academy.com</a></p>
 </section>
 <section id="docker-en-pratique" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Docker : en pratique</h2>
@@ -870,8 +890,14 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>Idée : <span class="orange"><strong>unifier</strong></span> le développement (<em>dev</em>) et l’administration système (<em>ops</em>)</p></li>
 <li class="fragment"><p>But : raccourcir le temps de développement en <span class="orange"><strong>déployant en continu</strong></span> tout en maintenant la qualité</p></li>
 </ul>
-
-<img data-src="img/devops.png" class="r-stretch"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/devops.png" height="300"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="devops-dataops-mlops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>DevOps, DataOps, MLOps ?</h2>
 <ul>
@@ -912,8 +938,14 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p><span class="orange"><strong>API</strong> : <strong>interface</strong></span> entre l’utilisateur (client) et le modèle entraîné</p></li>
 <li class="fragment"><p><span class="orange"><strong>API REST</strong></span> : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière <em>scalable</em></p></li>
 </ul>
-
-<img data-src="img/api-docker.png" class="r-stretch"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/api-docker.png"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="environnement-de-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Environnement de production</h2>
 <ul>
@@ -925,12 +957,18 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment">Déploiements <span class="orange"><strong>reproductibles</strong></span> et <span class="orange"><strong>automatisés</strong></span></li>
 </ul></li>
 </ul>
-
-<img data-src="img/kubernetes-logo.png" class="r-stretch"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/kubernetes-logo.png"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="fonctionnement-de-kubernetes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Fonctionnement de Kubernetes</h2>
 
-<img data-src="img/kubernetes-archi.png" class="r-stretch"></section>
+<img data-src="img/kubernetes-archi.png" class="r-stretch quarto-figure-center"></section>
 <section id="lapproche-cicd-principes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’approche CI/CD : principes</h2>
 <ul>
@@ -942,33 +980,31 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="lapproche-cicd-exemple" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’approche CI/CD : exemple</h2>
 
-<img data-src="img/ci-cd.png" class="r-stretch"></section>
+<img data-src="img/ci-cd.png" class="r-stretch quarto-figure-center"></section>
 <section id="pipeline-complet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Pipeline complet</h2>
 <ul>
 <li class="fragment"><p>Les données d’entrée ne sont pas fixes, il faut les intégrer dans un <span class="orange"><strong>pipeline</strong></span> complet de données</p></li>
 <li class="fragment"><p>La représentation est faite sous forme de graphes acycliques dirigés (<span class="orange"><strong>DAG</strong></span>)</p></li>
 </ul>
-
-<img data-src="img/pipeline.png" class="r-stretch"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/pipeline.png"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="conclusion" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Conclusion</h2>
 <ul>
 <li class="fragment">On a construit un pipeline <span class="orange"><strong>reproductible</strong></span>, <span class="orange"><strong>automatisé</strong></span> et <span class="orange"><strong>scalable</strong></span></li>
 </ul>
-
-<img data-src="img/devops.png" class="r-stretch"></section></section>
-<section>
-<section id="application" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Application</h1>
-
-</section>
-<section id="exercice-guidé" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exercice guidé</h2>
-<ul>
-<li class="fragment"><p>Dépôt GitHub : <a href="https://github.com/avouacr/ensae-reproductibilite-projet">https://github.com/avouacr/ensae-reproductibilite-projet</a></p></li>
-<li class="fragment"><p>Consignes sur la page <a href="https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html">Application</a> du cours</p></li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/devops.png" height="300"></p>
+</figure>
+</div>
 <div class="footer footer-default">
 <p>Bonnes pratiques pour la mise en production des projets de data science</p>
 </div>
