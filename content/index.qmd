@@ -159,7 +159,9 @@ __Format des commits__
     - [Introduction au terminal Linux](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/linux101.html)
     - [Versionner son code et travailler collaborativement avec Git](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/git.html)
 
+## Application : initialisation du projet
 
+- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#partie-0-initialisation-du-script)
 
 
 
@@ -239,6 +241,14 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - [**Idéal**]{.orange} 💪 : documenter ses fonctions avec des *docstrings*
 :::
 
+## Application : qualité du code
+
+- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#partie-1-qualit%C3%A9-du-script)
+
+
+
+
+
 # Structure des projets
 
 ## Enjeux
@@ -294,6 +304,10 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - Inclure un fichier `README.md` à la racine du projet
     - [**Carte d'identité**]{.blue2} et [**vitrine**]{.blue2} du projet
     - Présente le [**contexte**]{.blue2} et le [**fonctionnement**]{.blue2} du projet
+
+## Application : structure du projet
+
+- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#partie2)
 
 
 
@@ -390,6 +404,10 @@ et qui est [**isolé**]{.orange} des autres environnements existants
 
 - Peu adaptés à un environnement de [**production**]{.orange}
 
+## Application : environnements virtuels
+
+- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#anaconda)
+
 ## Conteneurs : introduction
 
 - Idée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on [**distribuer directement la bonne machine**]{.orange} ?
@@ -430,11 +448,9 @@ Source : [docker.com](https://www.docker.com/resources/what-container/)
 
 Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)
 
-## Docker : en pratique
+## Application : conteneurisation avec Docker
 
-- [Exercice guidé](https://ensae-reproductibilite.netlify.app/portability/#en-pratique-1)
-
-- [Aide-mémoire des principales commandes](https://ensae-reproductibilite.netlify.app/portability/#en-pratique-1)
+- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#docker)
 
 
 
