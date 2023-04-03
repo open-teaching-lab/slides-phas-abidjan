@@ -175,11 +175,11 @@ __Format des commits__
 
 ## Principes généraux
 
-:one: Adopter les [**standards communautaires**]{.orange}
+- Adopter les [**standards communautaires**]{.orange}
 
-:two: Utiliser des [**fonctions**]{.orange}
+- Utiliser des [**fonctions**]{.orange}
 
-:three: [**Auto-documenter**]{.orange} son code
+- [**Auto-documenter**]{.orange} son code
 
 ## :one: Standards communautaires
 
@@ -252,13 +252,13 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## Principes généraux
 
-:one: [**Notebooks**]{.orange} : pour l'[**exploration**]{.orange} et la [**communication**]{.orange}
+- [**Notebooks**]{.orange} : pour l'[**exploration**]{.orange} et la [**communication**]{.orange}
 
-:two: Pour l'[**industrialisation**]{.orange} : adopter une [**structure modulaire**]{.orange}
+- Pour l'[**industrialisation**]{.orange} : adopter une [**structure modulaire**]{.orange}
 
-:three: Adopter les [**standards communautaires**]{.orange}
+- Adopter les [**standards communautaires**]{.orange}
 
-:four: [**Documenter**]{.orange} son projet
+- [**Documenter**]{.orange} son projet
 
 ## :one: Notebooks
 
@@ -308,6 +308,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
     - En théorie, oui !
     - En pratique, c'est toujours plus compliqué...
 
+. . .
+
 ![](img/IWOMM.jpg){fig-align="center"}
 
 ## L'enjeu de la portabilité
@@ -328,9 +330,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - Quels [**problème**]{.orange} peuvent se poser ?
 
-----
-
-### Environnements virtuels : enjeux
+## Environnements virtuels : enjeux
 
 - [**Conflits de version**]{.orange} : différents projets peuvent recquérir des versions différentes d'un même *package*
 
@@ -340,9 +340,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - [**Portabilité limitée**]{.orange} : difficile de fixer dans un fichier les dépendances spécifiques à un projet
 
-----
-
-### Environnements virtuels : fonctionnement
+## Environnements virtuels : fonctionnement
 
 - [**Dossier auto-suffisant**]{.orange} qui contient :
     - Une installation de `Python` pour une version donnée ;
@@ -351,9 +349,7 @@ et qui est [**isolé**]{.orange} des autres environnements existants
 
 - Développer dans un environnement virtuel vierge est une bonne pratique pour la [**reproductibilité**]{.orange}
 
-----
-
-### Environnements virtuels : implémentations
+## Environnements virtuels : implémentations
 
 - Différentes [**implémentations**]{.orange} en Python
     - L'implémentation standard est `venv`
@@ -371,7 +367,9 @@ et qui est [**isolé**]{.orange} des autres environnements existants
 
 - `conda` est un outil en ligne de commandes (CLI)
 
-![](img/conda-eco.png){fig-align="center"}
+. . .
+
+![](img/conda-eco.png){height="200" fig-align="center"}
 
 ## Environnements virtuels : en pratique
 
@@ -411,6 +409,10 @@ Source : [docker.com](https://www.docker.com/resources/what-container/)
 
 - `Docker` est largement prédominant
 
+. . .
+
+![](img/docker.png){fig-align="center"}
+
 ## Docker : installation
 
 - [Instructions](https://docs.docker.com/get-docker/) selon le système d'exploitation
@@ -421,7 +423,7 @@ Source : [docker.com](https://www.docker.com/resources/what-container/)
 
 ## Docker : fonctionnement
 
-![](img/docker-workflow.png)
+![](img/docker-workflow.png){fig-align="center"}
 
 Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)
 
@@ -454,7 +456,9 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - But : raccourcir le temps de développement en [**déployant en continu**]{.orange} tout en maintenant la qualité
 
-![](img/devops.png)
+. . .
+
+![](img/devops.png){fig-align="center" height=300}
 
 ## DevOps, DataOps, MLOps ?
 
@@ -491,7 +495,9 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - [**API REST**]{.orange} : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière *scalable*
 
-![](img/api-docker.png)
+. . .
+
+![](img/api-docker.png){fig-align="center"}
 
 ## Environnement de production
 
@@ -502,11 +508,13 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
     - [**Monitoring**]{.orange} de l'état de santé des applications
     - Déploiements [**reproductibles**]{.orange} et [**automatisés**]{.orange}
 
-![](img/kubernetes-logo.png)
+. . .
+
+![](img/kubernetes-logo.png){fig-align="center"}
 
 ## Fonctionnement de Kubernetes
 
-![](img/kubernetes-archi.png)
+![](img/kubernetes-archi.png){fig-align="center"}
 
 ## L'approche CI/CD : principes
 
@@ -518,7 +526,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ## L'approche CI/CD : exemple
 
-![](img/ci-cd.png)
+![](img/ci-cd.png){fig-align="center"}
 
 ## Pipeline complet
 
@@ -526,23 +534,15 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - La représentation est faite sous forme de graphes acycliques dirigés ([**DAG**]{.orange})
 
-![](img/pipeline.png)
+. . .
+
+![](img/pipeline.png){fig-align="center"}
 
 ## Conclusion
 
 - On a construit un pipeline [**reproductible**]{.orange}, [**automatisé**]{.orange} et [**scalable**]{.orange}
 
-![](img/devops.png)
+![](img/devops.png){fig-align="center" height=300}
 
 
 
-
-
-
-# Application
-
-## Exercice guidé
-
-- Dépôt GitHub : [https://github.com/avouacr/ensae-reproductibilite-projet](https://github.com/avouacr/ensae-reproductibilite-projet)
-
-- Consignes sur la page [Application](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html) du cours
