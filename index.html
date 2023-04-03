@@ -511,18 +511,24 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <ul>
 <li class="fragment"><p>D’une vision utilitariste du code à une vision du code comme <span class="orange"><strong>outil de communication</strong></span></p></li>
 <li class="fragment"><p>Favoriser la <span class="orange"><strong>lisibilité</strong></span> et la <span class="orange"><strong>maintenabilité</strong></span></p></li>
-<li class="fragment"><p>Adopter les <span class="orange"><strong>standards communautaires</strong></span> du langage</p></li>
+<li class="fragment"><p>Faciliter la <span class="orange"><strong>réutilisation</strong></span></p></li>
 </ul>
 </section>
+<section id="principes-généraux" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Principes généraux</h2>
+<p><span class="emoji" data-emoji="one">1️⃣</span> Adopter les <span class="orange"><strong>standards communautaires</strong></span></p>
+<p><span class="emoji" data-emoji="two">2️⃣</span> Utiliser des <span class="orange"><strong>fonctions</strong></span></p>
+<p><span class="emoji" data-emoji="three">3️⃣</span> <span class="orange"><strong>Auto-documenter</strong></span> son code</p>
+</section>
 <section id="standards-communautaires" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Standards communautaires</h2>
+<h2><span class="emoji" data-emoji="one">1️⃣</span> Standards communautaires</h2>
 <ul>
 <li class="fragment"><p><span class="blue2"><strong>Python</strong></span> : <a href="https://peps.python.org/pep-0008/">PEP8</a>, <a href="https://peps.python.org/pep-0257/">PEP 257</a></p></li>
 <li class="fragment"><p>La <span class="orange"><strong>cohérence intra-projet</strong></span> doit toujours primer</p></li>
 </ul>
 </section>
-<section id="outils" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Outils</h2>
+<section id="standards-communautaires---outils" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="one">1️⃣</span> Standards communautaires - Outils</h2>
 <ul>
 <li class="fragment"><span class="blue2"><strong>Linters</strong></span> : diagnostic de qualité du code
 <ul>
@@ -533,6 +539,91 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><a href="https://github.com/psf/black">Black</a></li>
 </ul></li>
 </ul>
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Astuce</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment"><span class="blue2">Exemples d’erreurs repérées</span> par un <em>linter</em> :
+<ul>
+<li class="fragment">lignes de code trop longues ou mal indentées, parenthèses non équilibrées, noms de fonctions mal construits…</li>
+</ul></li>
+<li class="fragment"><span class="blue2">Exemples d’erreurs <strong>non</strong> repérées</span> par un <em>linter</em> :
+<ul>
+<li class="fragment">fonctions mal utilisées, arguments mal spécifiés, structure du code incohérente, code insuffisamment documenté…</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="utiliser-des-fonctions" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="two">2️⃣</span> Utiliser des fonctions</h2>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Règle d’or</strong></p>
+</div>
+<div class="callout-content">
+<p>Il faut utiliser une <span class="red2"><strong>fonction</strong></span> dès qu’on utilise une même portion de code plus de deux fois (<span class="red2"><strong><em>don’t repeat yourself</em> (DRY)</strong></span>)</p>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment"><span class="orange"><strong>Limite les risques d’erreurs</strong></span> liés aux copier/coller</li>
+<li class="fragment">Rend le code <span class="orange"><strong>plus lisible</strong></span> et <span class="orange"><strong>plus compact</strong></span></li>
+<li class="fragment"><span class="orange"><strong>Un seul endroit</strong></span> du code à modifier lorsqu’on souhaite modifier le traitement</li>
+<li class="fragment">Facilite la <span class="orange"><strong>réutilisation</strong></span> et la <span class="orange"><strong>documentation</strong></span> du code !</li>
+</ul>
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Règles pour écrire des fonctions <strong>pertinentes</strong></strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment">Une tâche = une fonction</li>
+<li class="fragment">Une tâche complexe = un enchaînement de fonctions réalisant chacune une tâche simple</li>
+<li class="fragment">Limiter l’utilisation de variables globales.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="documenter-son-code" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> Documenter son code</h2>
+<ul>
+<li class="fragment"><p>Documenter le <span class="orange"><strong>pourquoi</strong></span> plutôt que le <span class="orange"><strong>comment</strong></span></p></li>
+<li class="fragment"><p>Privilégier l’<span class="orange"><strong>auto-documentation</strong></span> via des nommages pertinents</p></li>
+</ul>
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Comment bien documenter un script ?</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment"><span class="orange"><strong>Minimum</strong></span> 🚦 : décrire ce que le code fait au début du script</li>
+<li class="fragment"><span class="orange"><strong>Bien</strong></span> 👍 : commenter les parties “délicates” du code</li>
+<li class="fragment"><span class="orange"><strong>Idéal</strong></span> 💪 : documenter ses fonctions avec des <em>docstrings</em></li>
+</ul>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="structure-des-projets" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
@@ -549,52 +640,61 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><span class="blue2"><strong>Non-linéarité</strong></span></li>
 <li class="fragment"><span class="blue2"><strong>Reproductibilité</strong></span></li>
 </ul></li>
-<li class="fragment"><p>Adopter les <span class="orange"><strong>standards communautaires</strong></span> du langage</p></li>
 </ul>
 </section>
-<section id="principes-généraux" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="principes-généraux-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Principes généraux</h2>
+<p><span class="emoji" data-emoji="one">1️⃣</span> <span class="orange"><strong>Notebooks</strong></span> : pour l’<span class="orange"><strong>exploration</strong></span> et la <span class="orange"><strong>communication</strong></span></p>
+<p><span class="emoji" data-emoji="two">2️⃣</span> Pour l’<span class="orange"><strong>industrialisation</strong></span> : adopter une <span class="orange"><strong>structure modulaire</strong></span></p>
+<p><span class="emoji" data-emoji="three">3️⃣</span> Adopter les <span class="orange"><strong>standards communautaires</strong></span></p>
+<p><span class="emoji" data-emoji="four">4️⃣</span> <span class="orange"><strong>Documenter</strong></span> son projet</p>
+</section>
+<section id="notebooks" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="one">1️⃣</span> Notebooks</h2>
 <ul>
-<li class="fragment">Les données sont <span class="orange"><strong>immuables</strong></span>
+<li class="fragment"><span class="orange"><strong>Avantages</strong></span>
 <ul>
-<li class="fragment">Pas de modifications manuelles</li>
-<li class="fragment"><span class="blue2"><strong>Stockage externe</strong></span> (ex : S3)</li>
+<li class="fragment"><span class="blue2"><strong>Interactivité</strong></span> : idéal pour l’expérimentation</li>
+<li class="fragment"><span class="blue2"><strong>Communication</strong></span> : diffusion de résultats sous forme exécutable</li>
 </ul></li>
-<li class="fragment"><span class="orange"><strong>Notebooks</strong></span> : pour l’<span class="orange"><strong>exploration</strong></span> et la <span class="orange"><strong>communication</strong></span>
+<li class="fragment"><span class="orange"><strong>Inconvénients</strong></span>
 <ul>
-<li class="fragment">Reproductibilité limitée</li>
-<li class="fragment">Mal gérés par le contrôle de version</li>
+<li class="fragment"><span class="blue2"><strong>Reproductibilité</strong></span> limitée</li>
+<li class="fragment">Pas adaptés pour l’<span class="blue2"><strong>automatisation</strong></span></li>
+<li class="fragment">Mal gérés par le <span class="blue2"><strong>contrôle de version</strong></span></li>
 </ul></li>
-<li class="fragment">Favoriser une structure <span class="orange"><strong>modulaire</strong></span>
-<ul>
-<li class="fragment">Utiliser des <span class="blue2"><strong>fonctions</strong></span> contenues dans des <span class="blue2"><strong>modules</strong></span></li>
-</ul></li>
-<li class="fragment"><span class="orange"><strong>(Auto-)documenter</strong></span> son projet</li>
 </ul>
 </section>
-<section id="standards-communautaires-outils" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Standards communautaires / outils</h2>
+<section id="favoriser-une-structure-modulaire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="two">2️⃣</span> Favoriser une structure modulaire</h2>
 <ul>
-<li class="fragment"><p><span class="orange"><strong>Python</strong></span> : <span class="blue2"><strong>Cookiecutters</strong></span> (<a href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter Data Science</a>)</p></li>
-<li class="fragment"><p>La <span class="orange"><strong>cohérence intra-projet</strong></span> doit toujours primer</p></li>
-</ul>
-</section>
-<section id="les-packages" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Les packages</h2>
-<ul>
-<li class="fragment">Un <em>package</em> est la forme maximale de <span class="orange"><strong>modularité</strong></span>
+<li class="fragment"><p>Principe : <span class="orange"><strong>séparation</strong></span> des <span class="blue2"><strong>données</strong></span>, du <span class="blue2"><strong>code</strong></span> et de la <span class="blue2"><strong>configuration</strong></span></p></li>
+<li class="fragment"><p>Adopter une structure de <span class="orange"><strong>package</strong></span></p>
 <ul>
 <li class="fragment">Contient des <span class="blue2"><strong>fonctions</strong></span> rangées dans des <span class="blue2"><strong>modules</strong></span></li>
 <li class="fragment">Contient également de la <span class="blue2"><strong>documentation</strong></span>, des <span class="blue2"><strong>tests</strong></span>, des (méta-)données…</li>
 </ul></li>
-<li class="fragment"><span class="orange"><strong>Avantages</strong></span>
+</ul>
+</section>
+<section id="adopter-les-standards-communautaires" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> Adopter les standards communautaires</h2>
 <ul>
-<li class="fragment"><span class="blue2"><strong>Simple</strong></span> à développer</li>
-<li class="fragment">Idéal pour favoriser la <span class="blue2"><strong>réutilisation</strong></span> du code</li>
+<li class="fragment"><span class="orange"><strong>Templates</strong></span> de projets : <span class="blue2"><strong>Cookiecutters</strong></span>
+<ul>
+<li class="fragment"><a href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter Data Science</a></li>
+<li class="fragment"><a href="https://py-pkgs.org/03-how-to-package-a-python#creating-a-package-structure">Cookiecutter Python Package</a></li>
 </ul></li>
-<li class="fragment"><span class="orange"><strong>Inconvénients</strong></span>
+<li class="fragment">La <span class="orange"><strong>cohérence intra-projet</strong></span> doit toujours primer</li>
+</ul>
+</section>
+<section id="documenter-son-projet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="four">4️⃣</span> Documenter son projet</h2>
 <ul>
-<li class="fragment">Coût de <span class="blue2"><strong>maintenance</strong></span> élevé</li>
+<li class="fragment"><p>Favoriser l’<span class="orange"><strong>auto-documentation</strong></span> via des nommages pertinents</p></li>
+<li class="fragment"><p>Inclure un fichier <code>README.md</code> à la racine du projet</p>
+<ul>
+<li class="fragment"><span class="orange"><strong>Carte d’identité</strong></span> et <span class="orange"><strong>vitrine</strong></span> du projet</li>
+<li class="fragment">Présente le <span class="orange"><strong>contexte</strong></span> et le <span class="orange"><strong>fonctionnement</strong></span> du projet</li>
 </ul></li>
 </ul>
 </section></section>
@@ -618,14 +718,13 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="lenjeu-de-la-portabilité" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’enjeu de la portabilité</h2>
 <ul>
-<li class="fragment"><p>Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses <span class="orange"><strong>adhérences</strong></span></p>
+<li class="fragment">Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses <span class="orange"><strong>adhérences</strong></span>
 <ul>
 <li class="fragment">Des <span class="orange"><strong>dépendances</strong></span> dans le langage du projet</li>
 <li class="fragment">Des dépendances dans d’autres langages</li>
 <li class="fragment">Des <span class="orange"><strong>librairies système</strong></span></li>
 </ul></li>
-<li class="fragment"><p>Un code est <span class="orange"><strong>portable</strong></span> s’il peut être exécuté dans un environnement différent que celui du développement</p></li>
-<li class="fragment"><p>Besoin de <span class="orange"><strong>nouveaux outils</strong></span></p></li>
+<li class="fragment">Un code est <span class="orange"><strong>portable</strong></span> s’il peut être exécuté dans un environnement différent que celui du développement</li>
 </ul>
 </section>
 <section id="environnements-virtuels-introduction" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -689,7 +788,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><code>conda</code> est un outil en ligne de commandes (CLI)</li>
 </ul>
 
-<img data-src="img/conda-eco.png" class="r-stretch"></section>
+<img data-src="img/conda-eco.png" class="r-stretch quarto-figure-center"></section>
 <section id="environnements-virtuels-en-pratique" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Environnements virtuels : en pratique</h2>
 <ul>
