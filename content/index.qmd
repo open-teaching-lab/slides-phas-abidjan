@@ -252,9 +252,9 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## Principes généraux
 
-- [**Notebooks**]{.orange} : pour l'[**exploration**]{.orange} et la [**communication**]{.orange}
+- [**Notebooks**]{.orange} : pour l'[**exploration**]{.blue2} et la [**communication**]{.blue2}
 
-- Pour l'[**industrialisation**]{.orange} : adopter une [**structure modulaire**]{.orange}
+- Pour l'[**industrialisation**]{.orange} : adopter une [**structure modulaire**]{.blue2}
 
 - Adopter les [**standards communautaires**]{.orange}
 
@@ -273,7 +273,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## :two: Favoriser une structure modulaire
 
-- Principe : [**séparation**]{.orange} des [**données**]{.blue2}, du [**code**]{.blue2} et de la [**configuration**]{.blue2}
+- Principe de [**séparation**]{.orange} des [**données**]{.blue2}, du [**code**]{.blue2} et de la [**configuration**]{.blue2}
 
 - Adopter une structure de [**package**]{.orange}
   - Contient des [**fonctions**]{.blue2} rangées dans des [**modules**]{.blue2}
@@ -292,8 +292,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - Favoriser l'[**auto-documentation**]{.orange} via des nommages pertinents
 
 - Inclure un fichier `README.md` à la racine du projet
-    - [**Carte d'identité**]{.orange} et [**vitrine**]{.orange} du projet
-    - Présente le [**contexte**]{.orange} et le [**fonctionnement**]{.orange} du projet
+    - [**Carte d'identité**]{.blue2} et [**vitrine**]{.blue2} du projet
+    - Présente le [**contexte**]{.blue2} et le [**fonctionnement**]{.blue2} du projet
 
 
 
@@ -315,11 +315,14 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 ## L'enjeu de la portabilité
 
 - Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses [**adhérences**]{.orange}
-    - Des [**dépendances**]{.orange} dans le langage du projet
-    - Des dépendances dans d'autres langages
-    - Des [**librairies système**]{.orange}
+    - Des [**dépendances**]{.blue2}
+    - Des [**librairies système**]{.blue2}
 
 - Un code est [**portable**]{.orange} s'il peut être exécuté dans un environnement différent que celui du développement
+
+- Besoin de nouveaux outils
+    - Les [**environnements virtuels**]{.blue2}
+    - Les [**conteneurs**]{.blue2}
 
 ## Environnements virtuels : introduction
 
@@ -462,11 +465,11 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ## DevOps, DataOps, MLOps ?
 
-- Le [***DevOps***]{.orange} n'intègre pas les spécificités liées à la data science
+- Le [**DevOps**]{.orange} n'intègre pas les spécificités liées à la data science
 
-- [***DataOps***]{.orange} : déploiement et maintenance de [**pipelines de données**]{.orange}
+- [**DataOps**]{.orange} : déploiement et maintenance de [**pipelines de données**]{.blue2}
 
-- [***MLOps***]{.orange} : déploiement et maintenance de [**modèles de Machine Learning**]{.orange}
+- [**MLOps**]{.orange} : déploiement et maintenance de [**modèles de Machine Learning**]{.blue2}
 
 - Les [**bonnes pratiques**]{.orange} favorisent la collaboration et facilitent les déploiements
 
@@ -475,9 +478,9 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 - On a construit un projet de data science [**reproductible**]{.orange} et conforme aux [**standards**]{.orange} des bonnes pratiques
 
 - Pour [**valoriser**]{.orange} le projet, il faut le [**déployer**]{.orange} dans un environnement en lien avec les utilisateurs
-    - Quel est le [**format**]{.orange} adapté pour le valoriser ?
-    - Quelle [**infrastructure de production**]{.orange} ?
-    - Comment [**automatiser**]{.orange} le processus de déploiement ?
+    - Quel est le [**format**]{.blue2} adapté pour le valoriser ?
+    - Quelle [**infrastructure de production**]{.blue2} ?
+    - Comment [**automatiser**]{.blue2} le processus de déploiement ?
 
 ## Format de valorisation
 
@@ -504,9 +507,9 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 - Dépend essentiellement de l'infrastructure à disposition
 
 - Un [**orchestrateur**]{.orange} de conteneurs répond à plusieurs besoins :
-    - Adapter les ressources ([**scaler**]{.orange}) selon les besoins
-    - [**Monitoring**]{.orange} de l'état de santé des applications
-    - Déploiements [**reproductibles**]{.orange} et [**automatisés**]{.orange}
+    - Adapter les ressources ([**scaler**]{.blue2}) selon les besoins
+    - [**Monitoring**]{.blue2} de l'état de santé des applications
+    - Déploiements [**reproductibles**]{.blue2} et [**automatisés**]{.blue2}
 
 . . .
 
