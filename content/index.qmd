@@ -45,6 +45,17 @@ from: markdown+emoji
 
 - <romain.avouac@insee.fr>, <lino.galiana@insee.fr>
 
+## La notion de mise en production
+
+- [**Mettre en production**]{.orange} : faire [**vivre**]{.blue2} une application dans l'espace de ses [**utilisateurs**]{.blue2}
+    - Notion simple mais mise en oeuvre compliquée !
+
+- Dépasser le stade de l'expérimentation
+    - [**Bonnes pratiques**]{.blue2} de développement
+    - Techniques informatiques d'[**industrialisation**]{.blue2}
+
+- Enjeu : pouvoir jouer le [**rôle d'interface**]{.orange} entre métier et équipes techniques
+
 ## La notion de bonnes pratiques
 
 - [**Origine**]{.blue2} : communauté des développeurs logiciels
@@ -54,7 +65,6 @@ from: markdown+emoji
     - la maintenance d'un code est très coûteuse
 
 - [**Conséquence**]{.blue2} : un ensemble de [**règles informelles**]{.orange}, conventionnellement acceptées comme produisant des logiciels [**fiables**]{.orange}, [**évolutifs**]{.orange} et [**maintenables**]{.orange}
-
 
 ## Pourquoi s'intéresser aux bonnes pratiques ?
 
@@ -66,16 +76,9 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 - [**projets collaboratifs**]{.orange} et de grande envergure
 
-
 - [**complexification**]{.orange} des données et des [**infrastructures**]{.orange}
 
 - [**déploiement**]{.orange} d'applications pour valoriser les analyses
-
-## Bonnes pratiques et reproductibilité
-
-![](img/reprospectrum.png){height="200" fig-align="center"}
-
-**Source** : Peng R., Reproducible Research in Computational Science, Science (2011)
 
 ## Contenu du cours
 
@@ -161,7 +164,7 @@ __Format des commits__
 
 ## Application : initialisation du projet
 
-- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#partie-0-initialisation-du-script)
+- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#partie-0-initialisation-du-projet)
 
 
 
