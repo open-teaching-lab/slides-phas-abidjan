@@ -93,6 +93,20 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 - [**Déployer**]{.orange} et [**valoriser**]{.orange} un projet de data science
 
+## Modalités pédagogiques
+
+- [**Apprentissage par la pratique**]{.orange}
+    - [Application](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html) : industrialisation d'un projet de ML
+
+- [**Langage**]{.orange} : `Python`
+    - Langage [**dominant**]{.blue2} dans le monde de la donnée
+    - Les principes présentés sont [**agnostiques**]{.blue2} au langage
+
+- [**Environnement d'exécution**]{.orange} : [SSP Cloud](https://datalab.sspcloud.fr/)
+    - Environnement de développement [**normalisé**]{.blue2}
+    - Véritable environnement de [**production**]{.blue2}
+    - Acquisition des [**bonnes pratiques**]{.blue2}
+
 
 
 
