@@ -405,12 +405,6 @@ et qui est [**isolé**]{.orange} des autres environnements existants
 
 ![](img/conda-eco.png){height="200" fig-align="center"}
 
-## Environnements virtuels : en pratique
-
-- [Exercice guidé](https://ensae-reproductibilite.netlify.app/portability/#en-pratique)
-
-- [Aide-mémoire des principales commandes](https://ensae-reproductibilite.netlify.app/portability/#aide-m%c3%a9moire)
-
 ## Environnements virtuels : limites
 
 - Les [**librairies système**]{.orange} ne sont pas gérées
