@@ -572,6 +572,8 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - On a construit un pipeline [**reproductible**]{.orange}, [**automatisé**]{.orange} et [**scalable**]{.orange}
 
+. . .
+
 ![](img/devops.png){fig-align="center" height=300}
 
 
