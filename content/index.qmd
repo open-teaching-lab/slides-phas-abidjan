@@ -1,7 +1,10 @@
 ---
 title: Mise en production des projets de data science
 subtitle: |
-  [**[Romain Avouac, Lino Galiana]{.orange}**]{.orange}
+  ENSAE 3A - 2023/2024
+author:
+    - Romain Avouac
+    - Lino Galiana
 # date: 
 slide-number: true
 footer: |
@@ -28,14 +31,6 @@ from: markdown+emoji
 
 # Introduction
 
-## Disclaimer
-
-- Contenu en construction : [https://linogaliana.github.io/ensae-reproductibilite-website/](https://linogaliana.github.io/ensae-reproductibilite-website/)
-
-- Programme large
-
-- Applications guidées
-
 ## Contexte
 
 - [**Qui sommes-nous ?**]{.orange}
@@ -45,16 +40,24 @@ from: markdown+emoji
 
 - <romain.avouac@insee.fr>, <lino.galiana@insee.fr>
 
+## Qu'est ce qu'un data scientist ?
+
+![](img/sexiest-job.png){fig-align="center" height=250}
+
+- Tendance à la [**spécialisation**]{.orange} : *data analyst*, *data engineer*, *ML Engineer*...
+
+- Rôle d'[**interface**]{.orange} entre métier et équipes techniques
+    - [**Compétences mixtes**]{.blue2} : savoir métier, modélisation, IT
+
 ## La notion de mise en production
 
 - [**Mettre en production**]{.orange} : faire [**vivre**]{.blue2} une application dans l'espace de ses [**utilisateurs**]{.blue2}
     - Notion simple mais mise en oeuvre compliquée !
 
-- Dépasser le stade de l'expérimentation
+- [**Dépasser le stade de l'expérimentation**]{.orange}
+    - Comprendre les [**besoins**]{.blue2} des utilisateurs
     - [**Bonnes pratiques**]{.blue2} de développement
     - Techniques informatiques d'[**industrialisation**]{.blue2}
-
-- Enjeu : pouvoir jouer le [**rôle d'interface**]{.orange} entre métier et équipes techniques
 
 ## La notion de bonnes pratiques
 
@@ -72,31 +75,42 @@ from: markdown+emoji
 
 L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
-- projets [**intenses en code**]{.orange}
+- projets [**intenses en code**]{.blue2}
 
-- [**projets collaboratifs**]{.orange} et de grande envergure
+- [**projets collaboratifs**]{.blue2} et de grande envergure
 
-- [**complexification**]{.orange} des données et des [**infrastructures**]{.orange}
+- [**complexification**]{.blue2} des données et des [**infrastructures**]{.blue2}
 
-- [**déploiement**]{.orange} d'applications pour valoriser les analyses
+- [**déploiement**]{.blue2} d'applications pour valoriser les modèles
 
-## Contenu du cours
+## Contenu du cours {.scrollable}
 
-- Voir le code comme un [**outil de communication**]{.orange}
-    - [**Contrôle de version**]{.blue2} avec Git
+- [**Pré-requis**]{.orange}
+    - Introduction au terminal `Linux`
+    - [**Contrôle de version**]{.blue2} avec `Git`
+
+- [**Bonnes pratiques**]{.orange} de développement
+    - [**Travail collaboratif**]{.blue2} avec `Git`
     - [**Qualité**]{.blue2} du code
     - [**Structure**]{.blue2} des projets
 
-- [**Travail collaboratif**]{.orange} avec Git et GitHub
+- [**Mise en production**]{.orange}
+    - Maximiser la [**portabilité**]{.blue2}
+    - [**Déployer**]{.blue2} et [**valoriser**]{.blue2} un projet de data science
+    - [**MLOps**]{.blue2}
 
-- Maximiser la [**portabilité**]{.orange}
+## Site web du cours
 
-- [**Déployer**]{.orange} et [**valoriser**]{.orange} un projet de data science
+- [https://ensae-reproductibilite.github.io/website/](https://ensae-reproductibilite.github.io/website/)
+
+- Tout le contenu du cours est en [***open-source***]{.orange}
+    - [GitHub](https://github.com/orgs/ensae-reproductibilite/repositories) {{< fa brands github >}}
+    - *Pull Requests* -> bonus {{< fa comment-dollar >}}
 
 ## Modalités pédagogiques
 
-- [**Apprentissage par la pratique**]{.orange}
-    - [Application](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html) : industrialisation d'un projet de ML
+- Apprentissage par la [**pratique**]{.orange}
+    - [Application](https://ensae-reproductibilite.github.io/website/chapters/application.html) : industrialisation d'un projet de ML
 
 - [**Langage**]{.orange} : `Python`
     - Langage [**dominant**]{.blue2} dans le monde de la donnée
@@ -107,9 +121,15 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
     - Véritable environnement de [**production**]{.blue2}
     - Acquisition des [**bonnes pratiques**]{.blue2}
 
+## Evaluation
 
+- [**Objectif**]{.orange} : mise en pratique [**réaliste**]{.orange} des notions étudiées
+    - [**Problématique métier**]{.blue2}
+    - [**Données réelles**]{.blue2}
 
-
+- Evaluation en [**deux parties**]{.orange} :
+    - [**En groupe**]{.blue2} : [**projet**]{.blue2} à construire selon 3 "parcours"
+    - [**Individuel**]{.blue2} : [**revue de code**]{.blue2} d'un autre projet
 
 # Git : rappels
 
@@ -575,6 +595,3 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 . . .
 
 ![](img/devops.png){fig-align="center" height=300}
-
-
-
