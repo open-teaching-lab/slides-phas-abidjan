@@ -1,0 +1,436 @@
+[
+  {
+    "objectID": "index.html#contexte",
+    "href": "index.html#contexte",
+    "title": "Mise en production des projets de data science",
+    "section": "Contexte",
+    "text": "Contexte\n\nQui sommes-nous ?\n\ndes data scientists de l’Insee\nfrustrés par l’approche souvent purement technique de la data science\nconvaincus que les bonnes pratiques valent à être enseignées\n\nromain.avouac at insee dot fr, lino.galiana at insee dot fr"
+  },
+  {
+    "objectID": "index.html#quest-ce-quun-data-scientist",
+    "href": "index.html#quest-ce-quun-data-scientist",
+    "title": "Mise en production des projets de data science",
+    "section": "Qu’est ce qu’un data scientist ?",
+    "text": "Qu’est ce qu’un data scientist ?\n\n\n\n\n\n\nTendance à la spécialisation : data analyst, data engineer, ML Engineer…\nRôle d’interface entre métier et équipes techniques\n\nCompétences mixtes : savoir métier, modélisation, IT"
+  },
+  {
+    "objectID": "index.html#la-notion-de-mise-en-production",
+    "href": "index.html#la-notion-de-mise-en-production",
+    "title": "Mise en production des projets de data science",
+    "section": "La notion de mise en production",
+    "text": "La notion de mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre compliquée !\n\nDépasser le stade de l’expérimentation\n\nComprendre les besoins des utilisateurs\nBonnes pratiques de développement\nTechniques informatiques d’industrialisation"
+  },
+  {
+    "objectID": "index.html#la-notion-de-bonnes-pratiques",
+    "href": "index.html#la-notion-de-bonnes-pratiques",
+    "title": "Mise en production des projets de data science",
+    "section": "La notion de bonnes pratiques",
+    "text": "La notion de bonnes pratiques\n\nOrigine : communauté des développeurs logiciels\nConstats :\n\nle “code est plus souvent lu qu’écrit” (Guido Van Rossum)\nla maintenance d’un code est très coûteuse\n\nConséquence : un ensemble de règles informelles, conventionnellement acceptées comme produisant des logiciels fiables, évolutifs et maintenables"
+  },
+  {
+    "objectID": "index.html#pourquoi-sintéresser-aux-bonnes-pratiques",
+    "href": "index.html#pourquoi-sintéresser-aux-bonnes-pratiques",
+    "title": "Mise en production des projets de data science",
+    "section": "Pourquoi s’intéresser aux bonnes pratiques ?",
+    "text": "Pourquoi s’intéresser aux bonnes pratiques ?\n\nL’activité du datascientist tend à se rapprocher de celle du développeur :\n\nprojets intenses en code\nprojets collaboratifs et de grande envergure\ncomplexification des données et des infrastructures\ndéploiement d’applications pour valoriser les modèles"
+  },
+  {
+    "objectID": "index.html#contenu-du-cours",
+    "href": "index.html#contenu-du-cours",
+    "title": "Mise en production des projets de data science",
+    "section": "Contenu du cours",
+    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\n\nMise en production\n\nMaximiser la portabilité\nDéployer et valoriser un projet de data science\nMLOps"
+  },
+  {
+    "objectID": "index.html#site-web-du-cours",
+    "href": "index.html#site-web-du-cours",
+    "title": "Mise en production des projets de data science",
+    "section": "Site web du cours",
+    "text": "Site web du cours\n\nhttps://ensae-reproductibilite.github.io/website/\nTout le contenu du cours est en open-source\n\nGitHub \nPull Requests -&gt; bonus"
+  },
+  {
+    "objectID": "index.html#modalités-pédagogiques",
+    "href": "index.html#modalités-pédagogiques",
+    "title": "Mise en production des projets de data science",
+    "section": "Modalités pédagogiques",
+    "text": "Modalités pédagogiques\n\nApprentissage par la pratique\n\nApplication : industrialisation d’un projet de ML\n\nLangage : Python \n\nLangage dominant dans le monde de la donnée\nLes principes présentés sont agnostiques au langage\n\nEnvironnement d’exécution : SSP Cloud\n\nEnvironnement de développement normalisé\nVéritable environnement de production\nAcquisition des bonnes pratiques"
+  },
+  {
+    "objectID": "index.html#evaluation",
+    "href": "index.html#evaluation",
+    "title": "Mise en production des projets de data science",
+    "section": "Evaluation",
+    "text": "Evaluation\n\nObjectif : mise en pratique réaliste des notions étudiées\n\nProblématique métier\nDonnées réelles\n\nEvaluation en deux parties :\n\nEn groupe : projet à construire selon 3 “parcours”\nIndividuel : revue de code d’un autre projet"
+  },
+  {
+    "objectID": "index.html#pourquoi-utiliser-git",
+    "href": "index.html#pourquoi-utiliser-git",
+    "title": "Mise en production des projets de data science",
+    "section": "Pourquoi utiliser Git ?",
+    "text": "Pourquoi utiliser Git ?\n\n\n\n\n\nSource"
+  },
+  {
+    "objectID": "index.html#concepts-essentiels",
+    "href": "index.html#concepts-essentiels",
+    "title": "Mise en production des projets de data science",
+    "section": "Concepts essentiels",
+    "text": "Concepts essentiels\n\n\n\n\n\nSource"
+  },
+  {
+    "objectID": "index.html#bonnes-pratiques",
+    "href": "index.html#bonnes-pratiques",
+    "title": "Mise en production des projets de data science",
+    "section": "Bonnes pratiques",
+    "text": "Bonnes pratiques\nQue versionne-t-on ?\n\nEssentiellement du code source\nPas d’outputs (fichiers .html, .pdf, modèles…)\nPas de données, d’informations locales ou sensibles\n\n\n\n\n\n\n\n\nNote\n\n\nPour définir des règles qui évitent de committer tel ou tel fichier, on utilise un fichier nommé .gitignore.\nSi on mélange du code et des éléments annexes (output, données…) dans un même dossier, il faut consacrer du temps à ce fichier.\nLe site gitignore.io peut vous fournir des modèles.\nN’hésitez pas à y ajouter des règles conservatrices (par exemple *.csv), comme cela est expliqué dans la documentation utilitR."
+  },
+  {
+    "objectID": "index.html#bonnes-pratiques-1",
+    "href": "index.html#bonnes-pratiques-1",
+    "title": "Mise en production des projets de data science",
+    "section": "Bonnes pratiques",
+    "text": "Bonnes pratiques\nFormat des commits\n\n\n\n\nFréquence\n\nAussi souvent que possible\nLe lot de modifications doit “faire sens”\n\nMessages\n\nCourts et informatifs (comme un titre de mail)\nDécrire le pourquoi plutôt que le comment dans le texte"
+  },
+  {
+    "objectID": "index.html#outils-pour-le-travail-collaboratif",
+    "href": "index.html#outils-pour-le-travail-collaboratif",
+    "title": "Mise en production des projets de data science",
+    "section": "Outils pour le travail collaboratif",
+    "text": "Outils pour le travail collaboratif\n\nL’éco-système Git facilite le travail collaboratif\n\nGit  : modèle des branches\nGitHub  / GitLab  : Issues, Pull Requests, Forks"
+  },
+  {
+    "objectID": "index.html#le-modèle-des-branches",
+    "href": "index.html#le-modèle-des-branches",
+    "title": "Mise en production des projets de data science",
+    "section": "Le modèle des branches",
+    "text": "Le modèle des branches"
+  },
+  {
+    "objectID": "index.html#les-outils-de-contribution",
+    "href": "index.html#les-outils-de-contribution",
+    "title": "Mise en production des projets de data science",
+    "section": "Les outils de contribution",
+    "text": "Les outils de contribution\n\nIssue : soumettre un problème ou une suggestion aux développeurs d’un projet\nPull Request : proposer aux développeurs d’un projet d’intégrer des modifications\nFork : faire la copie d’un projet existant dans son espace personnel\n\nIndispensable pour faire une pull request à un dépôt sur lequel on n’a pas les droits"
+  },
+  {
+    "objectID": "index.html#une-organisation-courante-le-github-flow",
+    "href": "index.html#une-organisation-courante-le-github-flow",
+    "title": "Mise en production des projets de data science",
+    "section": "Une organisation courante : le GitHub flow",
+    "text": "Une organisation courante : le GitHub flow\n\nDescription plus détaillée : ici"
+  },
+  {
+    "objectID": "index.html#enjeux",
+    "href": "index.html#enjeux",
+    "title": "Mise en production des projets de data science",
+    "section": "Enjeux",
+    "text": "Enjeux\n\nD’une vision utilitariste du code à une vision du code comme outil de communication\nFavoriser la lisibilité et la maintenabilité\nFaciliter la réutilisation"
+  },
+  {
+    "objectID": "index.html#principes-généraux",
+    "href": "index.html#principes-généraux",
+    "title": "Mise en production des projets de data science",
+    "section": "Principes généraux",
+    "text": "Principes généraux\n\nAdopter les standards communautaires\nUtiliser des fonctions\n(Auto-)documenter son code"
+  },
+  {
+    "objectID": "index.html#standards-communautaires",
+    "href": "index.html#standards-communautaires",
+    "title": "Mise en production des projets de data science",
+    "section": "1️⃣ Standards communautaires",
+    "text": "1️⃣ Standards communautaires\n\n“Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread”\nTidyverse Style Guide (R)\n\n\nPython : PEP8, PEP 257\n\nDes règles opinionated, mais conventionnelles\n\nLa cohérence intra-projet doit toujours primer"
+  },
+  {
+    "objectID": "index.html#standards-communautaires---outils",
+    "href": "index.html#standards-communautaires---outils",
+    "title": "Mise en production des projets de data science",
+    "section": "1️⃣ Standards communautaires - Outils",
+    "text": "1️⃣ Standards communautaires - Outils\n\nLinters : diagnostic de qualité du code\n\nPylint\n\nFormatters : application automatique des standards\n\nBlack\n\n\n\n\n\n\n\n\n\nAstuce\n\n\n\nExemples d’erreurs repérées par un linter :\n\nlignes de code trop longues ou mal indentées, parenthèses non équilibrées, noms de fonctions mal construits…\n\nExemples d’erreurs non repérées par un linter :\n\nfonctions mal utilisées, arguments mal spécifiés, structure du code incohérente, code insuffisamment documenté…"
+  },
+  {
+    "objectID": "index.html#utiliser-des-fonctions",
+    "href": "index.html#utiliser-des-fonctions",
+    "title": "Mise en production des projets de data science",
+    "section": "2️⃣ Utiliser des fonctions",
+    "text": "2️⃣ Utiliser des fonctions\n\n\n\n\n\n\nRègle d’or\n\n\nIl faut utiliser une fonction dès qu’on utilise une même portion de code plus de deux fois (don’t repeat yourself (DRY))\n\n\n\n\nLimite les risques d’erreurs liés aux copier/coller\nRend le code plus lisible et plus compact\nUn seul endroit du code à modifier lorsqu’on souhaite modifier le traitement\nFacilite la réutilisation et la documentation du code !\n\n\n\n\n\n\n\n\nRègles pour écrire des fonctions pertinentes\n\n\n\nUne tâche = une fonction\nUne tâche complexe = un enchaînement de fonctions réalisant chacune une tâche simple\nLimiter l’utilisation de variables globales."
+  },
+  {
+    "objectID": "index.html#documenter-son-code",
+    "href": "index.html#documenter-son-code",
+    "title": "Mise en production des projets de data science",
+    "section": "3️⃣ Documenter son code",
+    "text": "3️⃣ Documenter son code\n\nDocumenter le pourquoi plutôt que le comment\nPrivilégier l’auto-documentation via des nommages pertinents\n\n\n\n\n\n\n\n\nComment bien documenter un script ?\n\n\n\nMinimum 🚦 : décrire ce que le code fait au début du script\nBien 👍 : commenter les parties “délicates” du code\nIdéal 💪 : documenter ses fonctions avec des docstrings"
+  },
+  {
+    "objectID": "index.html#enjeux-1",
+    "href": "index.html#enjeux-1",
+    "title": "Mise en production des projets de data science",
+    "section": "Enjeux",
+    "text": "Enjeux\n\nFavoriser la lisibilité et la maintenabilité\nEnjeux spécifiques à la data science\n\nExpérimentation\nNon-linéarité\nReproductibilité"
+  },
+  {
+    "objectID": "index.html#principes-généraux-1",
+    "href": "index.html#principes-généraux-1",
+    "title": "Mise en production des projets de data science",
+    "section": "Principes généraux",
+    "text": "Principes généraux\n\nLa structure de projet dépend de sa maturité\n\nExploration : travail à partir de notebooks\nIndustrialisation : adopter une structure modulaire\n\nAdopter les standards communautaires\n(Auto-)documenter son projet"
+  },
+  {
+    "objectID": "index.html#phase-dexploration-notebooks",
+    "href": "index.html#phase-dexploration-notebooks",
+    "title": "Mise en production des projets de data science",
+    "section": "1️⃣ Phase d’exploration : notebooks",
+    "text": "1️⃣ Phase d’exploration : notebooks\n\nAvantages\n\nInteractivité : idéal pour l’expérimentation\nCommunication : diffusion de résultats sous forme exécutable\n\nInconvénients\n\nReproductibilité limitée\nPas adaptés pour l’automatisation\nMal gérés par le contrôle de version"
+  },
+  {
+    "objectID": "index.html#industrialisation-structure-modulaire",
+    "href": "index.html#industrialisation-structure-modulaire",
+    "title": "Mise en production des projets de data science",
+    "section": "2️⃣ Industrialisation : structure modulaire",
+    "text": "2️⃣ Industrialisation : structure modulaire\n\nPremier niveau : structuration du code\nAdopter une structure type package\n\nContient des fonctions rangées dans des modules\nUn script principal (main) orchestre les traitements\nInclus de la documentation, des tests, etc."
+  },
+  {
+    "objectID": "index.html#industrialisation-structure-modulaire-1",
+    "href": "index.html#industrialisation-structure-modulaire-1",
+    "title": "Mise en production des projets de data science",
+    "section": "2️⃣ Industrialisation : structure modulaire",
+    "text": "2️⃣ Industrialisation : structure modulaire\n\nDeuxième niveau : structuration du projet"
+  },
+  {
+    "objectID": "index.html#adopter-les-standards-communautaires",
+    "href": "index.html#adopter-les-standards-communautaires",
+    "title": "Mise en production des projets de data science",
+    "section": "3️⃣ Adopter les standards communautaires",
+    "text": "3️⃣ Adopter les standards communautaires\n\nTemplates de projets : Cookiecutters\n\nCookiecutter Data Science\nCookiecutter Python Package\n\nLa cohérence intra-projet doit toujours primer"
+  },
+  {
+    "objectID": "index.html#documenter-son-projet",
+    "href": "index.html#documenter-son-projet",
+    "title": "Mise en production des projets de data science",
+    "section": "4️⃣ Documenter son projet",
+    "text": "4️⃣ Documenter son projet\n\nFavoriser l’auto-documentation via des nommages pertinents"
+  },
+  {
+    "objectID": "index.html#lauto-documentation-illustration",
+    "href": "index.html#lauto-documentation-illustration",
+    "title": "Mise en production des projets de data science",
+    "section": "L’auto-documentation : illustration",
+    "text": "L’auto-documentation : illustration\n├── report.ipynb\n├── correlation.png\n├── data.csv\n├── data2.csv\n├── fig1.png\n├── figure 2 (copy).png\n├── report.pdf\n├── partial data.csv\n├── script.py\n└── script_final.py\n\nDifficile de rentrer dans le projet…\n\nTout au même niveau\nTitres non informatifs"
+  },
+  {
+    "objectID": "index.html#lauto-documentation-illustration-1",
+    "href": "index.html#lauto-documentation-illustration-1",
+    "title": "Mise en production des projets de data science",
+    "section": "L’auto-documentation : illustration",
+    "text": "L’auto-documentation : illustration\n├── data\n│   ├── raw\n│   │   ├── data.csv\n│   │   └── data2.csv\n│   └── interim\n│       └── partial data.csv\n├── notebooks\n│   └── report.ipynb\n├── src\n|   ├── script.py\n│   └── script_final.py\n└── reports\n    ├── report.pdf\n    └── figures\n        ├── fig1.png\n        ├── figure 2 (copy).png\n        ├── figure10.png\n        └── correlation.png\n\nUne structure déjà plus lisible !\n\nLes titres restent non informatifs"
+  },
+  {
+    "objectID": "index.html#lauto-documentation-illustration-2",
+    "href": "index.html#lauto-documentation-illustration-2",
+    "title": "Mise en production des projets de data science",
+    "section": "L’auto-documentation : illustration",
+    "text": "L’auto-documentation : illustration\n├── data\n│   ├── raw\n│   │   ├── dpe_logement_202103.csv\n│   │   └── dpe_logement_202003.csv\n│   └── interim\n│       └── dpe_logement_merged_preprocessed.csv\n├── notebooks\n│   └── report.ipynb\n├── src\n|   ├── main.R\n|   ├── preprocessing.R\n│   └── generate_plots.R\n└── reports\n    ├── report.pdf\n    └── figures\n        ├── histogram_energy_diagnostic.png\n        ├── barplot_consumption_pcs.png\n        ├── correlation_matrix.png\n        └── correlation.png\n\nUne structure auto-documentée\n\nOn comprend le projet sans même lire le code"
+  },
+  {
+    "objectID": "index.html#documenter-son-projet-1",
+    "href": "index.html#documenter-son-projet-1",
+    "title": "Mise en production des projets de data science",
+    "section": "4️⃣ Documenter son projet",
+    "text": "4️⃣ Documenter son projet\n\nFavoriser l’auto-documentation via des nommages pertinents\nInclure un fichier README.md à la racine du projet\n\nCarte d’identité et vitrine du projet\nPrésente le contexte et le fonctionnement du projet\n\nSi open-source : inclure une licence"
+  },
+  {
+    "objectID": "index.html#bonnes-pratiques-de-développement",
+    "href": "index.html#bonnes-pratiques-de-développement",
+    "title": "Mise en production des projets de data science",
+    "section": "Bonnes pratiques de développement",
+    "text": "Bonnes pratiques de développement\n\nConsignes sur le site du cours\n\nPartie 0️⃣ : initialisation de l’environnement et du projet\nPartie 1️⃣ : qualité du code\nPartie 2️⃣ : adoption d’une structure modulaire"
+  },
+  {
+    "objectID": "index.html#it-works-on-my-machine",
+    "href": "index.html#it-works-on-my-machine",
+    "title": "Mise en production des projets de data science",
+    "section": "“It works… on my machine”",
+    "text": "“It works… on my machine”\n\nOn a construit un projet lisible, structuré et versionné\nPeut-on partager notre projet ?\n\nEn théorie, oui !\nEn pratique, c’est toujours plus compliqué…"
+  },
+  {
+    "objectID": "index.html#lenjeu-de-la-portabilité",
+    "href": "index.html#lenjeu-de-la-portabilité",
+    "title": "Mise en production des projets de data science",
+    "section": "L’enjeu de la portabilité",
+    "text": "L’enjeu de la portabilité\n\nUn code ne vit jamais dans une bulle isolée, il contient en général de nombreuses adhérences\n\nDes dépendances\nDes librairies système\n\nUn code est portable s’il peut être exécuté dans un environnement différent que celui du développement\nBesoin de nouveaux outils\n\nLes environnements virtuels\nLes conteneurs"
+  },
+  {
+    "objectID": "index.html#environnements-virtuels-introduction",
+    "href": "index.html#environnements-virtuels-introduction",
+    "title": "Mise en production des projets de data science",
+    "section": "Environnements virtuels : introduction",
+    "text": "Environnements virtuels : introduction\n\nWorkflow classique du data scientist qui commencerait ses premiers projets\n\nInstaller une distribution de Python sur son poste\nDévelopper un projet en installant les packages nécessaires\nPasser au projet suivant et ainsi de suite\n\nQuels problème peuvent se poser ?"
+  },
+  {
+    "objectID": "index.html#environnements-virtuels-enjeux",
+    "href": "index.html#environnements-virtuels-enjeux",
+    "title": "Mise en production des projets de data science",
+    "section": "Environnements virtuels : enjeux",
+    "text": "Environnements virtuels : enjeux\n\nConflits de version : différents projets peuvent recquérir des versions différentes d’un même package\nVersion de Python fixe, celle de l’installation système\nReproductibilité limitée : difficile de dire quel projet nécessite quel package\nPortabilité limitée : difficile de fixer dans un fichier les dépendances spécifiques à un projet"
+  },
+  {
+    "objectID": "index.html#environnements-virtuels-fonctionnement",
+    "href": "index.html#environnements-virtuels-fonctionnement",
+    "title": "Mise en production des projets de data science",
+    "section": "Environnements virtuels : fonctionnement",
+    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui contient :\n\nUne installation de Python pour une version donnée ;\nDes packages additionnels et qui est isolé des autres environnements existants\n\nDévelopper dans un environnement virtuel vierge est une bonne pratique pour la reproductibilité"
+  },
+  {
+    "objectID": "index.html#environnements-virtuels-implémentations",
+    "href": "index.html#environnements-virtuels-implémentations",
+    "title": "Mise en production des projets de data science",
+    "section": "Environnements virtuels : implémentations",
+    "text": "Environnements virtuels : implémentations\n\nDifférentes implémentations en Python\n\nL’implémentation standard est venv\nL’implémentation la plus populaire en data science est conda\n\nconda est à la fois\n\nUn package manager (comme pip)\nUn gestionnaire d’environnements virtuels"
+  },
+  {
+    "objectID": "index.html#environnements-virtuels-installation",
+    "href": "index.html#environnements-virtuels-installation",
+    "title": "Mise en production des projets de data science",
+    "section": "Environnements virtuels : installation",
+    "text": "Environnements virtuels : installation\n\nconda est généralement installé dans le cadre de distributions\n\nMiniconda\nAnaconda\n\nconda est un outil en ligne de commandes (CLI)"
+  },
+  {
+    "objectID": "index.html#environnements-virtuels-limites",
+    "href": "index.html#environnements-virtuels-limites",
+    "title": "Mise en production des projets de data science",
+    "section": "Environnements virtuels : limites",
+    "text": "Environnements virtuels : limites\n\nLes librairies système ne sont pas gérées\nDifficile de gérer des projets multi-langages\nLourdeur de la phase d’installation à chaque changement d’environnement\nPeu adaptés à un environnement de production"
+  },
+  {
+    "objectID": "index.html#application-environnements-virtuels",
+    "href": "index.html#application-environnements-virtuels",
+    "title": "Mise en production des projets de data science",
+    "section": "Application : environnements virtuels",
+    "text": "Application : environnements virtuels\n\nConsignes sur le site du cours"
+  },
+  {
+    "objectID": "index.html#conteneurs-introduction",
+    "href": "index.html#conteneurs-introduction",
+    "title": "Mise en production des projets de data science",
+    "section": "Conteneurs : introduction",
+    "text": "Conteneurs : introduction\n\nIdée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on distribuer directement la bonne machine ?\nOn ne peut pas distribuer des machines physiques\nLes machines virtuelles sont coûteuses et complexes à redistribuer\nLes conteneurs offrent un bon compromis"
+  },
+  {
+    "objectID": "index.html#conteneurs-vs.-machines-virtuelles",
+    "href": "index.html#conteneurs-vs.-machines-virtuelles",
+    "title": "Mise en production des projets de data science",
+    "section": "Conteneurs vs. machines virtuelles",
+    "text": "Conteneurs vs. machines virtuelles\n\nSource : docker.com"
+  },
+  {
+    "objectID": "index.html#conteneurs-implémentations",
+    "href": "index.html#conteneurs-implémentations",
+    "title": "Mise en production des projets de data science",
+    "section": "Conteneurs : implémentations",
+    "text": "Conteneurs : implémentations\n\nPlusieurs implémentations des conteneurs\nDocker est largement prédominant"
+  },
+  {
+    "objectID": "index.html#docker-installation",
+    "href": "index.html#docker-installation",
+    "title": "Mise en production des projets de data science",
+    "section": "Docker : installation",
+    "text": "Docker : installation\n\nInstructions selon le système d’exploitation\nEnvironnement “bac à sable” : Play with Docker\nDocker est un outil en ligne de commandes (CLI)"
+  },
+  {
+    "objectID": "index.html#docker-fonctionnement",
+    "href": "index.html#docker-fonctionnement",
+    "title": "Mise en production des projets de data science",
+    "section": "Docker : fonctionnement",
+    "text": "Docker : fonctionnement\n\nSource : k21academy.com"
+  },
+  {
+    "objectID": "index.html#application-conteneurisation-avec-docker",
+    "href": "index.html#application-conteneurisation-avec-docker",
+    "title": "Mise en production des projets de data science",
+    "section": "Application : conteneurisation avec Docker",
+    "text": "Application : conteneurisation avec Docker\n\nConsignes sur le site du cours"
+  },
+  {
+    "objectID": "index.html#motivation",
+    "href": "index.html#motivation",
+    "title": "Mise en production des projets de data science",
+    "section": "Motivation",
+    "text": "Motivation\n\nLa massification et la diversification des données apportent de nombreux changements\n\nLe Data Lake\nLe Data Lab\nDe nouveaux profils : Data Scientist, Data Engineer, Data Architect\n\nLa majorité des projets de data science ne sont pas déployés\nBesoin d’industrialisation qui nécessite de nouveaux outils"
+  },
+  {
+    "objectID": "index.html#lapproche-devops",
+    "href": "index.html#lapproche-devops",
+    "title": "Mise en production des projets de data science",
+    "section": "L’approche DevOps",
+    "text": "L’approche DevOps\n\nIdée : unifier le développement (dev) et l’administration système (ops)\nBut : raccourcir le temps de développement en déployant en continu tout en maintenant la qualité"
+  },
+  {
+    "objectID": "index.html#devops-dataops-mlops",
+    "href": "index.html#devops-dataops-mlops",
+    "title": "Mise en production des projets de data science",
+    "section": "DevOps, DataOps, MLOps ?",
+    "text": "DevOps, DataOps, MLOps ?\n\nLe DevOps n’intègre pas les spécificités liées à la data science\nDataOps : déploiement et maintenance de pipelines de données\nMLOps : déploiement et maintenance de modèles de Machine Learning\nLes bonnes pratiques favorisent la collaboration et facilitent les déploiements"
+  },
+  {
+    "objectID": "index.html#la-mise-en-production",
+    "href": "index.html#la-mise-en-production",
+    "title": "Mise en production des projets de data science",
+    "section": "La mise en production",
+    "text": "La mise en production\n\nOn a construit un projet de data science reproductible et conforme aux standards des bonnes pratiques\nPour valoriser le projet, il faut le déployer dans un environnement en lien avec les utilisateurs\n\nQuel est le format adapté pour le valoriser ?\nQuelle infrastructure de production ?\nComment automatiser le processus de déploiement ?"
+  },
+  {
+    "objectID": "index.html#format-de-valorisation",
+    "href": "index.html#format-de-valorisation",
+    "title": "Mise en production des projets de data science",
+    "section": "Format de valorisation",
+    "text": "Format de valorisation\n\nCritères à prendre en compte :\n\nQuels sont les utilisateurs potentiels ?\nSeulement de la mise à disposition, ou besoin d’interactivité ?\nSpécificités ML : entraînement en batch ou online ?\nBesoin de scalabilité ?\n\nFormats usuels : API, application web, dashboard, site internet, rapport automatisé…"
+  },
+  {
+    "objectID": "index.html#exposer-un-modèle-via-une-api-rest",
+    "href": "index.html#exposer-un-modèle-via-une-api-rest",
+    "title": "Mise en production des projets de data science",
+    "section": "Exposer un modèle via une API REST",
+    "text": "Exposer un modèle via une API REST\n\nAPI : interface entre l’utilisateur (client) et le modèle entraîné\nAPI REST : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière scalable"
+  },
+  {
+    "objectID": "index.html#environnement-de-production",
+    "href": "index.html#environnement-de-production",
+    "title": "Mise en production des projets de data science",
+    "section": "Environnement de production",
+    "text": "Environnement de production\n\nDépend essentiellement de l’infrastructure à disposition\nUn orchestrateur de conteneurs répond à plusieurs besoins :\n\nAdapter les ressources (scaler) selon les besoins\nMonitoring de l’état de santé des applications\nDéploiements reproductibles et automatisés"
+  },
+  {
+    "objectID": "index.html#fonctionnement-de-kubernetes",
+    "href": "index.html#fonctionnement-de-kubernetes",
+    "title": "Mise en production des projets de data science",
+    "section": "Fonctionnement de Kubernetes",
+    "text": "Fonctionnement de Kubernetes"
+  },
+  {
+    "objectID": "index.html#lapproche-cicd-principes",
+    "href": "index.html#lapproche-cicd-principes",
+    "title": "Mise en production des projets de data science",
+    "section": "L’approche CI/CD : principes",
+    "text": "L’approche CI/CD : principes\n\nIntégration continue (CI) : à chaque modification du code source, l’application est automatiquement tested, built and released\nDéploiement continu (CD) : les nouvelles releases sont automatiquement déployées\nGitOps : le processus est décrit sous formes de manifestes, stockés sur un dépôt Git"
+  },
+  {
+    "objectID": "index.html#lapproche-cicd-exemple",
+    "href": "index.html#lapproche-cicd-exemple",
+    "title": "Mise en production des projets de data science",
+    "section": "L’approche CI/CD : exemple",
+    "text": "L’approche CI/CD : exemple"
+  },
+  {
+    "objectID": "index.html#pipeline-complet",
+    "href": "index.html#pipeline-complet",
+    "title": "Mise en production des projets de data science",
+    "section": "Pipeline complet",
+    "text": "Pipeline complet\n\nLes données d’entrée ne sont pas fixes, il faut les intégrer dans un pipeline complet de données\nLa représentation est faite sous forme de graphes acycliques dirigés (DAG)"
+  },
+  {
+    "objectID": "index.html#conclusion",
+    "href": "index.html#conclusion",
+    "title": "Mise en production des projets de data science",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable\n\n\n\n\n\n\n\n\n\n\nBonnes pratiques pour la mise en production des projets de data science"
+  }
+]
