@@ -109,14 +109,14 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 ## Modalités pédagogiques
 
-- Apprentissage par la [**pratique**]{.orange}
+- Apprentissage par la pratique
     - [Application](https://ensae-reproductibilite.github.io/website/chapters/application.html) : industrialisation d'un projet de ML
 
-- [**Langage**]{.orange} : `Python`
+- Langage : `Python` {{< fa brands python >}}
     - Langage [**dominant**]{.blue2} dans le monde de la donnée
     - Les principes présentés sont [**agnostiques**]{.blue2} au langage
 
-- [**Environnement d'exécution**]{.orange} : [SSP Cloud](https://datalab.sspcloud.fr/)
+- Environnement d'exécution : [SSP Cloud](https://datalab.sspcloud.fr/)
     - Environnement de développement [**normalisé**]{.blue2}
     - Véritable environnement de [**production**]{.blue2}
     - Acquisition des [**bonnes pratiques**]{.blue2}
@@ -131,7 +131,14 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
     - [**En groupe**]{.blue2} : [**projet**]{.blue2} à construire selon 3 "parcours"
     - [**Individuel**]{.blue2} : [**revue de code**]{.blue2} d'un autre projet
 
-# Git : rappels
+
+
+
+
+
+
+
+# Le travail collaboratif avec `Git`
 
 ## Pourquoi utiliser Git ?
 
@@ -186,19 +193,34 @@ __Format des commits__
 
 :::
 
-## En pratique
+## Outils pour le travail collaboratif
 
-- Git est un [**logiciel**]{.orange}
+- L'éco-système `Git` [**facilite** le travail collaboratif]{.blue2}
+    - `Git` {{< fa brands git-alt >}} : modèle des [__branches__]{.orange}
+    - `GitHub` {{< fa brands github >}} / `GitLab` {{< fa brands gitlab >}} : [**Issues**, **Pull Requests**, **Forks**]{.orange}
 
-- Utilisation en [**ligne de commande**]{.orange}
+## Le modèle des branches
 
-- Ressources sur le site :
-    - [Introduction au terminal Linux](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/linux101.html)
-    - [Versionner son code et travailler collaborativement avec Git](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/git.html)
+![](img/branches.png)
 
-## Application : initialisation du projet
+## Les outils de contribution
 
-- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#partie-0-initialisation-du-projet)
+- [***Issue***]{.orange} : soumettre un [**problème**]{.blue2} ou une [**suggestion**]{.blue2} aux développeurs d'un projet
+
+- [***Pull Request***]{.orange} : proposer aux développeurs d'un projet d'[**intégrer des modifications**]{.blue2}
+
+- [***Fork***]{.orange} : faire la [**copie**]{.blue2} d'un projet existant dans son espace personnel
+    - Indispensable pour faire une *pull request* à un dépôt sur lequel on n'a pas les droits 
+
+## Une organisation courante : le *GitHub flow*
+
+![](img/ghflow.png)
+
+Description plus détaillée : [ici](https://docs.github.com/en/get-started/quickstart/github-flow)
+
+
+
+
 
 
 
@@ -277,10 +299,6 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - [**Bien**]{.orange} 👍 : commenter les parties "délicates" du code
 - [**Idéal**]{.orange} 💪 : documenter ses fonctions avec des *docstrings*
 :::
-
-## Application : qualité du code
-
-- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#partie-1-qualit%C3%A9-du-script)
 
 
 
