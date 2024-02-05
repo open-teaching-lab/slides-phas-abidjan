@@ -244,7 +244,7 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
 
 - Utiliser des [**fonctions**]{.orange}
 
-- [**Auto-documenter**]{.orange} son code
+- [**(Auto-)documenter**]{.orange} son code
 
 ## :one: Standards communautaires
 
@@ -332,15 +332,15 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## Principes généraux
 
-- [**Notebooks**]{.orange} : pour l'[**exploration**]{.blue2} et la [**communication**]{.blue2}
-
-- Pour l'[**industrialisation**]{.orange} : adopter une [**structure modulaire**]{.blue2}
+- La [**structure**]{.orange} de projet dépend de sa [**maturité**]{.orange}
+    - [**Exploration**]{.orange} : travail à partir de [**notebooks**]{.blue2}
+    - [**Industrialisation**]{.orange} : adopter une [**structure modulaire**]{.blue2}
 
 - Adopter les [**standards communautaires**]{.orange}
 
-- [**Documenter**]{.orange} son projet
+- [**(Auto-)documenter**]{.orange} son projet
 
-## :one: Notebooks
+## :one: Phase d'exploration : *notebooks*
 
 - [**Avantages**]{.orange}
   - [**Interactivité**]{.blue2} : idéal pour l'expérimentation
@@ -351,13 +351,22 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
   - Pas adaptés pour l'[**automatisation**]{.blue2}
   - Mal gérés par le [**contrôle de version**]{.blue2}
 
-## :two: Favoriser une structure modulaire
+## :two: Industrialisation : structure modulaire
 
-- Principe de [**séparation**]{.orange} des [**données**]{.blue2}, du [**code**]{.blue2} et de la [**configuration**]{.blue2}
+- [**Premier niveau**]{.orange} : structuration du [**code**]{.orange}
 
-- Adopter une structure de [**package**]{.orange}
+- Adopter une structure type [**package**]{.orange}
   - Contient des [**fonctions**]{.blue2} rangées dans des [**modules**]{.blue2}
-  - Contient également de la [**documentation**]{.blue2}, des [**tests**]{.blue2}, des (méta-)données...
+  - Un script principal (`main`) [**orchestre**]{.blue2} les traitements
+  - Inclus de la [**documentation**]{.blue2}, des [**tests**]{.blue2}, etc.
+
+## :two: Industrialisation : structure modulaire
+
+- [**Deuxième niveau**]{.orange} : structuration du [**projet**]{.orange}
+
+. . .
+
+![](img/project-modularity.png){fig-align="center" height=350}
 
 ## :three: Adopter les standards communautaires
 
@@ -371,9 +380,87 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - Favoriser l'[**auto-documentation**]{.orange} via des nommages pertinents
 
+## L'auto-documentation : illustration
+
+```
+├── report.ipynb
+├── correlation.png
+├── data.csv
+├── data2.csv
+├── fig1.png
+├── figure 2 (copy).png
+├── report.pdf
+├── partial data.csv
+├── script.py
+└── script_final.py
+```
+
+- Difficile de rentrer dans le projet...
+    - Tout au [**même niveau**]{.blue2}
+    - Titres [**non informatifs**]{.blue2}
+
+## L'auto-documentation : illustration 
+
+```
+├── data
+│   ├── raw
+│   │   ├── data.csv
+│   │   └── data2.csv
+│   └── interim
+│       └── partial data.csv
+├── notebooks
+│   └── report.ipynb
+├── src
+|   ├── script.py
+│   └── script_final.py
+└── reports
+    ├── report.pdf
+    └── figures
+        ├── fig1.png
+        ├── figure 2 (copy).png
+        ├── figure10.png
+        └── correlation.png
+```
+
+- Une structure déjà plus lisible !
+    - Les titres restent [**non informatifs**]{.blue2}
+
+## L'auto-documentation : illustration 
+
+```
+├── data
+│   ├── raw
+│   │   ├── dpe_logement_202103.csv
+│   │   └── dpe_logement_202003.csv
+│   └── interim
+│       └── dpe_logement_merged_preprocessed.csv
+├── notebooks
+│   └── report.ipynb
+├── src
+|   ├── main.R
+|   ├── preprocessing.R
+│   └── generate_plots.R
+└── reports
+    ├── report.pdf
+    └── figures
+        ├── histogram_energy_diagnostic.png
+        ├── barplot_consumption_pcs.png
+        ├── correlation_matrix.png
+        └── correlation.png
+```
+
+- Une structure [**auto-documentée**]{.blue2}
+    - On comprend le projet sans même lire le code
+
+## :four: Documenter son projet
+
+- Favoriser l'[**auto-documentation**]{.orange} via des nommages pertinents
+
 - Inclure un fichier `README.md` à la racine du projet
     - [**Carte d'identité**]{.blue2} et [**vitrine**]{.blue2} du projet
     - Présente le [**contexte**]{.blue2} et le [**fonctionnement**]{.blue2} du projet
+
+- Si [**open-source**]{.orange} : inclure une [licence](https://docs.github.com/fr/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 
 ## Application : structure du projet
 
