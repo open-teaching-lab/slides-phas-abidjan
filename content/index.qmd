@@ -248,7 +248,12 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
 
 ## :one: Standards communautaires
 
+> *"Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread"*
+>
+> [Tidyverse Style Guide (R)](https://style.tidyverse.org/)
+
 - [**Python**]{.blue2} : [PEP8](https://peps.python.org/pep-0008/), [PEP 257](https://peps.python.org/pep-0257/)
+    - Des règles *opinionated*, mais [**conventionnelles**]{.blue2}
 
 - La [**cohérence intra-projet**]{.orange} doit toujours primer
 
@@ -259,6 +264,8 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
 
 - [**Formatters**]{.blue2} : application automatique des standards
     - [Black](https://github.com/psf/black)
+
+. . .
 
 ::: {.callout-tip}
 - [Exemples d’erreurs repérées]{.blue2} par un _linter_ : 
@@ -281,6 +288,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - [**Un seul endroit**]{.orange} du code à modifier lorsqu'on souhaite modifier le traitement
 - Facilite la [**réutilisation**]{.orange} et la [**documentation**]{.orange} du code !
 
+. . .
+
 ::: {.callout-tip}
 ## Règles pour écrire des fonctions **pertinentes**
 
@@ -295,6 +304,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - Documenter le [__pourquoi__]{.orange} plutôt que le [__comment__]{.orange}
 
 - Privilégier l'[**auto-documentation**]{.orange} via des nommages pertinents
+
+. . .
 
 ::: {.callout-tip}
 ## Comment bien documenter un script ?
