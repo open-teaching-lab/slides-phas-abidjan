@@ -160,6 +160,8 @@ __Que versionne-t-on ?__
 - [__Pas d'outputs__]{.orange} (fichiers `.html`, `.pdf`, modèles...)
 - [__Pas de données__]{.orange}, d'informations locales ou sensibles
 
+. . .
+
 :::{.callout-note}
 
 Pour définir des règles qui évitent de committer tel ou tel fichier, on utilise
@@ -201,7 +203,9 @@ __Format des commits__
 
 ## Le modèle des branches
 
-![](img/branches.png)
+::: {layout="[[-1], [1], [-1]]"}
+![](img/branches.png){fig-align="center" height=350}
+:::
 
 ## Les outils de contribution
 
