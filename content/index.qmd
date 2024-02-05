@@ -462,12 +462,14 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - Si [**open-source**]{.orange} : inclure une [licence](https://docs.github.com/fr/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 
-## Application : structure du projet
+# Application
 
-- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#partie2)
+## Bonnes pratiques de développement
 
-
-
+- Consignes sur le [site du cours](https://ensae-reproductibilite.github.io/website/chapters/application.html)
+    - Partie :zero: : initialisation de l'environnement et du projet
+    - Partie :one: : qualité du code
+    - Partie :two: : adoption d'une structure modulaire
 
 # Portabilité
 
