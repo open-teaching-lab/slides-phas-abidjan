@@ -332,9 +332,9 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## Principes généraux
 
-- La [**structure**]{.orange} de projet dépend de sa [**maturité**]{.orange}
+- Favoriser une [**structure modulaire**]{.blue2} selon l'état du projet
     - [**Exploration**]{.orange} : travail à partir de [**notebooks**]{.blue2}
-    - [**Industrialisation**]{.orange} : adopter une [**structure modulaire**]{.blue2}
+    - [**Industrialisation**]{.orange} : adopter une structure type [**paclage**]{.blue2}
 
 - Adopter les [**standards communautaires**]{.orange}
 
@@ -347,7 +347,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
   - [**Communication**]{.blue2} : diffusion de résultats sous forme exécutable
 
 - [**Inconvénients**]{.orange}
-  - [**Reproductibilité**]{.blue2} limitée
+  - [**Reproductibilité**]{.blue2} généralement limitée
   - Pas adaptés pour l'[**automatisation**]{.blue2}
   - Mal gérés par le [**contrôle de version**]{.blue2}
 
@@ -356,9 +356,9 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - [**Premier niveau**]{.orange} : structuration du [**code**]{.orange}
 
 - Adopter une structure type [**package**]{.orange}
-  - Contient des [**fonctions**]{.blue2} rangées dans des [**modules**]{.blue2}
+  - Des [**fonctions**]{.blue2} rangées dans des [**modules**]{.blue2}
   - Un script principal (`main`) [**orchestre**]{.blue2} les traitements
-  - Inclus de la [**documentation**]{.blue2}, des [**tests**]{.blue2}, etc.
+  - Utilisation de [**chemins relatifs**]{.blue2} uniquement
 
 ## :two: Industrialisation : structure modulaire
 
@@ -462,6 +462,11 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - Si [**open-source**]{.orange} : inclure une [licence](https://docs.github.com/fr/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 
+
+
+
+
+
 # Application
 
 ## Bonnes pratiques de développement
@@ -470,6 +475,12 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
     - Partie :zero: : initialisation de l'environnement et du projet
     - Partie :one: : qualité du code
     - Partie :two: : adoption d'une structure modulaire
+
+
+
+
+
+
 
 # Portabilité
 
@@ -556,6 +567,11 @@ et qui est [**isolé**]{.orange} des autres environnements existants
 - [**Lourdeur**]{.orange} de la phase d'installation à chaque changement d'environnement
 
 - Peu adaptés à un environnement de [**production**]{.orange}
+
+
+
+
+
 
 ## Application : environnements virtuels
 
