@@ -252,32 +252,39 @@
     "text": "“It works… on my machine”\n\nOn a construit un projet lisible, structuré et versionné\nPeut-on partager notre projet ?\n\nEn théorie, oui !\nEn pratique, c’est toujours plus compliqué…"
   },
   {
-    "objectID": "index.html#lenjeu-de-la-portabilité",
-    "href": "index.html#lenjeu-de-la-portabilité",
+    "objectID": "index.html#le-critère-de-la-portabilité",
+    "href": "index.html#le-critère-de-la-portabilité",
     "title": "Mise en production des projets de data science",
-    "section": "L’enjeu de la portabilité",
-    "text": "L’enjeu de la portabilité\n\nUn code ne vit jamais dans une bulle isolée, il contient en général de nombreuses adhérences\n\nDes dépendances\nDes librairies système\n\nUn code est portable s’il peut être exécuté dans un environnement différent que celui du développement\nBesoin de nouveaux outils\n\nLes environnements virtuels\nLes conteneurs"
+    "section": "Le critère de la portabilité",
+    "text": "Le critère de la portabilité\n\nUn code ne vit jamais dans une bulle isolée, il contient en général de nombreuses adhérences\n\nDes dépendances\nDes librairies système\n\nUn code est portable s’il peut être exécuté dans un environnement différent que celui du développement"
   },
   {
-    "objectID": "index.html#environnements-virtuels-introduction",
-    "href": "index.html#environnements-virtuels-introduction",
+    "objectID": "index.html#limites-du-mode-de-travail-usuel",
+    "href": "index.html#limites-du-mode-de-travail-usuel",
     "title": "Mise en production des projets de data science",
-    "section": "Environnements virtuels : introduction",
-    "text": "Environnements virtuels : introduction\n\nWorkflow classique du data scientist qui commencerait ses premiers projets\n\nInstaller une distribution de Python sur son poste\nDévelopper un projet en installant les packages nécessaires\nPasser au projet suivant et ainsi de suite\n\nQuels problème peuvent se poser ?"
+    "section": "Limites du mode de travail usuel",
+    "text": "Limites du mode de travail usuel\n\nWorkflow classique\n\nInstaller une distribution de Python sur son poste\nDévelopper un projet en installant les packages nécessaires\nPasser au projet suivant et ainsi de suite\n\nQuels problèmes peuvent se poser ?"
   },
   {
-    "objectID": "index.html#environnements-virtuels-enjeux",
-    "href": "index.html#environnements-virtuels-enjeux",
+    "objectID": "index.html#limites-du-mode-de-travail-usuel-1",
+    "href": "index.html#limites-du-mode-de-travail-usuel-1",
     "title": "Mise en production des projets de data science",
-    "section": "Environnements virtuels : enjeux",
-    "text": "Environnements virtuels : enjeux\n\nConflits de version : différents projets peuvent recquérir des versions différentes d’un même package\nVersion de Python fixe, celle de l’installation système\nReproductibilité limitée : difficile de dire quel projet nécessite quel package\nPortabilité limitée : difficile de fixer dans un fichier les dépendances spécifiques à un projet"
+    "section": "Limites du mode de travail usuel",
+    "text": "Limites du mode de travail usuel\n\nConflits de version : différents projets peuvent recquérir des versions différentes d’un même package\nVersion de Python fixe, celle de l’installation système\nReproductibilité limitée : difficile de dire quel projet nécessite quel package\nPortabilité limitée : difficile de fixer dans un fichier les dépendances spécifiques à un projet"
+  },
+  {
+    "objectID": "index.html#comment-favoriser-la-portabilité",
+    "href": "index.html#comment-favoriser-la-portabilité",
+    "title": "Mise en production des projets de data science",
+    "section": "Comment favoriser la portabilité ?",
+    "text": "Comment favoriser la portabilité ?\n\nEnjeu central pour la mise en production\n\nPasser d’un environnement de développement à un environnement de production\n\nBesoin de nouveaux outils\n\nLes environnements virtuels\nLes conteneurs"
   },
   {
     "objectID": "index.html#environnements-virtuels-fonctionnement",
     "href": "index.html#environnements-virtuels-fonctionnement",
     "title": "Mise en production des projets de data science",
     "section": "Environnements virtuels : fonctionnement",
-    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui contient :\n\nUne installation de Python pour une version donnée ;\nDes packages additionnels et qui est isolé des autres environnements existants\n\nDévelopper dans un environnement virtuel vierge est une bonne pratique pour la reproductibilité"
+    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui contient :\n\nUne installation de Python ;\nDes packages additionnels et qui est isolé des autres environnements existants"
   },
   {
     "objectID": "index.html#environnements-virtuels-implémentations",
@@ -299,13 +306,6 @@
     "title": "Mise en production des projets de data science",
     "section": "Environnements virtuels : limites",
     "text": "Environnements virtuels : limites\n\nLes librairies système ne sont pas gérées\nDifficile de gérer des projets multi-langages\nLourdeur de la phase d’installation à chaque changement d’environnement\nPeu adaptés à un environnement de production"
-  },
-  {
-    "objectID": "index.html#application-environnements-virtuels",
-    "href": "index.html#application-environnements-virtuels",
-    "title": "Mise en production des projets de data science",
-    "section": "Application : environnements virtuels",
-    "text": "Application : environnements virtuels\n\nConsignes sur le site du cours"
   },
   {
     "objectID": "index.html#conteneurs-introduction",
@@ -343,11 +343,11 @@
     "text": "Docker : fonctionnement\n\nSource : k21academy.com"
   },
   {
-    "objectID": "index.html#application-conteneurisation-avec-docker",
-    "href": "index.html#application-conteneurisation-avec-docker",
+    "objectID": "index.html#portabilité-du-projet",
+    "href": "index.html#portabilité-du-projet",
     "title": "Mise en production des projets de data science",
-    "section": "Application : conteneurisation avec Docker",
-    "text": "Application : conteneurisation avec Docker\n\nConsignes sur le site du cours"
+    "section": "Portabilité du projet",
+    "text": "Portabilité du projet\n\nConsignes sur le site du cours\n\nPartie :trois: : construction d’un projet portable et reproductible\n\nConstruire un environnement virtuel pour le projet\nConteneuriser l’application avec Docker"
   },
   {
     "objectID": "index.html#motivation",
