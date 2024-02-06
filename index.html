@@ -778,10 +778,10 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="principes-généraux-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Principes généraux</h2>
 <ul>
-<li class="fragment"><p>La <span class="orange"><strong>structure</strong></span> de projet dépend de sa <span class="orange"><strong>maturité</strong></span></p>
+<li class="fragment"><p>Favoriser une <span class="blue2"><strong>structure modulaire</strong></span> selon l’état du projet</p>
 <ul>
 <li class="fragment"><span class="orange"><strong>Exploration</strong></span> : travail à partir de <span class="blue2"><strong>notebooks</strong></span></li>
-<li class="fragment"><span class="orange"><strong>Industrialisation</strong></span> : adopter une <span class="blue2"><strong>structure modulaire</strong></span></li>
+<li class="fragment"><span class="orange"><strong>Industrialisation</strong></span> : adopter une structure type <span class="blue2"><strong>paclage</strong></span></li>
 </ul></li>
 <li class="fragment"><p>Adopter les <span class="orange"><strong>standards communautaires</strong></span></p></li>
 <li class="fragment"><p><span class="orange"><strong>(Auto-)documenter</strong></span> son projet</p></li>
@@ -797,7 +797,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 <li class="fragment"><span class="orange"><strong>Inconvénients</strong></span>
 <ul>
-<li class="fragment"><span class="blue2"><strong>Reproductibilité</strong></span> limitée</li>
+<li class="fragment"><span class="blue2"><strong>Reproductibilité</strong></span> généralement limitée</li>
 <li class="fragment">Pas adaptés pour l’<span class="blue2"><strong>automatisation</strong></span></li>
 <li class="fragment">Mal gérés par le <span class="blue2"><strong>contrôle de version</strong></span></li>
 </ul></li>
@@ -809,9 +809,9 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p><span class="orange"><strong>Premier niveau</strong></span> : structuration du <span class="orange"><strong>code</strong></span></p></li>
 <li class="fragment"><p>Adopter une structure type <span class="orange"><strong>package</strong></span></p>
 <ul>
-<li class="fragment">Contient des <span class="blue2"><strong>fonctions</strong></span> rangées dans des <span class="blue2"><strong>modules</strong></span></li>
+<li class="fragment">Des <span class="blue2"><strong>fonctions</strong></span> rangées dans des <span class="blue2"><strong>modules</strong></span></li>
 <li class="fragment">Un script principal (<code>main</code>) <span class="blue2"><strong>orchestre</strong></span> les traitements</li>
-<li class="fragment">Inclus de la <span class="blue2"><strong>documentation</strong></span>, des <span class="blue2"><strong>tests</strong></span>, etc.</li>
+<li class="fragment">Utilisation de <span class="blue2"><strong>chemins relatifs</strong></span> uniquement</li>
 </ul></li>
 </ul>
 </section>

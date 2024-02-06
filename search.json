@@ -172,21 +172,21 @@
     "href": "index.html#principes-généraux-1",
     "title": "Mise en production des projets de data science",
     "section": "Principes généraux",
-    "text": "Principes généraux\n\nLa structure de projet dépend de sa maturité\n\nExploration : travail à partir de notebooks\nIndustrialisation : adopter une structure modulaire\n\nAdopter les standards communautaires\n(Auto-)documenter son projet"
+    "text": "Principes généraux\n\nFavoriser une structure modulaire selon l’état du projet\n\nExploration : travail à partir de notebooks\nIndustrialisation : adopter une structure type paclage\n\nAdopter les standards communautaires\n(Auto-)documenter son projet"
   },
   {
     "objectID": "index.html#phase-dexploration-notebooks",
     "href": "index.html#phase-dexploration-notebooks",
     "title": "Mise en production des projets de data science",
     "section": "1️⃣ Phase d’exploration : notebooks",
-    "text": "1️⃣ Phase d’exploration : notebooks\n\nAvantages\n\nInteractivité : idéal pour l’expérimentation\nCommunication : diffusion de résultats sous forme exécutable\n\nInconvénients\n\nReproductibilité limitée\nPas adaptés pour l’automatisation\nMal gérés par le contrôle de version"
+    "text": "1️⃣ Phase d’exploration : notebooks\n\nAvantages\n\nInteractivité : idéal pour l’expérimentation\nCommunication : diffusion de résultats sous forme exécutable\n\nInconvénients\n\nReproductibilité généralement limitée\nPas adaptés pour l’automatisation\nMal gérés par le contrôle de version"
   },
   {
     "objectID": "index.html#industrialisation-structure-modulaire",
     "href": "index.html#industrialisation-structure-modulaire",
     "title": "Mise en production des projets de data science",
     "section": "2️⃣ Industrialisation : structure modulaire",
-    "text": "2️⃣ Industrialisation : structure modulaire\n\nPremier niveau : structuration du code\nAdopter une structure type package\n\nContient des fonctions rangées dans des modules\nUn script principal (main) orchestre les traitements\nInclus de la documentation, des tests, etc."
+    "text": "2️⃣ Industrialisation : structure modulaire\n\nPremier niveau : structuration du code\nAdopter une structure type package\n\nDes fonctions rangées dans des modules\nUn script principal (main) orchestre les traitements\nUtilisation de chemins relatifs uniquement"
   },
   {
     "objectID": "index.html#industrialisation-structure-modulaire-1",
