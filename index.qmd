@@ -496,7 +496,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ![](img/IWOMM.jpg){fig-align="center"}
 
-## L'enjeu de la portabilité
+## Le critère de la portabilité
 
 - Un code ne vit jamais dans une bulle isolée, il contient en général de nombreuses [**adhérences**]{.orange}
     - Des [**dépendances**]{.blue2}
@@ -504,37 +504,40 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - Un code est [**portable**]{.orange} s'il peut être exécuté dans un environnement différent que celui du développement
 
-- Besoin de nouveaux outils
-    - Les [**environnements virtuels**]{.blue2}
-    - Les [**conteneurs**]{.blue2}
+## Limites du mode de travail usuel
 
-## Environnements virtuels : introduction
-
-- [**Workflow**]{.orange} classique du data scientist qui commencerait ses premiers projets
+- [***Workflow* classique**]{.orange}
     - Installer une distribution de `Python` sur son poste
     - Développer un projet en installant les packages nécessaires
     - Passer au projet suivant et ainsi de suite
 
-- Quels [**problème**]{.orange} peuvent se poser ?
+- Quels [**problèmes**]{.orange} peuvent se poser ?
 
-## Environnements virtuels : enjeux
+## Limites du mode de travail usuel
 
 - [**Conflits de version**]{.orange} : différents projets peuvent recquérir des versions différentes d'un même *package*
 
-- [**Version de Python fixe**]{.orange}, celle de l'installation système
+- [**Version de `Python` fixe**]{.orange}, celle de l'installation système
 
 - [**Reproductibilité limitée**]{.orange} : difficile de dire quel projet nécessite quel package
 
 - [**Portabilité limitée**]{.orange} : difficile de fixer dans un fichier les dépendances spécifiques à un projet
 
+## Comment favoriser la portabilité ?
+
+- Enjeu central pour la [**mise en production**]{.orange}
+    - Passer d'un [**environnement de développement**]{.blue2} à un [**environnement de production**]{.blue2}
+
+- Besoin de [**nouveaux outils**]{.orange}
+    - Les [**environnements virtuels**]{.blue2}
+    - Les [**conteneurs**]{.blue2}
+
 ## Environnements virtuels : fonctionnement
 
 - [**Dossier auto-suffisant**]{.orange} qui contient :
-    - Une installation de `Python` pour une version donnée ;
+    - Une installation de `Python` ;
     - Des packages additionnels
 et qui est [**isolé**]{.orange} des autres environnements existants
-
-- Développer dans un environnement virtuel vierge est une bonne pratique pour la [**reproductibilité**]{.orange}
 
 ## Environnements virtuels : implémentations
 
@@ -567,15 +570,6 @@ et qui est [**isolé**]{.orange} des autres environnements existants
 - [**Lourdeur**]{.orange} de la phase d'installation à chaque changement d'environnement
 
 - Peu adaptés à un environnement de [**production**]{.orange}
-
-
-
-
-
-
-## Application : environnements virtuels
-
-- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#anaconda)
 
 ## Conteneurs : introduction
 
@@ -617,9 +611,19 @@ Source : [docker.com](https://www.docker.com/resources/what-container/)
 
 Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)
 
-## Application : conteneurisation avec Docker
 
-- Consignes sur le [site du cours](https://linogaliana.github.io/ensae-reproductibilite-website/chapters/application.html#docker)
+
+
+
+
+# Application
+
+## Portabilité du projet
+
+- Consignes sur le [site du cours](https://ensae-reproductibilite.github.io/website/chapters/application.html)
+    - Partie :trois: : construction d’un projet [**portable**]{.orange} et [**reproductible**]{.orange}
+        - Construire un [**environnement virtuel**]{.blue2} pour le projet
+        - Conteneuriser l'application avec `Docker`
 
 
 
