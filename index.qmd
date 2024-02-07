@@ -506,7 +506,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## Limites du mode de travail usuel
 
-- [***Workflow* classique**]{.orange}
+- *Workflow* [**classique**]{.orange}
     - Installer une distribution de `Python` sur son poste
     - Développer un projet en installant les packages nécessaires
     - Passer au projet suivant et ainsi de suite
@@ -534,10 +534,14 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## Environnements virtuels : fonctionnement
 
-- [**Dossier auto-suffisant**]{.orange} qui contient :
-    - Une installation de `Python` ;
-    - Des packages additionnels
-et qui est [**isolé**]{.orange} des autres environnements existants
+- [**Dossier auto-suffisant**]{.orange} qui :
+    - contient un [**intepréteur**]{.blue2} `Python` et des [**packages**]{.blue2}
+    - est [**isolé**]{.orange} des autres environnements existants
+
+. . .
+
+![](img/venv.png){fig-align="center" height=300}
+[Source](https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/)
 
 ## Environnements virtuels : implémentations
 
