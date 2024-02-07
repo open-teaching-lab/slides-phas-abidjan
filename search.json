@@ -284,7 +284,7 @@
     "href": "index.html#environnements-virtuels-fonctionnement",
     "title": "Mise en production des projets de data science",
     "section": "Environnements virtuels : fonctionnement",
-    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui contient :\n\nUne installation de Python ;\nDes packages additionnels et qui est isolé des autres environnements existants"
+    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui :\n\ncontient un intepréteur Python et des packages\nest isolé des autres environnements existants\n\n\n\n Source"
   },
   {
     "objectID": "index.html#environnements-virtuels-implémentations",
