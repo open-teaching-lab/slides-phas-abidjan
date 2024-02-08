@@ -32,6 +32,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/InseeFrLab/onyxia/logo.css">
@@ -781,7 +846,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>Favoriser une <span class="blue2"><strong>structure modulaire</strong></span> selon l’état du projet</p>
 <ul>
 <li class="fragment"><span class="orange"><strong>Exploration</strong></span> : travail à partir de <span class="blue2"><strong>notebooks</strong></span></li>
-<li class="fragment"><span class="orange"><strong>Industrialisation</strong></span> : adopter une structure type <span class="blue2"><strong>paclage</strong></span></li>
+<li class="fragment"><span class="orange"><strong>Industrialisation</strong></span> : adopter une structure type <span class="blue2"><strong>package</strong></span></li>
 </ul></li>
 <li class="fragment"><p>Adopter les <span class="orange"><strong>standards communautaires</strong></span></p></li>
 <li class="fragment"><p><span class="orange"><strong>(Auto-)documenter</strong></span> son projet</p></li>
@@ -966,7 +1031,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/IWOMM.jpg" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/IWOMM.jpg" class="quarto-figure quarto-figure-center" height="350"></p>
 </figure>
 </div>
 </div>
@@ -997,7 +1062,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="limites-du-mode-de-travail-usuel-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Limites du mode de travail usuel</h2>
 <ul>
-<li class="fragment"><p><span class="orange"><strong>Conflits de version</strong></span> : différents projets peuvent recquérir des versions différentes d’un même <em>package</em></p></li>
+<li class="fragment"><p><span class="orange"><strong>Conflits de version</strong></span> : différents projets peuvent requérir des versions différentes d’un même <em>package</em></p></li>
 <li class="fragment"><p><span class="orange"><strong>Version de <code>Python</code> fixe</strong></span>, celle de l’installation système</p></li>
 <li class="fragment"><p><span class="orange"><strong>Reproductibilité limitée</strong></span> : difficile de dire quel projet nécessite quel package</p></li>
 <li class="fragment"><p><span class="orange"><strong>Portabilité limitée</strong></span> : difficile de fixer dans un fichier les dépendances spécifiques à un projet</p></li>
@@ -1027,58 +1092,92 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 </ul>
 <div class="fragment">
-<p><img data-src="img/venv.png" class="quarto-figure quarto-figure-center" height="300"> <a href="https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/">Source</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/venv.png" class="quarto-figure quarto-figure-center" height="350"></p>
+</figure>
+</div>
+<p><a href="https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/">Source</a></p>
 </div>
 </section>
 <section id="environnements-virtuels-implémentations" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Environnements virtuels : implémentations</h2>
 <ul>
-<li class="fragment">Différentes <span class="orange"><strong>implémentations</strong></span> en Python
+<li class="fragment"><p>Implémentation standard : <a href="https://docs.python.org/fr/3/library/venv.html">venv</a></p></li>
+<li class="fragment"><p>Une implémentation populaire en data science : <a href="https://docs.conda.io/en/latest/">conda</a></p>
 <ul>
-<li class="fragment">L’implémentation standard est <code>venv</code></li>
-<li class="fragment">L’implémentation la plus populaire en data science est <code>conda</code></li>
+<li class="fragment">Également un <em>package manager</em> (comme <a href="https://pip.pypa.io/en/stable/getting-started/">pip</a>, mais multi-langages)</li>
 </ul></li>
-<li class="fragment"><code>conda</code> est à la fois
+<li class="fragment"><p>D’autres implémentations existent : <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a>, <a href="https://github.com/pyenv/pyenv">pyenv</a>…</p></li>
+</ul>
+</section>
+<section id="venv-utilisation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><code>venv</code> : utilisation</h2>
 <ul>
-<li class="fragment">Un <em>package manager</em> (comme <code>pip</code>)</li>
-<li class="fragment">Un gestionnaire d’environnements virtuels</li>
+<li class="fragment"><p><code>venv</code> fait partie de la librairie standard de <code>Python</code></p></li>
+<li class="fragment"><p>Utilisation basique (sous <code>Linux</code>)</p>
+<ul>
+<li class="fragment"><span class="orange"><strong>Créer</strong></span> un environnement : <code>python -m venv myenv</code></li>
+<li class="fragment"><span class="orange"><strong>Activer</strong></span> l’environnement : <code>source myenv/bin/activate</code></li>
+<li class="fragment"><span class="orange"><strong>Installer</strong></span> des packages : <code>pip install scikit-learn</code></li>
+<li class="fragment"><span class="orange"><strong>Quitter</strong></span> l’environnement : <code>deactivate</code></li>
 </ul></li>
 </ul>
 </section>
-<section id="environnements-virtuels-installation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Environnements virtuels : installation</h2>
+<section id="spécifier-les-dépendances" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Spécifier les dépendances</h2>
 <ul>
-<li class="fragment"><code>conda</code> est généralement installé dans le cadre de <span class="orange"><strong>distributions</strong></span>
+<li class="fragment">Développer dans un <span class="orange"><strong>environnement virtuel</strong></span> favorise :
 <ul>
-<li class="fragment"><code>Miniconda</code></li>
-<li class="fragment"><code>Anaconda</code></li>
+<li class="fragment">la <span class="blue2"><strong>reproductibilité</strong></span> : fixer les packages utilisés et leurs versions</li>
+<li class="fragment">la <span class="blue2"><strong>portabilité</strong></span> : distribuer ces spécifications</li>
 </ul></li>
-<li class="fragment"><code>conda</code> est un outil en ligne de commandes (CLI)</li>
+<li class="fragment"><span class="orange"><strong>Convention</strong></span> : fichier <code>requirements.txt</code> à la <span class="blue2"><strong>racine</strong></span> du projet (à <em>commit</em> !)
+<ul>
+<li class="fragment"><span class="blue2"><strong>Génération</strong></span> : <code>pip freeze &gt; requirements.txt</code></li>
+<li class="fragment"><span class="blue2"><strong>Installation</strong></span> : <code>pip install -r requirements.txt</code></li>
+</ul></li>
 </ul>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/conda-eco.png" class="quarto-figure quarto-figure-center" height="200"></p>
-</figure>
-</div>
-</div>
+</section>
+<section id="le-fichier-requirements.txt" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le fichier <code>requirements.txt</code></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>beautifulsoup4<span class="op">==</span><span class="fl">4.12.3</span></span>
+<span id="cb4-2"><a></a>expecttest<span class="op">!=</span><span class="fl">0.2.0</span></span>
+<span id="cb4-3"><a></a>networkx<span class="op">&gt;=</span><span class="fl">3.0.0</span></span>
+<span id="cb4-4"><a></a>numpy</span>
+<span id="cb4-5"><a></a>pandas</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li class="fragment"><span class="orange"><strong>Arbitrage</strong></span> à trouver entre :
+<ul>
+<li class="fragment"><span class="blue2"><strong>Reproductibilité</strong></span> : <span class="blue2"><strong>spécifier</strong></span> finement les versions</li>
+<li class="fragment"><span class="blue2"><strong>Sécurité</strong></span> : laisser les versions <span class="blue2"><strong>évoluer</strong></span></li>
+</ul></li>
+</ul>
 </section>
 <section id="environnements-virtuels-limites" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Environnements virtuels : limites</h2>
 <ul>
-<li class="fragment"><p>Les <span class="orange"><strong>librairies système</strong></span> ne sont pas gérées</p></li>
-<li class="fragment"><p>Difficile de gérer des projets <span class="orange"><strong>multi-langages</strong></span></p></li>
-<li class="fragment"><p><span class="orange"><strong>Lourdeur</strong></span> de la phase d’installation à chaque changement d’environnement</p></li>
-<li class="fragment"><p>Peu adaptés à un environnement de <span class="orange"><strong>production</strong></span></p></li>
+<li class="fragment"><span class="orange"><strong>Reproductibilité</strong></span> :
+<ul>
+<li class="fragment"><span class="blue2"><strong>Version de <code>Python</code></strong></span> non-gérée</li>
+<li class="fragment"><span class="blue2"><strong>Librairies système</strong></span> non-gérées</li>
+</ul></li>
+<li class="fragment">Peu adaptés aux environnements de <span class="orange"><strong>production</strong></span> :
+<ul>
+<li class="fragment">Reproductibilité limitée -&gt; <span class="blue2"><strong>portabilité limitée</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Lourdeur</strong></span> de gestion des environnements</li>
+</ul></li>
 </ul>
 </section>
-<section id="conteneurs-introduction" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Conteneurs : introduction</h2>
+<section id="le-gold-standard-de-la-portabilité" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le <em>gold-standard</em> de la portabilité</h2>
 <ul>
-<li class="fragment"><p>Idée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on <span class="orange"><strong>distribuer directement la bonne machine</strong></span> ?</p></li>
-<li class="fragment"><p>On ne peut pas distribuer des <span class="orange"><strong>machines physiques</strong></span></p></li>
-<li class="fragment"><p>Les <span class="orange"><strong>machines virtuelles</strong></span> sont coûteuses et complexes à redistribuer</p></li>
-<li class="fragment"><p>Les <span class="orange"><strong>conteneurs</strong></span> offrent un bon compromis</p></li>
+<li class="fragment"><span class="orange"><strong>Idée</strong></span> : au lieu de distribuer la recette pour recréer la bonne machine, peut-on <span class="orange"><strong>distribuer directement la bonne machine</strong></span> ?
+<ul>
+<li class="fragment">On ne peut pas distribuer des <span class="blue2"><strong>machines physiques</strong></span></li>
+<li class="fragment">Les <span class="blue2"><strong>machines virtuelles</strong></span> sont <span class="blue2"><strong>coûteuses</strong></span> à redistribuer</li>
+</ul></li>
+<li class="fragment">Les <span class="orange"><strong>conteneurs</strong></span> offrent le compromis idéal</li>
 </ul>
 </section>
 <section id="conteneurs-vs.-machines-virtuelles" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1089,27 +1188,63 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="conteneurs-implémentations" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Conteneurs : implémentations</h2>
 <ul>
-<li class="fragment"><p>Plusieurs implémentations des conteneurs</p></li>
-<li class="fragment"><p><code>Docker</code> est largement prédominant</p></li>
+<li class="fragment">Plusieurs implémentations des conteneurs
+<ul>
+<li class="fragment"><span class="blue2"><strong><code>Docker</code></strong></span> est largement prédominant</li>
+</ul></li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/docker.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/docker.png" class="quarto-figure quarto-figure-center" height="200"></p>
 </figure>
 </div>
 </div>
 </section>
 <section id="docker-installation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Docker : installation</h2>
+<h2><code>Docker</code> : installation</h2>
 <ul>
-<li class="fragment"><p><a href="https://docs.docker.com/get-docker/">Instructions</a> selon le système d’exploitation</p></li>
-<li class="fragment"><p>Environnement “bac à sable” : <a href="https://labs.play-with-docker.com/">Play with Docker</a></p></li>
-<li class="fragment"><p><code>Docker</code> est un outil en ligne de commandes (CLI)</p></li>
+<li class="fragment"><code>Docker</code> : outil en ligne de commande (CLI)
+<ul>
+<li class="fragment"><a href="https://docs.docker.com/get-docker/">Instructions</a> selon le système d’exploitation</li>
+<li class="fragment">Environnement “bac à sable” : <a href="https://labs.play-with-docker.com/">Play with Docker</a></li>
+</ul></li>
 </ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/playwithdocker.png" class="quarto-figure quarto-figure-center" height="350"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="le-dockerfile" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le <code>Dockerfile</code></h2>
+<ul>
+<li class="fragment">Exemple : <a href="https://fastapi.tiangolo.com/deployment/docker/">conteneurisation d’une API avec FastAPI</a></li>
+</ul>
+<div class="fragment">
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb5-1"><a></a><span class="co"># Image Docker de base</span></span>
+<span id="cb5-2"><a></a><span class="kw">FROM</span> python:3.11</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="co"># Définition du répertoire de travail</span></span>
+<span id="cb5-5"><a></a><span class="kw">WORKDIR</span> /code</span>
+<span id="cb5-6"><a></a></span>
+<span id="cb5-7"><a></a><span class="co"># Copie des fichiers nécessaires sur l'image</span></span>
+<span id="cb5-8"><a></a><span class="kw">COPY</span> requirements.txt /code/requirements.txt</span>
+<span id="cb5-9"><a></a></span>
+<span id="cb5-10"><a></a><span class="co"># Installation des dépendances</span></span>
+<span id="cb5-11"><a></a><span class="kw">RUN</span> <span class="ex">pip</span> install <span class="at">--no-cache-dir</span> <span class="at">--upgrade</span> <span class="at">-r</span> /code/requirements.txt <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb5-12"><a></a>    <span class="ex">python</span> <span class="at">-m</span> spacy download en_core_web_sm</span>
+<span id="cb5-13"><a></a></span>
+<span id="cb5-14"><a></a><span class="kw">COPY</span> app/ code/app</span>
+<span id="cb5-15"><a></a></span>
+<span id="cb5-16"><a></a><span class="co"># Commande lancée par l'image au runtime</span></span>
+<span id="cb5-17"><a></a><span class="kw">CMD</span> [<span class="st">"uvicorn"</span>, <span class="st">"app.main:app"</span>, <span class="st">"--host"</span>, <span class="st">"0.0.0.0"</span>, <span class="st">"--port"</span>, <span class="st">"80"</span>, <span class="st">"--proxy-headers"</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="docker-fonctionnement" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Docker : fonctionnement</h2>
+<h2><code>Docker</code> : fonctionnement</h2>
 
 <img data-src="img/docker-workflow.png" class="quarto-figure quarto-figure-center r-stretch"><p>Source : <a href="https://k21academy.com/docker-kubernetes/docker-and-kubernetes/">k21academy.com</a></p>
 </section></section>
@@ -1123,10 +1258,10 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <ul>
 <li class="fragment">Consignes sur le <a href="https://ensae-reproductibilite.github.io/website/chapters/application.html">site du cours</a>
 <ul>
-<li class="fragment">Partie :trois: : construction d’un projet <span class="orange"><strong>portable</strong></span> et <span class="orange"><strong>reproductible</strong></span>
+<li class="fragment">Partie <span class="emoji" data-emoji="three">3️⃣</span> : construction d’un projet <span class="orange"><strong>portable</strong></span> et <span class="orange"><strong>reproductible</strong></span>
 <ul>
 <li class="fragment">Construire un <span class="blue2"><strong>environnement virtuel</strong></span> pour le projet</li>
-<li class="fragment">Conteneuriser l’application avec <code>Docker</code></li>
+<li class="fragment"><span class="blue2"><strong>Conteneuriser</strong></span> l’application avec <code>Docker</code></li>
 </ul></li>
 </ul></li>
 </ul>

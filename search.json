@@ -172,7 +172,7 @@
     "href": "index.html#principes-généraux-1",
     "title": "Mise en production des projets de data science",
     "section": "Principes généraux",
-    "text": "Principes généraux\n\nFavoriser une structure modulaire selon l’état du projet\n\nExploration : travail à partir de notebooks\nIndustrialisation : adopter une structure type paclage\n\nAdopter les standards communautaires\n(Auto-)documenter son projet"
+    "text": "Principes généraux\n\nFavoriser une structure modulaire selon l’état du projet\n\nExploration : travail à partir de notebooks\nIndustrialisation : adopter une structure type package\n\nAdopter les standards communautaires\n(Auto-)documenter son projet"
   },
   {
     "objectID": "index.html#phase-dexploration-notebooks",
@@ -270,7 +270,7 @@
     "href": "index.html#limites-du-mode-de-travail-usuel-1",
     "title": "Mise en production des projets de data science",
     "section": "Limites du mode de travail usuel",
-    "text": "Limites du mode de travail usuel\n\nConflits de version : différents projets peuvent recquérir des versions différentes d’un même package\nVersion de Python fixe, celle de l’installation système\nReproductibilité limitée : difficile de dire quel projet nécessite quel package\nPortabilité limitée : difficile de fixer dans un fichier les dépendances spécifiques à un projet"
+    "text": "Limites du mode de travail usuel\n\nConflits de version : différents projets peuvent requérir des versions différentes d’un même package\nVersion de Python fixe, celle de l’installation système\nReproductibilité limitée : difficile de dire quel projet nécessite quel package\nPortabilité limitée : difficile de fixer dans un fichier les dépendances spécifiques à un projet"
   },
   {
     "objectID": "index.html#comment-favoriser-la-portabilité",
@@ -284,35 +284,49 @@
     "href": "index.html#environnements-virtuels-fonctionnement",
     "title": "Mise en production des projets de data science",
     "section": "Environnements virtuels : fonctionnement",
-    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui :\n\ncontient un intepréteur Python et des packages\nest isolé des autres environnements existants\n\n\n\n Source"
+    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui :\n\ncontient un intepréteur Python et des packages\nest isolé des autres environnements existants\n\n\n\n\n\n\n\n\nSource"
   },
   {
     "objectID": "index.html#environnements-virtuels-implémentations",
     "href": "index.html#environnements-virtuels-implémentations",
     "title": "Mise en production des projets de data science",
     "section": "Environnements virtuels : implémentations",
-    "text": "Environnements virtuels : implémentations\n\nDifférentes implémentations en Python\n\nL’implémentation standard est venv\nL’implémentation la plus populaire en data science est conda\n\nconda est à la fois\n\nUn package manager (comme pip)\nUn gestionnaire d’environnements virtuels"
+    "text": "Environnements virtuels : implémentations\n\nImplémentation standard : venv\nUne implémentation populaire en data science : conda\n\nÉgalement un package manager (comme pip, mais multi-langages)\n\nD’autres implémentations existent : virtualenv, pyenv…"
   },
   {
-    "objectID": "index.html#environnements-virtuels-installation",
-    "href": "index.html#environnements-virtuels-installation",
+    "objectID": "index.html#venv-utilisation",
+    "href": "index.html#venv-utilisation",
     "title": "Mise en production des projets de data science",
-    "section": "Environnements virtuels : installation",
-    "text": "Environnements virtuels : installation\n\nconda est généralement installé dans le cadre de distributions\n\nMiniconda\nAnaconda\n\nconda est un outil en ligne de commandes (CLI)"
+    "section": "venv : utilisation",
+    "text": "venv : utilisation\n\nvenv fait partie de la librairie standard de Python\nUtilisation basique (sous Linux)\n\nCréer un environnement : python -m venv myenv\nActiver l’environnement : source myenv/bin/activate\nInstaller des packages : pip install scikit-learn\nQuitter l’environnement : deactivate"
+  },
+  {
+    "objectID": "index.html#spécifier-les-dépendances",
+    "href": "index.html#spécifier-les-dépendances",
+    "title": "Mise en production des projets de data science",
+    "section": "Spécifier les dépendances",
+    "text": "Spécifier les dépendances\n\nDévelopper dans un environnement virtuel favorise :\n\nla reproductibilité : fixer les packages utilisés et leurs versions\nla portabilité : distribuer ces spécifications\n\nConvention : fichier requirements.txt à la racine du projet (à commit !)\n\nGénération : pip freeze &gt; requirements.txt\nInstallation : pip install -r requirements.txt"
+  },
+  {
+    "objectID": "index.html#le-fichier-requirements.txt",
+    "href": "index.html#le-fichier-requirements.txt",
+    "title": "Mise en production des projets de data science",
+    "section": "Le fichier requirements.txt",
+    "text": "Le fichier requirements.txt\nbeautifulsoup4==4.12.3\nexpecttest!=0.2.0\nnetworkx&gt;=3.0.0\nnumpy\npandas\n\nArbitrage à trouver entre :\n\nReproductibilité : spécifier finement les versions\nSécurité : laisser les versions évoluer"
   },
   {
     "objectID": "index.html#environnements-virtuels-limites",
     "href": "index.html#environnements-virtuels-limites",
     "title": "Mise en production des projets de data science",
     "section": "Environnements virtuels : limites",
-    "text": "Environnements virtuels : limites\n\nLes librairies système ne sont pas gérées\nDifficile de gérer des projets multi-langages\nLourdeur de la phase d’installation à chaque changement d’environnement\nPeu adaptés à un environnement de production"
+    "text": "Environnements virtuels : limites\n\nReproductibilité :\n\nVersion de Python non-gérée\nLibrairies système non-gérées\n\nPeu adaptés aux environnements de production :\n\nReproductibilité limitée -&gt; portabilité limitée\nLourdeur de gestion des environnements"
   },
   {
-    "objectID": "index.html#conteneurs-introduction",
-    "href": "index.html#conteneurs-introduction",
+    "objectID": "index.html#le-gold-standard-de-la-portabilité",
+    "href": "index.html#le-gold-standard-de-la-portabilité",
     "title": "Mise en production des projets de data science",
-    "section": "Conteneurs : introduction",
-    "text": "Conteneurs : introduction\n\nIdée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on distribuer directement la bonne machine ?\nOn ne peut pas distribuer des machines physiques\nLes machines virtuelles sont coûteuses et complexes à redistribuer\nLes conteneurs offrent un bon compromis"
+    "section": "Le gold-standard de la portabilité",
+    "text": "Le gold-standard de la portabilité\n\nIdée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on distribuer directement la bonne machine ?\n\nOn ne peut pas distribuer des machines physiques\nLes machines virtuelles sont coûteuses à redistribuer\n\nLes conteneurs offrent le compromis idéal"
   },
   {
     "objectID": "index.html#conteneurs-vs.-machines-virtuelles",
@@ -326,14 +340,21 @@
     "href": "index.html#conteneurs-implémentations",
     "title": "Mise en production des projets de data science",
     "section": "Conteneurs : implémentations",
-    "text": "Conteneurs : implémentations\n\nPlusieurs implémentations des conteneurs\nDocker est largement prédominant"
+    "text": "Conteneurs : implémentations\n\nPlusieurs implémentations des conteneurs\n\nDocker est largement prédominant"
   },
   {
     "objectID": "index.html#docker-installation",
     "href": "index.html#docker-installation",
     "title": "Mise en production des projets de data science",
     "section": "Docker : installation",
-    "text": "Docker : installation\n\nInstructions selon le système d’exploitation\nEnvironnement “bac à sable” : Play with Docker\nDocker est un outil en ligne de commandes (CLI)"
+    "text": "Docker : installation\n\nDocker : outil en ligne de commande (CLI)\n\nInstructions selon le système d’exploitation\nEnvironnement “bac à sable” : Play with Docker"
+  },
+  {
+    "objectID": "index.html#le-dockerfile",
+    "href": "index.html#le-dockerfile",
+    "title": "Mise en production des projets de data science",
+    "section": "Le Dockerfile",
+    "text": "Le Dockerfile\n\nExemple : conteneurisation d’une API avec FastAPI\n\n\n# Image Docker de base\nFROM python:3.11\n\n# Définition du répertoire de travail\nWORKDIR /code\n\n# Copie des fichiers nécessaires sur l'image\nCOPY requirements.txt /code/requirements.txt\n\n# Installation des dépendances\nRUN pip install --no-cache-dir --upgrade -r /code/requirements.txt && \\\n    python -m spacy download en_core_web_sm\n\nCOPY app/ code/app\n\n# Commande lancée par l'image au runtime\nCMD [\"uvicorn\", \"app.main:app\", \"--host\", \"0.0.0.0\", \"--port\", \"80\", \"--proxy-headers\"]"
   },
   {
     "objectID": "index.html#docker-fonctionnement",
@@ -347,7 +368,7 @@
     "href": "index.html#portabilité-du-projet",
     "title": "Mise en production des projets de data science",
     "section": "Portabilité du projet",
-    "text": "Portabilité du projet\n\nConsignes sur le site du cours\n\nPartie :trois: : construction d’un projet portable et reproductible\n\nConstruire un environnement virtuel pour le projet\nConteneuriser l’application avec Docker"
+    "text": "Portabilité du projet\n\nConsignes sur le site du cours\n\nPartie 3️⃣ : construction d’un projet portable et reproductible\n\nConstruire un environnement virtuel pour le projet\nConteneuriser l’application avec Docker"
   },
   {
     "objectID": "index.html#motivation",
