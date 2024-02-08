@@ -662,6 +662,13 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)
 
+## `Docker` en pratique
+
+- Présentation détaillée sur la [page du cours](https://ensae-reproductibilite.github.io/website/chapters/portability.html#les-conteneurs)
+    - [**Concepts**]{.blue2} (*caching*, *buildtime/runtime*)
+    - [**Commandes**]{.blue2} essentielles
+    - [**Application**]{.blue2} à un exemple concret
+
 # Application
 
 ## Portabilité du projet
