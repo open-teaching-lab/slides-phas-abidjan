@@ -364,6 +364,13 @@
     "text": "Docker : fonctionnement\n\nSource : k21academy.com"
   },
   {
+    "objectID": "index.html#docker-en-pratique",
+    "href": "index.html#docker-en-pratique",
+    "title": "Mise en production des projets de data science",
+    "section": "Docker en pratique",
+    "text": "Docker en pratique\n\nPrésentation détaillée sur la page du cours\n\nConcepts (caching, buildtime/runtime)\nCommandes essentielles\nApplication à un exemple concret"
+  },
+  {
     "objectID": "index.html#portabilité-du-projet",
     "href": "index.html#portabilité-du-projet",
     "title": "Mise en production des projets de data science",
