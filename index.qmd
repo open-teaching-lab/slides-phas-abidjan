@@ -334,7 +334,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - Favoriser une [**structure modulaire**]{.blue2} selon l'état du projet
     - [**Exploration**]{.orange} : travail à partir de [**notebooks**]{.blue2}
-    - [**Industrialisation**]{.orange} : adopter une structure type [**paclage**]{.blue2}
+    - [**Industrialisation**]{.orange} : adopter une structure type [**package**]{.blue2}
 
 - Adopter les [**standards communautaires**]{.orange}
 
@@ -494,7 +494,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/IWOMM.jpg){fig-align="center"}
+![](img/IWOMM.jpg){fig-align="center" height=350}
 
 ## Le critère de la portabilité
 
@@ -515,7 +515,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## Limites du mode de travail usuel
 
-- [**Conflits de version**]{.orange} : différents projets peuvent recquérir des versions différentes d'un même *package*
+- [**Conflits de version**]{.orange} : différents projets peuvent requérir des versions différentes d'un même *package*
 
 - [**Version de `Python` fixe**]{.orange}, celle de l'installation système
 
@@ -540,50 +540,70 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/venv.png){fig-align="center" height=300}
+![](img/venv.png){fig-align="center" height=350}
+
 [Source](https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/)
 
 ## Environnements virtuels : implémentations
 
-- Différentes [**implémentations**]{.orange} en Python
-    - L'implémentation standard est `venv`
-    - L'implémentation la plus populaire en data science est `conda`
+- Implémentation standard : [venv](https://docs.python.org/fr/3/library/venv.html)
 
-- `conda` est à la fois
-    - Un *package manager* (comme `pip`)
-    - Un gestionnaire d'environnements virtuels
+- Une implémentation populaire en data science : [conda](https://docs.conda.io/en/latest/)
+    - Également un *package manager* (comme [pip](https://pip.pypa.io/en/stable/getting-started/), mais multi-langages)
 
-## Environnements virtuels : installation
+- D'autres implémentations existent : [virtualenv](https://virtualenv.pypa.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv)...
 
-- `conda` est généralement installé dans le cadre de [**distributions**]{.orange}
-    - `Miniconda`
-    - `Anaconda`
+## `venv` : utilisation
 
-- `conda` est un outil en ligne de commandes (CLI)
+- `venv` fait partie de la librairie standard de `Python`
 
-. . .
+- Utilisation basique (sous `Linux`)
+    - [**Créer**]{.orange} un environnement : `python -m venv myenv`
+    - [**Activer**]{.orange} l'environnement : `source myenv/bin/activate`
+    - [**Installer**]{.orange} des packages : `pip install scikit-learn`
+    - [**Quitter**]{.orange} l'environnement : `deactivate`
 
-![](img/conda-eco.png){height="200" fig-align="center"}
+## Spécifier les dépendances
+
+- Développer dans un [**environnement virtuel**]{.orange} favorise :
+    - la [**reproductibilité**]{.blue2} : fixer les packages utilisés et leurs versions
+    - la [**portabilité**]{.blue2} : distribuer ces spécifications
+
+- [**Convention**]{.orange} : fichier `requirements.txt` à la [**racine**]{.blue2} du projet (à *commit* !)
+    - [**Génération**]{.blue2} : `pip freeze > requirements.txt`
+    - [**Installation**]{.blue2} : `pip install -r requirements.txt`
+
+## Le fichier `requirements.txt`
+
+```python
+beautifulsoup4==4.12.3
+expecttest!=0.2.0
+networkx>=3.0.0
+numpy
+pandas
+```
+
+- [**Arbitrage**]{.orange} à trouver entre :
+    - [**Reproductibilité**]{.blue2} : [**spécifier**]{.blue2} finement les versions
+    - [**Sécurité**]{.blue2} : laisser les versions [**évoluer**]{.blue2}
 
 ## Environnements virtuels : limites
 
-- Les [**librairies système**]{.orange} ne sont pas gérées
+- [**Reproductibilité**]{.orange} :
+    - [**Version de `Python`**]{.blue2} non-gérée
+    - [**Librairies système**]{.blue2} non-gérées
 
-- Difficile de gérer des projets [**multi-langages**]{.orange}
+- Peu adaptés aux environnements de [**production**]{.orange} :
+    - Reproductibilité limitée -> [**portabilité limitée**]{.blue2}
+    - [**Lourdeur**]{.blue2} de gestion des environnements
 
-- [**Lourdeur**]{.orange} de la phase d'installation à chaque changement d'environnement
+## Le *gold-standard* de la portabilité
 
-- Peu adaptés à un environnement de [**production**]{.orange}
+- [**Idée**]{.orange} : au lieu de distribuer la recette pour recréer la bonne machine, peut-on [**distribuer directement la bonne machine**]{.orange} ?
+    - On ne peut pas distribuer des [**machines physiques**]{.blue2}
+    - Les [**machines virtuelles**]{.blue2} sont [**coûteuses**]{.blue2} à redistribuer
 
-## Conteneurs : introduction
-
-- Idée : au lieu de distribuer la recette pour recréer la bonne machine, peut-on [**distribuer directement la bonne machine**]{.orange} ?
-
-- On ne peut pas distribuer des [**machines physiques**]{.orange}
-
-- Les [**machines virtuelles**]{.orange} sont coûteuses et complexes à redistribuer
-
-- Les [**conteneurs**]{.orange} offrent un bon compromis
+- Les [**conteneurs**]{.orange} offrent le compromis idéal
 
 ## Conteneurs vs. machines virtuelles
 
@@ -594,40 +614,62 @@ Source : [docker.com](https://www.docker.com/resources/what-container/)
 ## Conteneurs : implémentations
 
 - Plusieurs implémentations des conteneurs
-
-- `Docker` est largement prédominant
+    - [**`Docker`**]{.blue2} est largement prédominant
 
 . . .
 
-![](img/docker.png){fig-align="center"}
+![](img/docker.png){fig-align="center" height=200}
 
-## Docker : installation
+## `Docker` : installation
 
-- [Instructions](https://docs.docker.com/get-docker/) selon le système d'exploitation
+- `Docker` : outil en ligne de commande (CLI)
+    - [Instructions](https://docs.docker.com/get-docker/) selon le système d'exploitation
+    - Environnement "bac à sable" : [Play with Docker](https://labs.play-with-docker.com/)
 
-- Environnement "bac à sable" : [Play with Docker](https://labs.play-with-docker.com/)
+. . .
 
-- `Docker` est un outil en ligne de commandes (CLI)
+![](img/playwithdocker.png){fig-align="center" height=350}
 
-## Docker : fonctionnement
+## Le `Dockerfile`
+
+- Exemple : [conteneurisation d'une API avec FastAPI](https://fastapi.tiangolo.com/deployment/docker/)
+
+. . .
+
+```Dockerfile
+# Image Docker de base
+FROM python:3.11
+
+# Définition du répertoire de travail
+WORKDIR /code
+
+# Copie des fichiers nécessaires sur l'image
+COPY requirements.txt /code/requirements.txt
+
+# Installation des dépendances
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt && \
+    python -m spacy download en_core_web_sm
+
+COPY app/ code/app
+
+# Commande lancée par l'image au runtime
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-headers"]
+```
+
+## `Docker` : fonctionnement
 
 ![](img/docker-workflow.png){fig-align="center"}
 
 Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)
-
-
-
-
-
 
 # Application
 
 ## Portabilité du projet
 
 - Consignes sur le [site du cours](https://ensae-reproductibilite.github.io/website/chapters/application.html)
-    - Partie :trois: : construction d’un projet [**portable**]{.orange} et [**reproductible**]{.orange}
+    - Partie :three: : construction d’un projet [**portable**]{.orange} et [**reproductible**]{.orange}
         - Construire un [**environnement virtuel**]{.blue2} pour le projet
-        - Conteneuriser l'application avec `Docker`
+        - [**Conteneuriser**]{.blue2} l'application avec `Docker`
 
 
 
