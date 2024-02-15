@@ -481,6 +481,158 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 
 
+# Stockage des données
+
+## Enjeux
+
+- [**Massification**]{.orange} des données
+
+![](img/vvv.png){fig-align="center" height=350}
+
+[Source](https://www.packtpub.com/product/artificial-intelligence-with-python-second-edition/9781839219535)
+
+## Choisir des technologies adaptées
+
+- :one: [**Infrastructure**]{.orange}
+
+- :two: [**Formats**]{.orange} de données
+
+- :three: [***Frameworks***]{.orange} de traitement de données
+
+## :one: Le *data lake*
+
+- Un stockage [**peu coûteux**]{.orange} fait pour des [**données**]{.orange}
+  - [**volumineuses**]{.blue2}
+  - [**brutes**]{.blue2}
+  - issues de [**sources variées**]{.blue2}
+
+. . .
+
+![](img/datalake.png){height="400" fig-align="center"}
+
+## :one: Le stockage objet
+
+- Standard des *data lakes* dans le *cloud*
+    - Implémentation de référence : [Amazon S3](https://aws.amazon.com/fr/s3/)
+    - Implémentation open-source : [MinIO](https://min.io/)
+
+. . .
+
+![](img/minio.svg){height="400" fig-align="center"}
+
+## :two: Formats de données
+
+::: {.incremental}
+- Le choix d'un format de données répond à un [**arbitrage**]{.orange} entre plusieurs critères :
+    - [**Public cible**]{.blue2}
+    - [**Finalité**]{.blue2} (traitement, analyse, diffusion)
+    - [**Volumétrie**]{.blue2}
+    - [**Interopérabilité**]{.blue2}
+:::
+
+## :two: Limites des formats usuels
+
+- Les [**formats usuels**]{.orange} (`CSV`, `JSON`, `XML`) sont utiles pour :
+    - Le traitement de [**faibles volumes**]{.blue2} de données
+    - La [**diffusion**]{.orange} de données
+
+- [**Mal adaptés**]{.orange} au traitement de [**données volumineuses**]{.orange}
+  - [**Non-compressés**]{.blue2} : espace disque élevé
+  - [**Orientés ligne**]{.blue2} : un traitement sur une/des colonne(s) implique une lecture complète du fichier
+
+## :two: Orientation ligne vs. orientation colonne
+
+![](img/row-column.png){fig-align="center"}
+
+## :two: Formats prometteurs
+
+- [**Propriétés souhaitées**]{.orange} 
+  - Orientés [**colonne**]{.blue2}
+  - Efficients en [**stockage disque**]{.blue2}
+  - Efficients en [**RAM**]{.blue2}
+  - [**Interopérables**]{.blue2}
+
+- Formats [**candidats**]{.orange} 
+  - `Parquet` : [**stockage disque**]{.blue2}
+  - `Arrow` : traitement en [**mémoire**]{.blue2}
+
+## :two: `Parquet` : propriétés
+
+- [**Orienté colonne**]{.orange}
+  - Adapté aux traitements [**analytiques**]{.blue2}
+  - Conçu pour être écrit une fois mais lu fréquemment
+
+- [**Optimisé**]{.orange}
+  - [**Compression**]{.blue2} (jusqu'à 87 % moins d'espace qu'un CSV)
+  - Parcours du fichier (jusqu'à 34x plus rapide qu'un CSV)
+
+- [**Interopérable**]{.blue2} et open-source
+
+## :two: `Parquet` : partitionnement
+
+- [**Division en blocs**]{.orange} des données selon un [**critère**]{.orange}
+  - [**Optimise la lecture**]{.blue2} pour certaines *queries*
+
+![](img/partitions.png){fig-align="center"}
+
+## :three: Traitement en mémoire
+
+- `Parquet` ne résout pas tout
+  - L'espace disque est optimisé
+  - Les données décompressées doivent [**passer en RAM**]{.blue2}
+
+## :three: `Arrow`
+
+- Format de données [**en mémoire, orienté colonne**]{.orange}
+  - Optimisé pour les traitements [**analytiques**]{.blue2}
+  - Pas nécessaire de charger toutes les données en RAM
+  - [**Interopérable**]{.blue2}
+
+. . .
+
+![](img/arrow.png){fig-align="center"}
+
+## :three: Traitement des données massives
+
+- `Arrow` ne résout pas tout
+  - Les données massives nécessitent des [**infrastructures ***big data***]{.blue2}
+  - Les [**algorithmes**]{.blue2} aussi doivent être [**adaptés**]{.blue2}
+
+- Solution : [**calcul distribué**]{.orange}
+
+## :three: `Hadoop MapReduce`
+
+- Développé par Google (2004)
+
+- Popularisé par l'implémentation open-source d'[**Hadoop**]{.orange}
+
+. . .
+
+![](img/mapreduce.png){fig-align="center"}
+
+## :three: `Apache Spark`
+
+- Démocratisation du [**calcul distribué**]{.orange}
+  - [**Abstraction**]{.blue2} des opérations MapReduce
+  - [**Vitesse d'exécution**]{.blue2} (RAM vs. disque)
+
+. . .
+
+![](img/spark.png){fig-align="center"}
+
+## En résumé
+
+- Utiliser un [**format**]{.orange} de données adapté (`Parquet`)
+
+- Utiliser des [**outils**]{.orange} informatiques adaptés
+  - Données [**volumineuses**]{.blue2} : calcul [**en mémoire**]{.blue2} optimisé  (`Arrow` / `DuckDB`)
+  - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2} (`Spark`)
+
+
+
+
+
+
 
 # Portabilité
 
@@ -682,7 +834,8 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 
 
-# Vers la mise en production
+
+# Valorisation et déploiement
 
 ## Motivation
 
@@ -790,3 +943,10 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 . . .
 
 ![](img/devops.png){fig-align="center" height=300}
+
+
+
+
+
+# MLOps
+
