@@ -512,7 +512,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## :one: Le stockage objet
 
-- Standard des *data lakes* dans le *cloud*
+- [**Standard**]{.orange} des *data lakes* dans le [***cloud***]{.orange}
     - Implémentation de référence : [Amazon S3](https://aws.amazon.com/fr/s3/)
     - Implémentation open-source : [MinIO](https://min.io/)
 
@@ -536,25 +536,13 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
     - Le traitement de [**faibles volumes**]{.blue2} de données
     - La [**diffusion**]{.orange} de données
 
-- [**Mal adaptés**]{.orange} au traitement de [**données volumineuses**]{.orange}
+- [**Limités**]{.orange} pour le traitement de [**données volumineuses**]{.orange}
   - [**Non-compressés**]{.blue2} : espace disque élevé
-  - [**Orientés ligne**]{.blue2} : un traitement sur une/des colonne(s) implique une lecture complète du fichier
+  - [**Orientés ligne**]{.blue2} : peu adaptés aux traitements analytiques
 
 ## :two: Orientation ligne vs. orientation colonne
 
 ![](img/row-column.png){fig-align="center"}
-
-## :two: Formats prometteurs
-
-- [**Propriétés souhaitées**]{.orange} 
-  - Orientés [**colonne**]{.blue2}
-  - Efficients en [**stockage disque**]{.blue2}
-  - Efficients en [**RAM**]{.blue2}
-  - [**Interopérables**]{.blue2}
-
-- Formats [**candidats**]{.orange} 
-  - `Parquet` : [**stockage disque**]{.blue2}
-  - `Arrow` : traitement en [**mémoire**]{.blue2}
 
 ## :two: `Parquet` : propriétés
 
@@ -566,7 +554,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
   - [**Compression**]{.blue2} (jusqu'à 87 % moins d'espace qu'un CSV)
   - Parcours du fichier (jusqu'à 34x plus rapide qu'un CSV)
 
-- [**Interopérable**]{.blue2} et open-source
+- [**Interopérable**]{.orange}
+    - Gestion native des [**méta-données**]{.blue2}
 
 ## :two: `Parquet` : partitionnement
 
@@ -575,58 +564,20 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ![](img/partitions.png){fig-align="center"}
 
-## :three: Traitement en mémoire
+## :three: Traitement *in-memory*
 
 - `Parquet` ne résout pas tout
   - L'espace disque est optimisé
   - Les données décompressées doivent [**passer en RAM**]{.blue2}
 
-## :three: `Arrow`
+## :three: *Frameworks* de traitement *in-memory*
 
-- Format de données [**en mémoire, orienté colonne**]{.orange}
-  - Optimisé pour les traitements [**analytiques**]{.blue2}
-  - Pas nécessaire de charger toutes les données en RAM
-  - [**Interopérable**]{.blue2}
-
-. . .
-
-![](img/arrow.png){fig-align="center"}
-
-## :three: Traitement des données massives
-
-- `Arrow` ne résout pas tout
-  - Les données massives nécessitent des [**infrastructures ***big data***]{.blue2}
-  - Les [**algorithmes**]{.blue2} aussi doivent être [**adaptés**]{.blue2}
-
-- Solution : [**calcul distribué**]{.orange}
-
-## :three: `Hadoop MapReduce`
-
-- Développé par Google (2004)
-
-- Popularisé par l'implémentation open-source d'[**Hadoop**]{.orange}
-
-. . .
-
-![](img/mapreduce.png){fig-align="center"}
-
-## :three: `Apache Spark`
-
-- Démocratisation du [**calcul distribué**]{.orange}
-  - [**Abstraction**]{.blue2} des opérations MapReduce
-  - [**Vitesse d'exécution**]{.blue2} (RAM vs. disque)
-
-. . .
-
-![](img/spark.png){fig-align="center"}
-
-## En résumé
-
-- Utiliser un [**format**]{.orange} de données adapté (`Parquet`)
-
-- Utiliser des [**outils**]{.orange} informatiques adaptés
-  - Données [**volumineuses**]{.blue2} : calcul [**en mémoire**]{.blue2} optimisé  (`Arrow` / `DuckDB`)
-  - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2} (`Spark`)
+- Le *framework* adapté dépend de la [**volumétrie**]{.orange}
+  - Données [**volumineuses**]{.blue2} : calcul [**in-memory**]{.blue2} optimisé
+    - [Arrow](https://arrow.apache.org/overview/) : orientation fichier
+    - [DuckDB](https://duckdb.org/) : orientation base de données (`SQL`)
+  - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2}
+    - [Spark](https://spark.apache.org/)
 
 
 
