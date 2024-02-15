@@ -284,7 +284,7 @@
     "href": "index.html#limites-des-formats-usuels",
     "title": "Mise en production des projets de data science",
     "section": "2️⃣ Limites des formats usuels",
-    "text": "2️⃣ Limites des formats usuels\n\nLes formats usuels (CSV, JSON, XML) sont utiles pour :\n\nLe traitement de faibles volumes de données\nLa diffusion de données\n\nMal adaptés au traitement de données volumineuses\n\nNon-compressés : espace disque élevé\nOrientés ligne : un traitement sur une/des colonne(s) implique une lecture complète du fichier"
+    "text": "2️⃣ Limites des formats usuels\n\nLes formats usuels (CSV, JSON, XML) sont utiles pour :\n\nLe traitement de faibles volumes de données\nLa diffusion de données\n\nLimités pour le traitement de données volumineuses\n\nNon-compressés : espace disque élevé\nOrientés ligne : peu adaptés aux traitements analytiques"
   },
   {
     "objectID": "index.html#orientation-ligne-vs.-orientation-colonne",
@@ -294,18 +294,11 @@
     "text": "2️⃣ Orientation ligne vs. orientation colonne"
   },
   {
-    "objectID": "index.html#formats-prometteurs",
-    "href": "index.html#formats-prometteurs",
-    "title": "Mise en production des projets de data science",
-    "section": "2️⃣ Formats prometteurs",
-    "text": "2️⃣ Formats prometteurs\n\nPropriétés souhaitées\n\nOrientés colonne\nEfficients en stockage disque\nEfficients en RAM\nInteropérables\n\nFormats candidats\n\nParquet : stockage disque\nArrow : traitement en mémoire"
-  },
-  {
     "objectID": "index.html#parquet-propriétés",
     "href": "index.html#parquet-propriétés",
     "title": "Mise en production des projets de data science",
     "section": "2️⃣ Parquet : propriétés",
-    "text": "2️⃣ Parquet : propriétés\n\nOrienté colonne\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nParcours du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable et open-source"
+    "text": "2️⃣ Parquet : propriétés\n\nOrienté colonne\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nParcours du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable\n\nGestion native des méta-données"
   },
   {
     "objectID": "index.html#parquet-partitionnement",
@@ -315,46 +308,18 @@
     "text": "2️⃣ Parquet : partitionnement\n\nDivision en blocs des données selon un critère\n\nOptimise la lecture pour certaines queries"
   },
   {
-    "objectID": "index.html#traitement-en-mémoire",
-    "href": "index.html#traitement-en-mémoire",
+    "objectID": "index.html#traitement-in-memory",
+    "href": "index.html#traitement-in-memory",
     "title": "Mise en production des projets de data science",
-    "section": "3️⃣ Traitement en mémoire",
-    "text": "3️⃣ Traitement en mémoire\n\nParquet ne résout pas tout\n\nL’espace disque est optimisé\nLes données décompressées doivent passer en RAM"
+    "section": "3️⃣ Traitement in-memory",
+    "text": "3️⃣ Traitement in-memory\n\nParquet ne résout pas tout\n\nL’espace disque est optimisé\nLes données décompressées doivent passer en RAM"
   },
   {
-    "objectID": "index.html#arrow",
-    "href": "index.html#arrow",
+    "objectID": "index.html#frameworks-de-traitement-in-memory",
+    "href": "index.html#frameworks-de-traitement-in-memory",
     "title": "Mise en production des projets de data science",
-    "section": "3️⃣ Arrow",
-    "text": "3️⃣ Arrow\n\nFormat de données en mémoire, orienté colonne\n\nOptimisé pour les traitements analytiques\nPas nécessaire de charger toutes les données en RAM\nInteropérable"
-  },
-  {
-    "objectID": "index.html#traitement-des-données-massives",
-    "href": "index.html#traitement-des-données-massives",
-    "title": "Mise en production des projets de data science",
-    "section": "3️⃣ Traitement des données massives",
-    "text": "3️⃣ Traitement des données massives\n\nArrow ne résout pas tout\n\nLes données massives nécessitent des infrastructures big data**\nLes algorithmes aussi doivent être adaptés\n\nSolution : calcul distribué"
-  },
-  {
-    "objectID": "index.html#hadoop-mapreduce",
-    "href": "index.html#hadoop-mapreduce",
-    "title": "Mise en production des projets de data science",
-    "section": "3️⃣ Hadoop MapReduce",
-    "text": "3️⃣ Hadoop MapReduce\n\nDéveloppé par Google (2004)\nPopularisé par l’implémentation open-source d’Hadoop"
-  },
-  {
-    "objectID": "index.html#apache-spark",
-    "href": "index.html#apache-spark",
-    "title": "Mise en production des projets de data science",
-    "section": "3️⃣ Apache Spark",
-    "text": "3️⃣ Apache Spark\n\nDémocratisation du calcul distribué\n\nAbstraction des opérations MapReduce\nVitesse d’exécution (RAM vs. disque)"
-  },
-  {
-    "objectID": "index.html#en-résumé",
-    "href": "index.html#en-résumé",
-    "title": "Mise en production des projets de data science",
-    "section": "En résumé",
-    "text": "En résumé\n\nUtiliser un format de données adapté (Parquet)\nUtiliser des outils informatiques adaptés\n\nDonnées volumineuses : calcul en mémoire optimisé (Arrow / DuckDB)\nDonnées massives : calcul distribué (Spark)"
+    "section": "3️⃣ Frameworks de traitement in-memory",
+    "text": "3️⃣ Frameworks de traitement in-memory\n\nLe framework adapté dépend de la volumétrie\n\nDonnées volumineuses : calcul in-memory optimisé\n\nArrow : orientation fichier\nDuckDB : orientation base de données (SQL)\n\nDonnées massives : calcul distribué\n\nSpark"
   },
   {
     "objectID": "index.html#it-works-on-my-machine",
