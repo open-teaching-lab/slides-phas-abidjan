@@ -487,6 +487,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - [**Massification**]{.orange} des données
 
+. . .
+
 ![](img/vvv.png){fig-align="center" height=350}
 
 [Source](https://www.packtpub.com/product/artificial-intelligence-with-python-second-edition/9781839219535)
@@ -562,6 +564,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - [**Division en blocs**]{.orange} des données selon un [**critère**]{.orange}
   - [**Optimise la lecture**]{.blue2} pour certaines *queries*
 
+. . .
+
 ![](img/partitions.png){fig-align="center"}
 
 ## :three: Traitement *in-memory*
@@ -570,7 +574,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
   - L'espace disque est optimisé
   - Les données décompressées doivent [**passer en RAM**]{.blue2}
 
-## :three: *Frameworks* de traitement *in-memory*
+## :three: Frameworks de traitement *in-memory*
 
 - Le *framework* adapté dépend de la [**volumétrie**]{.orange}
   - Données [**volumineuses**]{.blue2} : calcul [**in-memory**]{.blue2} optimisé
