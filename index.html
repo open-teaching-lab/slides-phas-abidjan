@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Romain Avouac">
   <meta name="author" content="Lino Galiana">
@@ -1014,6 +1014,223 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul>
 </section></section>
 <section>
+<section id="stockage-des-données" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Stockage des données</h1>
+
+</section>
+<section id="enjeux-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Enjeux</h2>
+<ul>
+<li class="fragment"><span class="orange"><strong>Massification</strong></span> des données</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/vvv.png" class="quarto-figure quarto-figure-center" height="350"></p>
+</figure>
+</div>
+<p><a href="https://www.packtpub.com/product/artificial-intelligence-with-python-second-edition/9781839219535">Source</a></p>
+</section>
+<section id="choisir-des-technologies-adaptées" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Choisir des technologies adaptées</h2>
+<ul>
+<li class="fragment"><p><span class="emoji" data-emoji="one">1️⃣</span> <span class="orange"><strong>Infrastructure</strong></span></p></li>
+<li class="fragment"><p><span class="emoji" data-emoji="two">2️⃣</span> <span class="orange"><strong>Formats</strong></span> de données</p></li>
+<li class="fragment"><p><span class="emoji" data-emoji="three">3️⃣</span> <span class="orange"><strong><em>Frameworks</em></strong></span> de traitement de données</p></li>
+</ul>
+</section>
+<section id="le-data-lake" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="one">1️⃣</span> Le <em>data lake</em></h2>
+<ul>
+<li class="fragment">Un stockage <span class="orange"><strong>peu coûteux</strong></span> fait pour des <span class="orange"><strong>données</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>volumineuses</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>brutes</strong></span></li>
+<li class="fragment">issues de <span class="blue2"><strong>sources variées</strong></span></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/datalake.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="le-stockage-objet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="one">1️⃣</span> Le stockage objet</h2>
+<ul>
+<li class="fragment">Standard des <em>data lakes</em> dans le <em>cloud</em>
+<ul>
+<li class="fragment">Implémentation de référence : <a href="https://aws.amazon.com/fr/s3/">Amazon S3</a></li>
+<li class="fragment">Implémentation open-source : <a href="https://min.io/">MinIO</a></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/minio.svg" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="formats-de-données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="two">2️⃣</span> Formats de données</h2>
+<div>
+<ul>
+<li class="fragment">Le choix d’un format de données répond à un <span class="orange"><strong>arbitrage</strong></span> entre plusieurs critères :
+<ul>
+<li class="fragment"><span class="blue2"><strong>Public cible</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Finalité</strong></span> (traitement, analyse, diffusion)</li>
+<li class="fragment"><span class="blue2"><strong>Volumétrie</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Interopérabilité</strong></span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="limites-des-formats-usuels" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="two">2️⃣</span> Limites des formats usuels</h2>
+<ul>
+<li class="fragment">Les <span class="orange"><strong>formats usuels</strong></span> (<code>CSV</code>, <code>JSON</code>, <code>XML</code>) sont utiles pour :
+<ul>
+<li class="fragment">Le traitement de <span class="blue2"><strong>faibles volumes</strong></span> de données</li>
+<li class="fragment">La <span class="orange"><strong>diffusion</strong></span> de données</li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong>Mal adaptés</strong></span> au traitement de <span class="orange"><strong>données volumineuses</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Non-compressés</strong></span> : espace disque élevé</li>
+<li class="fragment"><span class="blue2"><strong>Orientés ligne</strong></span> : un traitement sur une/des colonne(s) implique une lecture complète du fichier</li>
+</ul></li>
+</ul>
+</section>
+<section id="orientation-ligne-vs.-orientation-colonne" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="two">2️⃣</span> Orientation ligne vs.&nbsp;orientation colonne</h2>
+
+<img data-src="img/row-column.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="formats-prometteurs" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="two">2️⃣</span> Formats prometteurs</h2>
+<ul>
+<li class="fragment"><span class="orange"><strong>Propriétés souhaitées</strong></span>
+<ul>
+<li class="fragment">Orientés <span class="blue2"><strong>colonne</strong></span></li>
+<li class="fragment">Efficients en <span class="blue2"><strong>stockage disque</strong></span></li>
+<li class="fragment">Efficients en <span class="blue2"><strong>RAM</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Interopérables</strong></span></li>
+</ul></li>
+<li class="fragment">Formats <span class="orange"><strong>candidats</strong></span>
+<ul>
+<li class="fragment"><code>Parquet</code> : <span class="blue2"><strong>stockage disque</strong></span></li>
+<li class="fragment"><code>Arrow</code> : traitement en <span class="blue2"><strong>mémoire</strong></span></li>
+</ul></li>
+</ul>
+</section>
+<section id="parquet-propriétés" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="two">2️⃣</span> <code>Parquet</code> : propriétés</h2>
+<ul>
+<li class="fragment"><span class="orange"><strong>Orienté colonne</strong></span>
+<ul>
+<li class="fragment">Adapté aux traitements <span class="blue2"><strong>analytiques</strong></span></li>
+<li class="fragment">Conçu pour être écrit une fois mais lu fréquemment</li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong>Optimisé</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Compression</strong></span> (jusqu’à 87 % moins d’espace qu’un CSV)</li>
+<li class="fragment">Parcours du fichier (jusqu’à 34x plus rapide qu’un CSV)</li>
+</ul></li>
+<li class="fragment"><span class="blue2"><strong>Interopérable</strong></span> et open-source</li>
+</ul>
+</section>
+<section id="parquet-partitionnement" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="two">2️⃣</span> <code>Parquet</code> : partitionnement</h2>
+<ul>
+<li class="fragment"><span class="orange"><strong>Division en blocs</strong></span> des données selon un <span class="orange"><strong>critère</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Optimise la lecture</strong></span> pour certaines <em>queries</em></li>
+</ul></li>
+</ul>
+
+<img data-src="img/partitions.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="traitement-en-mémoire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> Traitement en mémoire</h2>
+<ul>
+<li class="fragment"><code>Parquet</code> ne résout pas tout
+<ul>
+<li class="fragment">L’espace disque est optimisé</li>
+<li class="fragment">Les données décompressées doivent <span class="blue2"><strong>passer en RAM</strong></span></li>
+</ul></li>
+</ul>
+</section>
+<section id="arrow" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> <code>Arrow</code></h2>
+<ul>
+<li class="fragment">Format de données <span class="orange"><strong>en mémoire, orienté colonne</strong></span>
+<ul>
+<li class="fragment">Optimisé pour les traitements <span class="blue2"><strong>analytiques</strong></span></li>
+<li class="fragment">Pas nécessaire de charger toutes les données en RAM</li>
+<li class="fragment"><span class="blue2"><strong>Interopérable</strong></span></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/arrow.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="traitement-des-données-massives" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> Traitement des données massives</h2>
+<ul>
+<li class="fragment"><code>Arrow</code> ne résout pas tout
+<ul>
+<li class="fragment">Les données massives nécessitent des <span class="blue2"><strong>infrastructures </strong><em>big data</em>**</span></li>
+<li class="fragment">Les <span class="blue2"><strong>algorithmes</strong></span> aussi doivent être <span class="blue2"><strong>adaptés</strong></span></li>
+</ul></li>
+<li class="fragment">Solution : <span class="orange"><strong>calcul distribué</strong></span></li>
+</ul>
+</section>
+<section id="hadoop-mapreduce" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> <code>Hadoop MapReduce</code></h2>
+<ul>
+<li class="fragment"><p>Développé par Google (2004)</p></li>
+<li class="fragment"><p>Popularisé par l’implémentation open-source d’<span class="orange"><strong>Hadoop</strong></span></p></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mapreduce.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="apache-spark" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> <code>Apache Spark</code></h2>
+<ul>
+<li class="fragment">Démocratisation du <span class="orange"><strong>calcul distribué</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Abstraction</strong></span> des opérations MapReduce</li>
+<li class="fragment"><span class="blue2"><strong>Vitesse d’exécution</strong></span> (RAM vs.&nbsp;disque)</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/spark.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="en-résumé" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>En résumé</h2>
+<ul>
+<li class="fragment"><p>Utiliser un <span class="orange"><strong>format</strong></span> de données adapté (<code>Parquet</code>)</p></li>
+<li class="fragment"><p>Utiliser des <span class="orange"><strong>outils</strong></span> informatiques adaptés</p>
+<ul>
+<li class="fragment">Données <span class="blue2"><strong>volumineuses</strong></span> : calcul <span class="blue2"><strong>en mémoire</strong></span> optimisé (<code>Arrow</code> / <code>DuckDB</code>)</li>
+<li class="fragment">Données <span class="blue2"><strong>massives</strong></span> : calcul <span class="blue2"><strong>distribué</strong></span> (<code>Spark</code>)</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
 <section id="portabilité" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Portabilité</h1>
 
@@ -1278,8 +1495,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul>
 </section></section>
 <section>
-<section id="vers-la-mise-en-production" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Vers la mise en production</h1>
+<section id="valorisation-et-déploiement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Valorisation et déploiement</h1>
 
 </section>
 <section id="motivation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1417,14 +1634,17 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <p><img data-src="img/devops.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
+</div>
+</section></section>
+<section id="mlops" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>MLOps</h1>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>Bonnes pratiques pour la mise en production des projets de data science</p>
 </div>
 </div>
-</div>
-</section></section>
+</section>
     </div>
   </div>
 
