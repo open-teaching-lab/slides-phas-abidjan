@@ -263,14 +263,14 @@
     "href": "index.html#le-data-lake",
     "title": "Mise en production des projets de data science",
     "section": "1️⃣ Le data lake",
-    "text": "1️⃣ Le data lake\n\nUn stockage peu coûteux fait pour des données\n\nvolumineuses\nbrutes\nissues de sources variées"
+    "text": "1️⃣ Le data lake\n\nUn stockage peu coûteux fait pour des données\n\nVolumineuses\nBrutes\nIssues de sources variées"
   },
   {
     "objectID": "index.html#le-stockage-objet",
     "href": "index.html#le-stockage-objet",
     "title": "Mise en production des projets de data science",
     "section": "1️⃣ Le stockage objet",
-    "text": "1️⃣ Le stockage objet\n\nStandard des data lakes dans le cloud\n\nImplémentation de référence : Amazon S3\nImplémentation open-source : MinIO"
+    "text": "1️⃣ Le stockage objet\n\nStandard des data lakes dans le cloud\n\nImplémentation dominante : Amazon S3\nImplémentation open-source : MinIO"
   },
   {
     "objectID": "index.html#formats-de-données",
