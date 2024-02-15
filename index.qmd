@@ -489,7 +489,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/vvv.png){fig-align="center" height=350}
+![](img/vvv.png){fig-align="center" height=400}
 
 [Source](https://www.packtpub.com/product/artificial-intelligence-with-python-second-edition/9781839219535)
 
@@ -504,9 +504,9 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 ## :one: Le *data lake*
 
 - Un stockage [**peu coûteux**]{.orange} fait pour des [**données**]{.orange}
-  - [**volumineuses**]{.blue2}
-  - [**brutes**]{.blue2}
-  - issues de [**sources variées**]{.blue2}
+  - [**Volumineuses**]{.blue2}
+  - [**Brutes**]{.blue2}
+  - Issues de [**sources variées**]{.blue2}
 
 . . .
 
@@ -515,12 +515,12 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 ## :one: Le stockage objet
 
 - [**Standard**]{.orange} des *data lakes* dans le [***cloud***]{.orange}
-    - Implémentation de référence : [Amazon S3](https://aws.amazon.com/fr/s3/)
+    - Implémentation dominante : [Amazon S3](https://aws.amazon.com/fr/s3/)
     - Implémentation open-source : [MinIO](https://min.io/)
 
 . . .
 
-![](img/minio.svg){height="400" fig-align="center"}
+![](img/minio.svg){height="300" fig-align="center"}
 
 ## :two: Formats de données
 
