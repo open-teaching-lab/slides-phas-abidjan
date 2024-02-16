@@ -509,6 +509,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><span class="blue2"><strong>Travail collaboratif</strong></span> avec <code>Git</code></li>
 <li class="fragment"><span class="blue2"><strong>Qualité</strong></span> du code</li>
 <li class="fragment"><span class="blue2"><strong>Structure</strong></span> des projets</li>
+<li class="fragment">Traitement des <span class="blue2"><strong>données volumineuses</strong></span></li>
 </ul></li>
 <li class="fragment"><span class="orange"><strong>Mise en production</strong></span>
 <ul>
@@ -1014,8 +1015,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul>
 </section></section>
 <section>
-<section id="stockage-des-données" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Stockage des données</h1>
+<section id="traitement-des-données-volumineuses" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Traitement des données volumineuses</h1>
 
 </section>
 <section id="enjeux-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1026,7 +1027,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/vvv.png" class="quarto-figure quarto-figure-center" height="400"></p>
+<p><img data-src="img/vvv.png" class="quarto-figure quarto-figure-center" height="350"></p>
 </figure>
 </div>
 <p><a href="https://www.packtpub.com/product/artificial-intelligence-with-python-second-edition/9781839219535">Source</a></p>
@@ -1040,7 +1041,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p><span class="emoji" data-emoji="three">3️⃣</span> <span class="orange"><strong><em>Frameworks</em></strong></span> de traitement de données</p></li>
 </ul>
 </section>
-<section id="le-data-lake" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="le-data-lake" class="slide level2 scrollable" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="one">1️⃣</span> Le <em>data lake</em></h2>
 <ul>
 <li class="fragment">Un stockage <span class="orange"><strong>peu coûteux</strong></span> fait pour des <span class="orange"><strong>données</strong></span>
@@ -1056,6 +1057,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <p><img data-src="img/datalake.png" class="quarto-figure quarto-figure-center" height="400"></p>
 </figure>
 </div>
+<p><a href="https://www.qlik.com/us/data-lake">Source</a></p>
 </div>
 </section>
 <section id="le-stockage-objet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1095,7 +1097,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment">Les <span class="orange"><strong>formats usuels</strong></span> (<code>CSV</code>, <code>JSON</code>, <code>XML</code>) sont utiles pour :
 <ul>
 <li class="fragment">Le traitement de <span class="blue2"><strong>faibles volumes</strong></span> de données</li>
-<li class="fragment">La <span class="orange"><strong>diffusion</strong></span> de données</li>
+<li class="fragment">La <span class="blue2"><strong>diffusion</strong></span> de données</li>
 </ul></li>
 <li class="fragment"><span class="orange"><strong>Limités</strong></span> pour le traitement de <span class="orange"><strong>données volumineuses</strong></span>
 <ul>
@@ -1104,22 +1106,27 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 </ul>
 </section>
-<section id="orientation-ligne-vs.-orientation-colonne" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="orientation-ligne-vs.-orientation-colonne" class="slide level2 scrollable" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="two">2️⃣</span> Orientation ligne vs.&nbsp;orientation colonne</h2>
-
-<img data-src="img/row-column.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/row-column.png" class="quarto-figure quarto-figure-center" height="350"></p>
+</figure>
+</div>
+<p><a href="https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705">Source</a></p>
+</section>
 <section id="parquet-propriétés" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="two">2️⃣</span> <code>Parquet</code> : propriétés</h2>
 <ul>
 <li class="fragment"><span class="orange"><strong>Orienté colonne</strong></span>
 <ul>
-<li class="fragment">Adapté aux traitements <span class="blue2"><strong>analytiques</strong></span></li>
+<li class="fragment">Adapté aux <span class="blue2"><strong>traitements analytiques</strong></span></li>
 <li class="fragment">Conçu pour être écrit une fois mais lu fréquemment</li>
 </ul></li>
 <li class="fragment"><span class="orange"><strong>Optimisé</strong></span>
 <ul>
 <li class="fragment"><span class="blue2"><strong>Compression</strong></span> (jusqu’à 87 % moins d’espace qu’un CSV)</li>
-<li class="fragment">Parcours du fichier (jusqu’à 34x plus rapide qu’un CSV)</li>
+<li class="fragment"><span class="blue2"><strong>Lecture</strong></span> du fichier (jusqu’à 34x plus rapide qu’un CSV)</li>
 </ul></li>
 <li class="fragment"><span class="orange"><strong>Interopérable</strong></span>
 <ul>

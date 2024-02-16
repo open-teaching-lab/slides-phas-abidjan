@@ -39,7 +39,7 @@
     "href": "index.html#contenu-du-cours",
     "title": "Mise en production des projets de data science",
     "section": "Contenu du cours",
-    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\n\nMise en production\n\nMaximiser la portabilité\nDéployer et valoriser un projet de data science\nMLOps"
+    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\n\nMise en production\n\nMaximiser la portabilité\nDéployer et valoriser un projet de data science\nMLOps"
   },
   {
     "objectID": "index.html#site-web-du-cours",
@@ -263,7 +263,7 @@
     "href": "index.html#le-data-lake",
     "title": "Mise en production des projets de data science",
     "section": "1️⃣ Le data lake",
-    "text": "1️⃣ Le data lake\n\nUn stockage peu coûteux fait pour des données\n\nVolumineuses\nBrutes\nIssues de sources variées"
+    "text": "1️⃣ Le data lake\n\nUn stockage peu coûteux fait pour des données\n\nVolumineuses\nBrutes\nIssues de sources variées\n\n\n\n\n\n\n\n\nSource"
   },
   {
     "objectID": "index.html#le-stockage-objet",
@@ -291,14 +291,14 @@
     "href": "index.html#orientation-ligne-vs.-orientation-colonne",
     "title": "Mise en production des projets de data science",
     "section": "2️⃣ Orientation ligne vs. orientation colonne",
-    "text": "2️⃣ Orientation ligne vs. orientation colonne"
+    "text": "2️⃣ Orientation ligne vs. orientation colonne\n\n\n\n\n\nSource"
   },
   {
     "objectID": "index.html#parquet-propriétés",
     "href": "index.html#parquet-propriétés",
     "title": "Mise en production des projets de data science",
     "section": "2️⃣ Parquet : propriétés",
-    "text": "2️⃣ Parquet : propriétés\n\nOrienté colonne\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nParcours du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable\n\nGestion native des méta-données"
+    "text": "2️⃣ Parquet : propriétés\n\nOrienté colonne\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nLecture du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable\n\nGestion native des méta-données"
   },
   {
     "objectID": "index.html#parquet-partitionnement",
