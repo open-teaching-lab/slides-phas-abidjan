@@ -910,3 +910,90 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 # MLOps
 
+## Motivation
+
+- Intégrer :
+    - les [**principes DevOps**]{.orange}
+    - les [**spécificités**]{.orange} des projets de ML
+
+. . .
+
+![](img/mlops.png){fig-align="center" height=400}
+
+## MLOps : principes
+
+- [**Reproductibilité**]{.orange}
+
+- [**Contrôle de version**]{.orange}
+
+- [**Automatisation**]{.orange}
+
+- [**Collaboration**]{.orange}
+
+- [***Monitoring***]{.orange}
+
+## MLOps : implémentation
+
+- De nombreux [**frameworks**]{.orange} implémentent les principes du MLOps
+    - Catalogue du `SSP Cloud` : [MLFlow](https://mlflow.org/)
+
+- Avantages de `MLflow` : 
+  - [**Open-source**]{.blue2}
+  - Couvre l'entièreté du [**cycle de vie**]{.blue2} d'un modèle ML
+  - [**Agnostique**]{.blue2} au package ML utilisé
+  - Intégration avec `Kubernetes`
+
+## `MLFlow` : vue d'ensemble
+
+![](img/mlflow-overview.png){fig-align="center" height=350}
+
+[Source](https://dzlab.github.io/ml/2020/07/12/ml-ci-mlflow/)
+
+## `MLFlow` : Tracking server
+
+- "Une [**API**]{.orange} et une [**interface utilisateur**]{.orange} pour [**enregistrer**]{.orange} les paramètres, les versions du code, les métriques et les artefacts"
+
+. . .
+
+![](img/mlflow-tracking.png){fig-align="center" height=400}
+
+## `MLFlow` : Models
+
+- "Une convention pour [**'packager'**]{.orange} des [**modèles**]{.orange} de *machine learning* sous plusieurs [**formes**]{.orange}"
+
+. . .
+
+![](img/mlflow-models.png){fig-align="center" height=400}
+
+## `MLFlow` : Model registry
+
+- "Un [**entrepôt centralisé de modèles**]{.orange}, un ensemble d'API et une interface utilisateur pour gérer [**collaborativement**]{.orange}  le cycle de vie complet d'un modèle MLflow"
+
+. . .
+
+![](img/mlflow-model-registry.png){fig-align="center" height=400}
+
+## Servir le modèle (sans `MLFlow`)
+
+## Servir le modèle (avec `MLFlow`)
+
+
+
+
+
+
+# Application
+
+## MLOps
+
+- Consignes sur le [site du cours](https://ensae-reproductibilite.github.io/website/chapters/application.html)
+    - Partie X : application des principes MLOps avec `MLFlow`
+
+
+
+
+
+
+# Conclusion
+
+Vision essentiellement technique dans ce cours mais changements plus larges (organisationnels, etc..)
