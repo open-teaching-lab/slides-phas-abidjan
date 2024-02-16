@@ -537,5 +537,75 @@
     "title": "Mise en production des projets de data science",
     "section": "Conclusion",
     "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable"
+  },
+  {
+    "objectID": "index.html#motivation-1",
+    "href": "index.html#motivation-1",
+    "title": "Mise en production des projets de data science",
+    "section": "Motivation",
+    "text": "Motivation\n\nIntégrer :\n\nles principes DevOps\nles spécificités des projets de ML"
+  },
+  {
+    "objectID": "index.html#mlops-principes",
+    "href": "index.html#mlops-principes",
+    "title": "Mise en production des projets de data science",
+    "section": "MLOps : principes",
+    "text": "MLOps : principes\n\nReproductibilité\nContrôle de version\nAutomatisation\nCollaboration\nMonitoring"
+  },
+  {
+    "objectID": "index.html#mlops-implémentation",
+    "href": "index.html#mlops-implémentation",
+    "title": "Mise en production des projets de data science",
+    "section": "MLOps : implémentation",
+    "text": "MLOps : implémentation\n\nDe nombreux frameworks implémentent les principes du MLOps\n\nCatalogue du SSP Cloud : MLFlow\n\nAvantages de MLflow :\n\nOpen-source\nCouvre l’entièreté du cycle de vie d’un modèle ML\nAgnostique au package ML utilisé\nIntégration avec Kubernetes"
+  },
+  {
+    "objectID": "index.html#mlflow-vue-densemble",
+    "href": "index.html#mlflow-vue-densemble",
+    "title": "Mise en production des projets de data science",
+    "section": "MLFlow : vue d’ensemble",
+    "text": "MLFlow : vue d’ensemble\n\n\n\n\n\nSource"
+  },
+  {
+    "objectID": "index.html#mlflow-tracking-server",
+    "href": "index.html#mlflow-tracking-server",
+    "title": "Mise en production des projets de data science",
+    "section": "MLFlow : Tracking server",
+    "text": "MLFlow : Tracking server\n\n“Une API et une interface utilisateur pour enregistrer les paramètres, les versions du code, les métriques et les artefacts”"
+  },
+  {
+    "objectID": "index.html#mlflow-models",
+    "href": "index.html#mlflow-models",
+    "title": "Mise en production des projets de data science",
+    "section": "MLFlow : Models",
+    "text": "MLFlow : Models\n\n“Une convention pour ‘packager’ des modèles de machine learning sous plusieurs formes”"
+  },
+  {
+    "objectID": "index.html#mlflow-model-registry",
+    "href": "index.html#mlflow-model-registry",
+    "title": "Mise en production des projets de data science",
+    "section": "MLFlow : Model registry",
+    "text": "MLFlow : Model registry\n\n“Un entrepôt centralisé de modèles, un ensemble d’API et une interface utilisateur pour gérer collaborativement le cycle de vie complet d’un modèle MLflow”"
+  },
+  {
+    "objectID": "index.html#servir-le-modèle-sans-mlflow",
+    "href": "index.html#servir-le-modèle-sans-mlflow",
+    "title": "Mise en production des projets de data science",
+    "section": "Servir le modèle (sans MLFlow)",
+    "text": "Servir le modèle (sans MLFlow)"
+  },
+  {
+    "objectID": "index.html#servir-le-modèle-avec-mlflow",
+    "href": "index.html#servir-le-modèle-avec-mlflow",
+    "title": "Mise en production des projets de data science",
+    "section": "Servir le modèle (avec MLFlow)",
+    "text": "Servir le modèle (avec MLFlow)"
+  },
+  {
+    "objectID": "index.html#mlops-1",
+    "href": "index.html#mlops-1",
+    "title": "Mise en production des projets de data science",
+    "section": "MLOps",
+    "text": "MLOps\n\nConsignes sur le site du cours\n\nPartie X : application des principes MLOps avec MLFlow"
   }
 ]

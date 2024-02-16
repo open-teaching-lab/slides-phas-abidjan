@@ -1583,8 +1583,125 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </div>
 </div>
 </section></section>
+<section>
 <section id="mlops" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>MLOps</h1>
+
+</section>
+<section id="motivation-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Motivation</h2>
+<ul>
+<li class="fragment">Intégrer :
+<ul>
+<li class="fragment">les <span class="orange"><strong>principes DevOps</strong></span></li>
+<li class="fragment">les <span class="orange"><strong>spécificités</strong></span> des projets de ML</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mlops.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="mlops-principes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>MLOps : principes</h2>
+<ul>
+<li class="fragment"><p><span class="orange"><strong>Reproductibilité</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Contrôle de version</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Automatisation</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Collaboration</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong><em>Monitoring</em></strong></span></p></li>
+</ul>
+</section>
+<section id="mlops-implémentation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>MLOps : implémentation</h2>
+<ul>
+<li class="fragment">De nombreux <span class="orange"><strong>frameworks</strong></span> implémentent les principes du MLOps
+<ul>
+<li class="fragment">Catalogue du <code>SSP Cloud</code> : <a href="https://mlflow.org/">MLFlow</a></li>
+</ul></li>
+<li class="fragment">Avantages de <code>MLflow</code> :
+<ul>
+<li class="fragment"><span class="blue2"><strong>Open-source</strong></span></li>
+<li class="fragment">Couvre l’entièreté du <span class="blue2"><strong>cycle de vie</strong></span> d’un modèle ML</li>
+<li class="fragment"><span class="blue2"><strong>Agnostique</strong></span> au package ML utilisé</li>
+<li class="fragment">Intégration avec <code>Kubernetes</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="mlflow-vue-densemble" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><code>MLFlow</code> : vue d’ensemble</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mlflow-overview.png" class="quarto-figure quarto-figure-center" height="350"></p>
+</figure>
+</div>
+<p><a href="https://dzlab.github.io/ml/2020/07/12/ml-ci-mlflow/">Source</a></p>
+</section>
+<section id="mlflow-tracking-server" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><code>MLFlow</code> : Tracking server</h2>
+<ul>
+<li class="fragment">“Une <span class="orange"><strong>API</strong></span> et une <span class="orange"><strong>interface utilisateur</strong></span> pour <span class="orange"><strong>enregistrer</strong></span> les paramètres, les versions du code, les métriques et les artefacts”</li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mlflow-tracking.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="mlflow-models" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><code>MLFlow</code> : Models</h2>
+<ul>
+<li class="fragment">“Une convention pour <span class="orange"><strong>‘packager’</strong></span> des <span class="orange"><strong>modèles</strong></span> de <em>machine learning</em> sous plusieurs <span class="orange"><strong>formes</strong></span>”</li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mlflow-models.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="mlflow-model-registry" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><code>MLFlow</code> : Model registry</h2>
+<ul>
+<li class="fragment">“Un <span class="orange"><strong>entrepôt centralisé de modèles</strong></span>, un ensemble d’API et une interface utilisateur pour gérer <span class="orange"><strong>collaborativement</strong></span> le cycle de vie complet d’un modèle MLflow”</li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mlflow-model-registry.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="servir-le-modèle-sans-mlflow" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Servir le modèle (sans <code>MLFlow</code>)</h2>
+</section>
+<section id="servir-le-modèle-avec-mlflow" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Servir le modèle (avec <code>MLFlow</code>)</h2>
+</section></section>
+<section>
+<section id="application-2" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Application</h1>
+
+</section>
+<section id="mlops-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>MLOps</h2>
+<ul>
+<li class="fragment">Consignes sur le <a href="https://ensae-reproductibilite.github.io/website/chapters/application.html">site du cours</a>
+<ul>
+<li class="fragment">Partie X : application des principes MLOps avec <code>MLFlow</code></li>
+</ul></li>
+</ul>
+</section></section>
+<section id="conclusion-1" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Conclusion</h1>
+<p>Vision essentiellement technique dans ce cours mais changements plus larges (organisationnels, etc..)</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
