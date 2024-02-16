@@ -93,6 +93,7 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
     - [**Travail collaboratif**]{.blue2} avec `Git`
     - [**Qualité**]{.blue2} du code
     - [**Structure**]{.blue2} des projets
+    - Traitement des [**données volumineuses**]{.blue2}
 
 - [**Mise en production**]{.orange}
     - Maximiser la [**portabilité**]{.blue2}
@@ -481,7 +482,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 
 
-# Stockage des données
+# Traitement des données volumineuses
 
 ## Enjeux
 
@@ -489,7 +490,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/vvv.png){fig-align="center" height=400}
+![](img/vvv.png){fig-align="center" height=350}
 
 [Source](https://www.packtpub.com/product/artificial-intelligence-with-python-second-edition/9781839219535)
 
@@ -501,7 +502,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - :three: [***Frameworks***]{.orange} de traitement de données
 
-## :one: Le *data lake*
+## :one: Le *data lake* {.scrollable}
 
 - Un stockage [**peu coûteux**]{.orange} fait pour des [**données**]{.orange}
   - [**Volumineuses**]{.blue2}
@@ -511,6 +512,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 . . .
 
 ![](img/datalake.png){height="400" fig-align="center"}
+
+[Source](https://www.qlik.com/us/data-lake)
 
 ## :one: Le stockage objet
 
@@ -536,25 +539,27 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - Les [**formats usuels**]{.orange} (`CSV`, `JSON`, `XML`) sont utiles pour :
     - Le traitement de [**faibles volumes**]{.blue2} de données
-    - La [**diffusion**]{.orange} de données
+    - La [**diffusion**]{.blue2} de données
 
 - [**Limités**]{.orange} pour le traitement de [**données volumineuses**]{.orange}
   - [**Non-compressés**]{.blue2} : espace disque élevé
   - [**Orientés ligne**]{.blue2} : peu adaptés aux traitements analytiques
 
-## :two: Orientation ligne vs. orientation colonne
+## :two: Orientation ligne vs. orientation colonne {.scrollable}
 
-![](img/row-column.png){fig-align="center"}
+![](img/row-column.png){height="350" fig-align="center"}
+
+[Source](https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705)
 
 ## :two: `Parquet` : propriétés
 
 - [**Orienté colonne**]{.orange}
-  - Adapté aux traitements [**analytiques**]{.blue2}
+  - Adapté aux [**traitements analytiques**]{.blue2}
   - Conçu pour être écrit une fois mais lu fréquemment
 
 - [**Optimisé**]{.orange}
   - [**Compression**]{.blue2} (jusqu'à 87 % moins d'espace qu'un CSV)
-  - Parcours du fichier (jusqu'à 34x plus rapide qu'un CSV)
+  - [**Lecture**]{.blue2} du fichier (jusqu'à 34x plus rapide qu'un CSV)
 
 - [**Interopérable**]{.orange}
     - Gestion native des [**méta-données**]{.blue2}
