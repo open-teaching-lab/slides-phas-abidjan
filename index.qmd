@@ -13,7 +13,6 @@ footer: |
 lang: fr-FR
 # for blind readers:
 slide-tone: false
-# for @olevitt:
 chalkboard: # press the B key to toggle chalkboard
   theme: whiteboard
 # uncomment to use the multiplex mode:
@@ -138,9 +137,25 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 
 
+# Partie 1
+
+## Bonnes pratiques de développement
+
+:one: [**Travail collaboratif**]{.blue2} avec `Git`
+
+:two: [**Qualité**]{.blue2} du code
+
+:three: [**Structure**]{.blue2} des projets
+
+:four: Traitement des [**données volumineuses**]{.blue2}
+
+:five: Favoriser la [**portabilité**]{.blue2} d'une application
 
 
-# Le travail collaboratif avec `Git`
+
+
+
+# :one: Le travail collaboratif avec `Git`
 
 ## Pourquoi utiliser Git ?
 
@@ -230,7 +245,7 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
 
 
 
-# Qualité du code
+# :two: Qualité du code
 
 ## Enjeux
 
@@ -321,7 +336,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 
 
-# Structure des projets
+# :three: Structure des projets
 
 ## Enjeux
 
@@ -483,7 +498,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 
 
-# Traitement des données volumineuses
+# :four: Traitement des données volumineuses
 
 ## Enjeux
 
@@ -595,7 +610,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 
 
-# Portabilité
+# :five: Portabilité
 
 ## "It works... on my machine"
 
@@ -801,9 +816,34 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 
 
-# Valorisation d'un projet
 
-# Déploiement
+# Partie 2
+
+## Mise en production
+
+:one: [**Valorisation**]{.blue2} d'un projet de data science
+
+:two: [**Déploiement**]{.blue2}
+
+:three: [**MLOps**]{.blue2}
+
+
+
+
+
+
+
+# :one: Valorisation d'un projet
+
+
+
+
+
+
+
+
+
+# :two: Déploiement
 
 ## Motivation
 
@@ -930,7 +970,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 
 
-# MLOps
+# :three: MLOps
 
 ## Motivation
 
