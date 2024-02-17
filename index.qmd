@@ -36,7 +36,7 @@ from: markdown+emoji
 - [**Qui sommes-nous ?**]{.orange}
     - des [**data scientists**]{.blue2} de l'Insee
     - frustrés par l'[**approche**]{.blue2} souvent purement [**technique**]{.blue2} de la data science
-    - convaincus que les [**bonnes pratiques**]{.blue2} valent à être enseignées
+    - convaincus que les [**bonnes pratiques de développement**]{.blue2} valent à être enseignées
 
 - <romain.avouac@insee.fr>, <lino.galiana@insee.fr>
 
@@ -94,10 +94,11 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
     - [**Qualité**]{.blue2} du code
     - [**Structure**]{.blue2} des projets
     - Traitement des [**données volumineuses**]{.blue2}
+    - Favoriser la [**portabilité**]{.blue2} d'une application
 
 - [**Mise en production**]{.orange}
-    - Maximiser la [**portabilité**]{.blue2}
-    - [**Déployer**]{.blue2} et [**valoriser**]{.blue2} un projet de data science
+    - [**Valorisation**]{.blue2} d'un projet de data science
+    - [**Déploiement**]{.blue2}
     - [**MLOps**]{.blue2}
 
 ## Site web du cours
@@ -781,6 +782,11 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
     - [**Commandes**]{.blue2} essentielles
     - [**Application**]{.blue2} à un exemple concret
 
+
+
+
+
+
 # Application
 
 ## Portabilité du projet
@@ -795,7 +801,9 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 
 
-# Valorisation et déploiement
+# Valorisation d'un projet
+
+# Déploiement
 
 ## Motivation
 
@@ -903,6 +911,20 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 . . .
 
 ![](img/devops.png){fig-align="center" height=300}
+
+
+
+
+
+
+# Application
+
+## Mise en production
+
+- Consignes sur le [site du cours](https://ensae-reproductibilite.github.io/website/chapters/application.html)
+    - Partie 4 : automatisation de la livraison d'une application avec l’intégration continue
+    - Partie 5 : déploiement d'une application
+
 
 
 
