@@ -63,6 +63,13 @@
     "text": "Evaluation\n\nObjectif : mise en pratique réaliste des notions étudiées\n\nProblématique métier\nDonnées réelles\n\nEvaluation en deux parties :\n\nEn groupe : projet à construire selon 3 “parcours”\nIndividuel : revue de code d’un autre projet"
   },
   {
+    "objectID": "index.html#bonnes-pratiques-de-développement",
+    "href": "index.html#bonnes-pratiques-de-développement",
+    "title": "Mise en production des projets de data science",
+    "section": "Bonnes pratiques de développement",
+    "text": "Bonnes pratiques de développement\n1️⃣ Travail collaboratif avec Git\n2️⃣ Qualité du code\n3️⃣ Structure des projets\n4️⃣ Traitement des données volumineuses\n5️⃣ Favoriser la portabilité d’une application"
+  },
+  {
     "objectID": "index.html#pourquoi-utiliser-git",
     "href": "index.html#pourquoi-utiliser-git",
     "title": "Mise en production des projets de data science",
@@ -238,8 +245,8 @@
     "text": "4️⃣ Documenter son projet\n\nFavoriser l’auto-documentation via des nommages pertinents\nInclure un fichier README.md à la racine du projet\n\nCarte d’identité et vitrine du projet\nPrésente le contexte et le fonctionnement du projet\n\nSi open-source : inclure une licence"
   },
   {
-    "objectID": "index.html#bonnes-pratiques-de-développement",
-    "href": "index.html#bonnes-pratiques-de-développement",
+    "objectID": "index.html#bonnes-pratiques-de-développement-1",
+    "href": "index.html#bonnes-pratiques-de-développement-1",
     "title": "Mise en production des projets de data science",
     "section": "Bonnes pratiques de développement",
     "text": "Bonnes pratiques de développement\n\nConsignes sur le site du cours\n\nPartie 0️⃣ : initialisation de l’environnement et du projet\nPartie 1️⃣ : qualité du code\nPartie 2️⃣ : adoption d’une structure modulaire"
@@ -455,6 +462,13 @@
     "text": "Portabilité du projet\n\nConsignes sur le site du cours\n\nPartie 3️⃣ : construction d’un projet portable et reproductible\n\nConstruire un environnement virtuel pour le projet\nConteneuriser l’application avec Docker"
   },
   {
+    "objectID": "index.html#mise-en-production",
+    "href": "index.html#mise-en-production",
+    "title": "Mise en production des projets de data science",
+    "section": "Mise en production",
+    "text": "Mise en production\n1️⃣ Valorisation d’un projet de data science\n2️⃣ Déploiement\n3️⃣ MLOps"
+  },
+  {
     "objectID": "index.html#motivation",
     "href": "index.html#motivation",
     "title": "Mise en production des projets de data science",
@@ -539,8 +553,8 @@
     "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable"
   },
   {
-    "objectID": "index.html#mise-en-production",
-    "href": "index.html#mise-en-production",
+    "objectID": "index.html#mise-en-production-1",
+    "href": "index.html#mise-en-production-1",
     "title": "Mise en production des projets de data science",
     "section": "Mise en production",
     "text": "Mise en production\n\nConsignes sur le site du cours\n\nPartie 4 : automatisation de la livraison d’une application avec l’intégration continue\nPartie 5 : déploiement d’une application"
