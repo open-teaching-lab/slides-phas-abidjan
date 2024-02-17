@@ -4,7 +4,7 @@
     "href": "index.html#contexte",
     "title": "Mise en production des projets de data science",
     "section": "Contexte",
-    "text": "Contexte\n\nQui sommes-nous ?\n\ndes data scientists de l’Insee\nfrustrés par l’approche souvent purement technique de la data science\nconvaincus que les bonnes pratiques valent à être enseignées\n\nromain.avouac at insee dot fr, lino.galiana at insee dot fr"
+    "text": "Contexte\n\nQui sommes-nous ?\n\ndes data scientists de l’Insee\nfrustrés par l’approche souvent purement technique de la data science\nconvaincus que les bonnes pratiques de développement valent à être enseignées\n\nromain.avouac at insee dot fr, lino.galiana at insee dot fr"
   },
   {
     "objectID": "index.html#quest-ce-quun-data-scientist",
@@ -39,7 +39,7 @@
     "href": "index.html#contenu-du-cours",
     "title": "Mise en production des projets de data science",
     "section": "Contenu du cours",
-    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\n\nMise en production\n\nMaximiser la portabilité\nDéployer et valoriser un projet de data science\nMLOps"
+    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nValorisation d’un projet de data science\nDéploiement\nMLOps"
   },
   {
     "objectID": "index.html#site-web-du-cours",
@@ -537,6 +537,13 @@
     "title": "Mise en production des projets de data science",
     "section": "Conclusion",
     "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable"
+  },
+  {
+    "objectID": "index.html#mise-en-production",
+    "href": "index.html#mise-en-production",
+    "title": "Mise en production des projets de data science",
+    "section": "Mise en production",
+    "text": "Mise en production\n\nConsignes sur le site du cours\n\nPartie 4 : automatisation de la livraison d’une application avec l’intégration continue\nPartie 5 : déploiement d’une application"
   },
   {
     "objectID": "index.html#motivation-1",
