@@ -466,7 +466,7 @@
     "href": "index.html#le-mur-de-la-production",
     "title": "Mise en production des projets de data science",
     "section": "Le “mur de la production”",
-    "text": "Le “mur de la production”\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre compliquée !\n\nLa majorité des projets de data-science ne délivrent pas de valeur (1, 2, 3)"
+    "text": "Le “mur de la production”\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre complexe !\n\nLa majorité des projets de data-science ne délivrent pas de valeur (1, 2, 3)"
   },
   {
     "objectID": "index.html#dépasser-le-mur-de-la-production",
