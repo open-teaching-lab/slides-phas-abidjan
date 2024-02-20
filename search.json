@@ -39,7 +39,7 @@
     "href": "index.html#contenu-du-cours",
     "title": "Mise en production des projets de data science",
     "section": "Contenu du cours",
-    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nValorisation d’un projet de data science\nDéploiement\nMLOps"
+    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nValorisation\nDéploiement\nMLOps"
   },
   {
     "objectID": "index.html#site-web-du-cours",
@@ -462,32 +462,25 @@
     "text": "Portabilité du projet\n\nConsignes sur le site du cours\n\nPartie 3️⃣ : construction d’un projet portable et reproductible\n\nConstruire un environnement virtuel pour le projet\nConteneuriser l’application avec Docker"
   },
   {
-    "objectID": "index.html#mise-en-production",
-    "href": "index.html#mise-en-production",
+    "objectID": "index.html#le-mur-de-la-production",
+    "href": "index.html#le-mur-de-la-production",
     "title": "Mise en production des projets de data science",
-    "section": "Mise en production",
-    "text": "Mise en production\n1️⃣ Valorisation d’un projet de data science\n2️⃣ Déploiement\n3️⃣ MLOps"
+    "section": "Le “mur de la production”",
+    "text": "Le “mur de la production”\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre compliquée !\n\nLa majorité des projets de data-science ne délivrent pas de valeur (1, 2, 3)"
   },
   {
-    "objectID": "index.html#motivation",
-    "href": "index.html#motivation",
+    "objectID": "index.html#dépasser-le-mur-de-la-production",
+    "href": "index.html#dépasser-le-mur-de-la-production",
     "title": "Mise en production des projets de data science",
-    "section": "Motivation",
-    "text": "Motivation\n\nLa massification et la diversification des données apportent de nombreux changements\n\nLe Data Lake\nLe Data Lab\nDe nouveaux profils : Data Scientist, Data Engineer, Data Architect\n\nLa majorité des projets de data science ne sont pas déployés\nBesoin d’industrialisation qui nécessite de nouveaux outils"
+    "section": "Dépasser le “mur de la production”",
+    "text": "Dépasser le “mur de la production”\n\nBesoin d’organisations plus continues"
   },
   {
-    "objectID": "index.html#lapproche-devops",
-    "href": "index.html#lapproche-devops",
+    "objectID": "index.html#plan",
+    "href": "index.html#plan",
     "title": "Mise en production des projets de data science",
-    "section": "L’approche DevOps",
-    "text": "L’approche DevOps\n\nIdée : unifier le développement (dev) et l’administration système (ops)\nBut : raccourcir le temps de développement en déployant en continu tout en maintenant la qualité"
-  },
-  {
-    "objectID": "index.html#devops-dataops-mlops",
-    "href": "index.html#devops-dataops-mlops",
-    "title": "Mise en production des projets de data science",
-    "section": "DevOps, DataOps, MLOps ?",
-    "text": "DevOps, DataOps, MLOps ?\n\nLe DevOps n’intègre pas les spécificités liées à la data science\nDataOps : déploiement et maintenance de pipelines de données\nMLOps : déploiement et maintenance de modèles de Machine Learning\nLes bonnes pratiques favorisent la collaboration et facilitent les déploiements"
+    "section": "Plan",
+    "text": "Plan\n1️⃣ Valorisation\n2️⃣ Déploiement\n3️⃣ MLOps"
   },
   {
     "objectID": "index.html#la-mise-en-production",
@@ -509,6 +502,27 @@
     "title": "Mise en production des projets de data science",
     "section": "Exposer un modèle via une API REST",
     "text": "Exposer un modèle via une API REST\n\nAPI : interface entre l’utilisateur (client) et le modèle entraîné\nAPI REST : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière scalable"
+  },
+  {
+    "objectID": "index.html#motivation",
+    "href": "index.html#motivation",
+    "title": "Mise en production des projets de data science",
+    "section": "Motivation",
+    "text": "Motivation\n\nLa massification et la diversification des données apportent de nombreux changements\n\nLe Data Lake\nLe Data Lab\nDe nouveaux profils : Data Scientist, Data Engineer, Data Architect\n\nBesoin d’industrialisation qui nécessite de nouveaux outils"
+  },
+  {
+    "objectID": "index.html#lapproche-devops",
+    "href": "index.html#lapproche-devops",
+    "title": "Mise en production des projets de data science",
+    "section": "L’approche DevOps",
+    "text": "L’approche DevOps\n\nIdée : unifier le développement (dev) et l’administration système (ops)\nBut : raccourcir le temps de développement en déployant en continu tout en maintenant la qualité"
+  },
+  {
+    "objectID": "index.html#devops-dataops-mlops",
+    "href": "index.html#devops-dataops-mlops",
+    "title": "Mise en production des projets de data science",
+    "section": "DevOps, DataOps, MLOps ?",
+    "text": "DevOps, DataOps, MLOps ?\n\nLe DevOps n’intègre pas les spécificités liées à la data science\nDataOps : déploiement et maintenance de pipelines de données\nMLOps : déploiement et maintenance de modèles de ML"
   },
   {
     "objectID": "index.html#environnement-de-production",
@@ -553,8 +567,8 @@
     "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable"
   },
   {
-    "objectID": "index.html#mise-en-production-1",
-    "href": "index.html#mise-en-production-1",
+    "objectID": "index.html#mise-en-production",
+    "href": "index.html#mise-en-production",
     "title": "Mise en production des projets de data science",
     "section": "Mise en production",
     "text": "Mise en production\n\nConsignes sur le site du cours\n\nPartie 4 : automatisation de la livraison d’une application avec l’intégration continue\nPartie 5 : déploiement d’une application"

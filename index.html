@@ -514,7 +514,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 <li class="fragment"><span class="orange"><strong>Mise en production</strong></span>
 <ul>
-<li class="fragment"><span class="blue2"><strong>Valorisation</strong></span> d’un projet de data science</li>
+<li class="fragment"><span class="blue2"><strong>Valorisation</strong></span></li>
 <li class="fragment"><span class="blue2"><strong>Déploiement</strong></span></li>
 <li class="fragment"><span class="blue2"><strong>MLOps</strong></span></li>
 </ul></li>
@@ -567,8 +567,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul>
 </section></section>
 <section>
-<section id="partie-1" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Partie 1</h1>
+<section id="partie-1-bonnes-pratiques-de-développement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Partie 1 : bonnes pratiques de développement</h1>
 
 </section>
 <section id="bonnes-pratiques-de-développement" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1456,61 +1456,43 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul>
 </section></section>
 <section>
-<section id="partie-2" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Partie 2</h1>
+<section id="partie-2-mise-en-production" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Partie 2 : mise en production</h1>
 
 </section>
-<section id="mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Mise en production</h2>
-<p><span class="emoji" data-emoji="one">1️⃣</span> <span class="blue2"><strong>Valorisation</strong></span> d’un projet de data science</p>
-<p><span class="emoji" data-emoji="two">2️⃣</span> <span class="blue2"><strong>Déploiement</strong></span></p>
-<p><span class="emoji" data-emoji="three">3️⃣</span> <span class="blue2"><strong>MLOps</strong></span></p>
-</section></section>
-<section id="valorisation-dun-projet" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1><span class="emoji" data-emoji="one">1️⃣</span> Valorisation d’un projet</h1>
-
-</section>
-
-<section>
-<section id="déploiement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1><span class="emoji" data-emoji="two">2️⃣</span> Déploiement</h1>
-
-</section>
-<section id="motivation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Motivation</h2>
+<section id="le-mur-de-la-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le “mur de la production”</h2>
 <ul>
-<li class="fragment"><p>La <span class="orange"><strong>massification</strong></span> et la <span class="orange"><strong>diversification</strong></span> des données apportent de nombreux changements</p>
+<li class="fragment"><span class="orange"><strong>Mettre en production</strong></span> : faire <span class="blue2"><strong>vivre</strong></span> une application dans l’espace de ses <span class="blue2"><strong>utilisateurs</strong></span>
 <ul>
-<li class="fragment">Le <em>Data Lake</em></li>
-<li class="fragment">Le <em>Data Lab</em></li>
-<li class="fragment">De nouveaux profils : <em>Data Scientist</em>, <em>Data Engineer</em>, <em>Data Architect</em></li>
+<li class="fragment">Notion simple mais mise en oeuvre compliquée !</li>
 </ul></li>
-<li class="fragment"><p>La majorité des projets de data science <span class="orange"><strong>ne sont pas déployés</strong></span></p></li>
-<li class="fragment"><p>Besoin d’<span class="orange"><strong>industrialisation</strong></span> qui nécessite de nouveaux outils</p></li>
+<li class="fragment">La majorité des projets de data-science <span class="orange"><strong>ne délivrent pas de valeur</strong></span> (<a href="https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/">1</a>, <a href="https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6">2</a>, <a href="https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/a245101b-61cf-4695-9b9e-b95cb30d97ca/content">3</a>)</li>
 </ul>
 </section>
-<section id="lapproche-devops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>L’approche DevOps</h2>
+<section id="dépasser-le-mur-de-la-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Dépasser le “mur de la production”</h2>
 <ul>
-<li class="fragment"><p>Idée : <span class="orange"><strong>unifier</strong></span> le développement (<em>dev</em>) et l’administration système (<em>ops</em>)</p></li>
-<li class="fragment"><p>But : raccourcir le temps de développement en <span class="orange"><strong>déployant en continu</strong></span> tout en maintenant la qualité</p></li>
+<li class="fragment">Besoin d’organisations plus <span class="orange"><strong>continues</strong></span></li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/devops.png" class="quarto-figure quarto-figure-center" height="300"></p>
+<p><img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="devops-dataops-mlops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>DevOps, DataOps, MLOps ?</h2>
-<ul>
-<li class="fragment"><p>Le <span class="orange"><strong>DevOps</strong></span> n’intègre pas les spécificités liées à la data science</p></li>
-<li class="fragment"><p><span class="orange"><strong>DataOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>pipelines de données</strong></span></p></li>
-<li class="fragment"><p><span class="orange"><strong>MLOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>modèles de Machine Learning</strong></span></p></li>
-<li class="fragment"><p>Les <span class="orange"><strong>bonnes pratiques</strong></span> favorisent la collaboration et facilitent les déploiements</p></li>
-</ul>
+<section id="plan" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Plan</h2>
+<p><span class="emoji" data-emoji="one">1️⃣</span> <span class="blue2"><strong>Valorisation</strong></span></p>
+<p><span class="emoji" data-emoji="two">2️⃣</span> <span class="blue2"><strong>Déploiement</strong></span></p>
+<p><span class="emoji" data-emoji="three">3️⃣</span> <span class="blue2"><strong>MLOps</strong></span></p>
+</section></section>
+<section>
+<section id="valorisation-dun-projet" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1><span class="emoji" data-emoji="one">1️⃣</span> Valorisation d’un projet</h1>
+
 </section>
 <section id="la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>La mise en production</h2>
@@ -1550,6 +1532,45 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </figure>
 </div>
 </div>
+</section></section>
+<section>
+<section id="déploiement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1><span class="emoji" data-emoji="two">2️⃣</span> Déploiement</h1>
+
+</section>
+<section id="motivation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Motivation</h2>
+<ul>
+<li class="fragment">La <span class="orange"><strong>massification</strong></span> et la <span class="orange"><strong>diversification</strong></span> des données apportent de nombreux changements
+<ul>
+<li class="fragment">Le <em>Data Lake</em></li>
+<li class="fragment">Le <em>Data Lab</em></li>
+<li class="fragment">De nouveaux profils : <em>Data Scientist</em>, <em>Data Engineer</em>, <em>Data Architect</em></li>
+</ul></li>
+<li class="fragment">Besoin d’<span class="orange"><strong>industrialisation</strong></span> qui nécessite de nouveaux outils</li>
+</ul>
+</section>
+<section id="lapproche-devops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>L’approche DevOps</h2>
+<ul>
+<li class="fragment"><p>Idée : <span class="orange"><strong>unifier</strong></span> le développement (<em>dev</em>) et l’administration système (<em>ops</em>)</p></li>
+<li class="fragment"><p>But : raccourcir le temps de développement en <span class="orange"><strong>déployant en continu</strong></span> tout en maintenant la qualité</p></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/devops.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="devops-dataops-mlops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>DevOps, DataOps, MLOps ?</h2>
+<ul>
+<li class="fragment"><p>Le <span class="orange"><strong>DevOps</strong></span> n’intègre pas les spécificités liées à la data science</p></li>
+<li class="fragment"><p><span class="orange"><strong>DataOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>pipelines de données</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>MLOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>modèles de ML</strong></span></p></li>
+</ul>
 </section>
 <section id="environnement-de-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Environnement de production</h2>
@@ -1618,7 +1639,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <h1>Application</h1>
 
 </section>
-<section id="mise-en-production-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Mise en production</h2>
 <ul>
 <li class="fragment">Consignes sur le <a href="https://ensae-reproductibilite.github.io/website/chapters/application.html">site du cours</a>
