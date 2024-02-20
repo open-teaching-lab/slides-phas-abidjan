@@ -96,7 +96,7 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
     - Favoriser la [**portabilité**]{.blue2} d'une application
 
 - [**Mise en production**]{.orange}
-    - [**Valorisation**]{.blue2} d'un projet de data science
+    - [**Valorisation**]{.blue2}
     - [**Déploiement**]{.blue2}
     - [**MLOps**]{.blue2}
 
@@ -137,7 +137,7 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 
 
-# Partie 1
+# Partie 1 : bonnes pratiques de développement
 
 ## Bonnes pratiques de développement
 
@@ -817,11 +817,26 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 
 
-# Partie 2
+# Partie 2 : mise en production
 
-## Mise en production
+## Le "mur de la production"
 
-:one: [**Valorisation**]{.blue2} d'un projet de data science
+- [**Mettre en production**]{.orange} : faire [**vivre**]{.blue2} une application dans l'espace de ses [**utilisateurs**]{.blue2}
+    - Notion simple mais mise en oeuvre compliquée !
+
+- La majorité des projets de data-science [**ne délivrent pas de valeur**]{.orange} ([1](https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/), [2](https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6), [3](https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/a245101b-61cf-4695-9b9e-b95cb30d97ca/content))
+
+## Dépasser le "mur de la production"
+
+- Besoin d'organisations plus [**continues**]{.orange}
+
+. . .
+
+![](img/exploration-production.png){fig-align="center"}
+
+## Plan
+
+:one: [**Valorisation**]{.blue2}
 
 :two: [**Déploiement**]{.blue2}
 
@@ -834,47 +849,6 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 
 # :one: Valorisation d'un projet
-
-
-
-
-
-
-
-
-
-# :two: Déploiement
-
-## Motivation
-
-- La [**massification**]{.orange} et la [**diversification**]{.orange} des données apportent de nombreux changements
-    - Le *Data Lake*
-    - Le *Data Lab*
-    - De nouveaux profils : *Data Scientist*, *Data Engineer*, *Data Architect*
-
-- La majorité des projets de data science [**ne sont pas déployés**]{.orange}
-
-- Besoin d'[**industrialisation**]{.orange} qui nécessite de nouveaux outils
-
-## L'approche DevOps
-
-- Idée : [**unifier**]{.orange} le développement (*dev*) et l'administration système (*ops*)
-
-- But : raccourcir le temps de développement en [**déployant en continu**]{.orange} tout en maintenant la qualité
-
-. . .
-
-![](img/devops.png){fig-align="center" height=300}
-
-## DevOps, DataOps, MLOps ?
-
-- Le [**DevOps**]{.orange} n'intègre pas les spécificités liées à la data science
-
-- [**DataOps**]{.orange} : déploiement et maintenance de [**pipelines de données**]{.blue2}
-
-- [**MLOps**]{.orange} : déploiement et maintenance de [**modèles de Machine Learning**]{.blue2}
-
-- Les [**bonnes pratiques**]{.orange} favorisent la collaboration et facilitent les déploiements
 
 ## La mise en production
 
@@ -904,6 +878,41 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 . . .
 
 ![](img/api-docker.png){fig-align="center"}
+
+
+
+
+
+
+
+# :two: Déploiement
+
+## Motivation
+
+- La [**massification**]{.orange} et la [**diversification**]{.orange} des données apportent de nombreux changements
+    - Le *Data Lake*
+    - Le *Data Lab*
+    - De nouveaux profils : *Data Scientist*, *Data Engineer*, *Data Architect*
+
+- Besoin d'[**industrialisation**]{.orange} qui nécessite de nouveaux outils
+
+## L'approche DevOps
+
+- Idée : [**unifier**]{.orange} le développement (*dev*) et l'administration système (*ops*)
+
+- But : raccourcir le temps de développement en [**déployant en continu**]{.orange} tout en maintenant la qualité
+
+. . .
+
+![](img/devops.png){fig-align="center" height=300}
+
+## DevOps, DataOps, MLOps ?
+
+- Le [**DevOps**]{.orange} n'intègre pas les spécificités liées à la data science
+
+- [**DataOps**]{.orange} : déploiement et maintenance de [**pipelines de données**]{.blue2}
+
+- [**MLOps**]{.orange} : déploiement et maintenance de [**modèles de ML**]{.blue2}
 
 ## Environnement de production
 
