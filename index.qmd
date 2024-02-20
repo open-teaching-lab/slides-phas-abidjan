@@ -822,9 +822,9 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 ## Le "mur de la production"
 
 - [**Mettre en production**]{.orange} : faire [**vivre**]{.blue2} une application dans l'espace de ses [**utilisateurs**]{.blue2}
-    - Notion simple mais mise en oeuvre compliquée !
+    - Notion simple mais mise en oeuvre complexe !
 
-- La majorité des projets de data-science [**ne délivrent pas de valeur**]{.orange} ([1](https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/), [2](https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6), [3](https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/a245101b-61cf-4695-9b9e-b95cb30d97ca/content))
+- La majorité des projets de data-science [**ne délivrent pas de valeur**]{.blue2} ([1](https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/), [2](https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6), [3](https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/a245101b-61cf-4695-9b9e-b95cb30d97ca/content))
 
 ## Dépasser le "mur de la production"
 
@@ -848,7 +848,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 
 
-# :one: Valorisation d'un projet
+# :one: Valorisation
 
 ## La mise en production
 
@@ -1046,9 +1046,11 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ## Servir le modèle (sans `MLFlow`)
 
+![](img/api-no-mlflow.png){fig-align="center"}
+
 ## Servir le modèle (avec `MLFlow`)
 
-
+![](img/api-with-mlflow.png){fig-align="center"}
 
 
 
