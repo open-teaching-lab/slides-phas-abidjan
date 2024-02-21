@@ -589,7 +589,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## :three: Données volumineuses
 
-- Calcul [***larger than memory** optimisé*]{.blue2}
+- Calcul [***larger than memory* optimisé**]{.blue2}
     - [Arrow](https://arrow.apache.org/overview/) : orientation fichier (`Parquet`)
     - [DuckDB](https://duckdb.org/) : orientation base de données (`SQL`)
 
@@ -608,6 +608,13 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ![Source : [nd.edu](https://www3.nd.edu/~pbui/teaching/cse.30331.fa16/challenge11.html)](img/mapreduce.png){fig-align="center" height="350"}
 
+## En résumé : pour traiter la volumétrie
+
+- Utiliser un [**format**]{.orange} de données adapté (`Parquet`)
+
+- Utiliser des [**outils**]{.orange} informatiques adaptés
+  - En premier : [**calcul *larger than memory* optimisé**]{.blue2} (`Arrow` / `DuckDB`)
+  - Si [**volumétrie**]{.blue2} trop importante : [**calcul distribué**]{.blue2} (`Spark`)
 
 
 
@@ -1109,4 +1116,10 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 # Conclusion
 
-Vision essentiellement technique dans ce cours mais changements plus larges (organisationnels, etc..)
+- 
+
+- Le [**coût**]{.orange} est d'autant plus faible que l'on se place [**en amont du projet**]{.orange}
+
+- Dans ce cours : vision essentiellement technique, mais les changements nécessaires sont plus larges
+    - organisationnels
+    - 
