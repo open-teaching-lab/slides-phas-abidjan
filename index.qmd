@@ -1073,7 +1073,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 - Mise en place d'un système d'[**alertes**]{.orange}
 
-## Pipeline complet
+## Résultat : un pipeline reproductible
 
 ![Source: [martinfowler.com](martinfowler.com)](img/ML-model-lifecycle.png){fig-align="center"}
 
