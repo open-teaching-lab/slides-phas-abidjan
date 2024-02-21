@@ -326,7 +326,7 @@
     "href": "index.html#frameworks-de-traitement-in-memory",
     "title": "Mise en production des projets de data science",
     "section": "3️⃣ Frameworks de traitement in-memory",
-    "text": "3️⃣ Frameworks de traitement in-memory\n\nLe framework adapté dépend de la volumétrie\n\nDonnées volumineuses : calcul in-memory optimisé\n\nArrow : orientation fichier\nDuckDB : orientation base de données (SQL)\n\nDonnées massives : calcul distribué\n\nSpark"
+    "text": "3️⃣ Frameworks de traitement in-memory\n\nLe framework adapté dépend de la volumétrie\n\nDonnées volumineuses : calcul in-memory optimisé\n\nArrow : orientation fichier (Parquet)\nDuckDB : orientation base de données (SQL)\n\nDonnées massives : calcul distribué\n\nSpark"
   },
   {
     "objectID": "index.html#it-works-on-my-machine",
@@ -571,7 +571,7 @@
     "href": "index.html#mise-en-production",
     "title": "Mise en production des projets de data science",
     "section": "Mise en production",
-    "text": "Mise en production\n\nConsignes sur le site du cours\n\nPartie 4 : automatisation de la livraison d’une application avec l’intégration continue\nPartie 5 : déploiement d’une application"
+    "text": "Mise en production\n\nConsignes sur le site du cours\n\nPartie 4️⃣ : automatisation de la livraison d’une application avec l’intégration continue\nPartie 5️⃣ : déploiement d’une application et industrialisation"
   },
   {
     "objectID": "index.html#motivation-1",
