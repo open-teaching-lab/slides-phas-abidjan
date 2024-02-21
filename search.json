@@ -319,14 +319,21 @@
     "href": "index.html#traitement-in-memory",
     "title": "Mise en production des projets de data science",
     "section": "3️⃣ Traitement in-memory",
-    "text": "3️⃣ Traitement in-memory\n\nParquet ne résout pas tout\n\nL’espace disque est optimisé\nLes données décompressées doivent passer en RAM"
+    "text": "3️⃣ Traitement in-memory\n\nParquet ne résout pas tout\n\nL’espace disque est optimisé\nLes données décompressées doivent passer en RAM\n\nLe framework adapté dépend de la volumétrie"
   },
   {
-    "objectID": "index.html#frameworks-de-traitement-in-memory",
-    "href": "index.html#frameworks-de-traitement-in-memory",
+    "objectID": "index.html#données-volumineuses",
+    "href": "index.html#données-volumineuses",
     "title": "Mise en production des projets de data science",
-    "section": "3️⃣ Frameworks de traitement in-memory",
-    "text": "3️⃣ Frameworks de traitement in-memory\n\nLe framework adapté dépend de la volumétrie\n\nDonnées volumineuses : calcul in-memory optimisé\n\nArrow : orientation fichier (Parquet)\nDuckDB : orientation base de données (SQL)\n\nDonnées massives : calcul distribué\n\nSpark"
+    "section": "3️⃣ Données volumineuses",
+    "text": "3️⃣ Données volumineuses\n\nCalcul larger than memory optimisé\n\nArrow : orientation fichier (Parquet)\nDuckDB : orientation base de données (SQL)\n\n\n\n\n\n\nSource : Arrow"
+  },
+  {
+    "objectID": "index.html#données-massives",
+    "href": "index.html#données-massives",
+    "title": "Mise en production des projets de data science",
+    "section": "3️⃣ Données massives",
+    "text": "3️⃣ Données massives\n\nCalcul distribué sur un cluster de machines\n\nSpark\n\nBase : paradigme MapReduce\n\n\n\n\n\nSource : nd.edu"
   },
   {
     "objectID": "index.html#it-works-on-my-machine",

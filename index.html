@@ -1175,24 +1175,44 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment">L’espace disque est optimisé</li>
 <li class="fragment">Les données décompressées doivent <span class="blue2"><strong>passer en RAM</strong></span></li>
 </ul></li>
+<li class="fragment">Le <em>framework</em> adapté dépend de la <span class="orange"><strong>volumétrie</strong></span></li>
 </ul>
 </section>
-<section id="frameworks-de-traitement-in-memory" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2><span class="emoji" data-emoji="three">3️⃣</span> Frameworks de traitement <em>in-memory</em></h2>
+<section id="données-volumineuses" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> Données volumineuses</h2>
 <ul>
-<li class="fragment">Le <em>framework</em> adapté dépend de la <span class="orange"><strong>volumétrie</strong></span>
-<ul>
-<li class="fragment">Données <span class="blue2"><strong>volumineuses</strong></span> : calcul <span class="blue2"><strong>in-memory</strong></span> optimisé
+<li class="fragment">Calcul <span class="blue2"><em><strong>larger than memory</strong> optimisé</em></span>
 <ul>
 <li class="fragment"><a href="https://arrow.apache.org/overview/">Arrow</a> : orientation fichier (<code>Parquet</code>)</li>
 <li class="fragment"><a href="https://duckdb.org/">DuckDB</a> : orientation base de données (<code>SQL</code>)</li>
 </ul></li>
-<li class="fragment">Données <span class="blue2"><strong>massives</strong></span> : calcul <span class="blue2"><strong>distribué</strong></span>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/arrow-interoperability.png" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Source : <a href="https://arrow.apache.org/overview/">Arrow</a></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="données-massives" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="three">3️⃣</span> Données massives</h2>
+<ul>
+<li class="fragment">Calcul <span class="blue2"><strong>distribué</strong></span> sur un <span class="blue2"><strong>cluster</strong></span> de machines
 <ul>
 <li class="fragment"><a href="https://spark.apache.org/">Spark</a></li>
 </ul></li>
-</ul></li>
+<li class="fragment">Base : <span class="blue2"><strong>paradigme MapReduce</strong></span></li>
 </ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mapreduce.png" class="quarto-figure quarto-figure-center" height="350"></p>
+<figcaption>Source : <a href="https://www3.nd.edu/~pbui/teaching/cse.30331.fa16/challenge11.html">nd.edu</a></figcaption>
+</figure>
+</div>
+</div>
 </section></section>
 <section>
 <section id="portabilité" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
