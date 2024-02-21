@@ -1086,7 +1086,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 ## MLOps
 
 - Consignes sur le [site du cours](https://ensae-reproductibilite.github.io/website/chapters/application.html)
-    - Partie X : application des principes MLOps avec `MLFlow`
+    - Partie :six: : application des [**principes MLOps**]{.blue2} avec `MLFlow`
 
 
 
