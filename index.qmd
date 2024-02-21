@@ -139,7 +139,7 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 # Partie :one: : bonnes pratiques de développement
 
-## Bonnes pratiques de développement
+## Plan de la partie
 
 :one: [**Travail collaboratif**]{.blue2} avec `Git`
 
@@ -839,21 +839,21 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ![Source : [IBM](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
 
-## Plan
+## Plan de la partie
 
-:one: [**Valorisation**]{.blue2}
+:six: [**Valorisation**]{.blue2}
 
-:two: [**Déploiement**]{.blue2}
+:seven: [**Déploiement**]{.blue2}
 
-:three: [**MLOps**]{.blue2}
-
-
+:eight: [**MLOps**]{.blue2}
 
 
 
 
 
-# :one: Valorisation
+
+
+# :six: Valorisation
 
 ## La mise en production
 
@@ -890,7 +890,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 
 
-# :two: Déploiement
+# :seven: Déploiement
 
 ## Motivation
 
@@ -984,7 +984,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 
 
-# :three: MLOps
+# :eight: MLOps
 
 ## Motivation
 
