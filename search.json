@@ -466,14 +466,14 @@
     "href": "index.html#le-mur-de-la-production",
     "title": "Mise en production des projets de data science",
     "section": "Le “mur de la production”",
-    "text": "Le “mur de la production”\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre complexe !\n\nLa majorité des projets de data-science ne délivrent pas de valeur (1, 2, 3)"
+    "text": "Le “mur de la production”\n\nBase : un projet maintenable, reproductible, portable\n\nComment dépasser le stade de l’expérimentation ?\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre complexe !\n\nLa majorité des projets “data-driven” ne délivrent pas de valeur (1, 2, 3)"
   },
   {
-    "objectID": "index.html#dépasser-le-mur-de-la-production",
-    "href": "index.html#dépasser-le-mur-de-la-production",
+    "objectID": "index.html#un-besoin-dorganisations-plus-continues",
+    "href": "index.html#un-besoin-dorganisations-plus-continues",
     "title": "Mise en production des projets de data science",
-    "section": "Dépasser le “mur de la production”",
-    "text": "Dépasser le “mur de la production”\n\nBesoin d’organisations plus continues\n\n\n\n\n\nSource : IBM"
+    "section": "Un besoin d’organisations plus continues",
+    "text": "Un besoin d’organisations plus continues\n\nSource : IBM"
   },
   {
     "objectID": "index.html#plan",
