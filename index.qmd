@@ -585,14 +585,29 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
   - L'espace disque est optimisé
   - Les données décompressées doivent [**passer en RAM**]{.blue2}
 
-## :three: Frameworks de traitement *in-memory*
-
 - Le *framework* adapté dépend de la [**volumétrie**]{.orange}
-  - Données [**volumineuses**]{.blue2} : calcul [**in-memory**]{.blue2} optimisé
+
+## :three: Données volumineuses
+
+- Calcul [***larger than memory** optimisé*]{.blue2}
     - [Arrow](https://arrow.apache.org/overview/) : orientation fichier (`Parquet`)
     - [DuckDB](https://duckdb.org/) : orientation base de données (`SQL`)
-  - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2}
+
+. . .
+
+![Source : [Arrow](https://arrow.apache.org/overview/)](img/arrow-interoperability.png){fig-align="center"}
+
+## :three: Données massives
+
+- Calcul [**distribué**]{.blue2} sur un [**cluster**]{.blue2} de machines
     - [Spark](https://spark.apache.org/)
+
+- Base : [**paradigme MapReduce**]{.blue2}
+
+. . .
+
+![Source : [nd.edu](https://www3.nd.edu/~pbui/teaching/cse.30331.fa16/challenge11.html)](img/mapreduce.png){fig-align="center" height="350"}
+
 
 
 
