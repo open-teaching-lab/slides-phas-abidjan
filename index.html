@@ -1181,7 +1181,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="données-volumineuses" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="three">3️⃣</span> Données volumineuses</h2>
 <ul>
-<li class="fragment">Calcul <span class="blue2"><em><strong>larger than memory</strong> optimisé</em></span>
+<li class="fragment">Calcul <span class="blue2"><strong><em>larger than memory</em> optimisé</strong></span>
 <ul>
 <li class="fragment"><a href="https://arrow.apache.org/overview/">Arrow</a> : orientation fichier (<code>Parquet</code>)</li>
 <li class="fragment"><a href="https://duckdb.org/">DuckDB</a> : orientation base de données (<code>SQL</code>)</li>
@@ -1213,6 +1213,17 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </figure>
 </div>
 </div>
+</section>
+<section id="en-résumé-pour-traiter-la-volumétrie" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>En résumé : pour traiter la volumétrie</h2>
+<ul>
+<li class="fragment"><p>Utiliser un <span class="orange"><strong>format</strong></span> de données adapté (<code>Parquet</code>)</p></li>
+<li class="fragment"><p>Utiliser des <span class="orange"><strong>outils</strong></span> informatiques adaptés</p>
+<ul>
+<li class="fragment">En premier : <span class="blue2"><strong>calcul <em>larger than memory</em> optimisé</strong></span> (<code>Arrow</code> / <code>DuckDB</code>)</li>
+<li class="fragment">Si <span class="blue2"><strong>volumétrie</strong></span> trop importante : <span class="blue2"><strong>calcul distribué</strong></span> (<code>Spark</code>)</li>
+</ul></li>
+</ul>
 </section></section>
 <section>
 <section id="portabilité" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
@@ -1842,7 +1853,15 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section></section>
 <section id="conclusion-1" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Conclusion</h1>
-<p>Vision essentiellement technique dans ce cours mais changements plus larges (organisationnels, etc..)</p>
+<ul>
+<li class="fragment"></li>
+<li class="fragment"><p>Le <span class="orange"><strong>coût</strong></span> est d’autant plus faible que l’on se place <span class="orange"><strong>en amont du projet</strong></span></p></li>
+<li class="fragment"><p>Dans ce cours : vision essentiellement technique, mais les changements nécessaires sont plus larges</p>
+<ul>
+<li class="fragment">organisationnels</li>
+<li class="fragment"></li>
+</ul></li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

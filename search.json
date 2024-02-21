@@ -336,6 +336,13 @@
     "text": "3️⃣ Données massives\n\nCalcul distribué sur un cluster de machines\n\nSpark\n\nBase : paradigme MapReduce\n\n\n\n\n\nSource : nd.edu"
   },
   {
+    "objectID": "index.html#en-résumé-pour-traiter-la-volumétrie",
+    "href": "index.html#en-résumé-pour-traiter-la-volumétrie",
+    "title": "Mise en production des projets de data science",
+    "section": "En résumé : pour traiter la volumétrie",
+    "text": "En résumé : pour traiter la volumétrie\n\nUtiliser un format de données adapté (Parquet)\nUtiliser des outils informatiques adaptés\n\nEn premier : calcul larger than memory optimisé (Arrow / DuckDB)\nSi volumétrie trop importante : calcul distribué (Spark)"
+  },
+  {
     "objectID": "index.html#it-works-on-my-machine",
     "href": "index.html#it-works-on-my-machine",
     "title": "Mise en production des projets de data science",
