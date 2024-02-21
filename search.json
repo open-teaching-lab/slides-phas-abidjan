@@ -74,14 +74,14 @@
     "href": "index.html#pourquoi-utiliser-git",
     "title": "Mise en production des projets de data science",
     "section": "Pourquoi utiliser Git ?",
-    "text": "Pourquoi utiliser Git ?\n\n\n\n\n\nSource"
+    "text": "Pourquoi utiliser Git ?\n\n\n\nSource : ThinkR"
   },
   {
     "objectID": "index.html#concepts-essentiels",
     "href": "index.html#concepts-essentiels",
     "title": "Mise en production des projets de data science",
     "section": "Concepts essentiels",
-    "text": "Concepts essentiels\n\n\n\n\n\nSource"
+    "text": "Concepts essentiels\n\n\n\nSource : fabacademy.org"
   },
   {
     "objectID": "index.html#bonnes-pratiques",
@@ -109,7 +109,7 @@
     "href": "index.html#le-modèle-des-branches",
     "title": "Mise en production des projets de data science",
     "section": "Le modèle des branches",
-    "text": "Le modèle des branches"
+    "text": "Le modèle des branches\n\n\n\n \n\n\n\n\n\n\n\nSource : lutece.paris.fr"
   },
   {
     "objectID": "index.html#les-outils-de-contribution",
@@ -256,7 +256,7 @@
     "href": "index.html#enjeux-2",
     "title": "Mise en production des projets de data science",
     "section": "Enjeux",
-    "text": "Enjeux\n\nMassification des données\n\n\n\n\n\n\n\nSource"
+    "text": "Enjeux\n\nMassification des données\n\n\n\n\n\nSource : AI with Python"
   },
   {
     "objectID": "index.html#choisir-des-technologies-adaptées",
@@ -270,14 +270,14 @@
     "href": "index.html#le-data-lake",
     "title": "Mise en production des projets de data science",
     "section": "1️⃣ Le data lake",
-    "text": "1️⃣ Le data lake\n\nUn stockage peu coûteux fait pour des données\n\nVolumineuses\nBrutes\nIssues de sources variées\n\n\n\n\n\n\n\n\nSource"
+    "text": "1️⃣ Le data lake\n\nUn stockage peu coûteux fait pour des données\n\nVolumineuses\nBrutes\nIssues de sources variées\n\n\n\n\n\n\nSource : qlik.com"
   },
   {
     "objectID": "index.html#le-stockage-objet",
     "href": "index.html#le-stockage-objet",
     "title": "Mise en production des projets de data science",
     "section": "1️⃣ Le stockage objet",
-    "text": "1️⃣ Le stockage objet\n\nStandard des data lakes dans le cloud\n\nImplémentation dominante : Amazon S3\nImplémentation open-source : MinIO"
+    "text": "1️⃣ Le stockage objet\n\nStandard des data lakes dans le cloud\n\nImplémentation dominante : Amazon S3\nImplémentation open-source : MinIO\n\n\n\n\n\n\nSource : min.io"
   },
   {
     "objectID": "index.html#formats-de-données",
@@ -298,7 +298,7 @@
     "href": "index.html#orientation-ligne-vs.-orientation-colonne",
     "title": "Mise en production des projets de data science",
     "section": "2️⃣ Orientation ligne vs. orientation colonne",
-    "text": "2️⃣ Orientation ligne vs. orientation colonne\n\n\n\n\n\nSource"
+    "text": "2️⃣ Orientation ligne vs. orientation colonne\n\n\n\nSource : towardsdatascience.com"
   },
   {
     "objectID": "index.html#parquet-propriétés",
@@ -312,7 +312,7 @@
     "href": "index.html#parquet-partitionnement",
     "title": "Mise en production des projets de data science",
     "section": "2️⃣ Parquet : partitionnement",
-    "text": "2️⃣ Parquet : partitionnement\n\nDivision en blocs des données selon un critère\n\nOptimise la lecture pour certaines queries"
+    "text": "2️⃣ Parquet : partitionnement\n\nDivision en blocs des données selon un critère\n\nOptimise la lecture pour certaines queries\n\n\n\n\n\n\nSource : datio.com"
   },
   {
     "objectID": "index.html#traitement-in-memory",
@@ -333,7 +333,7 @@
     "href": "index.html#it-works-on-my-machine",
     "title": "Mise en production des projets de data science",
     "section": "“It works… on my machine”",
-    "text": "“It works… on my machine”\n\nOn a construit un projet lisible, structuré et versionné\nPeut-on partager notre projet ?\n\nEn théorie, oui !\nEn pratique, c’est toujours plus compliqué…"
+    "text": "“It works… on my machine”\n\nOn a construit un projet lisible, structuré et versionné\nPeut-on partager notre projet ?\n\nEn théorie, oui !\nEn pratique, c’est toujours plus compliqué…\n\n\n\n\n\n\nSource : simply-the-test.blogspot.com"
   },
   {
     "objectID": "index.html#le-critère-de-la-portabilité",
@@ -368,7 +368,7 @@
     "href": "index.html#environnements-virtuels-fonctionnement",
     "title": "Mise en production des projets de data science",
     "section": "Environnements virtuels : fonctionnement",
-    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui :\n\ncontient un intepréteur Python et des packages\nest isolé des autres environnements existants\n\n\n\n\n\n\n\n\nSource"
+    "text": "Environnements virtuels : fonctionnement\n\nDossier auto-suffisant qui :\n\ncontient un intepréteur Python et des packages\nest isolé des autres environnements existants\n\n\n\n\n\n\nSource : dataquest.io"
   },
   {
     "objectID": "index.html#environnements-virtuels-implémentations",
@@ -473,7 +473,7 @@
     "href": "index.html#dépasser-le-mur-de-la-production",
     "title": "Mise en production des projets de data science",
     "section": "Dépasser le “mur de la production”",
-    "text": "Dépasser le “mur de la production”\n\nBesoin d’organisations plus continues"
+    "text": "Dépasser le “mur de la production”\n\nBesoin d’organisations plus continues\n\n\n\n\n\nSource : IBM"
   },
   {
     "objectID": "index.html#plan",
@@ -515,7 +515,7 @@
     "href": "index.html#lapproche-devops",
     "title": "Mise en production des projets de data science",
     "section": "L’approche DevOps",
-    "text": "L’approche DevOps\n\nIdée : unifier le développement (dev) et l’administration système (ops)\nBut : raccourcir le temps de développement en déployant en continu tout en maintenant la qualité"
+    "text": "L’approche DevOps\n\nIdée : unifier le développement (dev) et l’administration système (ops)\nBut : raccourcir le temps de développement en déployant en continu tout en maintenant la qualité\n\n\n\n\n\nSource : syloe.com"
   },
   {
     "objectID": "index.html#devops-dataops-mlops",
@@ -536,7 +536,7 @@
     "href": "index.html#fonctionnement-de-kubernetes",
     "title": "Mise en production des projets de data science",
     "section": "Fonctionnement de Kubernetes",
-    "text": "Fonctionnement de Kubernetes"
+    "text": "Fonctionnement de Kubernetes\n\nSource : DBA Consulting Blog"
   },
   {
     "objectID": "index.html#lapproche-cicd-principes",
@@ -564,7 +564,7 @@
     "href": "index.html#conclusion",
     "title": "Mise en production des projets de data science",
     "section": "Conclusion",
-    "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable"
+    "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable\n\n\n\n\n\nSource : syloe.com"
   },
   {
     "objectID": "index.html#mise-en-production",
@@ -578,7 +578,7 @@
     "href": "index.html#motivation-1",
     "title": "Mise en production des projets de data science",
     "section": "Motivation",
-    "text": "Motivation\n\nIntégrer :\n\nles principes DevOps\nles spécificités des projets de ML"
+    "text": "Motivation\n\nIntégrer :\n\nles principes DevOps\nles spécificités des projets de ML\n\n\n\n\n\n\nSource : ml4devs.com"
   },
   {
     "objectID": "index.html#mlops-principes",
@@ -599,28 +599,28 @@
     "href": "index.html#mlflow-vue-densemble",
     "title": "Mise en production des projets de data science",
     "section": "MLFlow : vue d’ensemble",
-    "text": "MLFlow : vue d’ensemble\n\n\n\n\n\nSource"
+    "text": "MLFlow : vue d’ensemble\n\n\n\nSource : dzlab.github.io"
   },
   {
     "objectID": "index.html#mlflow-tracking-server",
     "href": "index.html#mlflow-tracking-server",
     "title": "Mise en production des projets de data science",
     "section": "MLFlow : Tracking server",
-    "text": "MLFlow : Tracking server\n\n“Une API et une interface utilisateur pour enregistrer les paramètres, les versions du code, les métriques et les artefacts”"
+    "text": "MLFlow : Tracking server\n\n“Une API et une interface utilisateur pour enregistrer les paramètres, les versions du code, les métriques et les artefacts”\n\n\n\n\n\nSource : Databricks"
   },
   {
     "objectID": "index.html#mlflow-models",
     "href": "index.html#mlflow-models",
     "title": "Mise en production des projets de data science",
     "section": "MLFlow : Models",
-    "text": "MLFlow : Models\n\n“Une convention pour ‘packager’ des modèles de machine learning sous plusieurs formes”"
+    "text": "MLFlow : Models\n\n“Une convention pour ‘packager’ des modèles de machine learning sous plusieurs formes”\n\n\n\n\n\nSource : Dataiku"
   },
   {
     "objectID": "index.html#mlflow-model-registry",
     "href": "index.html#mlflow-model-registry",
     "title": "Mise en production des projets de data science",
     "section": "MLFlow : Model registry",
-    "text": "MLFlow : Model registry\n\n“Un entrepôt centralisé de modèles, un ensemble d’API et une interface utilisateur pour gérer collaborativement le cycle de vie complet d’un modèle MLflow”"
+    "text": "MLFlow : Model registry\n\n“Un entrepôt centralisé de modèles, un ensemble d’API et une interface utilisateur pour gérer collaborativement le cycle de vie complet d’un modèle MLflow”\n\n\n\n\n\nSource : Databricks"
   },
   {
     "objectID": "index.html#servir-le-modèle-sans-mlflow",
@@ -635,6 +635,41 @@
     "title": "Mise en production des projets de data science",
     "section": "Servir le modèle (avec MLFlow)",
     "text": "Servir le modèle (avec MLFlow)"
+  },
+  {
+    "objectID": "index.html#suivi-du-modèle",
+    "href": "index.html#suivi-du-modèle",
+    "title": "Mise en production des projets de data science",
+    "section": "Suivi du modèle",
+    "text": "Suivi du modèle\n\nPourquoi surveiller un modèle en production ?\n\nDétecter d’éventuels biais des données d’entraînement\nDétecter une instabilité du modèle\nAmélioration continue du modèle\n\n⚠️ Le mot surveillance d’une application/modèle recouvre des réalités différentes"
+  },
+  {
+    "objectID": "index.html#surveillance-selon-linformaticien",
+    "href": "index.html#surveillance-selon-linformaticien",
+    "title": "Mise en production des projets de data science",
+    "section": "Surveillance selon l’informaticien",
+    "text": "Surveillance selon l’informaticien\n\nSurveiller une application est partie intégrante de l’approche DevOps\nContrôle technique de l’API :\n\nLatence\nMémoire\nUtilisation disque\n…"
+  },
+  {
+    "objectID": "index.html#surveillance-selon-le-data-scientist",
+    "href": "index.html#surveillance-selon-le-data-scientist",
+    "title": "Mise en production des projets de data science",
+    "section": "Surveillance selon le data scientist",
+    "text": "Surveillance selon le data scientist\n\nSurveiller un modèle ML est partie intégrante de l’approche MLOps\nContrôle méthodologique du modèle\nPerformance en temps réel du modèle souvent impossible, utilisation de proxys :\n\nData drift : la distribution des données d’entrée change dans le temps\nConcept drift : la relation modélisée change dans le temps"
+  },
+  {
+    "objectID": "index.html#comment-surveiller-un-modèle-en-production",
+    "href": "index.html#comment-surveiller-un-modèle-en-production",
+    "title": "Mise en production des projets de data science",
+    "section": "Comment surveiller un modèle en production ?",
+    "text": "Comment surveiller un modèle en production ?\n\nIntégration de logs dans l’API\nRécupération et mise en forme des logs\nSuivi de métriques de ML\nMise en place d’un système d’alertes"
+  },
+  {
+    "objectID": "index.html#pipeline-complet-1",
+    "href": "index.html#pipeline-complet-1",
+    "title": "Mise en production des projets de data science",
+    "section": "Pipeline complet",
+    "text": "Pipeline complet\n\nSource: martinfowler.com"
   },
   {
     "objectID": "index.html#mlops-1",
