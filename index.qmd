@@ -159,15 +159,11 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 ## Pourquoi utiliser Git ?
 
-![](img/timeline.png){fig-align="center" height=475}
-
-[Source](https://thinkr.fr/travailler-avec-git-via-rstudio-et-versionner-son-code/)
+![Source : [ThinkR](https://thinkr.fr/travailler-avec-git-via-rstudio-et-versionner-son-code/)](img/timeline.png){fig-align="center" height=475}
 
 ## Concepts essentiels
 
-![](img/gitallinone.png){height="400" fig-align="center"}
-
-[Source](http://fabacademy.org/2021/labs/bhubaneswar/students/deepak-chaudhry/ia_PPFP.html)
+![Source : [fabacademy.org](http://fabacademy.org/2021/labs/bhubaneswar/students/deepak-chaudhry/ia_PPFP.html)](img/gitallinone.png){height="400" fig-align="center"}
 
 ## Bonnes pratiques {auto-animate=true .smaller}
 
@@ -221,7 +217,7 @@ __Format des commits__
 ## Le modèle des branches
 
 ::: {layout="[[-1], [1], [-1]]"}
-![](img/branches.png){fig-align="center" height=350}
+![Source : [lutece.paris.fr](https://lutece.paris.fr/support/jsp/site/Portal.jsp?page=wiki&view=page&page_name=git&language=fr)](img/branches.png){fig-align="center" height=350}
 :::
 
 ## Les outils de contribution
@@ -506,9 +502,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/vvv.png){fig-align="center" height=350}
-
-[Source](https://www.packtpub.com/product/artificial-intelligence-with-python-second-edition/9781839219535)
+![Source : [AI with Python](https://www.packtpub.com/product/artificial-intelligence-with-python-second-edition/9781839219535)](img/vvv.png){fig-align="center" height=350}
 
 ## Choisir des technologies adaptées
 
@@ -527,9 +521,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/datalake.png){height="400" fig-align="center"}
-
-[Source](https://www.qlik.com/us/data-lake)
+![Source : [qlik.com](https://www.qlik.com/us/data-lake)](img/datalake.png){height="400" fig-align="center"}
 
 ## :one: Le stockage objet
 
@@ -539,7 +531,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/minio.svg){height="300" fig-align="center"}
+![Source : [min.io](https://min.io/)](img/minio.svg){height="300" fig-align="center"}
 
 ## :two: Formats de données
 
@@ -563,9 +555,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## :two: Orientation ligne vs. orientation colonne {.scrollable}
 
-![](img/row-column.png){height="350" fig-align="center"}
-
-[Source](https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705)
+![Source : [towardsdatascience.com](https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705)](img/row-column.png){height="350" fig-align="center"}
 
 ## :two: `Parquet` : propriétés
 
@@ -587,7 +577,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/partitions.png){fig-align="center"}
+![Source : [datio.com](https://www.datio.com/iaas/understanding-the-data-partitioning-technique/)](img/partitions.png){fig-align="center"}
 
 ## :three: Traitement *in-memory*
 
@@ -622,7 +612,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/IWOMM.jpg){fig-align="center" height=350}
+![Source : [simply-the-test.blogspot.com](https://simply-the-test.blogspot.com/2010/05/it-works-on-my-machine.html)](img/IWOMM.jpg){fig-align="center" height=350}
 
 ## Le critère de la portabilité
 
@@ -668,9 +658,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 . . .
 
-![](img/venv.png){fig-align="center" height=350}
-
-[Source](https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/)
+![Source : [dataquest.io](https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/)](img/venv.png){fig-align="center" height=350}
 
 ## Environnements virtuels : implémentations
 
@@ -735,9 +723,7 @@ pandas
 
 ## Conteneurs vs. machines virtuelles
 
-![](img/docker-vm.png)
-
-Source : [docker.com](https://www.docker.com/resources/what-container/)
+![Source : [docker.com](https://www.docker.com/resources/what-container/)](img/docker-vm.png)
 
 ## Conteneurs : implémentations
 
@@ -786,9 +772,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ## `Docker` : fonctionnement
 
-![](img/docker-workflow.png){fig-align="center"}
-
-Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)
+![Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-kubernetes/)](img/docker-workflow.png){fig-align="center"}
 
 ## `Docker` en pratique
 
@@ -832,7 +816,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 . . .
 
-![](img/exploration-production.png){fig-align="center"}
+![Source : [IBM](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
 
 ## Plan
 
@@ -877,7 +861,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 . . .
 
-![](img/api-docker.png){fig-align="center"}
+![](img/api-no-mlflow.png){fig-align="center"}
 
 
 
@@ -904,7 +888,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 . . .
 
-![](img/devops.png){fig-align="center" height=300}
+![Source : [syloe.com](https://www.syloe.com/expert-devops-automatisation-deploiements/)](img/devops.png){fig-align="center" height=300}
 
 ## DevOps, DataOps, MLOps ?
 
@@ -929,7 +913,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ## Fonctionnement de Kubernetes
 
-![](img/kubernetes-archi.png){fig-align="center"}
+![Source : DBA Consulting Blog](img/kubernetes-archi.png){fig-align="center"}
 
 ## L'approche CI/CD : principes
 
@@ -959,7 +943,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 . . .
 
-![](img/devops.png){fig-align="center" height=300}
+![Source : [syloe.com](https://www.syloe.com/expert-devops-automatisation-deploiements/)](img/devops.png){fig-align="center" height=300}
 
 
 
@@ -989,7 +973,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 . . .
 
-![](img/mlops.png){fig-align="center" height=400}
+![Source : [ml4devs.com](https://www.ml4devs.com/articles/mlops-machine-learning-life-cycle/)](img/mlops.png){fig-align="center" height=400}
 
 ## MLOps : principes
 
@@ -1001,7 +985,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 - [**Collaboration**]{.orange}
 
-- [***Monitoring***]{.orange}
+- [**Monitoring**]{.orange}
 
 ## MLOps : implémentation
 
@@ -1016,9 +1000,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 ## `MLFlow` : vue d'ensemble
 
-![](img/mlflow-overview.png){fig-align="center" height=350}
-
-[Source](https://dzlab.github.io/ml/2020/07/12/ml-ci-mlflow/)
+![Source : [dzlab.github.io](https://dzlab.github.io/ml/2020/07/12/ml-ci-mlflow/)](img/mlflow-overview.png){fig-align="center" height=350}
 
 ## `MLFlow` : Tracking server
 
@@ -1026,7 +1008,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 . . .
 
-![](img/mlflow-tracking.png){fig-align="center" height=400}
+![Source : [Databricks](https://docs.databricks.com/en/mlflow/index.html)](img/mlflow-tracking.png){fig-align="center" height=400}
 
 ## `MLFlow` : Models
 
@@ -1034,7 +1016,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 . . .
 
-![](img/mlflow-models.png){fig-align="center" height=400}
+![Source : [Dataiku](https://blog.dataiku.com/introducing-mlflow-saved-models)](img/mlflow-models.png){fig-align="center" height=400}
 
 ## `MLFlow` : Model registry
 
@@ -1042,7 +1024,7 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 
 . . .
 
-![](img/mlflow-model-registry.png){fig-align="center" height=400}
+![Source : [Databricks](https://www.databricks.com/blog/2019/10/17/introducing-the-mlflow-model-registry.html)](img/mlflow-model-registry.png){fig-align="center" height=400}
 
 ## Servir le modèle (sans `MLFlow`)
 
@@ -1051,6 +1033,50 @@ Source : [k21academy.com](https://k21academy.com/docker-kubernetes/docker-and-ku
 ## Servir le modèle (avec `MLFlow`)
 
 ![](img/api-with-mlflow.png){fig-align="center"}
+
+## Suivi du modèle
+
+- Pourquoi [**surveiller**]{.orange} un modèle en production ?
+    - Détecter d'éventuels [**biais**]{.blue2} des données d'entraînement
+    - Détecter une [**instabilité**]{.blue2} du modèle
+    - [**Amélioration continue**]{.blue2} du modèle
+
+- ⚠️ Le mot [**surveillance**]{.orange} d'une application/modèle recouvre des [**réalités différentes**]{.blue2}
+
+## Surveillance selon l'informaticien
+
+- Surveiller une application est partie intégrante de l'approche [**DevOps**]{.orange}
+
+- Contrôle [**technique**]{.orange} de l'API :
+    - Latence
+    - Mémoire
+    - Utilisation disque
+    - ...
+
+## Surveillance selon le data scientist
+
+- Surveiller un modèle ML est partie intégrante de l'approche [**MLOps**]{.orange}
+
+- Contrôle [**méthodologique**]{.orange} du modèle
+
+- Performance en [**temps réel**]{.orange} du modèle souvent impossible, utilisation de proxys :
+    - [**Data drift**]{.blue2} : la distribution des données d'entrée change dans le temps
+    - [**Concept drift**]{.blue2} : la relation modélisée change dans le temps
+
+## Comment surveiller un modèle en production ?
+
+- Intégration de [**logs**]{.orange} dans l'API
+
+- Récupération et mise en forme des logs
+
+- Suivi de [**métriques**]{.orange} de ML
+
+- Mise en place d'un système d'[**alertes**]{.orange}
+
+## Pipeline complet
+
+![Source: [martinfowler.com](martinfowler.com)](img/ML-model-lifecycle.png){fig-align="center"}
+
 
 
 
