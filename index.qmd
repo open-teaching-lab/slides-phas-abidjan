@@ -137,7 +137,7 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 
 
-# Partie 1 : bonnes pratiques de développement
+# Partie :one: : bonnes pratiques de développement
 
 ## Bonnes pratiques de développement
 
@@ -801,20 +801,19 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 
 
-# Partie 2 : mise en production
+# Partie :two: : mise en production
 
 ## Le "mur de la production"
+
+- Base : un projet [**maintenable**]{.orange}, [**reproductible**]{.orange}, [**portable**]{.orange}
+    - Comment [**dépasser**]{.blue2} le stade de l'[**expérimentation**]{.blue2} ?
 
 - [**Mettre en production**]{.orange} : faire [**vivre**]{.blue2} une application dans l'espace de ses [**utilisateurs**]{.blue2}
     - Notion simple mais mise en oeuvre complexe !
 
-- La majorité des projets de data-science [**ne délivrent pas de valeur**]{.blue2} ([1](https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/), [2](https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6), [3](https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/a245101b-61cf-4695-9b9e-b95cb30d97ca/content))
+- La majorité des projets "*data-driven*" [**ne délivrent pas de valeur**]{.blue2} ([1](https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/), [2](https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6), [3](https://www.researchgate.net/publication/346647451_Beyond_the_Hype_Why_Do_Data-Driven_Projects_Fail))
 
-## Dépasser le "mur de la production"
-
-- Besoin d'organisations plus [**continues**]{.orange}
-
-. . .
+## Un besoin d'organisations plus continues
 
 ![Source : [IBM](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
 
