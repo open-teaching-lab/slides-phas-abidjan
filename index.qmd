@@ -589,7 +589,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 - Le *framework* adapté dépend de la [**volumétrie**]{.orange}
   - Données [**volumineuses**]{.blue2} : calcul [**in-memory**]{.blue2} optimisé
-    - [Arrow](https://arrow.apache.org/overview/) : orientation fichier
+    - [Arrow](https://arrow.apache.org/overview/) : orientation fichier (`Parquet`)
     - [DuckDB](https://duckdb.org/) : orientation base de données (`SQL`)
   - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2}
     - [Spark](https://spark.apache.org/)
@@ -602,7 +602,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 # :five: Portabilité
 
-## "It works... on my machine"
+## "It works... on my machine" {.scrollable}
 
 - On a construit un projet [**lisible**]{.orange}, [**structuré**]{.orange} et [**versionné**]{.orange}
 
@@ -650,7 +650,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
     - Les [**environnements virtuels**]{.blue2}
     - Les [**conteneurs**]{.blue2}
 
-## Environnements virtuels : fonctionnement
+## Environnements virtuels : fonctionnement {.scrollable}
 
 - [**Dossier auto-suffisant**]{.orange} qui :
     - contient un [**intepréteur**]{.blue2} `Python` et des [**packages**]{.blue2}
@@ -955,8 +955,8 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 ## Mise en production
 
 - Consignes sur le [site du cours](https://ensae-reproductibilite.github.io/website/chapters/application.html)
-    - Partie 4 : automatisation de la livraison d'une application avec l’intégration continue
-    - Partie 5 : déploiement d'une application
+    - Partie :four: : [**automatisation**]{.blue2} de la livraison d'une application avec l’[**intégration continue**]{.blue2}
+    - Partie :five: : [**déploiement**]{.blue2} d'une application et [**industrialisation**]{.blue2}
 
 
 
