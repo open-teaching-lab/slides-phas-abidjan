@@ -1116,10 +1116,13 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 # Conclusion
 
-- 
+- La [**mise en production**]{.orange} met en lumière le [**rôle d'interface**]{.orange}
+    - De la [***data science***]{.blue2} : statistique et informatique
+    - Du [***data scientist***]{.blue2} : équipes métier et techniques
 
-- Le [**coût**]{.orange} est d'autant plus faible que l'on se place [**en amont du projet**]{.orange}
-
-- Dans ce cours : vision essentiellement technique, mais les changements nécessaires sont plus larges
-    - organisationnels
-    - 
+- Enjeu : adopter des [**modes d'organisation plus continus**]{.orange}
+    - Des [**bonnes pratiques**]{.blue2} à appliquer [**le plus tôt possible**]{.blue2}
+    - [**Automatiser**]{.blue2} pour favoriser l'[**amélioration continue**]{.blue2}
+    
+- ⚠️ Ce cours présente une [**vision technique**]{.orange} du sujet
+    - Les changements nécessaires sont plus larges !
