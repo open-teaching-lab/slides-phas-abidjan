@@ -665,11 +665,11 @@
     "text": "Comment surveiller un modèle en production ?\n\nIntégration de logs dans l’API\nRécupération et mise en forme des logs\nSuivi de métriques de ML\nMise en place d’un système d’alertes"
   },
   {
-    "objectID": "index.html#pipeline-complet-1",
-    "href": "index.html#pipeline-complet-1",
+    "objectID": "index.html#résultat-un-pipeline-reproductible",
+    "href": "index.html#résultat-un-pipeline-reproductible",
     "title": "Mise en production des projets de data science",
-    "section": "Pipeline complet",
-    "text": "Pipeline complet\n\nSource: martinfowler.com"
+    "section": "Résultat : un pipeline reproductible",
+    "text": "Résultat : un pipeline reproductible\n\nSource: martinfowler.com"
   },
   {
     "objectID": "index.html#mlops-1",
