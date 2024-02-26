@@ -853,6 +853,9 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
     - [**Servir**]{.orange} : [**déployer**]{.blue2} l'application dans un [**format pertinent**]{.blue2} auprès de ses utilisateurs potentiels
     - [**Faire vivre**]{.orange} : gérer le [**cycle de vie**]{.blue2} et favoriser l'[**amélioration continue**]{.blue2}
 
+- [**Multiples dimensions**]{.orange} : connaissance métier, organisation, infrastructure, outils techniques..
+    - Ce cours présente une [**approche technique**]{.blue2} du sujet
+
 ## Favoriser la continuité
 
 ![Source : [IBM](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
@@ -877,42 +880,46 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 # :six: Déploiement
 
+## Un sujet large
 
-
-- De nouvelles questions à se poser :
+- Les [**questions essentielles**]{.orange} à se poser :
     - Quel est le [**format**]{.blue2} adapté pour [**valoriser**]{.blue2} le projet ?
     - Quelle [**infrastructure de production**]{.blue2} ?
     - Comment [**automatiser**]{.blue2} le processus de déploiement ?
     - Comment [**suivre**]{.blue2} l'application en production ?
 
-## Format de valorisation
+- De [**nombreuses choix possibles**]{.orange}
+    - Présentation des [**concepts et outils standards**]{.blue2}
+
+## Formats de valorisation
 
 - [**Critères**]{.orange} à prendre en compte :
     - Quels sont les [**utilisateurs**]{.blue2} potentiels ?
-    - Seulement de la [**mise à disposition**]{.blue2}, ou besoin d'[**interactivité**]{.blue2} ?
-    - Spécificités ML : entraînement en [**batch**]{.blue2} ou [**online**]{.blue2} ?
-    - Besoin de [**scalabilité**]{.blue2} ?
+    - Quels sont leurs [**besoins**]{.blue2} ?
 
-- [**Formats usuels**]{.orange} : API, application web, dashboard, site internet, rapport automatisé...
+- [**Exemple**]{.orange} : mise à disposition d'un [**LLM**]{.orange}
 
-## Exposer un modèle via une API REST
+. . .
+
+![Source : [Ubuntu](https://ubuntu.com/blog/guide-to-ml-model-serving)](img/model-serving.png){fig-align="center" height=250}
+
+## Cas d'usage
+
+- Servir un modèle de ML via une API
+
+## Les APIs
+
+## Les APIs REST
 
 - [**API** : **interface**]{.orange} entre l'utilisateur (client) et le modèle entraîné
 
 - [**API REST**]{.orange} : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière *scalable*
 
-. . .
+## Cible
 
 ![](img/api-no-mlflow.png){fig-align="center"}
 
-## Motivation
 
-- La [**massification**]{.orange} et la [**diversification**]{.orange} des données apportent de nombreux changements
-    - Le *Data Lake*
-    - Le *Data Lab*
-    - De nouveaux profils : *Data Scientist*, *Data Engineer*, *Data Architect*
-
-- Besoin d'[**industrialisation**]{.orange} qui nécessite de nouveaux outils
 
 ## L'approche DevOps
 
@@ -978,6 +985,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 . . .
 
 ![Source : [syloe.com](https://www.syloe.com/expert-devops-automatisation-deploiements/)](img/devops.png){fig-align="center" height=300}
+
 
 
 
@@ -1110,6 +1118,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 ## Résultat : un pipeline reproductible
 
 ![Source: [martinfowler.com](martinfowler.com)](img/ML-model-lifecycle.png){fig-align="center"}
+
 
 
 
