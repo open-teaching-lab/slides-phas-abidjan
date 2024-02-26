@@ -826,25 +826,31 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ## Le "mur de la production"
 
-- Base : un projet [**maintenable**]{.orange}, [**reproductible**]{.orange}, [**portable**]{.orange}
-    - Comment [**dépasser**]{.blue2} le stade de l'[**expérimentation**]{.blue2} ?
+- La majorité des projets "*data-driven*" [**ne délivrent pas de valeur**]{.blue2} ([1](https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/), [2](https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6), [3](https://www.researchgate.net/publication/346647451_Beyond_the_Hype_Why_Do_Data-Driven_Projects_Fail))
+
+- Comment [**dépasser**]{.blue2} le stade de l'[**expérimentation concluante**]{.blue2} ?
+
+## Vers la mise en production
 
 - [**Mettre en production**]{.orange} : faire [**vivre**]{.blue2} une application dans l'espace de ses [**utilisateurs**]{.blue2}
-    - Notion simple mais mise en oeuvre complexe !
 
-- La majorité des projets "*data-driven*" [**ne délivrent pas de valeur**]{.blue2} ([1](https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/), [2](https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6), [3](https://www.researchgate.net/publication/346647451_Beyond_the_Hype_Why_Do_Data-Driven_Projects_Fail))
+- De nouvelles questions à se poser :
+    - Quel est le [**format**]{.blue2} adapté pour [**valoriser**]{.blue2} le projet ?
+    - Quelle [**infrastructure de production**]{.blue2} ?
+    - Comment [**automatiser**]{.blue2} le processus de déploiement ?
+    - Comment [**suivre**]{.blue2} l'application en production ?
 
 ## Un besoin d'organisations plus continues
 
 ![Source : [IBM](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
 
+- L'application des [**bonnes pratiques**]{.blue2} aide considérablement !
+
 ## Plan de la partie
 
-:six: [**Valorisation**]{.blue2}
+:six: [**Déploiement**]{.blue2}
 
-:seven: [**Déploiement**]{.blue2}
-
-:eight: [**MLOps**]{.blue2}
+:seven: [**MLOps**]{.blue2}
 
 
 
@@ -852,16 +858,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 
 
-# :six: Valorisation
-
-## La mise en production
-
-- On a construit un projet de data science [**reproductible**]{.orange} et conforme aux [**standards**]{.orange} des bonnes pratiques
-
-- Pour [**valoriser**]{.orange} le projet, il faut le [**déployer**]{.orange} dans un environnement en lien avec les utilisateurs
-    - Quel est le [**format**]{.blue2} adapté pour le valoriser ?
-    - Quelle [**infrastructure de production**]{.blue2} ?
-    - Comment [**automatiser**]{.blue2} le processus de déploiement ?
+# :six: Déploiement
 
 ## Format de valorisation
 
@@ -882,14 +879,6 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 . . .
 
 ![](img/api-no-mlflow.png){fig-align="center"}
-
-
-
-
-
-
-
-# :seven: Déploiement
 
 ## Motivation
 
@@ -983,7 +972,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 
 
-# :eight: MLOps
+# :seven: MLOps
 
 ## Motivation
 
