@@ -252,11 +252,18 @@
     "text": "Bonnes pratiques de développement\n\nConsignes sur le site du cours\n\nPartie 0️⃣ : initialisation de l’environnement et du projet\nPartie 1️⃣ : qualité du code\nPartie 2️⃣ : adoption d’une structure modulaire"
   },
   {
+    "objectID": "index.html#the-obligatory-intro-slide",
+    "href": "index.html#the-obligatory-intro-slide",
+    "title": "Mise en production des projets de data science",
+    "section": "“The obligatory intro slide”",
+    "text": "“The obligatory intro slide”\n\n\n\nSource : motherduck.com"
+  },
+  {
     "objectID": "index.html#enjeux-2",
     "href": "index.html#enjeux-2",
     "title": "Mise en production des projets de data science",
     "section": "Enjeux",
-    "text": "Enjeux\n\nMassification des données\n\n\n\n\n\nSource : AI with Python"
+    "text": "Enjeux\n\nTendance à la massification des données\n\nRelatif aux capacités de stockage et de traitement\n\n\n\n\n\n\nSource : AI with Python"
   },
   {
     "objectID": "index.html#choisir-des-technologies-adaptées",
@@ -326,7 +333,7 @@
     "href": "index.html#données-volumineuses",
     "title": "Mise en production des projets de data science",
     "section": "3️⃣ Données volumineuses",
-    "text": "3️⃣ Données volumineuses\n\nCalcul larger than memory optimisé\n\nArrow : orientation fichier (Parquet)\nDuckDB : orientation base de données (SQL)\n\n\n\n\n\n\nSource : Arrow"
+    "text": "3️⃣ Données volumineuses\n\nCalcul larger than memory optimisé\n\nArrow : orientation fichier (Parquet)\nDuckDB : orientation base de données (SQL)\n\nAutre avantage : interopérabilité\n\n\n\n\n\nSource : Arrow"
   },
   {
     "objectID": "index.html#données-massives",
@@ -340,7 +347,14 @@
     "href": "index.html#en-résumé-pour-traiter-la-volumétrie",
     "title": "Mise en production des projets de data science",
     "section": "En résumé : pour traiter la volumétrie",
-    "text": "En résumé : pour traiter la volumétrie\n\nUtiliser un format de données adapté (Parquet)\nUtiliser des outils informatiques adaptés\n\nEn premier : calcul larger than memory optimisé (Arrow / DuckDB)\nSi volumétrie trop importante : calcul distribué (Spark)"
+    "text": "En résumé : pour traiter la volumétrie\n\nUtiliser un format de données adapté (Parquet)\nUtiliser des outils informatiques adaptés\n\nSuffisant la plupart du temps : calcul larger than memory optimisé (Arrow / DuckDB)\nSi volumétrie massive : calcul distribué (Spark)"
+  },
+  {
+    "objectID": "index.html#big-data-is-dead",
+    "href": "index.html#big-data-is-dead",
+    "title": "Mise en production des projets de data science",
+    "section": "“Big Data is dead” ?",
+    "text": "“Big Data is dead” ?\n\nJordan Tigani : Big Data is dead\n\n“The big data frontier keeps receding”\n“Most people don’t have that much data”\n“Most data is rarely queried”\n\nPlaidoyer pour une parcimonie…\n\n… qui facilite la mise en production !"
   },
   {
     "objectID": "index.html#it-works-on-my-machine",

@@ -1033,10 +1033,22 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <h1><span class="emoji" data-emoji="four">4️⃣</span> Traitement des données volumineuses</h1>
 
 </section>
+<section id="the-obligatory-intro-slide" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>“The obligatory intro slide”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/intro-big-data.png" class="quarto-figure quarto-figure-center" height="400"></p>
+<figcaption>Source : <a href="https://motherduck.com/blog/big-data-is-dead/">motherduck.com</a></figcaption>
+</figure>
+</div>
+</section>
 <section id="enjeux-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Enjeux</h2>
 <ul>
-<li class="fragment"><span class="orange"><strong>Massification</strong></span> des données</li>
+<li class="fragment">Tendance à la <span class="orange"><strong>massification</strong></span> des données
+<ul>
+<li class="fragment">Relatif aux <span class="blue2"><strong>capacités de stockage et de traitement</strong></span></li>
+</ul></li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
@@ -1185,6 +1197,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><a href="https://arrow.apache.org/overview/">Arrow</a> : orientation fichier (<code>Parquet</code>)</li>
 <li class="fragment"><a href="https://duckdb.org/">DuckDB</a> : orientation base de données (<code>SQL</code>)</li>
 </ul></li>
+<li class="fragment">Autre avantage : <span class="blue2"><strong>interopérabilité</strong></span></li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
@@ -1219,8 +1232,23 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>Utiliser un <span class="orange"><strong>format</strong></span> de données adapté (<code>Parquet</code>)</p></li>
 <li class="fragment"><p>Utiliser des <span class="orange"><strong>outils</strong></span> informatiques adaptés</p>
 <ul>
-<li class="fragment">En premier : <span class="blue2"><strong>calcul <em>larger than memory</em> optimisé</strong></span> (<code>Arrow</code> / <code>DuckDB</code>)</li>
-<li class="fragment">Si <span class="blue2"><strong>volumétrie</strong></span> trop importante : <span class="blue2"><strong>calcul distribué</strong></span> (<code>Spark</code>)</li>
+<li class="fragment">Suffisant la plupart du temps : <span class="blue2"><strong>calcul <em>larger than memory</em> optimisé</strong></span> (<code>Arrow</code> / <code>DuckDB</code>)</li>
+<li class="fragment">Si volumétrie massive : <span class="blue2"><strong>calcul distribué</strong></span> (<code>Spark</code>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="big-data-is-dead" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>“Big Data is dead” ?</h2>
+<ul>
+<li class="fragment">Jordan Tigani : <a href="https://motherduck.com/blog/big-data-is-dead/">Big Data is dead</a>
+<ul>
+<li class="fragment">“The big data frontier keeps receding”</li>
+<li class="fragment">“Most people don’t have that much data”</li>
+<li class="fragment">“Most data is rarely queried”</li>
+</ul></li>
+<li class="fragment">Plaidoyer pour une <span class="orange"><strong>parcimonie</strong></span>…
+<ul>
+<li class="fragment">… qui <span class="blue2"><strong>facilite la mise en production</strong></span> !</li>
 </ul></li>
 </ul>
 </section></section>
