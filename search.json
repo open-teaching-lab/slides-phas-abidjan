@@ -494,21 +494,21 @@
     "href": "index.html#le-mur-de-la-production",
     "title": "Mise en production des projets de data science",
     "section": "Le “mur de la production”",
-    "text": "Le “mur de la production”\n\nLa majorité des projets “data-driven” ne délivrent pas de valeur (1, 2, 3)\nComment dépasser le stade de l’expérimentation concluante ?"
+    "text": "Le “mur de la production”\n\nLa majorité des projets “data-driven” ne délivrent pas de valeur (1, 2, 3)\nComment dépasser le stade de l’expérimentation ?"
   },
   {
-    "objectID": "index.html#vers-la-mise-en-production",
-    "href": "index.html#vers-la-mise-en-production",
+    "objectID": "index.html#mise-en-production",
+    "href": "index.html#mise-en-production",
     "title": "Mise en production des projets de data science",
-    "section": "Vers la mise en production",
-    "text": "Vers la mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\nDe nouvelles questions à se poser :\n\nQuel est le format adapté pour valoriser le projet ?\nQuelle infrastructure de production ?\nComment automatiser le processus de déploiement ?\nComment suivre l’application en production ?"
+    "section": "Mise en production",
+    "text": "Mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nServir : déployer l’application dans un format pertinent auprès de ses utilisateurs potentiels\nFaire vivre : gérer le cycle de vie et favoriser l’amélioration continue"
   },
   {
-    "objectID": "index.html#un-besoin-dorganisations-plus-continues",
-    "href": "index.html#un-besoin-dorganisations-plus-continues",
+    "objectID": "index.html#favoriser-la-continuité",
+    "href": "index.html#favoriser-la-continuité",
     "title": "Mise en production des projets de data science",
-    "section": "Un besoin d’organisations plus continues",
-    "text": "Un besoin d’organisations plus continues\n\nSource : IBM\nL’application des bonnes pratiques aide considérablement !"
+    "section": "Favoriser la continuité",
+    "text": "Favoriser la continuité\n\nSource : IBM\nComment faire ?\n\nApplication des bonnes pratiques de développement\nBesoin de nouveaux concepts et outils"
   },
   {
     "objectID": "index.html#plan-de-la-partie-1",
@@ -595,8 +595,8 @@
     "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable\n\n\n\n\n\nSource : syloe.com"
   },
   {
-    "objectID": "index.html#mise-en-production",
-    "href": "index.html#mise-en-production",
+    "objectID": "index.html#mise-en-production-1",
+    "href": "index.html#mise-en-production-1",
     "title": "Mise en production des projets de data science",
     "section": "Mise en production",
     "text": "Mise en production\n\nConsignes sur le site du cours\n\nPartie 4️⃣ : automatisation de la livraison d’une application avec l’intégration continue\nPartie 5️⃣ : déploiement d’une application et industrialisation"
