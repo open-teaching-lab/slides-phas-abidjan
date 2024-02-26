@@ -510,11 +510,34 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 ## Choisir des technologies adaptées
 
-- :one: [**Infrastructure**]{.orange}
+:one: [**Infrastructures**]{.orange} de données
 
-- :two: [**Formats**]{.orange} de données
+. . .
 
-- :three: [***Frameworks***]{.orange} de traitement de données
+:two: [**Formats**]{.orange} de données
+
+. . .
+
+:three: [***Frameworks***]{.orange} de traitement de données
+
+## :one: Infrastructures : historique {.scrollable}
+
+- Historiquement : stockage dans des [**bases de données**]{.orange}
+
+- 80's : essor des [bases de données relationnelles](https://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle)
+    - Modèle de la [***data warehouse***]{.orange}
+
+. . .
+
+![Source : [corporatefinanceinstitute.com](https://corporatefinanceinstitute.com/resources/business-intelligence/data-warehousing/)](img/data-warehouse.png){height="250" fig-align="center"}
+
+## :one: Limite des *data warehouses*
+
+- Peu adaptées aux données *big data*
+    - Passage à l'échelle [**coûteux**]{.blue2}
+    - Limitées aux [**données structurées**]{.blue2}
+
+- 2010's : modèle du [***data lake***]{.orange}
 
 ## :one: Le *data lake* {.scrollable}
 
@@ -854,7 +877,6 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
     - [**Faire vivre**]{.orange} : gérer le [**cycle de vie**]{.blue2} et favoriser l'[**amélioration continue**]{.blue2}
 
 - [**Multiples dimensions**]{.orange} : connaissance métier, organisation, infrastructure, outils techniques..
-    - Ce cours présente une [**approche technique**]{.blue2} du sujet
 
 ## Favoriser la continuité
 
@@ -862,7 +884,19 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 - [**Comment faire ?**]{.orange}
     - Application des [**bonnes pratiques**]{.blue2} de développement
-    - Besoin de [**nouveaux concepts et outils**]{.blue2}
+    - Besoin de [**nouveaux concepts et outils**]{.blue2} : [DataOps](https://dataopsmanifesto.org/fr/)
+
+## Le DataOps
+
+- Origine : mouvement [DevOps](https://fr.wikipedia.org/wiki/Devops)
+
+. . .
+
+![Source : [syloe.com](https://www.syloe.com/expert-devops-automatisation-deploiements/)](img/devops.png){fig-align="center" height=300}
+
+- [**DataOps**]{.orange} : construction de [**pipelines de données**]{.blue2}
+
+- [**MLOps**]{.orange} : déploiement et maintenance de [**modèles de ML**]{.blue2}
 
 ## Plan de la partie
 
@@ -879,8 +913,6 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 
 # :six: Déploiement
-
-## Un sujet large
 
 - Les [**questions essentielles**]{.orange} à se poser :
     - Quel est le [**format**]{.blue2} adapté pour [**valoriser**]{.blue2} le projet ?
@@ -919,26 +951,6 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ![](img/api-no-mlflow.png){fig-align="center"}
 
-
-
-## L'approche DevOps
-
-- Idée : [**unifier**]{.orange} le développement (*dev*) et l'administration système (*ops*)
-
-- But : raccourcir le temps de développement en [**déployant en continu**]{.orange} tout en maintenant la qualité
-
-. . .
-
-![Source : [syloe.com](https://www.syloe.com/expert-devops-automatisation-deploiements/)](img/devops.png){fig-align="center" height=300}
-
-## DevOps, DataOps, MLOps ?
-
-- Le [**DevOps**]{.orange} n'intègre pas les spécificités liées à la data science
-
-- [**DataOps**]{.orange} : déploiement et maintenance de [**pipelines de données**]{.blue2}
-
-- [**MLOps**]{.orange} : déploiement et maintenance de [**modèles de ML**]{.blue2}
-
 ## Environnement de production
 
 - Dépend essentiellement de l'infrastructure à disposition
@@ -956,19 +968,20 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ![Source : DBA Consulting Blog](img/kubernetes-archi.png){fig-align="center"}
 
-## L'approche CI/CD : principes
+## L'approche CI/CD
 
-- [**Intégration continue**]{.orange} (CI) : à chaque modification du code source, l'application est automatiquement [**tested, built and released**]{.blue2}
+- [**Intégration continue**]{.orange} (CI) : chaque commit déclenche un processus "[**test, build and release**]{.blue2}"
+    - `GitHub` {{< fa brands github >}} : [GitHub Actions](https://github.com/features/actions)
+    - `GitLab` {{< fa brands gitlab >}} : [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 
 - [**Déploiement continu**]{.orange} (CD) : les nouvelles [**releases**]{.blue2} sont automatiquement déployées
-
-- [**GitOps**]{.orange} : le processus est décrit sous formes de [**manifestes**]{.blue2}, stockés sur un dépôt `Git`
+    - Sur le `SSP Cloud` : [ArgoCD](https://argo-cd.readthedocs.io/en/stable/)
 
 ## L'approche CI/CD : exemple
 
 ![](img/ci-cd.png){fig-align="center"}
 
-## Pipeline complet
+## Intégration dans un *pipeline DataOps*
 
 - Les données d'entrée ne sont pas fixes, il faut les intégrer dans un [**pipeline**]{.orange} complet de données
 
@@ -976,7 +989,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 . . .
 
-![](img/pipeline.png){fig-align="center"}
+![](img/data-pipeline.png){fig-align="center"}
 
 ## Conclusion
 
@@ -984,7 +997,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 . . .
 
-![Source : [syloe.com](https://www.syloe.com/expert-devops-automatisation-deploiements/)](img/devops.png){fig-align="center" height=300}
+![Source : [IBM](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
 
 
 
