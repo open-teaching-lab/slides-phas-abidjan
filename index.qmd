@@ -96,7 +96,6 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
     - Favoriser la [**portabilité**]{.blue2} d'une application
 
 - [**Mise en production**]{.orange}
-    - [**Valorisation**]{.blue2}
     - [**Déploiement**]{.blue2}
     - [**MLOps**]{.blue2}
 
