@@ -39,7 +39,7 @@
     "href": "index.html#contenu-du-cours",
     "title": "Mise en production des projets de data science",
     "section": "Contenu du cours",
-    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nValorisation\nDéploiement\nMLOps"
+    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nDéploiement\nMLOps"
   },
   {
     "objectID": "index.html#site-web-du-cours",
@@ -480,28 +480,28 @@
     "href": "index.html#le-mur-de-la-production",
     "title": "Mise en production des projets de data science",
     "section": "Le “mur de la production”",
-    "text": "Le “mur de la production”\n\nBase : un projet maintenable, reproductible, portable\n\nComment dépasser le stade de l’expérimentation ?\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre complexe !\n\nLa majorité des projets “data-driven” ne délivrent pas de valeur (1, 2, 3)"
+    "text": "Le “mur de la production”\n\nLa majorité des projets “data-driven” ne délivrent pas de valeur (1, 2, 3)\nComment dépasser le stade de l’expérimentation concluante ?"
+  },
+  {
+    "objectID": "index.html#vers-la-mise-en-production",
+    "href": "index.html#vers-la-mise-en-production",
+    "title": "Mise en production des projets de data science",
+    "section": "Vers la mise en production",
+    "text": "Vers la mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\nDe nouvelles questions à se poser :\n\nQuel est le format adapté pour valoriser le projet ?\nQuelle infrastructure de production ?\nComment automatiser le processus de déploiement ?\nComment suivre l’application en production ?"
   },
   {
     "objectID": "index.html#un-besoin-dorganisations-plus-continues",
     "href": "index.html#un-besoin-dorganisations-plus-continues",
     "title": "Mise en production des projets de data science",
     "section": "Un besoin d’organisations plus continues",
-    "text": "Un besoin d’organisations plus continues\n\nSource : IBM"
+    "text": "Un besoin d’organisations plus continues\n\nSource : IBM\nL’application des bonnes pratiques aide considérablement !"
   },
   {
     "objectID": "index.html#plan-de-la-partie-1",
     "href": "index.html#plan-de-la-partie-1",
     "title": "Mise en production des projets de data science",
     "section": "Plan de la partie",
-    "text": "Plan de la partie\n6️⃣ Valorisation\n7️⃣ Déploiement\n8️⃣ MLOps"
-  },
-  {
-    "objectID": "index.html#la-mise-en-production",
-    "href": "index.html#la-mise-en-production",
-    "title": "Mise en production des projets de data science",
-    "section": "La mise en production",
-    "text": "La mise en production\n\nOn a construit un projet de data science reproductible et conforme aux standards des bonnes pratiques\nPour valoriser le projet, il faut le déployer dans un environnement en lien avec les utilisateurs\n\nQuel est le format adapté pour le valoriser ?\nQuelle infrastructure de production ?\nComment automatiser le processus de déploiement ?"
+    "text": "Plan de la partie\n6️⃣ Déploiement\n7️⃣ MLOps"
   },
   {
     "objectID": "index.html#format-de-valorisation",

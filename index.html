@@ -514,7 +514,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 <li class="fragment"><span class="orange"><strong>Mise en production</strong></span>
 <ul>
-<li class="fragment"><span class="blue2"><strong>Valorisation</strong></span></li>
 <li class="fragment"><span class="blue2"><strong>Déploiement</strong></span></li>
 <li class="fragment"><span class="blue2"><strong>MLOps</strong></span></li>
 </ul></li>
@@ -1496,43 +1495,39 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="le-mur-de-la-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Le “mur de la production”</h2>
 <ul>
-<li class="fragment">Base : un projet <span class="orange"><strong>maintenable</strong></span>, <span class="orange"><strong>reproductible</strong></span>, <span class="orange"><strong>portable</strong></span>
+<li class="fragment"><p>La majorité des projets “<em>data-driven</em>” <span class="blue2"><strong>ne délivrent pas de valeur</strong></span> (<a href="https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/">1</a>, <a href="https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6">2</a>, <a href="https://www.researchgate.net/publication/346647451_Beyond_the_Hype_Why_Do_Data-Driven_Projects_Fail">3</a>)</p></li>
+<li class="fragment"><p>Comment <span class="blue2"><strong>dépasser</strong></span> le stade de l’<span class="blue2"><strong>expérimentation concluante</strong></span> ?</p></li>
+</ul>
+</section>
+<section id="vers-la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Vers la mise en production</h2>
 <ul>
-<li class="fragment">Comment <span class="blue2"><strong>dépasser</strong></span> le stade de l’<span class="blue2"><strong>expérimentation</strong></span> ?</li>
-</ul></li>
-<li class="fragment"><span class="orange"><strong>Mettre en production</strong></span> : faire <span class="blue2"><strong>vivre</strong></span> une application dans l’espace de ses <span class="blue2"><strong>utilisateurs</strong></span>
+<li class="fragment"><p><span class="orange"><strong>Mettre en production</strong></span> : faire <span class="blue2"><strong>vivre</strong></span> une application dans l’espace de ses <span class="blue2"><strong>utilisateurs</strong></span></p></li>
+<li class="fragment"><p>De nouvelles questions à se poser :</p>
 <ul>
-<li class="fragment">Notion simple mais mise en oeuvre complexe !</li>
+<li class="fragment">Quel est le <span class="blue2"><strong>format</strong></span> adapté pour <span class="blue2"><strong>valoriser</strong></span> le projet ?</li>
+<li class="fragment">Quelle <span class="blue2"><strong>infrastructure de production</strong></span> ?</li>
+<li class="fragment">Comment <span class="blue2"><strong>automatiser</strong></span> le processus de déploiement ?</li>
+<li class="fragment">Comment <span class="blue2"><strong>suivre</strong></span> l’application en production ?</li>
 </ul></li>
-<li class="fragment">La majorité des projets “<em>data-driven</em>” <span class="blue2"><strong>ne délivrent pas de valeur</strong></span> (<a href="https://sloanreview.mit.edu/projects/expanding-ais-impact-with-organizational-learning/">1</a>, <a href="https://hdsr.mitpress.mit.edu/pub/2fu65ujf/release/6">2</a>, <a href="https://www.researchgate.net/publication/346647451_Beyond_the_Hype_Why_Do_Data-Driven_Projects_Fail">3</a>)</li>
 </ul>
 </section>
 <section id="un-besoin-dorganisations-plus-continues" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Un besoin d’organisations plus continues</h2>
 
-<img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Source : <a href="https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation">IBM</a></p></section>
+<img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Source : <a href="https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation">IBM</a></p><ul>
+<li class="fragment">L’application des <span class="blue2"><strong>bonnes pratiques</strong></span> aide considérablement !</li>
+</ul>
+</section>
 <section id="plan-de-la-partie-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Plan de la partie</h2>
-<p><span class="emoji" data-emoji="six">6️⃣</span> <span class="blue2"><strong>Valorisation</strong></span></p>
-<p><span class="emoji" data-emoji="seven">7️⃣</span> <span class="blue2"><strong>Déploiement</strong></span></p>
-<p><span class="emoji" data-emoji="eight">8️⃣</span> <span class="blue2"><strong>MLOps</strong></span></p>
+<p><span class="emoji" data-emoji="six">6️⃣</span> <span class="blue2"><strong>Déploiement</strong></span></p>
+<p><span class="emoji" data-emoji="seven">7️⃣</span> <span class="blue2"><strong>MLOps</strong></span></p>
 </section></section>
 <section>
-<section id="valorisation" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1><span class="emoji" data-emoji="six">6️⃣</span> Valorisation</h1>
+<section id="déploiement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1><span class="emoji" data-emoji="six">6️⃣</span> Déploiement</h1>
 
-</section>
-<section id="la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>La mise en production</h2>
-<ul>
-<li class="fragment"><p>On a construit un projet de data science <span class="orange"><strong>reproductible</strong></span> et conforme aux <span class="orange"><strong>standards</strong></span> des bonnes pratiques</p></li>
-<li class="fragment"><p>Pour <span class="orange"><strong>valoriser</strong></span> le projet, il faut le <span class="orange"><strong>déployer</strong></span> dans un environnement en lien avec les utilisateurs</p>
-<ul>
-<li class="fragment">Quel est le <span class="blue2"><strong>format</strong></span> adapté pour le valoriser ?</li>
-<li class="fragment">Quelle <span class="blue2"><strong>infrastructure de production</strong></span> ?</li>
-<li class="fragment">Comment <span class="blue2"><strong>automatiser</strong></span> le processus de déploiement ?</li>
-</ul></li>
-</ul>
 </section>
 <section id="format-de-valorisation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Format de valorisation</h2>
@@ -1560,11 +1555,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </figure>
 </div>
 </div>
-</section></section>
-<section>
-<section id="déploiement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1><span class="emoji" data-emoji="seven">7️⃣</span> Déploiement</h1>
-
 </section>
 <section id="motivation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Motivation</h2>
@@ -1681,7 +1671,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section></section>
 <section>
 <section id="mlops" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1><span class="emoji" data-emoji="eight">8️⃣</span> MLOps</h1>
+<h1><span class="emoji" data-emoji="seven">7️⃣</span> MLOps</h1>
 
 </section>
 <section id="motivation-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
