@@ -495,9 +495,14 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 
 # :four: Traitement des données volumineuses
 
+## "The obligatory intro slide"
+
+![Source : [motherduck.com](https://motherduck.com/blog/big-data-is-dead/)](img/intro-big-data.png){fig-align="center" height=400}
+
 ## Enjeux
 
-- [**Massification**]{.orange} des données
+- Tendance à la [**massification**]{.orange} des données
+    - Relatif aux [**capacités de stockage et de traitement**]{.blue2}
 
 . . .
 
@@ -592,6 +597,8 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
     - [Arrow](https://arrow.apache.org/overview/) : orientation fichier (`Parquet`)
     - [DuckDB](https://duckdb.org/) : orientation base de données (`SQL`)
 
+- Autre avantage : [**interopérabilité**]{.blue2}
+
 . . .
 
 ![Source : [Arrow](https://arrow.apache.org/overview/)](img/arrow-interoperability.png){fig-align="center"}
@@ -612,8 +619,18 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - Utiliser un [**format**]{.orange} de données adapté (`Parquet`)
 
 - Utiliser des [**outils**]{.orange} informatiques adaptés
-  - En premier : [**calcul *larger than memory* optimisé**]{.blue2} (`Arrow` / `DuckDB`)
-  - Si [**volumétrie**]{.blue2} trop importante : [**calcul distribué**]{.blue2} (`Spark`)
+  - Suffisant la plupart du temps : [**calcul *larger than memory* optimisé**]{.blue2} (`Arrow` / `DuckDB`)
+  - Si volumétrie massive : [**calcul distribué**]{.blue2} (`Spark`)
+
+## "Big Data is dead" ?
+
+- Jordan Tigani : [Big Data is dead](https://motherduck.com/blog/big-data-is-dead/)
+    - "The big data frontier keeps receding"
+    - "Most people don't have that much data"
+    - "Most data is rarely queried"
+
+- Plaidoyer pour une [**parcimonie**]{.orange}...
+    - ... qui [**facilite la mise en production**]{.blue2} !
 
 
 
