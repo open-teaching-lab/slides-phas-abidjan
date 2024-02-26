@@ -1572,7 +1572,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="favoriser-la-continuité" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Favoriser la continuité</h2>
 
-<img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Source : <a href="https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation">IBM</a></p><ul>
+<img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Source : <a href="https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation">ibm.com</a></p><ul>
 <li class="fragment"><span class="orange"><strong>Comment faire ?</strong></span>
 <ul>
 <li class="fragment">Application des <span class="blue2"><strong>bonnes pratiques</strong></span> de développement</li>
@@ -1606,6 +1606,10 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section>
 <section id="déploiement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1><span class="emoji" data-emoji="six">6️⃣</span> Déploiement</h1>
+
+</section>
+<section id="un-sujet-large" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Un sujet large</h2>
 <ul>
 <li class="fragment">Les <span class="orange"><strong>questions essentielles</strong></span> à se poser :
 <ul>
@@ -1634,7 +1638,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/model-serving.png" class="quarto-figure quarto-figure-center" height="250"></p>
-<figcaption>Source : <a href="https://ubuntu.com/blog/guide-to-ml-model-serving">Ubuntu</a></figcaption>
+<figcaption>Source : <a href="https://ubuntu.com/blog/guide-to-ml-model-serving">ubuntu.com</a></figcaption>
 </figure>
 </div>
 </div>
@@ -1698,34 +1702,53 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="lapproche-cicd-exemple" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’approche CI/CD : exemple</h2>
-
-<img data-src="img/ci-cd.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="intégration-dans-un-pipeline-dataops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Intégration dans un <em>pipeline DataOps</em></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/ci-cd.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+</section>
+<section id="pipeline-dataops-complet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Pipeline <span class="orange"><strong><em>DataOps</em></strong></span> complet</h2>
 <ul>
-<li class="fragment"><p>Les données d’entrée ne sont pas fixes, il faut les intégrer dans un <span class="orange"><strong>pipeline</strong></span> complet de données</p></li>
-<li class="fragment"><p>La représentation est faite sous forme de graphes acycliques dirigés (<span class="orange"><strong>DAG</strong></span>)</p></li>
+<li class="fragment">Intégration de toutes les étapes dans un <span class="orange"><strong>pipeline</strong></span> de données
+<ul>
+<li class="fragment">Modélisation sous forme de <span class="blue2"><strong>graphe acyclique dirigé</strong></span> (<span class="blue2"><strong>DAG</strong></span>)</li>
+</ul></li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/data-pipeline.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/data-pipeline.png" class="quarto-figure quarto-figure-center" height="300"></p>
+<figcaption>Source : <a href="https://ubuntu.com/blog/data-pipelines-overview">ubuntu.com</a></figcaption>
 </figure>
 </div>
+<ul>
+<li class="fragment">En pratique : utilisation d’un <span class="orange"><strong>orchestrateur</strong></span>
+<ul>
+<li class="fragment">Sur le <code>SSP Cloud</code> : <a href="https://argoproj.github.io/workflows/">Argo Workflows</a></li>
+</ul></li>
+</ul>
 </div>
 </section>
 <section id="conclusion" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Conclusion</h2>
 <ul>
-<li class="fragment">On a construit un pipeline <span class="orange"><strong>reproductible</strong></span>, <span class="orange"><strong>automatisé</strong></span> et <span class="orange"><strong>scalable</strong></span></li>
+<li class="fragment">On a construit un pipeline <span class="orange"><strong>reproductible</strong></span> et <span class="orange"><strong>automatisé</strong></span></li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center"></p>
-<figcaption>Source : <a href="https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation">IBM</a></figcaption>
+<p><img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center" height="300"></p>
+<figcaption>Source : <a href="https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation">ibm.com</a></figcaption>
 </figure>
 </div>
+<ul>
+<li class="fragment">Comment tenir compte des <span class="orange"><strong>spécificités du ML</strong></span> ?
+<ul>
+<li class="fragment"><span class="blue2"><strong>Approche MLOps</strong></span></li>
+</ul></li>
+</ul>
 </div>
 </section></section>
 <section>
@@ -1753,7 +1776,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <ul>
 <li class="fragment">Intégrer :
 <ul>
-<li class="fragment">les <span class="orange"><strong>principes DevOps</strong></span></li>
+<li class="fragment">les <span class="orange"><strong>principes DataOps</strong></span></li>
 <li class="fragment">les <span class="orange"><strong>spécificités</strong></span> des projets de ML</li>
 </ul></li>
 </ul>

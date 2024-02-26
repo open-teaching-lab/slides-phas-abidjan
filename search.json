@@ -522,7 +522,7 @@
     "href": "index.html#favoriser-la-continuité",
     "title": "Mise en production des projets de data science",
     "section": "Favoriser la continuité",
-    "text": "Favoriser la continuité\n\nSource : IBM\nComment faire ?\n\nApplication des bonnes pratiques de développement\nBesoin de nouveaux concepts et outils : DataOps"
+    "text": "Favoriser la continuité\n\nSource : ibm.com\nComment faire ?\n\nApplication des bonnes pratiques de développement\nBesoin de nouveaux concepts et outils : DataOps"
   },
   {
     "objectID": "index.html#le-dataops",
@@ -539,11 +539,18 @@
     "text": "Plan de la partie\n6️⃣ Déploiement\n7️⃣ MLOps"
   },
   {
+    "objectID": "index.html#un-sujet-large",
+    "href": "index.html#un-sujet-large",
+    "title": "Mise en production des projets de data science",
+    "section": "Un sujet large",
+    "text": "Un sujet large\n\nLes questions essentielles à se poser :\n\nQuel est le format adapté pour valoriser le projet ?\nQuelle infrastructure de production ?\nComment automatiser le processus de déploiement ?\nComment suivre l’application en production ?\n\nDe nombreuses choix possibles\n\nPrésentation des concepts et outils standards"
+  },
+  {
     "objectID": "index.html#formats-de-valorisation",
     "href": "index.html#formats-de-valorisation",
     "title": "Mise en production des projets de data science",
     "section": "Formats de valorisation",
-    "text": "Formats de valorisation\n\nCritères à prendre en compte :\n\nQuels sont les utilisateurs potentiels ?\nQuels sont leurs besoins ?\n\nExemple : mise à disposition d’un LLM\n\n\n\n\n\nSource : Ubuntu"
+    "text": "Formats de valorisation\n\nCritères à prendre en compte :\n\nQuels sont les utilisateurs potentiels ?\nQuels sont leurs besoins ?\n\nExemple : mise à disposition d’un LLM\n\n\n\n\n\nSource : ubuntu.com"
   },
   {
     "objectID": "index.html#cas-dusage",
@@ -602,18 +609,18 @@
     "text": "L’approche CI/CD : exemple"
   },
   {
-    "objectID": "index.html#intégration-dans-un-pipeline-dataops",
-    "href": "index.html#intégration-dans-un-pipeline-dataops",
+    "objectID": "index.html#pipeline-dataops-complet",
+    "href": "index.html#pipeline-dataops-complet",
     "title": "Mise en production des projets de data science",
-    "section": "Intégration dans un pipeline DataOps",
-    "text": "Intégration dans un pipeline DataOps\n\nLes données d’entrée ne sont pas fixes, il faut les intégrer dans un pipeline complet de données\nLa représentation est faite sous forme de graphes acycliques dirigés (DAG)"
+    "section": "Pipeline DataOps complet",
+    "text": "Pipeline DataOps complet\n\nIntégration de toutes les étapes dans un pipeline de données\n\nModélisation sous forme de graphe acyclique dirigé (DAG)\n\n\n\n\n\n\nSource : ubuntu.com\n\n\n\nEn pratique : utilisation d’un orchestrateur\n\nSur le SSP Cloud : Argo Workflows"
   },
   {
     "objectID": "index.html#conclusion",
     "href": "index.html#conclusion",
     "title": "Mise en production des projets de data science",
     "section": "Conclusion",
-    "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable\n\n\n\n\n\nSource : IBM"
+    "text": "Conclusion\n\nOn a construit un pipeline reproductible et automatisé\n\n\n\n\n\nSource : ibm.com\n\n\n\nComment tenir compte des spécificités du ML ?\n\nApproche MLOps"
   },
   {
     "objectID": "index.html#mise-en-production-1",
@@ -627,7 +634,7 @@
     "href": "index.html#motivation",
     "title": "Mise en production des projets de data science",
     "section": "Motivation",
-    "text": "Motivation\n\nIntégrer :\n\nles principes DevOps\nles spécificités des projets de ML\n\n\n\n\n\n\nSource : ml4devs.com"
+    "text": "Motivation\n\nIntégrer :\n\nles principes DataOps\nles spécificités des projets de ML\n\n\n\n\n\n\nSource : ml4devs.com"
   },
   {
     "objectID": "index.html#mlops-principes",
