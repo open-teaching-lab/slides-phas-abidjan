@@ -270,7 +270,21 @@
     "href": "index.html#choisir-des-technologies-adaptées",
     "title": "Mise en production des projets de data science",
     "section": "Choisir des technologies adaptées",
-    "text": "Choisir des technologies adaptées\n\n1️⃣ Infrastructure\n2️⃣ Formats de données\n3️⃣ Frameworks de traitement de données"
+    "text": "Choisir des technologies adaptées\n1️⃣ Infrastructures de données\n\n2️⃣ Formats de données\n\n\n3️⃣ Frameworks de traitement de données"
+  },
+  {
+    "objectID": "index.html#infrastructures-historique",
+    "href": "index.html#infrastructures-historique",
+    "title": "Mise en production des projets de data science",
+    "section": "1️⃣ Infrastructures : historique",
+    "text": "1️⃣ Infrastructures : historique\n\nHistoriquement : stockage dans des bases de données\n80’s : essor des bases de données relationnelles\n\nModèle de la data warehouse\n\n\n\n\n\n\nSource : corporatefinanceinstitute.com"
+  },
+  {
+    "objectID": "index.html#limite-des-data-warehouses",
+    "href": "index.html#limite-des-data-warehouses",
+    "title": "Mise en production des projets de data science",
+    "section": "1️⃣ Limite des data warehouses",
+    "text": "1️⃣ Limite des data warehouses\n\nPeu adaptées aux données big data\n\nPassage à l’échelle coûteux\nLimitées aux données structurées\n\n2010’s : modèle du data lake"
   },
   {
     "objectID": "index.html#le-data-lake",
@@ -501,14 +515,21 @@
     "href": "index.html#mise-en-production",
     "title": "Mise en production des projets de data science",
     "section": "Mise en production",
-    "text": "Mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nServir : déployer l’application dans un format pertinent auprès de ses utilisateurs potentiels\nFaire vivre : gérer le cycle de vie et favoriser l’amélioration continue\n\nMultiples dimensions : connaissance métier, organisation, infrastructure, outils techniques..\n\nCe cours présente une approche technique du sujet"
+    "text": "Mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nServir : déployer l’application dans un format pertinent auprès de ses utilisateurs potentiels\nFaire vivre : gérer le cycle de vie et favoriser l’amélioration continue\n\nMultiples dimensions : connaissance métier, organisation, infrastructure, outils techniques.."
   },
   {
     "objectID": "index.html#favoriser-la-continuité",
     "href": "index.html#favoriser-la-continuité",
     "title": "Mise en production des projets de data science",
     "section": "Favoriser la continuité",
-    "text": "Favoriser la continuité\n\nSource : IBM\nComment faire ?\n\nApplication des bonnes pratiques de développement\nBesoin de nouveaux concepts et outils"
+    "text": "Favoriser la continuité\n\nSource : IBM\nComment faire ?\n\nApplication des bonnes pratiques de développement\nBesoin de nouveaux concepts et outils : DataOps"
+  },
+  {
+    "objectID": "index.html#le-dataops",
+    "href": "index.html#le-dataops",
+    "title": "Mise en production des projets de data science",
+    "section": "Le DataOps",
+    "text": "Le DataOps\n\nOrigine : mouvement DevOps\n\n\n\n\n\nSource : syloe.com\n\n\n\nDataOps : construction de pipelines de données\nMLOps : déploiement et maintenance de modèles de ML"
   },
   {
     "objectID": "index.html#plan-de-la-partie-1",
@@ -516,13 +537,6 @@
     "title": "Mise en production des projets de data science",
     "section": "Plan de la partie",
     "text": "Plan de la partie\n6️⃣ Déploiement\n7️⃣ MLOps"
-  },
-  {
-    "objectID": "index.html#un-sujet-large",
-    "href": "index.html#un-sujet-large",
-    "title": "Mise en production des projets de data science",
-    "section": "Un sujet large",
-    "text": "Un sujet large\n\nLes questions essentielles à se poser :\n\nQuel est le format adapté pour valoriser le projet ?\nQuelle infrastructure de production ?\nComment automatiser le processus de déploiement ?\nComment suivre l’application en production ?\n\nDe nombreuses choix possibles\n\nPrésentation des concepts et outils standards"
   },
   {
     "objectID": "index.html#formats-de-valorisation",
@@ -560,20 +574,6 @@
     "text": "Cible"
   },
   {
-    "objectID": "index.html#lapproche-devops",
-    "href": "index.html#lapproche-devops",
-    "title": "Mise en production des projets de data science",
-    "section": "L’approche DevOps",
-    "text": "L’approche DevOps\n\nIdée : unifier le développement (dev) et l’administration système (ops)\nBut : raccourcir le temps de développement en déployant en continu tout en maintenant la qualité\n\n\n\n\n\nSource : syloe.com"
-  },
-  {
-    "objectID": "index.html#devops-dataops-mlops",
-    "href": "index.html#devops-dataops-mlops",
-    "title": "Mise en production des projets de data science",
-    "section": "DevOps, DataOps, MLOps ?",
-    "text": "DevOps, DataOps, MLOps ?\n\nLe DevOps n’intègre pas les spécificités liées à la data science\nDataOps : déploiement et maintenance de pipelines de données\nMLOps : déploiement et maintenance de modèles de ML"
-  },
-  {
     "objectID": "index.html#environnement-de-production",
     "href": "index.html#environnement-de-production",
     "title": "Mise en production des projets de data science",
@@ -588,11 +588,11 @@
     "text": "Fonctionnement de Kubernetes\n\nSource : DBA Consulting Blog"
   },
   {
-    "objectID": "index.html#lapproche-cicd-principes",
-    "href": "index.html#lapproche-cicd-principes",
+    "objectID": "index.html#lapproche-cicd",
+    "href": "index.html#lapproche-cicd",
     "title": "Mise en production des projets de data science",
-    "section": "L’approche CI/CD : principes",
-    "text": "L’approche CI/CD : principes\n\nIntégration continue (CI) : à chaque modification du code source, l’application est automatiquement tested, built and released\nDéploiement continu (CD) : les nouvelles releases sont automatiquement déployées\nGitOps : le processus est décrit sous formes de manifestes, stockés sur un dépôt Git"
+    "section": "L’approche CI/CD",
+    "text": "L’approche CI/CD\n\nIntégration continue (CI) : chaque commit déclenche un processus “test, build and release”\n\nGitHub  : GitHub Actions\nGitLab  : GitLab CI/CD\n\nDéploiement continu (CD) : les nouvelles releases sont automatiquement déployées\n\nSur le SSP Cloud : ArgoCD"
   },
   {
     "objectID": "index.html#lapproche-cicd-exemple",
@@ -602,18 +602,18 @@
     "text": "L’approche CI/CD : exemple"
   },
   {
-    "objectID": "index.html#pipeline-complet",
-    "href": "index.html#pipeline-complet",
+    "objectID": "index.html#intégration-dans-un-pipeline-dataops",
+    "href": "index.html#intégration-dans-un-pipeline-dataops",
     "title": "Mise en production des projets de data science",
-    "section": "Pipeline complet",
-    "text": "Pipeline complet\n\nLes données d’entrée ne sont pas fixes, il faut les intégrer dans un pipeline complet de données\nLa représentation est faite sous forme de graphes acycliques dirigés (DAG)"
+    "section": "Intégration dans un pipeline DataOps",
+    "text": "Intégration dans un pipeline DataOps\n\nLes données d’entrée ne sont pas fixes, il faut les intégrer dans un pipeline complet de données\nLa représentation est faite sous forme de graphes acycliques dirigés (DAG)"
   },
   {
     "objectID": "index.html#conclusion",
     "href": "index.html#conclusion",
     "title": "Mise en production des projets de data science",
     "section": "Conclusion",
-    "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable\n\n\n\n\n\nSource : syloe.com"
+    "text": "Conclusion\n\nOn a construit un pipeline reproductible, automatisé et scalable\n\n\n\n\n\nSource : IBM"
   },
   {
     "objectID": "index.html#mise-en-production-1",

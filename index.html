@@ -1061,10 +1061,41 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="choisir-des-technologies-adaptées" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Choisir des technologies adaptées</h2>
+<p><span class="emoji" data-emoji="one">1️⃣</span> <span class="orange"><strong>Infrastructures</strong></span> de données</p>
+<div class="fragment">
+<p><span class="emoji" data-emoji="two">2️⃣</span> <span class="orange"><strong>Formats</strong></span> de données</p>
+</div>
+<div class="fragment">
+<p><span class="emoji" data-emoji="three">3️⃣</span> <span class="orange"><strong><em>Frameworks</em></strong></span> de traitement de données</p>
+</div>
+</section>
+<section id="infrastructures-historique" class="slide level2 scrollable" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="one">1️⃣</span> Infrastructures : historique</h2>
 <ul>
-<li class="fragment"><p><span class="emoji" data-emoji="one">1️⃣</span> <span class="orange"><strong>Infrastructure</strong></span></p></li>
-<li class="fragment"><p><span class="emoji" data-emoji="two">2️⃣</span> <span class="orange"><strong>Formats</strong></span> de données</p></li>
-<li class="fragment"><p><span class="emoji" data-emoji="three">3️⃣</span> <span class="orange"><strong><em>Frameworks</em></strong></span> de traitement de données</p></li>
+<li class="fragment"><p>Historiquement : stockage dans des <span class="orange"><strong>bases de données</strong></span></p></li>
+<li class="fragment"><p>80’s : essor des <a href="https://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle">bases de données relationnelles</a></p>
+<ul>
+<li class="fragment">Modèle de la <span class="orange"><strong><em>data warehouse</em></strong></span></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/data-warehouse.png" class="quarto-figure quarto-figure-center" height="250"></p>
+<figcaption>Source : <a href="https://corporatefinanceinstitute.com/resources/business-intelligence/data-warehousing/">corporatefinanceinstitute.com</a></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="limite-des-data-warehouses" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2><span class="emoji" data-emoji="one">1️⃣</span> Limite des <em>data warehouses</em></h2>
+<ul>
+<li class="fragment">Peu adaptées aux données <em>big data</em>
+<ul>
+<li class="fragment">Passage à l’échelle <span class="blue2"><strong>coûteux</strong></span></li>
+<li class="fragment">Limitées aux <span class="blue2"><strong>données structurées</strong></span></li>
+</ul></li>
+<li class="fragment">2010’s : modèle du <span class="orange"><strong><em>data lake</em></strong></span></li>
 </ul>
 </section>
 <section id="le-data-lake" class="slide level2 scrollable" data-background-image="background.svg" data-background-size="contain">
@@ -1535,10 +1566,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><span class="orange"><strong>Servir</strong></span> : <span class="blue2"><strong>déployer</strong></span> l’application dans un <span class="blue2"><strong>format pertinent</strong></span> auprès de ses utilisateurs potentiels</li>
 <li class="fragment"><span class="orange"><strong>Faire vivre</strong></span> : gérer le <span class="blue2"><strong>cycle de vie</strong></span> et favoriser l’<span class="blue2"><strong>amélioration continue</strong></span></li>
 </ul></li>
-<li class="fragment"><span class="orange"><strong>Multiples dimensions</strong></span> : connaissance métier, organisation, infrastructure, outils techniques..
-<ul>
-<li class="fragment">Ce cours présente une <span class="blue2"><strong>approche technique</strong></span> du sujet</li>
-</ul></li>
+<li class="fragment"><span class="orange"><strong>Multiples dimensions</strong></span> : connaissance métier, organisation, infrastructure, outils techniques..</li>
 </ul>
 </section>
 <section id="favoriser-la-continuité" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1548,9 +1576,27 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><span class="orange"><strong>Comment faire ?</strong></span>
 <ul>
 <li class="fragment">Application des <span class="blue2"><strong>bonnes pratiques</strong></span> de développement</li>
-<li class="fragment">Besoin de <span class="blue2"><strong>nouveaux concepts et outils</strong></span></li>
+<li class="fragment">Besoin de <span class="blue2"><strong>nouveaux concepts et outils</strong></span> : <a href="https://dataopsmanifesto.org/fr/">DataOps</a></li>
 </ul></li>
 </ul>
+</section>
+<section id="le-dataops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le DataOps</h2>
+<ul>
+<li class="fragment">Origine : mouvement <a href="https://fr.wikipedia.org/wiki/Devops">DevOps</a></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/devops.png" class="quarto-figure quarto-figure-center" height="300"></p>
+<figcaption>Source : <a href="https://www.syloe.com/expert-devops-automatisation-deploiements/">syloe.com</a></figcaption>
+</figure>
+</div>
+<ul>
+<li class="fragment"><p><span class="orange"><strong>DataOps</strong></span> : construction de <span class="blue2"><strong>pipelines de données</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>MLOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>modèles de ML</strong></span></p></li>
+</ul>
+</div>
 </section>
 <section id="plan-de-la-partie-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Plan de la partie</h2>
@@ -1560,10 +1606,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section>
 <section id="déploiement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1><span class="emoji" data-emoji="six">6️⃣</span> Déploiement</h1>
-
-</section>
-<section id="un-sujet-large" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Un sujet large</h2>
 <ul>
 <li class="fragment">Les <span class="orange"><strong>questions essentielles</strong></span> à se poser :
 <ul>
@@ -1617,29 +1659,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <h2>Cible</h2>
 
 <img data-src="img/api-no-mlflow.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="lapproche-devops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>L’approche DevOps</h2>
-<ul>
-<li class="fragment"><p>Idée : <span class="orange"><strong>unifier</strong></span> le développement (<em>dev</em>) et l’administration système (<em>ops</em>)</p></li>
-<li class="fragment"><p>But : raccourcir le temps de développement en <span class="orange"><strong>déployant en continu</strong></span> tout en maintenant la qualité</p></li>
-</ul>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/devops.png" class="quarto-figure quarto-figure-center" height="300"></p>
-<figcaption>Source : <a href="https://www.syloe.com/expert-devops-automatisation-deploiements/">syloe.com</a></figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="devops-dataops-mlops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>DevOps, DataOps, MLOps ?</h2>
-<ul>
-<li class="fragment"><p>Le <span class="orange"><strong>DevOps</strong></span> n’intègre pas les spécificités liées à la data science</p></li>
-<li class="fragment"><p><span class="orange"><strong>DataOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>pipelines de données</strong></span></p></li>
-<li class="fragment"><p><span class="orange"><strong>MLOps</strong></span> : déploiement et maintenance de <span class="blue2"><strong>modèles de ML</strong></span></p></li>
-</ul>
-</section>
 <section id="environnement-de-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Environnement de production</h2>
 <ul>
@@ -1663,20 +1682,26 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <h2>Fonctionnement de Kubernetes</h2>
 
 <img data-src="img/kubernetes-archi.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Source : DBA Consulting Blog</p></section>
-<section id="lapproche-cicd-principes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>L’approche CI/CD : principes</h2>
+<section id="lapproche-cicd" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>L’approche CI/CD</h2>
 <ul>
-<li class="fragment"><p><span class="orange"><strong>Intégration continue</strong></span> (CI) : à chaque modification du code source, l’application est automatiquement <span class="blue2"><strong>tested, built and released</strong></span></p></li>
-<li class="fragment"><p><span class="orange"><strong>Déploiement continu</strong></span> (CD) : les nouvelles <span class="blue2"><strong>releases</strong></span> sont automatiquement déployées</p></li>
-<li class="fragment"><p><span class="orange"><strong>GitOps</strong></span> : le processus est décrit sous formes de <span class="blue2"><strong>manifestes</strong></span>, stockés sur un dépôt <code>Git</code></p></li>
+<li class="fragment"><span class="orange"><strong>Intégration continue</strong></span> (CI) : chaque commit déclenche un processus “<span class="blue2"><strong>test, build and release</strong></span>”
+<ul>
+<li class="fragment"><code>GitHub</code> <i class="fa-brands fa-github" aria-label="github"></i> : <a href="https://github.com/features/actions">GitHub Actions</a></li>
+<li class="fragment"><code>GitLab</code> <i class="fa-brands fa-gitlab" aria-label="gitlab"></i> : <a href="https://docs.gitlab.com/ee/ci/">GitLab CI/CD</a></li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong>Déploiement continu</strong></span> (CD) : les nouvelles <span class="blue2"><strong>releases</strong></span> sont automatiquement déployées
+<ul>
+<li class="fragment">Sur le <code>SSP Cloud</code> : <a href="https://argo-cd.readthedocs.io/en/stable/">ArgoCD</a></li>
+</ul></li>
 </ul>
 </section>
 <section id="lapproche-cicd-exemple" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’approche CI/CD : exemple</h2>
 
 <img data-src="img/ci-cd.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="pipeline-complet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Pipeline complet</h2>
+<section id="intégration-dans-un-pipeline-dataops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Intégration dans un <em>pipeline DataOps</em></h2>
 <ul>
 <li class="fragment"><p>Les données d’entrée ne sont pas fixes, il faut les intégrer dans un <span class="orange"><strong>pipeline</strong></span> complet de données</p></li>
 <li class="fragment"><p>La représentation est faite sous forme de graphes acycliques dirigés (<span class="orange"><strong>DAG</strong></span>)</p></li>
@@ -1684,7 +1709,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/pipeline.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/data-pipeline.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -1697,8 +1722,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/devops.png" class="quarto-figure quarto-figure-center" height="300"></p>
-<figcaption>Source : <a href="https://www.syloe.com/expert-devops-automatisation-deploiements/">syloe.com</a></figcaption>
+<p><img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Source : <a href="https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation">IBM</a></figcaption>
 </figure>
 </div>
 </div>
