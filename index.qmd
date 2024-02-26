@@ -880,7 +880,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ## Favoriser la continuité
 
-![Source : [IBM](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
+![Source : [ibm.com](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
 
 - [**Comment faire ?**]{.orange}
     - Application des [**bonnes pratiques**]{.blue2} de développement
@@ -914,6 +914,8 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 # :six: Déploiement
 
+## Un sujet large
+
 - Les [**questions essentielles**]{.orange} à se poser :
     - Quel est le [**format**]{.blue2} adapté pour [**valoriser**]{.blue2} le projet ?
     - Quelle [**infrastructure de production**]{.blue2} ?
@@ -933,7 +935,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 . . .
 
-![Source : [Ubuntu](https://ubuntu.com/blog/guide-to-ml-model-serving)](img/model-serving.png){fig-align="center" height=250}
+![Source : [ubuntu.com](https://ubuntu.com/blog/guide-to-ml-model-serving)](img/model-serving.png){fig-align="center" height=250}
 
 ## Cas d'usage
 
@@ -979,27 +981,30 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ## L'approche CI/CD : exemple
 
-![](img/ci-cd.png){fig-align="center"}
+![](img/ci-cd.png){fig-align="center" height=250}
 
-## Intégration dans un *pipeline DataOps*
+## Pipeline [***DataOps***]{.orange} complet
 
-- Les données d'entrée ne sont pas fixes, il faut les intégrer dans un [**pipeline**]{.orange} complet de données
-
-- La représentation est faite sous forme de graphes acycliques dirigés ([**DAG**]{.orange})
+- Intégration de toutes les étapes dans un [**pipeline**]{.orange} de données
+    - Modélisation sous forme de [**graphe acyclique dirigé**]{.blue2} ([**DAG**]{.blue2})
 
 . . .
 
-![](img/data-pipeline.png){fig-align="center"}
+![Source : [ubuntu.com](https://ubuntu.com/blog/data-pipelines-overview)](img/data-pipeline.png){fig-align="center" height=300}
+
+- En pratique : utilisation d'un [**orchestrateur**]{.orange}
+    - Sur le `SSP Cloud` : [Argo Workflows](https://argoproj.github.io/workflows/)
 
 ## Conclusion
 
-- On a construit un pipeline [**reproductible**]{.orange}, [**automatisé**]{.orange} et [**scalable**]{.orange}
+- On a construit un pipeline [**reproductible**]{.orange} et [**automatisé**]{.orange}
 
 . . .
 
-![Source : [IBM](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center"}
+![Source : [ibm.com](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center" height=300}
 
-
+- Comment tenir compte des [**spécificités du ML**]{.orange} ?
+    - [**Approche MLOps**]{.blue2}
 
 
 
@@ -1023,7 +1028,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 ## Motivation
 
 - Intégrer :
-    - les [**principes DevOps**]{.orange}
+    - les [**principes DataOps**]{.orange}
     - les [**spécificités**]{.orange} des projets de ML
 
 . . .
