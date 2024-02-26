@@ -1535,6 +1535,10 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><span class="orange"><strong>Servir</strong></span> : <span class="blue2"><strong>déployer</strong></span> l’application dans un <span class="blue2"><strong>format pertinent</strong></span> auprès de ses utilisateurs potentiels</li>
 <li class="fragment"><span class="orange"><strong>Faire vivre</strong></span> : gérer le <span class="blue2"><strong>cycle de vie</strong></span> et favoriser l’<span class="blue2"><strong>amélioration continue</strong></span></li>
 </ul></li>
+<li class="fragment"><span class="orange"><strong>Multiples dimensions</strong></span> : connaissance métier, organisation, infrastructure, outils techniques..
+<ul>
+<li class="fragment">Ce cours présente une <span class="blue2"><strong>approche technique</strong></span> du sujet</li>
+</ul></li>
 </ul>
 </section>
 <section id="favoriser-la-continuité" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1556,55 +1560,63 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section>
 <section id="déploiement" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1><span class="emoji" data-emoji="six">6️⃣</span> Déploiement</h1>
+
+</section>
+<section id="un-sujet-large" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Un sujet large</h2>
 <ul>
-<li class="fragment">De nouvelles questions à se poser :
+<li class="fragment">Les <span class="orange"><strong>questions essentielles</strong></span> à se poser :
 <ul>
 <li class="fragment">Quel est le <span class="blue2"><strong>format</strong></span> adapté pour <span class="blue2"><strong>valoriser</strong></span> le projet ?</li>
 <li class="fragment">Quelle <span class="blue2"><strong>infrastructure de production</strong></span> ?</li>
 <li class="fragment">Comment <span class="blue2"><strong>automatiser</strong></span> le processus de déploiement ?</li>
 <li class="fragment">Comment <span class="blue2"><strong>suivre</strong></span> l’application en production ?</li>
 </ul></li>
+<li class="fragment">De <span class="orange"><strong>nombreuses choix possibles</strong></span>
+<ul>
+<li class="fragment">Présentation des <span class="blue2"><strong>concepts et outils standards</strong></span></li>
+</ul></li>
 </ul>
 </section>
-<section id="format-de-valorisation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Format de valorisation</h2>
+<section id="formats-de-valorisation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Formats de valorisation</h2>
 <ul>
 <li class="fragment"><span class="orange"><strong>Critères</strong></span> à prendre en compte :
 <ul>
 <li class="fragment">Quels sont les <span class="blue2"><strong>utilisateurs</strong></span> potentiels ?</li>
-<li class="fragment">Seulement de la <span class="blue2"><strong>mise à disposition</strong></span>, ou besoin d’<span class="blue2"><strong>interactivité</strong></span> ?</li>
-<li class="fragment">Spécificités ML : entraînement en <span class="blue2"><strong>batch</strong></span> ou <span class="blue2"><strong>online</strong></span> ?</li>
-<li class="fragment">Besoin de <span class="blue2"><strong>scalabilité</strong></span> ?</li>
+<li class="fragment">Quels sont leurs <span class="blue2"><strong>besoins</strong></span> ?</li>
 </ul></li>
-<li class="fragment"><span class="orange"><strong>Formats usuels</strong></span> : API, application web, dashboard, site internet, rapport automatisé…</li>
-</ul>
-</section>
-<section id="exposer-un-modèle-via-une-api-rest" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exposer un modèle via une API REST</h2>
-<ul>
-<li class="fragment"><p><span class="orange"><strong>API</strong> : <strong>interface</strong></span> entre l’utilisateur (client) et le modèle entraîné</p></li>
-<li class="fragment"><p><span class="orange"><strong>API REST</strong></span> : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière <em>scalable</em></p></li>
+<li class="fragment"><span class="orange"><strong>Exemple</strong></span> : mise à disposition d’un <span class="orange"><strong>LLM</strong></span></li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/api-no-mlflow.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/model-serving.png" class="quarto-figure quarto-figure-center" height="250"></p>
+<figcaption>Source : <a href="https://ubuntu.com/blog/guide-to-ml-model-serving">Ubuntu</a></figcaption>
 </figure>
 </div>
 </div>
 </section>
-<section id="motivation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Motivation</h2>
+<section id="cas-dusage" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Cas d’usage</h2>
 <ul>
-<li class="fragment">La <span class="orange"><strong>massification</strong></span> et la <span class="orange"><strong>diversification</strong></span> des données apportent de nombreux changements
-<ul>
-<li class="fragment">Le <em>Data Lake</em></li>
-<li class="fragment">Le <em>Data Lab</em></li>
-<li class="fragment">De nouveaux profils : <em>Data Scientist</em>, <em>Data Engineer</em>, <em>Data Architect</em></li>
-</ul></li>
-<li class="fragment">Besoin d’<span class="orange"><strong>industrialisation</strong></span> qui nécessite de nouveaux outils</li>
+<li class="fragment">Servir un modèle de ML via une API</li>
 </ul>
 </section>
+<section id="les-apis" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les APIs</h2>
+</section>
+<section id="les-apis-rest" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les APIs REST</h2>
+<ul>
+<li class="fragment"><p><span class="orange"><strong>API</strong> : <strong>interface</strong></span> entre l’utilisateur (client) et le modèle entraîné</p></li>
+<li class="fragment"><p><span class="orange"><strong>API REST</strong></span> : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière <em>scalable</em></p></li>
+</ul>
+</section>
+<section id="cible" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Cible</h2>
+
+<img data-src="img/api-no-mlflow.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="lapproche-devops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’approche DevOps</h2>
 <ul>
@@ -1711,7 +1723,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <h1><span class="emoji" data-emoji="seven">7️⃣</span> MLOps</h1>
 
 </section>
-<section id="motivation-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="motivation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Motivation</h2>
 <ul>
 <li class="fragment">Intégrer :
