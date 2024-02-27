@@ -1651,41 +1651,80 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="les-apis" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les APIs</h2>
+<blockquote>
+<p>Une API (application programming interface ou « interface de programmation d’application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d’échanger des données et des fonctionnalités.</p>
+<p><a href="https://www.cnil.fr/fr/definition/interface-de-programmation-dapplication-api">CNIL</a></p>
+</blockquote>
+<ul>
+<li class="fragment">Définition peu informative
+<ul>
+<li class="fragment"><code>Python</code>, <code>scikit-learn</code>, <code>Docker</code>, etc. sont des APIs</li>
+<li class="fragment">En pratique, on signifie généralement une <span class="blue2"><strong>API REST</strong></span></li>
+</ul></li>
+</ul>
 </section>
 <section id="les-apis-rest" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les APIs REST</h2>
 <ul>
-<li class="fragment"><p><span class="orange"><strong>API</strong> : <strong>interface</strong></span> entre l’utilisateur (client) et le modèle entraîné</p></li>
-<li class="fragment"><p><span class="orange"><strong>API REST</strong></span> : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière <em>scalable</em></p></li>
+<li class="fragment"><span class="orange"><strong>API RESTful</strong></span> : API conforme au style d’architecture <a href="https://fr.wikipedia.org/wiki/Representational_state_transfer">REST</a>
+<ul>
+<li class="fragment">Communication via le <span class="blue2"><strong>protocole HTTP</strong></span></li>
+</ul></li>
+<li class="fragment">En pratique :
+<ul>
+<li class="fragment">On requête un <span class="blue2"><strong>endpoint</strong></span> (ex : <a href="https://api-adresse.data.gouv.fr/search/">l’API de la BAN</a>)</li>
+<li class="fragment">Avec des <span class="blue2"><strong>requêtes HTTP</strong></span> (<code>GET</code>, <code>POST</code>, etc.) (ex : <a href="https://api-adresse.data.gouv.fr/search/?q=comédie&amp;type=street">rues contenant “comédie”</a>)</li>
+</ul></li>
 </ul>
 </section>
-<section id="cible" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Cible</h2>
-
-<img data-src="img/api-no-mlflow.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="environnement-de-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Environnement de production</h2>
+<section id="architecture-cible" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Architecture cible</h2>
 <ul>
-<li class="fragment"><p>Dépend essentiellement de l’infrastructure à disposition</p></li>
-<li class="fragment"><p>Un <span class="orange"><strong>orchestrateur</strong></span> de conteneurs répond à plusieurs besoins :</p>
+<li class="fragment">Construire une <span class="orange"><strong>API</strong></span> pour <span class="orange"><strong>servir</strong></span> le modèle
 <ul>
-<li class="fragment">Adapter les ressources (<span class="blue2"><strong>scaler</strong></span>) selon les besoins</li>
-<li class="fragment"><span class="blue2"><strong>Monitoring</strong></span> de l’état de santé des applications</li>
-<li class="fragment">Déploiements <span class="blue2"><strong>reproductibles</strong></span> et <span class="blue2"><strong>automatisés</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Interface</strong></span> entre <span class="blue2"><strong>l’utilisateur</strong></span> et le <span class="blue2"><strong>modèle</strong></span> entraîné</li>
 </ul></li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/kubernetes-logo.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/api-no-mlflow.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="environnement-de-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Environnement de production</h2>
+<ul>
+<li class="fragment"><p>Dépend essentiellement de l’infrastructure à disposition</p></li>
+<li class="fragment"><p><span class="orange"><strong>Propriétés recherchées</strong></span> :</p>
+<ul>
+<li class="fragment">Adapter les ressources (<span class="blue2"><strong>scaler</strong></span>) selon les besoins</li>
+<li class="fragment">Déploiements <span class="blue2"><strong>reproductibles</strong></span> et <span class="blue2"><strong>automatisés</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Monitoring</strong></span> de l’état de santé des applications</li>
+</ul></li>
+<li class="fragment"><p>Solution : utiliser un <span class="orange"><strong>orchestrateur de conteneurs</strong></span></p>
+<ul>
+<li class="fragment">Base du <code>SSP Cloud</code> : <a href="https://kubernetes.io/fr/">Kubernetes</a></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/kubernetes-logo.png" class="quarto-figure quarto-figure-center" height="100"></p>
 </figure>
 </div>
 </div>
 </section>
 <section id="fonctionnement-de-kubernetes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Fonctionnement de Kubernetes</h2>
-
-<img data-src="img/kubernetes-archi.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Source : DBA Consulting Blog</p></section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/kubernetes-archi.png" class="quarto-figure quarto-figure-center" height="400"></p>
+<figcaption>Source : <a href="https://drsalbertspijkers.blogspot.com/2017/06/red-hat-openshift-and-orchestrating.html">DBA Consulting Blog</a></figcaption>
+</figure>
+</div>
+</section>
 <section id="lapproche-cicd" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>L’approche CI/CD</h2>
 <ul>
@@ -1711,10 +1750,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="pipeline-dataops-complet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Pipeline <span class="orange"><strong><em>DataOps</em></strong></span> complet</h2>
 <ul>
-<li class="fragment">Intégration de toutes les étapes dans un <span class="orange"><strong>pipeline</strong></span> de données
-<ul>
-<li class="fragment">Modélisation sous forme de <span class="blue2"><strong>graphe acyclique dirigé</strong></span> (<span class="blue2"><strong>DAG</strong></span>)</li>
-</ul></li>
+<li class="fragment">Intégration des étapes dans un <span class="orange"><strong>pipeline</strong></span> (<span class="blue2"><strong>DAG</strong></span>)</li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
@@ -1739,7 +1775,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center" height="300"></p>
+<p><img data-src="img/exploration-production.png" class="quarto-figure quarto-figure-center" height="250"></p>
 <figcaption>Source : <a href="https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation">ibm.com</a></figcaption>
 </figure>
 </div>

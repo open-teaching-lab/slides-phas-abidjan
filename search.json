@@ -564,35 +564,35 @@
     "href": "index.html#les-apis",
     "title": "Mise en production des projets de data science",
     "section": "Les APIs",
-    "text": "Les APIs"
+    "text": "Les APIs\n\nUne API (application programming interface ou « interface de programmation d’application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d’échanger des données et des fonctionnalités.\nCNIL\n\n\nDéfinition peu informative\n\nPython, scikit-learn, Docker, etc. sont des APIs\nEn pratique, on signifie généralement une API REST"
   },
   {
     "objectID": "index.html#les-apis-rest",
     "href": "index.html#les-apis-rest",
     "title": "Mise en production des projets de data science",
     "section": "Les APIs REST",
-    "text": "Les APIs REST\n\nAPI : interface entre l’utilisateur (client) et le modèle entraîné\nAPI REST : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière scalable"
+    "text": "Les APIs REST\n\nAPI RESTful : API conforme au style d’architecture REST\n\nCommunication via le protocole HTTP\n\nEn pratique :\n\nOn requête un endpoint (ex : l’API de la BAN)\nAvec des requêtes HTTP (GET, POST, etc.) (ex : rues contenant “comédie”)"
   },
   {
-    "objectID": "index.html#cible",
-    "href": "index.html#cible",
+    "objectID": "index.html#architecture-cible",
+    "href": "index.html#architecture-cible",
     "title": "Mise en production des projets de data science",
-    "section": "Cible",
-    "text": "Cible"
+    "section": "Architecture cible",
+    "text": "Architecture cible\n\nConstruire une API pour servir le modèle\n\nInterface entre l’utilisateur et le modèle entraîné"
   },
   {
     "objectID": "index.html#environnement-de-production",
     "href": "index.html#environnement-de-production",
     "title": "Mise en production des projets de data science",
     "section": "Environnement de production",
-    "text": "Environnement de production\n\nDépend essentiellement de l’infrastructure à disposition\nUn orchestrateur de conteneurs répond à plusieurs besoins :\n\nAdapter les ressources (scaler) selon les besoins\nMonitoring de l’état de santé des applications\nDéploiements reproductibles et automatisés"
+    "text": "Environnement de production\n\nDépend essentiellement de l’infrastructure à disposition\nPropriétés recherchées :\n\nAdapter les ressources (scaler) selon les besoins\nDéploiements reproductibles et automatisés\nMonitoring de l’état de santé des applications\n\nSolution : utiliser un orchestrateur de conteneurs\n\nBase du SSP Cloud : Kubernetes"
   },
   {
     "objectID": "index.html#fonctionnement-de-kubernetes",
     "href": "index.html#fonctionnement-de-kubernetes",
     "title": "Mise en production des projets de data science",
     "section": "Fonctionnement de Kubernetes",
-    "text": "Fonctionnement de Kubernetes\n\nSource : DBA Consulting Blog"
+    "text": "Fonctionnement de Kubernetes\n\n\n\nSource : DBA Consulting Blog"
   },
   {
     "objectID": "index.html#lapproche-cicd",
@@ -613,7 +613,7 @@
     "href": "index.html#pipeline-dataops-complet",
     "title": "Mise en production des projets de data science",
     "section": "Pipeline DataOps complet",
-    "text": "Pipeline DataOps complet\n\nIntégration de toutes les étapes dans un pipeline de données\n\nModélisation sous forme de graphe acyclique dirigé (DAG)\n\n\n\n\n\n\nSource : ubuntu.com\n\n\n\nEn pratique : utilisation d’un orchestrateur\n\nSur le SSP Cloud : Argo Workflows"
+    "text": "Pipeline DataOps complet\n\nIntégration des étapes dans un pipeline (DAG)\n\n\n\n\n\nSource : ubuntu.com\n\n\n\nEn pratique : utilisation d’un orchestrateur\n\nSur le SSP Cloud : Argo Workflows"
   },
   {
     "objectID": "index.html#conclusion",
