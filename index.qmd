@@ -943,32 +943,51 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ## Les APIs
 
+> Une API (application programming interface ou « interface de programmation d’application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d’échanger des données et des fonctionnalités.
+>
+> [CNIL](https://www.cnil.fr/fr/definition/interface-de-programmation-dapplication-api)
+
+- Définition peu informative
+    - `Python`, `scikit-learn`, `Docker`, etc. sont des APIs
+    - En pratique, on signifie généralement une [**API REST**]{.blue2}
+
 ## Les APIs REST
 
-- [**API** : **interface**]{.orange} entre l'utilisateur (client) et le modèle entraîné
+- [**API RESTful**]{.orange} : API conforme au style d'architecture [REST](https://fr.wikipedia.org/wiki/Representational_state_transfer)
+    - Communication via le [**protocole HTTP**]{.blue2}
 
-- [**API REST**]{.orange} : permet de requêter le modèle avec une syntaxe simple (HTTP) et de manière *scalable*
+- En pratique : 
+    - On requête un [**endpoint**]{.blue2} (ex : [l'API de la BAN](https://api-adresse.data.gouv.fr/search/))
+    - Avec des [**requêtes HTTP**]{.blue2} (`GET`, `POST`, etc.) (ex : [rues contenant "comédie"](https://api-adresse.data.gouv.fr/search/?q=comédie&type=street))
 
-## Cible
+## Architecture cible
 
-![](img/api-no-mlflow.png){fig-align="center"}
+- Construire une [**API**]{.orange} pour [**servir**]{.orange} le modèle 
+    - [**Interface**]{.blue2} entre [**l'utilisateur**]{.blue2} et le [**modèle**]{.blue2} entraîné
+
+. . .
+
+![](img/api-no-mlflow.png){fig-align="center" height=400}
 
 ## Environnement de production
 
 - Dépend essentiellement de l'infrastructure à disposition
 
-- Un [**orchestrateur**]{.orange} de conteneurs répond à plusieurs besoins :
+- [**Propriétés recherchées**]{.orange} :
     - Adapter les ressources ([**scaler**]{.blue2}) selon les besoins
-    - [**Monitoring**]{.blue2} de l'état de santé des applications
     - Déploiements [**reproductibles**]{.blue2} et [**automatisés**]{.blue2}
+    - [**Monitoring**]{.blue2} de l'état de santé des applications
+
+- Solution : utiliser un [**orchestrateur de conteneurs**]{.orange}
+    - Base du `SSP Cloud` : [Kubernetes](https://kubernetes.io/fr/)
 
 . . .
 
-![](img/kubernetes-logo.png){fig-align="center"}
+![](img/kubernetes-logo.png){fig-align="center" height=100}
 
 ## Fonctionnement de Kubernetes
 
-![Source : DBA Consulting Blog](img/kubernetes-archi.png){fig-align="center"}
+![Source : [DBA Consulting Blog](https://drsalbertspijkers.blogspot.com/2017/06/red-hat-openshift-and-orchestrating.html)](img/kubernetes-archi.png){fig-align="center"  height=400}
 
 ## L'approche CI/CD
 
@@ -985,8 +1004,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ## Pipeline [***DataOps***]{.orange} complet
 
-- Intégration de toutes les étapes dans un [**pipeline**]{.orange} de données
-    - Modélisation sous forme de [**graphe acyclique dirigé**]{.blue2} ([**DAG**]{.blue2})
+- Intégration des étapes dans un [**pipeline**]{.orange} ([**DAG**]{.blue2})
 
 . . .
 
@@ -1001,7 +1019,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 . . .
 
-![Source : [ibm.com](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center" height=300}
+![Source : [ibm.com](https://public.dhe.ibm.com/software/data/sw-library/analytics/data-science-lifecycle/#model-implementation)](img/exploration-production.png){fig-align="center" height=250}
 
 - Comment tenir compte des [**spécificités du ML**]{.orange} ?
     - [**Approche MLOps**]{.blue2}
