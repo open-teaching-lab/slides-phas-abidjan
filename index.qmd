@@ -30,6 +30,29 @@ from: markdown+emoji
 
 # Introduction
 
+## Ressources associées
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Slides
+
+{{< qrcode https://ensae-reproductibilite.github.io/slides/ qr1 width=400 height=400 >}}
+
+:::
+
+::: {.column width="50%"}
+### Site web
+
+{{< qrcode https://ensae-reproductibilite.github.io/website/ qr2 width=400 height=400 >}}
+
+:::
+
+::::
+
+
+
+
 ## Contexte
 
 - [**Qui sommes-nous ?**]{.orange}
