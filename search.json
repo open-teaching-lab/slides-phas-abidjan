@@ -609,11 +609,39 @@
     "text": "L’approche CI/CD\n\nIntégration continue (CI) : chaque commit déclenche un processus “test, build and release”\n\nGitHub  : GitHub Actions\nGitLab  : GitLab CI/CD\n\nDéploiement continu (CD) : les nouvelles releases sont automatiquement déployées\n\nSur le SSP Cloud : ArgoCD"
   },
   {
-    "objectID": "index.html#lapproche-cicd-exemple",
-    "href": "index.html#lapproche-cicd-exemple",
+    "objectID": "index.html#ci-implémentation-avec-github-actions",
+    "href": "index.html#ci-implémentation-avec-github-actions",
     "title": "Mise en production des projets de data science",
-    "section": "L’approche CI/CD : exemple",
-    "text": "L’approche CI/CD : exemple"
+    "section": "CI : implémentation avec GitHub Actions",
+    "text": "CI : implémentation avec GitHub Actions\n\nPrincipe : commit -&gt; exécution d’une série d’étapes\n\nScript exécuté sur une VM : runner\nMise à disposition d’un output : artifact\n\nMultiples outputs possibles\n\nImage Docker\nSlides\nSite internet"
+  },
+  {
+    "objectID": "index.html#ci-anatomie-dun-fichier-de-ci",
+    "href": "index.html#ci-anatomie-dun-fichier-de-ci",
+    "title": "Mise en production des projets de data science",
+    "section": "CI : anatomie d’un fichier de CI",
+    "text": "CI : anatomie d’un fichier de CI\n\nSpécification : fichier .yaml qui paramétrise le runner\n\n⚠️ Situé dans le dossier .github/workflows/\n\n\n\n\n.github/workflows/ci.yaml\n\nname: Build Docker image\n\non: \n  push:\n    branches:\n      - main\n    tags:\n\njobs:\n  docker:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Set up QEMU\n        uses: docker/setup-qemu-action@v3\n      - name: Set up Docker Buildx\n        uses: docker/setup-buildx-action@v3\n      - name: Docker meta\n        id: meta\n        uses: docker/metadata-action@v5\n        with:\n          images: ensae-reproductibilite/api-titanic\n      - name: Login to Docker Hub\n        uses: docker/login-action@v3\n        with:\n          username: ${{ secrets.DOCKERHUB_USERNAME }}\n          password: ${{ secrets.DOCKERHUB_TOKEN }}\n      - name: Build and push\n        uses: docker/build-push-action@v5\n        with:\n          push: true\n          tags: ${{ steps.meta.outputs.tags }}\n          labels: ${{ steps.meta.outputs.labels }}"
+  },
+  {
+    "objectID": "index.html#cd-implémentation-avec-argocd",
+    "href": "index.html#cd-implémentation-avec-argocd",
+    "title": "Mise en production des projets de data science",
+    "section": "CD : implémentation avec ArgoCD",
+    "text": "CD : implémentation avec ArgoCD"
+  },
+  {
+    "objectID": "index.html#cd-anatomie-dun-fichier-de-cd",
+    "href": "index.html#cd-anatomie-dun-fichier-de-cd",
+    "title": "Mise en production des projets de data science",
+    "section": "CD : anatomie d’un fichier de CD",
+    "text": "CD : anatomie d’un fichier de CD"
+  },
+  {
+    "objectID": "index.html#cicd-implémentation-sur-kubernetes",
+    "href": "index.html#cicd-implémentation-sur-kubernetes",
+    "title": "Mise en production des projets de data science",
+    "section": "CI/CD : implémentation sur Kubernetes",
+    "text": "CI/CD : implémentation sur Kubernetes"
   },
   {
     "objectID": "index.html#pipeline-dataops-complet",

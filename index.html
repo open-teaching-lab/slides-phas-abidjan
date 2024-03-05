@@ -429,14 +429,14 @@ Lino Galiana
 <h3 data-background-image="background.svg" data-background-size="contain" id="slides">Slides</h3>
 <div id="qr1" class="qrcode"></div>
 <script type="text/javascript">
-var qrcode = new QRCode("qr1", {"text":"https://ensae-reproductibilite.github.io/slides/","colorLight":"#ffffff","colorDark":"#000000","width":"400","height":"400"});
+var qrcode = new QRCode("qr1", {"text":"https://ensae-reproductibilite.github.io/slides/","colorLight":"#ffffff","colorDark":"#000000","height":"400","width":"400"});
 </script>
     
 </div><div class="column" style="width:50%;">
 <h3 data-background-image="background.svg" data-background-size="contain" id="site-web">Site web</h3>
 <div id="qr2" class="qrcode"></div>
 <script type="text/javascript">
-var qrcode = new QRCode("qr2", {"text":"https://ensae-reproductibilite.github.io/website/","colorLight":"#ffffff","colorDark":"#000000","width":"400","height":"400"});
+var qrcode = new QRCode("qr2", {"text":"https://ensae-reproductibilite.github.io/website/","colorLight":"#ffffff","colorDark":"#000000","height":"400","width":"400"});
 </script>
     
 </div>
@@ -1760,11 +1760,79 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 </ul>
 </section>
-<section id="lapproche-cicd-exemple" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>L’approche CI/CD : exemple</h2>
+<section id="ci-implémentation-avec-github-actions" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>CI : implémentation avec <code>GitHub Actions</code></h2>
+<ul>
+<li class="fragment"><span class="orange"><strong>Principe</strong></span> : commit -&gt; exécution d’une série d’étapes
+<ul>
+<li class="fragment">Script exécuté sur une VM : <span class="blue2"><strong><em>runner</em></strong></span></li>
+<li class="fragment">Mise à disposition d’un <em>output</em> : <span class="blue2"><strong><em>artifact</em></strong></span></li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong>Multiples outputs possibles</strong></span>
+<ul>
+<li class="fragment"><a href="https://github.com/ensae-reproductibilite/application-correction/blob/appli19b/.github/workflows/prod.yml">Image Docker</a></li>
+<li class="fragment"><a href="https://github.com/ensae-reproductibilite/slides/blob/main/.github/workflows/publish.yaml">Slides</a></li>
+<li class="fragment"><a href="https://github.com/ensae-reproductibilite/website/blob/main/.github/workflows/publish.yaml">Site internet</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="ci-anatomie-dun-fichier-de-ci" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>CI : anatomie d’un fichier de CI</h2>
+<ul>
+<li class="fragment">Spécification : fichier <code>.yaml</code> qui paramétrise le <em>runner</em>
+<ul>
+<li class="fragment">⚠️ Situé dans le dossier <code>.github/workflows/</code></li>
+</ul></li>
+</ul>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>.github/workflows/ci.yaml</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename=".github/workflows/ci.yaml"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Build Docker image</span></span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a><span class="fu">on</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb6-4"><a></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb6-5"><a></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span></span>
+<span id="cb6-6"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
+<span id="cb6-7"><a></a><span class="at">    </span><span class="fu">tags</span><span class="kw">:</span></span>
+<span id="cb6-8"><a></a></span>
+<span id="cb6-9"><a></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb6-10"><a></a><span class="at">  </span><span class="fu">docker</span><span class="kw">:</span></span>
+<span id="cb6-11"><a></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb6-12"><a></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb6-13"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up QEMU</span></span>
+<span id="cb6-14"><a></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/setup-qemu-action@v3</span></span>
+<span id="cb6-15"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Docker Buildx</span></span>
+<span id="cb6-16"><a></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/setup-buildx-action@v3</span></span>
+<span id="cb6-17"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Docker meta</span></span>
+<span id="cb6-18"><a></a><span class="at">        </span><span class="fu">id</span><span class="kw">:</span><span class="at"> meta</span></span>
+<span id="cb6-19"><a></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/metadata-action@v5</span></span>
+<span id="cb6-20"><a></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb6-21"><a></a><span class="at">          </span><span class="fu">images</span><span class="kw">:</span><span class="at"> ensae-reproductibilite/api-titanic</span></span>
+<span id="cb6-22"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Login to Docker Hub</span></span>
+<span id="cb6-23"><a></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/login-action@v3</span></span>
+<span id="cb6-24"><a></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb6-25"><a></a><span class="at">          </span><span class="fu">username</span><span class="kw">:</span><span class="at"> ${{ secrets.DOCKERHUB_USERNAME }}</span></span>
+<span id="cb6-26"><a></a><span class="at">          </span><span class="fu">password</span><span class="kw">:</span><span class="at"> ${{ secrets.DOCKERHUB_TOKEN }}</span></span>
+<span id="cb6-27"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build and push</span></span>
+<span id="cb6-28"><a></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/build-push-action@v5</span></span>
+<span id="cb6-29"><a></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb6-30"><a></a><span class="at">          </span><span class="fu">push</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-31"><a></a><span class="at">          </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> ${{ steps.meta.outputs.tags }}</span></span>
+<span id="cb6-32"><a></a><span class="at">          </span><span class="fu">labels</span><span class="kw">:</span><span class="at"> ${{ steps.meta.outputs.labels }}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="cd-implémentation-avec-argocd" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>CD : implémentation avec <code>ArgoCD</code></h2>
+</section>
+<section id="cd-anatomie-dun-fichier-de-cd" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>CD : anatomie d’un fichier de CD</h2>
+</section>
+<section id="cicd-implémentation-sur-kubernetes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>CI/CD : implémentation sur <code>Kubernetes</code></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/ci-cd.png" class="quarto-figure quarto-figure-center" height="250"></p>
+<p><img data-src="img/ci-cd.png" class="quarto-figure quarto-figure-center" height="400"></p>
 </figure>
 </div>
 </section>
