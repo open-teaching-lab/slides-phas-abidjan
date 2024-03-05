@@ -1021,9 +1021,64 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 - [**Déploiement continu**]{.orange} (CD) : les nouvelles [**releases**]{.blue2} sont automatiquement déployées
     - Sur le `SSP Cloud` : [ArgoCD](https://argo-cd.readthedocs.io/en/stable/)
 
-## L'approche CI/CD : exemple
+## CI : implémentation avec `GitHub Actions`
 
-![](img/ci-cd.png){fig-align="center" height=250}
+- [**Principe**]{.orange} : commit -> exécution d'une série d'étapes
+    - Script exécuté sur une VM : [***runner***]{.blue2}
+    - Mise à disposition d'un *output* : [***artifact***]{.blue2}
+
+- [**Multiples outputs possibles**]{.orange}
+    - [Image Docker](https://github.com/ensae-reproductibilite/application-correction/blob/appli19b/.github/workflows/prod.yml)
+    - [Slides](https://github.com/ensae-reproductibilite/slides/blob/main/.github/workflows/publish.yaml)
+    - [Site internet](https://github.com/ensae-reproductibilite/website/blob/main/.github/workflows/publish.yaml)
+
+## CI : anatomie d'un fichier de CI
+
+- Spécification : fichier `.yaml` qui paramétrise le *runner*
+    - ⚠️ Situé dans le dossier `.github/workflows/`
+
+```{.yaml filename=".github/workflows/ci.yaml"}
+name: Build Docker image
+
+on: 
+  push:
+    branches:
+      - main
+    tags:
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ensae-reproductibilite/api-titanic
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+```
+
+## CD : implémentation avec `ArgoCD`
+
+## CD : anatomie d'un fichier de CD
+
+## CI/CD : implémentation sur `Kubernetes`
+
+![](img/ci-cd.png){fig-align="center" height=400}
 
 ## Pipeline [***DataOps***]{.orange} complet
 
