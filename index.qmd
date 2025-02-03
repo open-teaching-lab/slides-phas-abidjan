@@ -1,14 +1,15 @@
 ---
 title: Mise en production des projets de data science
 subtitle: |
-  ENSAE 3A - 2023/2024
+    [Cours de 3e année à l'ENSAE]{.blue2}<br>
+    2024/2025
 author:
     - Romain Avouac
     - Lino Galiana
-# date: 
+# date:
 slide-number: true
 footer: |
-  Bonnes pratiques pour la mise en production des projets de data science
+  Bonnes pratiques pour la mise en production des projets de data science ([retour _homepage_](https://ensae-reproductibilite.github.io/)) [{{< fa brands github >}}](https://github.com/ensae-reproductibilite/)
 # uncomment for French presentations:
 lang: fr-FR
 # for blind readers:
@@ -21,7 +22,7 @@ format:
   # pick the light mode (onyxia-revealjs) or the dark mode (onyxia-dark-revealjs)
   onyxia-revealjs:
   #onyxia-dark-revealjs:
-    incremental: true 
+    incremental: true
     output-file: index.html
 controls: true
 css: custom.css
@@ -53,14 +54,24 @@ from: markdown+emoji
 
 
 
-## Contexte
+## Contexte {.nonincremental auto-animate=true}
+
+![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/mise-en-prod/slides-comic.jpg){fig-align="center"}
+
+- [**Qui sommes-nous ?**]{.orange}
+
+
+## Contexte {.nonincremental auto-animate=true}
+
+![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/mise-en-prod/slides-comic.jpg){fig-align="center"}
+
 
 - [**Qui sommes-nous ?**]{.orange}
     - des [**data scientists**]{.blue2} de l'Insee
     - frustrés par l'[**approche**]{.blue2} souvent purement [**technique**]{.blue2} de la data science
     - convaincus que les [**bonnes pratiques de développement**]{.blue2} valent à être enseignées
 
-- <romain.avouac@insee.fr>, <lino.galiana@insee.fr>
+- {{< fa solid envelope >}} <romain.avouac@insee.fr>, <lino.galiana@insee.fr>
 
 ## Qu'est ce qu'un data scientist ?
 
@@ -105,11 +116,11 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 
 - [**déploiement**]{.blue2} d'applications pour valoriser les modèles
 
-## Contenu du cours {.scrollable}
+## Contenu du cours {.scrollable .smaller}
 
 - [**Pré-requis**]{.orange}
-    - Introduction au terminal `Linux`
-    - [**Contrôle de version**]{.blue2} avec `Git`
+    - Introduction au terminal `Linux` ([Linux 101](https://ensae-reproductibilite.github.io/website/chapters/linux-101.html))
+    - [**Contrôle de version**]{.blue2} avec `Git` ([Git _refresher_](https://ensae-reproductibilite.github.io/website/chapters/git.html))
 
 - [**Bonnes pratiques**]{.orange} de développement
     - [**Travail collaboratif**]{.blue2} avec `Git`
@@ -151,7 +162,7 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
     - [**Données réelles**]{.blue2}
 
 - Evaluation en [**deux parties**]{.orange} :
-    - [**En groupe**]{.blue2} : [**projet**]{.blue2} à construire selon 3 "parcours"
+    - [**En groupe**]{.blue2} : [**projet**]{.blue2} à construire selon 4 "parcours"
     - [**Individuel**]{.blue2} : [**revue de code**]{.blue2} d'un autre projet
 
 
@@ -205,12 +216,7 @@ un fichier nommé __`.gitignore`__.
 Si on mélange du code et des éléments
 annexes (_output_, données...) dans un même dossier, il [__faut consacrer du temps à ce fichier__]{.orange}.
 
-Le site [`gitignore.io`](https://www.toptal.com/developers/gitignore) peut vous fournir
-des modèles.
-
-N'hésitez pas à y ajouter des règles conservatrices (par exemple `*.csv`), 
-comme cela est expliqué dans [la documentation `utilitR`](https://www.book.utilitr.org/git.html?q=gitignore#gitignore).
-
+N'hésitez pas à y ajouter des règles conservatrices (par exemple `*.csv`, `*.parquet`).
 :::
 
 ## Bonnes pratiques {auto-animate=true .smaller}
@@ -249,7 +255,7 @@ __Format des commits__
 - [***Pull Request***]{.orange} : proposer aux développeurs d'un projet d'[**intégrer des modifications**]{.blue2}
 
 - [***Fork***]{.orange} : faire la [**copie**]{.blue2} d'un projet existant dans son espace personnel
-    - Indispensable pour faire une *pull request* à un dépôt sur lequel on n'a pas les droits 
+    - Indispensable pour faire une *pull request* à un dépôt sur lequel on n'a pas les droits
 
 ## Une organisation courante : le *GitHub flow*
 
@@ -303,7 +309,7 @@ Description plus détaillée : [ici](https://docs.github.com/en/get-started/quic
 . . .
 
 ::: {.callout-tip}
-- [Exemples d’erreurs repérées]{.blue2} par un _linter_ : 
+- [Exemples d’erreurs repérées]{.blue2} par un _linter_ :
     + lignes de code trop longues ou mal indentées, parenthèses non équilibrées, noms de fonctions mal construits…
 - [Exemples d’erreurs __non__ repérées]{.blue2} par un _linter_ :
     + fonctions mal utilisées, arguments mal spécifiés, structure du code incohérente, code insuffisamment documenté…
@@ -434,7 +440,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
     - Tout au [**même niveau**]{.blue2}
     - Titres [**non informatifs**]{.blue2}
 
-## L'auto-documentation : illustration 
+## L'auto-documentation : illustration
 
 ```
 ├── data
@@ -460,7 +466,7 @@ portion de code plus de deux fois ([**_don't repeat yourself_ (DRY)**]{.red2})
 - Une structure déjà plus lisible !
     - Les titres restent [**non informatifs**]{.blue2}
 
-## L'auto-documentation : illustration 
+## L'auto-documentation : illustration
 
 ```
 ├── data
@@ -979,13 +985,13 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 - [**API RESTful**]{.orange} : API conforme au style d'architecture [REST](https://fr.wikipedia.org/wiki/Representational_state_transfer)
     - Communication via le [**protocole HTTP**]{.blue2}
 
-- En pratique : 
+- En pratique :
     - On requête un [**endpoint**]{.blue2} (ex : [l'API de la BAN](https://api-adresse.data.gouv.fr/search/))
     - Avec des [**requêtes HTTP**]{.blue2} (`GET`, `POST`, etc.) (ex : [rues contenant "comédie"](https://api-adresse.data.gouv.fr/search/?q=comédie&type=street))
 
 ## Architecture cible
 
-- Construire une [**API**]{.orange} pour [**servir**]{.orange} le modèle 
+- Construire une [**API**]{.orange} pour [**servir**]{.orange} le modèle
     - [**Interface**]{.blue2} entre [**l'utilisateur**]{.blue2} et le [**modèle**]{.blue2} entraîné
 
 . . .
@@ -1040,7 +1046,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 ```{.yaml filename=".github/workflows/ci.yaml"}
 name: Build Docker image
 
-on: 
+on:
   push:
     branches:
       - main
@@ -1148,7 +1154,7 @@ jobs:
 - De nombreux [**frameworks**]{.orange} implémentent les principes du MLOps
     - Catalogue du `SSP Cloud` : [MLFlow](https://mlflow.org/)
 
-- Avantages de `MLflow` : 
+- Avantages de `MLflow` :
   - [**Open-source**]{.blue2}
   - Couvre l'entièreté du [**cycle de vie**]{.blue2} d'un modèle ML
   - [**Agnostique**]{.blue2} au package ML utilisé
@@ -1259,6 +1265,6 @@ jobs:
 - Enjeu : adopter des [**modes d'organisation plus continus**]{.orange}
     - Des [**bonnes pratiques**]{.blue2} à appliquer [**le plus tôt possible**]{.blue2}
     - [**Automatiser**]{.blue2} pour favoriser l'[**amélioration continue**]{.blue2}
-    
+
 - ⚠️ Ce cours présente une [**vision technique**]{.orange} du sujet
     - Les changements nécessaires sont plus larges !
