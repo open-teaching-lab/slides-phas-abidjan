@@ -11,7 +11,14 @@
     "href": "index.html#contexte",
     "title": "Mise en production des projets de data science",
     "section": "Contexte",
-    "text": "Contexte\n\nQui sommes-nous ?\n\ndes data scientists de l’Insee\nfrustrés par l’approche souvent purement technique de la data science\nconvaincus que les bonnes pratiques de développement valent à être enseignées\n\nromain.avouac at insee dot fr, lino.galiana at insee dot fr"
+    "text": "Contexte\n\n\nQui sommes-nous ?"
+  },
+  {
+    "objectID": "index.html#contexte-1",
+    "href": "index.html#contexte-1",
+    "title": "Mise en production des projets de data science",
+    "section": "Contexte",
+    "text": "Contexte\n\n\nQui sommes-nous ?\n\ndes data scientists de l’Insee\nfrustrés par l’approche souvent purement technique de la data science\nconvaincus que les bonnes pratiques de développement valent à être enseignées\n\n romain.avouac at insee dot fr, lino.galiana at insee dot fr"
   },
   {
     "objectID": "index.html#quest-ce-quun-data-scientist",
@@ -46,7 +53,7 @@
     "href": "index.html#contenu-du-cours",
     "title": "Mise en production des projets de data science",
     "section": "Contenu du cours",
-    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux\nContrôle de version avec Git\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nDéploiement\nMLOps"
+    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux (Linux 101)\nContrôle de version avec Git (Git refresher)\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nDéploiement\nMLOps"
   },
   {
     "objectID": "index.html#site-web-du-cours",
@@ -67,7 +74,7 @@
     "href": "index.html#evaluation",
     "title": "Mise en production des projets de data science",
     "section": "Evaluation",
-    "text": "Evaluation\n\nObjectif : mise en pratique réaliste des notions étudiées\n\nProblématique métier\nDonnées réelles\n\nEvaluation en deux parties :\n\nEn groupe : projet à construire selon 3 “parcours”\nIndividuel : revue de code d’un autre projet"
+    "text": "Evaluation\n\nObjectif : mise en pratique réaliste des notions étudiées\n\nProblématique métier\nDonnées réelles\n\nEvaluation en deux parties :\n\nEn groupe : projet à construire selon 4 “parcours”\nIndividuel : revue de code d’un autre projet"
   },
   {
     "objectID": "index.html#plan-de-la-partie",
@@ -95,14 +102,14 @@
     "href": "index.html#bonnes-pratiques",
     "title": "Mise en production des projets de data science",
     "section": "Bonnes pratiques",
-    "text": "Bonnes pratiques\nQue versionne-t-on ?\n\nEssentiellement du code source\nPas d’outputs (fichiers .html, .pdf, modèles…)\nPas de données, d’informations locales ou sensibles\n\n\n\n\n\n\n\n\nNote\n\n\nPour définir des règles qui évitent de committer tel ou tel fichier, on utilise un fichier nommé .gitignore.\nSi on mélange du code et des éléments annexes (output, données…) dans un même dossier, il faut consacrer du temps à ce fichier.\nLe site gitignore.io peut vous fournir des modèles.\nN’hésitez pas à y ajouter des règles conservatrices (par exemple *.csv), comme cela est expliqué dans la documentation utilitR."
+    "text": "Bonnes pratiques\nQue versionne-t-on ?\n\nEssentiellement du code source\nPas d’outputs (fichiers .html, .pdf, modèles…)\nPas de données, d’informations locales ou sensibles\n\n\n\n\n\n\n\n\nNote\n\n\nPour définir des règles qui évitent de committer tel ou tel fichier, on utilise un fichier nommé .gitignore.\nSi on mélange du code et des éléments annexes (output, données…) dans un même dossier, il faut consacrer du temps à ce fichier.\nN’hésitez pas à y ajouter des règles conservatrices (par exemple *.csv, *.parquet)."
   },
   {
     "objectID": "index.html#bonnes-pratiques-1",
     "href": "index.html#bonnes-pratiques-1",
     "title": "Mise en production des projets de data science",
     "section": "Bonnes pratiques",
-    "text": "Bonnes pratiques\nFormat des commits\n\n\n\n\nFréquence\n\nAussi souvent que possible\nLe lot de modifications doit “faire sens”\n\nMessages\n\nCourts et informatifs (comme un titre de mail)\nDécrire le pourquoi plutôt que le comment dans le texte"
+    "text": "Bonnes pratiques\nFormat des commits\n\n\n\n\n\n\n\nFréquence\n\nAussi souvent que possible\nLe lot de modifications doit “faire sens”\n\nMessages\n\nCourts et informatifs (comme un titre de mail)\nDécrire le pourquoi plutôt que le comment dans le texte"
   },
   {
     "objectID": "index.html#outils-pour-le-travail-collaboratif",
@@ -116,7 +123,7 @@
     "href": "index.html#le-modèle-des-branches",
     "title": "Mise en production des projets de data science",
     "section": "Le modèle des branches",
-    "text": "Le modèle des branches\n\n\n\n \n\n\n\n\n\n\n\nSource : lutece.paris.fr"
+    "text": "Le modèle des branches\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nSource : lutece.paris.fr"
   },
   {
     "objectID": "index.html#les-outils-de-contribution",
@@ -620,7 +627,7 @@
     "href": "index.html#ci-anatomie-dun-fichier-de-ci",
     "title": "Mise en production des projets de data science",
     "section": "CI : anatomie d’un fichier de CI",
-    "text": "CI : anatomie d’un fichier de CI\n\nSpécification : fichier .yaml qui paramétrise le runner\n\n⚠️ Situé dans le dossier .github/workflows/\n\n\n\n\n.github/workflows/ci.yaml\n\nname: Build Docker image\n\non: \n  push:\n    branches:\n      - main\n    tags:\n\njobs:\n  docker:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Set up QEMU\n        uses: docker/setup-qemu-action@v3\n      - name: Set up Docker Buildx\n        uses: docker/setup-buildx-action@v3\n      - name: Docker meta\n        id: meta\n        uses: docker/metadata-action@v5\n        with:\n          images: ensae-reproductibilite/api-titanic\n      - name: Login to Docker Hub\n        uses: docker/login-action@v3\n        with:\n          username: ${{ secrets.DOCKERHUB_USERNAME }}\n          password: ${{ secrets.DOCKERHUB_TOKEN }}\n      - name: Build and push\n        uses: docker/build-push-action@v5\n        with:\n          push: true\n          tags: ${{ steps.meta.outputs.tags }}\n          labels: ${{ steps.meta.outputs.labels }}"
+    "text": "CI : anatomie d’un fichier de CI\n\nSpécification : fichier .yaml qui paramétrise le runner\n\n⚠️ Situé dans le dossier .github/workflows/\n\n\n\n\n.github/workflows/ci.yaml\n\nname: Build Docker image\n\non:\n  push:\n    branches:\n      - main\n    tags:\n\njobs:\n  docker:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Set up QEMU\n        uses: docker/setup-qemu-action@v3\n      - name: Set up Docker Buildx\n        uses: docker/setup-buildx-action@v3\n      - name: Docker meta\n        id: meta\n        uses: docker/metadata-action@v5\n        with:\n          images: ensae-reproductibilite/api-titanic\n      - name: Login to Docker Hub\n        uses: docker/login-action@v3\n        with:\n          username: ${{ secrets.DOCKERHUB_USERNAME }}\n          password: ${{ secrets.DOCKERHUB_TOKEN }}\n      - name: Build and push\n        uses: docker/build-push-action@v5\n        with:\n          push: true\n          tags: ${{ steps.meta.outputs.tags }}\n          labels: ${{ steps.meta.outputs.labels }}"
   },
   {
     "objectID": "index.html#cd-implémentation-avec-argocd",
