@@ -1180,6 +1180,8 @@ spec:
 - Spécification : fichier `.yaml` qui paramétrise le *runner*
     - ⚠️ Situé dans le dossier `.github/workflows/`
 
+. . .
+
 ```{.yaml filename=".github/workflows/ci.yaml"}
 name: Build Docker image
 
