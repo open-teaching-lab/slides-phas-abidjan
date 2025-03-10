@@ -53,7 +53,7 @@
     "href": "index.html#contenu-du-cours",
     "title": "Mise en production des projets de data science",
     "section": "Contenu du cours",
-    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux (Linux 101)\nContrôle de version avec Git (Git refresher)\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nDéploiement\nMLOps"
+    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux (Linux 101)\nContrôle de version avec Git (Git refresher)\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nIntroduction au format YAML\nDéploiement\nMLOps"
   },
   {
     "objectID": "index.html#site-web-du-cours",
@@ -550,7 +550,49 @@
     "href": "index.html#plan-de-la-partie-1",
     "title": "Mise en production des projets de data science",
     "section": "Plan de la partie",
-    "text": "Plan de la partie\n6️⃣ Déploiement\n7️⃣ MLOps"
+    "text": "Plan de la partie\n6️⃣ Introduction au format YAML\n7️⃣ Déploiement\n8️⃣ MLOps"
+  },
+  {
+    "objectID": "index.html#quest-ce-que-le-format-yaml",
+    "href": "index.html#quest-ce-que-le-format-yaml",
+    "title": "Mise en production des projets de data science",
+    "section": "Qu’est-ce que le format YAML ?",
+    "text": "Qu’est-ce que le format YAML ?\n\nYAML Ain’t Markup Language\n\nLangage de sérialisation de données\nStructure expressive mais lisible\n\n\n\n---\nsource: ambient-it.net\ndomain:\n - devops\ntutorial:\n  - yaml:\n      name: YAML Ain't Markup Language\n      born: 2001\n  - json:\n      name: JavaScript Object Notation\n      born: 2001\n  - xml:\n      name: Extensible Markup Language\n      born: 1996\n---"
+  },
+  {
+    "objectID": "index.html#pourquoi-sintéresser-au-yaml",
+    "href": "index.html#pourquoi-sintéresser-au-yaml",
+    "title": "Mise en production des projets de data science",
+    "section": "Pourquoi s’intéresser au YAML ?",
+    "text": "Pourquoi s’intéresser au YAML ?\n\nOutil standard pour les fichiers de configuration\n\nThe rise of the YAML engineer\n\nSimplicité et puissance du paradigme déclaratif\n\nOn décrit l’état final souhaité\nL’implémentation est laissée au moteur sous-jacent\n\n\n\nkind: Pod\nmetadata:\n  name: my-api-pod\nspec:\n  containers:\n  - name: api\n    image: my_dh_account/my_fast_api:0.0.1\n    env:\n    - name: MODEL\n      value: deepseek-ai/DeepSeek-R1"
+  },
+  {
+    "objectID": "index.html#yaml-vs.-json",
+    "href": "index.html#yaml-vs.-json",
+    "title": "Mise en production des projets de data science",
+    "section": "YAML vs. JSON",
+    "text": "YAML vs. JSON\n\nYAML est un superset de JSON\n\nTout fichier JSON valide est un fichier YAML valide\n\nStructure basée sur l’indentation\n\nFavorise la lisibilité\nPlus prône aux erreurs\n\n\n\n\n\n\n\n\n\nuser:\n  name: Alice\n  age: 30\n\n\n{\n  \"user\": {\n    \"name\": \"Alice\",\n    \"age\": 30\n  }\n}\n\n\n\n\nConvertisseurs : yaml-to-json, json-to-yaml"
+  },
+  {
+    "objectID": "index.html#caractéristiques-dun-fichier-yaml",
+    "href": "index.html#caractéristiques-dun-fichier-yaml",
+    "title": "Mise en production des projets de data science",
+    "section": "Caractéristiques d’un fichier YAML",
+    "text": "Caractéristiques d’un fichier YAML\n\nExtension : .yaml ou .yml\nStructure hiérarchique basée sur des paires clé-valeur\nDifférents types à disposition (numériques, strings, booléens, listes)\n\n\nkind: Pod\nmetadata:\n  name: my-api-pod\nspec:\n  containers:\n  - name: api\n    image: my_dh_account/my_fast_api:0.0.1\n    env:\n    - name: MODEL\n      value: deepseek-ai/DeepSeek-R1\n    - name: DEBUG\n      value: true\n    ports:\n    - containerPort: 8000"
+  },
+  {
+    "objectID": "index.html#validation-et-erreurs-fréquentes",
+    "href": "index.html#validation-et-erreurs-fréquentes",
+    "title": "Mise en production des projets de data science",
+    "section": "Validation et erreurs fréquentes",
+    "text": "Validation et erreurs fréquentes\n\nPrincipale erreur : mauvaise indentation\n\nUtiliser 2 espaces (pas de tabulation!)\n\nOutils de validation :\n\nSupport natif dans la plupart des IDE\nLinters : YAMLlint"
+  },
+  {
+    "objectID": "index.html#yaml-et-lapproche-gitops",
+    "href": "index.html#yaml-et-lapproche-gitops",
+    "title": "Mise en production des projets de data science",
+    "section": "YAML et l’approche GitOps",
+    "text": "YAML et l’approche GitOps\n\nLe YAML est le langage privilégié de l’approche GitOps\n\nLes manifestes sont déclarés en YAML (paradigme infrastructure as code)\nLes manifestes sont stockés sur un dépôt Git (approche GitOps)\n\nCette approche a de nombreux avantages :\n\nReproductibilité\nTraçabilité\nAutomatisation"
   },
   {
     "objectID": "index.html#un-sujet-large",
