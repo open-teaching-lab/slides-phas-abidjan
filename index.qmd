@@ -1217,13 +1217,9 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 ```
 
-## CD : implémentation avec `ArgoCD`
-
-## CD : anatomie d'un fichier de CD
-
 ## CI/CD : implémentation sur `Kubernetes`
 
-![](img/ci-cd.png){fig-align="center" height=400}
+![](img/ci-cd.png){fig-align="center" height=300}
 
 ## Pipeline [***DataOps***]{.orange} complet
 
