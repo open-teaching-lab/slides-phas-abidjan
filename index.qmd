@@ -25,6 +25,7 @@ format:
     incremental: true
     output-file: index.html
 controls: true
+code-annotations: hover
 css: custom.css
 from: markdown+emoji
 ---
@@ -130,6 +131,7 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
     - Favoriser la [**portabilité**]{.blue2} d'une application
 
 - [**Mise en production**]{.orange}
+    - Introduction au format `YAML`
     - [**Déploiement**]{.blue2}
     - [**MLOps**]{.blue2}
 
@@ -929,19 +931,155 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-he
 
 ## Plan de la partie
 
-:six: [**Déploiement**]{.blue2}
+:six: Introduction au format [**YAML**]{.blue2}
 
-:seven: [**MLOps**]{.blue2}
+:seven: [**Déploiement**]{.blue2}
 
-
-
-
+:eight: [**MLOps**]{.blue2}
 
 
 
 
 
-# :six: Déploiement
+
+# :six: Introduction au format `YAML`
+
+## Qu'est-ce que le format `YAML` ?
+
+- [*YAML Ain't Markup Language*](https://yaml.org/)
+    - Langage de [**sérialisation**]{.blue2} de données
+    - Structure [**expressive**]{.blue2} mais [**lisible**]{.blue2}
+
+. . .
+
+```yaml
+---
+source: ambient-it.net
+domain:
+ - devops
+tutorial:
+  - yaml:
+      name: YAML Ain't Markup Language
+      born: 2001
+  - json:
+      name: JavaScript Object Notation
+      born: 2001
+  - xml:
+      name: Extensible Markup Language
+      born: 1996
+---
+```
+
+## Pourquoi s'intéresser au `YAML` ?
+
+- Outil standard pour les fichiers de [**configuration**]{.orange}
+    - [*The rise of the YAML engineer*](https://ep2024.europython.eu/session/the-rise-of-the-yaml-engineer/)
+
+- Simplicité et puissance du [**paradigme déclaratif**]{.orange}
+    - On décrit l'[**état final souhaité**]{.blue2}
+    - L'implémentation est laissée au [**moteur sous-jacent**]{.blue2}
+
+. . .
+
+```yaml
+kind: Pod
+metadata:
+  name: my-api-pod
+spec:
+  containers:
+  - name: api
+    image: my_dh_account/my_fast_api:0.0.1
+    env:
+    - name: MODEL
+      value: deepseek-ai/DeepSeek-R1
+```
+
+## `YAML` vs. `JSON`
+
+- `YAML` est un [**superset**]{.orange} de `JSON`
+    - Tout fichier `JSON` valide est un fichier `YAML` valide
+
+- Structure basée sur l'[**indentation**]{.orange}
+    - Favorise la [**lisibilité**]{.blue2}
+    - Plus prône aux [**erreurs**]{.blue2}
+
+. . .
+
+:::{layout-ncol="2"}
+
+```yaml
+user:
+  name: Alice
+  age: 30
+```
+
+```json
+{
+  "user": {
+    "name": "Alice",
+    "age": 30
+  }
+}
+```
+
+:::
+
+- Convertisseurs : [yaml-to-json](https://jsonformatter.org/yaml-to-json), [json-to-yaml](https://jsonformatter.org/json-to-yaml)
+
+## Caractéristiques d'un fichier `YAML`
+
+- Extension : `.yaml` ou `.yml`
+
+- Structure [**hiérarchique**]{.orange} basée sur des [**paires clé-valeur**]{.orange}
+
+- Différents [**types**]{.blue2} à disposition (numériques, *strings*, booléens, listes)
+
+. . .
+
+```yaml
+kind: Pod
+metadata:
+  name: my-api-pod
+spec:
+  containers:
+  - name: api
+    image: my_dh_account/my_fast_api:0.0.1
+    env:
+    - name: MODEL
+      value: deepseek-ai/DeepSeek-R1
+    - name: DEBUG
+      value: true
+    ports:
+    - containerPort: 8000
+```
+
+## Validation et erreurs fréquentes
+
+- Principale erreur : mauvaise [**indentation**]{.orange}
+    - Utiliser [**2 espaces**]{.blue2} (pas de tabulation!)
+
+- Outils de [**validation**]{.orange} :
+    - [**Support natif**]{.blue2} dans la plupart des IDE
+    - [***Linters***]{.blue2} : [YAMLlint](https://yamllint.com)
+
+## `YAML` et l'approche `GitOps`
+
+- Le [**YAML**]{.orange} est le langage privilégié de l'[**approche GitOps**]{.orange}
+    - Les manifestes sont [**déclarés**]{.blue2} en `YAML` (paradigme [**infrastructure as code**]{.blue2})
+    - Les manifestes sont [**stockés**]{.blue2} sur un dépôt `Git` (approche [**GitOps**]{.blue2})
+
+- Cette approche a de nombreux avantages :
+    - [**Reproductibilité**]{.blue2}
+    - [**Traçabilité**]{.blue2}
+    - [**Automatisation**]{.blue2}
+
+
+
+
+
+
+
+# :seven: Déploiement
 
 ## Un sujet large
 
@@ -1125,7 +1263,7 @@ jobs:
 
 
 
-# :seven: MLOps
+# :eight: MLOps
 
 ## Motivation
 
