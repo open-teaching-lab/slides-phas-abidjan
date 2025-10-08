@@ -6,15 +6,14 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.42">
+  <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="author" content="Romain Avouac">
-  <meta name="author" content="Lino Galiana">
-  <title>Mise en production des projets de data science</title>
+  <meta name="author" content="Nathan Randriamanana">
+  <title>De l’expérimentation à la mise en production</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -33,8 +32,9 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -45,7 +45,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-8f62eb61b5baf0f2495119921d4031c4.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-ea8535d309a38c52e88d69daf30b07d0.css">
   <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/InseeFrLab/onyxia/logo.css">
   <link rel="stylesheet" href="custom.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -201,18 +201,13 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="site_libs/quarto-contrib/quarto-project/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Mise en production des projets de data science</h1>
-  <p class="subtitle"></p><p><span class="blue2">Cours de 3e année à l’ENSAE</span><br> 2024/2025</p><p></p>
+  <h1 class="title">De l’expérimentation à la mise en production</h1>
+  <p class="subtitle"></p><p><span class="blue2">MLOps Workshop @ ENSEA 🇨🇮 (World Bank Project)</span><br> <span class="green2">PHAS – INSEE x ENSAI x Banque Mondiale</span><br> Octobre 2025</p><p></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Romain Avouac 
-</div>
-</div>
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Lino Galiana 
+Nathan Randriamanana 
 </div>
 </div>
 </div>
@@ -230,7 +225,7 @@ Lino Galiana
 <h3 data-background-image="background.svg" data-background-size="contain" id="slides">Slides</h3>
 <div id="qr1" class="qrcode"></div>
 <script type="text/javascript">
-var qrcode = new QRCode("qr1", {"colorDark":"#000000","colorLight":"#ffffff","height":"400","text":"https://ensae-reproductibilite.github.io/slides/","width":"400"});
+var qrcode = new QRCode("qr1", {"colorDark":"#000000","colorLight":"#ffffff","height":"400","text":"https://open-teaching-lab.github.io/slides-phas-abidjan/","width":"400"});
 </script>
     
 </div><div class="column" style="width:50%;">
@@ -242,15 +237,59 @@ var qrcode = new QRCode("qr2", {"colorDark":"#000000","colorLight":"#ffffff","he
     
 </div></div>
 </section>
-<section id="contexte" class="slide level2 nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
-<h2 data-id="quarto-animate-title">Contexte</h2>
+<section id="présentations" class="slide level2 nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Présentations</h2>
 
-<img data-src="https://minio.lab.sspcloud.fr/lgaliana/generative-art/mise-en-prod/slides-comic.jpg" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li class="fragment"><span class="orange"><strong>Qui sommes-nous ?</strong></span></li>
+<img data-src="https://minio.lab.sspcloud.fr/nrandriamanana/portfolio/Nathan_resize.JPG" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li class="fragment"><span class="orange"><strong>Qui suis-je ?</strong></span></li>
 </ul>
 </section>
-<section id="contexte-1" class="slide level2 nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
+<section id="présentations-1" class="slide level2 nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Présentations</h2>
+
+<img data-src="https://minio.lab.sspcloud.fr/nrandriamanana/portfolio/Nathan_resize.JPG" class="quarto-figure quarto-figure-left r-stretch"><ul>
+<li class="fragment"><span class="orange"><strong>Qui suis-je ?</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Data Scientist</strong></span> de l’Insee</li>
+<li class="fragment">travaille à la <span class="blue2"><strong>Direction des statistiques d’entreprises</strong></span></li>
+<li class="fragment">administrateur du répertoire <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_national_d%27identification_et_du_r%C3%A9pertoire_des_entreprises_et_de_leurs_%C3%A9tablissements" class="blue2"><strong>SIRENE</strong></a> des entreprises</li>
+</ul></li>
+</ul>
+</section>
+<section id="présentations-2" class="slide level2 nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Présentations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 data-background-image="background.svg" data-background-size="contain" id="linkedin">Linkedin</h3>
+<div id="qr3" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qr3", {"colorDark":"#000000","colorLight":"#ffffff","height":"400","text":"https://www.linkedin.com/in/nathan-randriamanana-69a1721b3/","width":"400"});
+</script>
+    
+</div><div class="column" style="width:50%;">
+<h3 data-background-image="background.svg" data-background-size="contain" id="github">Github</h3>
+<div id="https://github.com/TheAIWizard" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("https://github.com/TheAIWizard", {"colorDark":"#000000","colorLight":"#ffffff","height":"400","text":"https://github.com/open-teaching-lab","width":"400"});
+</script>
+    
+</div></div>
+</section>
+<section id="présentations-3" class="slide level2 nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Présentations</h2>
+<h3 class="nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain" id="tour-de-table">Tour de table</h3>
+<ul>
+<li class="fragment">Faisons connaissance</li>
+<li class="fragment">Que recherchez vous dans ce cours ?
+<ul>
+<li class="fragment">des sujets qui vous passionnent ?</li>
+<li class="fragment">des attentes particulières ?</li>
+</ul></li>
+</ul>
+</section>
+<section id="contexte" class="slide level2 nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Contexte</h2>
+<h3 class="nonincremental" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain" id="les-contributeurs">Les contributeurs</h3>
 
 <img data-src="https://minio.lab.sspcloud.fr/lgaliana/generative-art/mise-en-prod/slides-comic.jpg" class="quarto-figure quarto-figure-center r-stretch"><ul>
 <li class="fragment"><span class="orange"><strong>Qui sommes-nous ?</strong></span>
@@ -269,7 +308,12 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 h='&#x69;&#110;&#x73;&#x65;&#x65;&#46;&#102;&#114;';a='&#64;';n='&#108;&#x69;&#110;&#x6f;&#46;&#x67;&#x61;&#108;&#x69;&#x61;&#110;&#x61;';e=n+a+h;
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'+e+'<\/'+'a'+'>');
 // -->
-</script><noscript>lino.galiana at insee dot fr</noscript></li>
+</script><noscript>lino.galiana at insee dot fr</noscript>, <script type="text/javascript">
+<!--
+h='&#x69;&#110;&#x73;&#x65;&#x65;&#46;&#102;&#114;';a='&#64;';n='&#110;&#x61;&#116;&#104;&#x61;&#110;&#46;&#114;&#x61;&#110;&#100;&#114;&#x69;&#x61;&#x6d;&#x61;&#110;&#x61;&#110;&#x61;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>nathan.randriamanana at insee dot fr</noscript></li>
 </ul>
 </section>
 <section id="quest-ce-quun-data-scientist" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -388,11 +432,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><span class="blue2"><strong>Problématique métier</strong></span></li>
 <li class="fragment"><span class="blue2"><strong>Données réelles</strong></span></li>
 </ul></li>
-<li class="fragment">Evaluation en <span class="orange"><strong>deux parties</strong></span> :
-<ul>
-<li class="fragment"><span class="blue2"><strong>En groupe</strong></span> : <span class="blue2"><strong>projet</strong></span> à construire selon 4 “parcours”</li>
-<li class="fragment"><span class="blue2"><strong>Individuel</strong></span> : <span class="blue2"><strong>revue de code</strong></span> d’un autre projet</li>
-</ul></li>
 </ul>
 </section></section>
 <section>
@@ -460,9 +499,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <section id="bonnes-pratiques-1" class="slide level2 smaller" data-auto-animate="true" data-background-image="background.svg" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Bonnes pratiques</h2>
 <p><strong>Format des commits</strong></p>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout="[40,60]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
@@ -497,9 +533,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="le-modèle-des-branches" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Le modèle des branches</h2>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout="[[-1], [1], [-1]]">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
@@ -972,7 +1005,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="formats-de-données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="two">2️⃣</span> Formats de données</h2>
-<div>
 <ul>
 <li class="fragment">Le choix d’un format de données répond à un <span class="orange"><strong>arbitrage</strong></span> entre plusieurs critères :
 <ul>
@@ -982,7 +1014,6 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><span class="blue2"><strong>Interopérabilité</strong></span></li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="limites-des-formats-usuels" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="two">2️⃣</span> Limites des formats usuels</h2>
@@ -1247,11 +1278,11 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="le-fichier-requirements.txt" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Le fichier <code>requirements.txt</code></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>beautifulsoup4<span class="op">==</span><span class="fl">4.12.3</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>beautifulsoup4<span class="op">==</span><span class="fl">4.12.3</span></span>
 <span id="cb4-2"><a></a>expecttest<span class="op">!=</span><span class="fl">0.2.0</span></span>
 <span id="cb4-3"><a></a>networkx<span class="op">&gt;=</span><span class="fl">3.0.0</span></span>
 <span id="cb4-4"><a></a>numpy</span>
-<span id="cb4-5"><a></a>pandas</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a></a>pandas</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li class="fragment"><span class="orange"><strong>Arbitrage</strong></span> à trouver entre :
 <ul>
@@ -1329,7 +1360,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment">Exemple : <a href="https://fastapi.tiangolo.com/deployment/docker/">conteneurisation d’une API avec FastAPI</a></li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb5-1"><a></a><span class="co"># Image Docker de base</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb5-1"><a></a><span class="co"># Image Docker de base</span></span>
 <span id="cb5-2"><a></a><span class="kw">FROM</span> python:3.11</span>
 <span id="cb5-3"><a></a></span>
 <span id="cb5-4"><a></a><span class="co"># Définition du répertoire de travail</span></span>
@@ -1345,7 +1376,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb5-14"><a></a><span class="kw">COPY</span> app/ code/app</span>
 <span id="cb5-15"><a></a></span>
 <span id="cb5-16"><a></a><span class="co"># Commande lancée par l'image au runtime</span></span>
-<span id="cb5-17"><a></a><span class="kw">CMD</span> [<span class="st">"uvicorn"</span>, <span class="st">"app.main:app"</span>, <span class="st">"--host"</span>, <span class="st">"0.0.0.0"</span>, <span class="st">"--port"</span>, <span class="st">"80"</span>, <span class="st">"--proxy-headers"</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-17"><a></a><span class="kw">CMD</span> [<span class="st">"uvicorn"</span>, <span class="st">"app.main:app"</span>, <span class="st">"--host"</span>, <span class="st">"0.0.0.0"</span>, <span class="st">"--port"</span>, <span class="st">"80"</span>, <span class="st">"--proxy-headers"</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="docker-fonctionnement" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1454,7 +1485,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="pp">---</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="pp">---</span></span>
 <span id="cb6-2"><a></a><span class="fu">source</span><span class="kw">:</span><span class="at"> ambient-it.net</span></span>
 <span id="cb6-3"><a></a><span class="fu">domain</span><span class="kw">:</span></span>
 <span id="cb6-4"><a></a><span class="at"> </span><span class="kw">-</span><span class="at"> devops</span></span>
@@ -1468,7 +1499,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb6-12"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">xml</span><span class="kw">:</span></span>
 <span id="cb6-13"><a></a><span class="at">      </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Extensible Markup Language</span></span>
 <span id="cb6-14"><a></a><span class="at">      </span><span class="fu">born</span><span class="kw">:</span><span class="at"> </span><span class="dv">1996</span></span>
-<span id="cb6-15"><a></a><span class="pp">---</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-15"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="pourquoi-sintéresser-au-yaml" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1485,7 +1516,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Pod</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Pod</span></span>
 <span id="cb7-2"><a></a><span class="fu">metadata</span><span class="kw">:</span></span>
 <span id="cb7-3"><a></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> my-api-pod</span></span>
 <span id="cb7-4"><a></a><span class="fu">spec</span><span class="kw">:</span></span>
@@ -1494,7 +1525,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb7-7"><a></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> my_dh_account/my_fast_api:0.0.1</span></span>
 <span id="cb7-8"><a></a><span class="at">    </span><span class="fu">env</span><span class="kw">:</span></span>
 <span id="cb7-9"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> MODEL</span></span>
-<span id="cb7-10"><a></a><span class="at">      </span><span class="fu">value</span><span class="kw">:</span><span class="at"> deepseek-ai/DeepSeek-R1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-10"><a></a><span class="at">      </span><span class="fu">value</span><span class="kw">:</span><span class="at"> deepseek-ai/DeepSeek-R1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="yaml-vs.-json" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1511,23 +1542,20 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 </ul>
 <div class="fragment">
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a></a><span class="fu">user</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a></a><span class="fu">user</span><span class="kw">:</span></span>
 <span id="cb8-2"><a></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Alice</span></span>
-<span id="cb8-3"><a></a><span class="at">  </span><span class="fu">age</span><span class="kw">:</span><span class="at"> </span><span class="dv">30</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-3"><a></a><span class="at">  </span><span class="fu">age</span><span class="kw">:</span><span class="at"> </span><span class="dv">30</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a></a><span class="fu">{</span></span>
 <span id="cb9-2"><a></a>  <span class="dt">"user"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb9-3"><a></a>    <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Alice"</span><span class="fu">,</span></span>
 <span id="cb9-4"><a></a>    <span class="dt">"age"</span><span class="fu">:</span> <span class="dv">30</span></span>
 <span id="cb9-5"><a></a>  <span class="fu">}</span></span>
-<span id="cb9-6"><a></a><span class="fu">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-6"><a></a><span class="fu">}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -1544,7 +1572,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>Différents <span class="blue2"><strong>types</strong></span> à disposition (numériques, <em>strings</em>, booléens, listes)</p></li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Pod</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Pod</span></span>
 <span id="cb10-2"><a></a><span class="fu">metadata</span><span class="kw">:</span></span>
 <span id="cb10-3"><a></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> my-api-pod</span></span>
 <span id="cb10-4"><a></a><span class="fu">spec</span><span class="kw">:</span></span>
@@ -1557,7 +1585,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb10-11"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> DEBUG</span></span>
 <span id="cb10-12"><a></a><span class="at">      </span><span class="fu">value</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb10-13"><a></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
-<span id="cb10-14"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">containerPort</span><span class="kw">:</span><span class="at"> </span><span class="dv">8000</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-14"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">containerPort</span><span class="kw">:</span><span class="at"> </span><span class="dv">8000</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="validation-et-erreurs-fréquentes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1755,7 +1783,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="code-with-filename-file">
 <pre><strong>.github/workflows/ci.yaml</strong></pre>
 </div>
-<div class="sourceCode" id="cb11" data-filename=".github/workflows/ci.yaml"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Build Docker image</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename=".github/workflows/ci.yaml"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Build Docker image</span></span>
 <span id="cb11-2"><a></a></span>
 <span id="cb11-3"><a></a><span class="fu">on</span><span class="kw">:</span></span>
 <span id="cb11-4"><a></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
@@ -1786,7 +1814,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb11-29"><a></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
 <span id="cb11-30"><a></a><span class="at">          </span><span class="fu">push</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb11-31"><a></a><span class="at">          </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> ${{ steps.meta.outputs.tags }}</span></span>
-<span id="cb11-32"><a></a><span class="at">          </span><span class="fu">labels</span><span class="kw">:</span><span class="at"> ${{ steps.meta.outputs.labels }}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-32"><a></a><span class="at">          </span><span class="fu">labels</span><span class="kw">:</span><span class="at"> ${{ steps.meta.outputs.labels }}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -2237,7 +2265,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -2264,190 +2292,173 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
       });
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
           }
+          return false;
         }
-        return false;
-      }
-      const onCopySuccess = function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copié");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copié");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
           }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
           for (const childEl of codeEl.children) {
             if (isCodeAnnotation(childEl)) {
               childEl.remove();
             }
           }
           return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
-      });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/ensae-reproductibilite\.github\.io\/slides\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/open-teaching-lab\.github\.io\/slides-phas-abidjan\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
             }
           }
-        }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
           }
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
           }
-        } else {
-          return undefined;
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
         }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
           });
         }
-      }
-    });
-    </script>
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
     
 
 </body></html>
