@@ -1,7 +1,8 @@
 ---
-title: Mise en production des projets de data science
+title: De l'expérimentation à la mise en production
 subtitle: |
-    [Cours - Masterclass à l'ENSAE]{.blue2}<br>
+    [MLOps Workshop @ ENSEA 🇨🇮 (World Bank Project)]{.blue2}<br>
+    [PHAS – INSEE x ENSAI x Banque Mondiale]{.green2}<br>
     Octobre 2025
 author:
     - Nathan Randriamanana
@@ -37,7 +38,7 @@ from: markdown+emoji
 ::: {.column width="50%"}
 ### Slides
 
-{{< qrcode https://ensae-reproductibilite.github.io/slides/ qr1 width=400 height=400 >}}
+{{< qrcode https://open-teaching-lab.github.io/slides-phas-abidjan/ qr1 width=400 height=400 >}}
 
 :::
 
@@ -51,16 +52,52 @@ from: markdown+emoji
 ::::
 
 
+## Présentations {.nonincremental auto-animate=true}
 
+![](https://minio.lab.sspcloud.fr/nrandriamanana/portfolio/Nathan_resize.JPG){fig-align="center"}
+
+- [**Qui suis-je ?**]{.orange}
+
+## Présentations {.nonincremental auto-animate=true}
+
+![](https://minio.lab.sspcloud.fr/nrandriamanana/portfolio/Nathan_resize.JPG){fig-align="left"} 
+
+- [**Qui suis-je ?**]{.orange}
+    - [**Data Scientist**]{.blue2} de l'Insee
+    - travaille à la [**Direction des statistiques d'entreprises**]{.blue2}
+    - administrateur du répertoire [**SIRENE**](https://fr.wikipedia.org/wiki/Syst%C3%A8me_national_d%27identification_et_du_r%C3%A9pertoire_des_entreprises_et_de_leurs_%C3%A9tablissements){.blue2} des entreprises
+
+## Présentations {.nonincremental auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Linkedin
+
+{{< qrcode https://www.linkedin.com/in/nathan-randriamanana-69a1721b3/ qr3 width=400 height=400 >}}
+
+:::
+
+::: {.column width="50%"}
+### Github
+
+{{< qrcode https://github.com/open-teaching-lab https://github.com/TheAIWizard qr2 width=400 height=400 >}}
+
+:::
+
+::::
+
+## Présentations {.nonincremental auto-animate=true}
+
+### Tour de table {.nonincremental auto-animate=true}
+- Faisons connaissance
+- Que recherchez vous dans ce cours ?
+    - des sujets qui vous passionnent ?
+    - des attentes particulières ?
 
 ## Contexte {.nonincremental auto-animate=true}
-
-![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/mise-en-prod/slides-comic.jpg){fig-align="center"}
-
-- [**Qui sommes-nous ?**]{.orange}
-
-
-## Contexte {.nonincremental auto-animate=true}
+    
+### Les contributeurs {.nonincremental auto-animate=true}
 
 ![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/mise-en-prod/slides-comic.jpg){fig-align="center"}
 
@@ -70,7 +107,7 @@ from: markdown+emoji
     - frustrés par l'[**approche**]{.blue2} souvent purement [**technique**]{.blue2} de la data science
     - convaincus que les [**bonnes pratiques de développement**]{.blue2} valent à être enseignées
 
-- {{< fa solid envelope >}} <romain.avouac@insee.fr>, <lino.galiana@insee.fr>
+- {{< fa solid envelope >}} <romain.avouac@insee.fr>, <lino.galiana@insee.fr>, <nathan.randriamanana@insee.fr>
 
 ## Qu'est ce qu'un data scientist ?
 
@@ -160,10 +197,6 @@ L'activité du *datascientist* tend à se rapprocher de celle du développeur :
 - [**Objectif**]{.orange} : mise en pratique [**réaliste**]{.orange} des notions étudiées
     - [**Problématique métier**]{.blue2}
     - [**Données réelles**]{.blue2}
-
-- Evaluation en [**deux parties**]{.orange} :
-    - [**En groupe**]{.blue2} : [**projet**]{.blue2} à construire selon 4 "parcours"
-    - [**Individuel**]{.blue2} : [**revue de code**]{.blue2} d'un autre projet
 
 
 
