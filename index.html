@@ -6,11 +6,11 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+  <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Nathan Randriamanana">
   <title>De l’expérimentation à la mise en production</title>
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-ea8535d309a38c52e88d69daf30b07d0.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-7230c0af59ab1606bc2ed49e76979e8e.css">
   <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/InseeFrLab/onyxia/logo.css">
   <link rel="stylesheet" href="custom.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -1278,11 +1278,11 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </section>
 <section id="le-fichier-requirements.txt" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Le fichier <code>requirements.txt</code></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>beautifulsoup4<span class="op">==</span><span class="fl">4.12.3</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>beautifulsoup4<span class="op">==</span><span class="fl">4.12.3</span></span>
 <span id="cb4-2"><a></a>expecttest<span class="op">!=</span><span class="fl">0.2.0</span></span>
 <span id="cb4-3"><a></a>networkx<span class="op">&gt;=</span><span class="fl">3.0.0</span></span>
 <span id="cb4-4"><a></a>numpy</span>
-<span id="cb4-5"><a></a>pandas</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-5"><a></a>pandas</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li class="fragment"><span class="orange"><strong>Arbitrage</strong></span> à trouver entre :
 <ul>
@@ -1360,7 +1360,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment">Exemple : <a href="https://fastapi.tiangolo.com/deployment/docker/">conteneurisation d’une API avec FastAPI</a></li>
 </ul>
 <div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb5-1"><a></a><span class="co"># Image Docker de base</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb5-1"><a></a><span class="co"># Image Docker de base</span></span>
 <span id="cb5-2"><a></a><span class="kw">FROM</span> python:3.11</span>
 <span id="cb5-3"><a></a></span>
 <span id="cb5-4"><a></a><span class="co"># Définition du répertoire de travail</span></span>
@@ -1376,7 +1376,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb5-14"><a></a><span class="kw">COPY</span> app/ code/app</span>
 <span id="cb5-15"><a></a></span>
 <span id="cb5-16"><a></a><span class="co"># Commande lancée par l'image au runtime</span></span>
-<span id="cb5-17"><a></a><span class="kw">CMD</span> [<span class="st">"uvicorn"</span>, <span class="st">"app.main:app"</span>, <span class="st">"--host"</span>, <span class="st">"0.0.0.0"</span>, <span class="st">"--port"</span>, <span class="st">"80"</span>, <span class="st">"--proxy-headers"</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-17"><a></a><span class="kw">CMD</span> [<span class="st">"uvicorn"</span>, <span class="st">"app.main:app"</span>, <span class="st">"--host"</span>, <span class="st">"0.0.0.0"</span>, <span class="st">"--port"</span>, <span class="st">"80"</span>, <span class="st">"--proxy-headers"</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="docker-fonctionnement" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1485,7 +1485,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 </ul>
 <div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="pp">---</span></span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="pp">---</span></span>
 <span id="cb6-2"><a></a><span class="fu">source</span><span class="kw">:</span><span class="at"> ambient-it.net</span></span>
 <span id="cb6-3"><a></a><span class="fu">domain</span><span class="kw">:</span></span>
 <span id="cb6-4"><a></a><span class="at"> </span><span class="kw">-</span><span class="at"> devops</span></span>
@@ -1499,7 +1499,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb6-12"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">xml</span><span class="kw">:</span></span>
 <span id="cb6-13"><a></a><span class="at">      </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Extensible Markup Language</span></span>
 <span id="cb6-14"><a></a><span class="at">      </span><span class="fu">born</span><span class="kw">:</span><span class="at"> </span><span class="dv">1996</span></span>
-<span id="cb6-15"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-15"><a></a><span class="pp">---</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="pourquoi-sintéresser-au-yaml" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1516,7 +1516,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 </ul></li>
 </ul>
 <div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Pod</span></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Pod</span></span>
 <span id="cb7-2"><a></a><span class="fu">metadata</span><span class="kw">:</span></span>
 <span id="cb7-3"><a></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> my-api-pod</span></span>
 <span id="cb7-4"><a></a><span class="fu">spec</span><span class="kw">:</span></span>
@@ -1525,7 +1525,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb7-7"><a></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> my_dh_account/my_fast_api:0.0.1</span></span>
 <span id="cb7-8"><a></a><span class="at">    </span><span class="fu">env</span><span class="kw">:</span></span>
 <span id="cb7-9"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> MODEL</span></span>
-<span id="cb7-10"><a></a><span class="at">      </span><span class="fu">value</span><span class="kw">:</span><span class="at"> deepseek-ai/DeepSeek-R1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-10"><a></a><span class="at">      </span><span class="fu">value</span><span class="kw">:</span><span class="at"> deepseek-ai/DeepSeek-R1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="yaml-vs.-json" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1545,17 +1545,17 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a></a><span class="fu">user</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a></a><span class="fu">user</span><span class="kw">:</span></span>
 <span id="cb8-2"><a></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Alice</span></span>
-<span id="cb8-3"><a></a><span class="at">  </span><span class="fu">age</span><span class="kw">:</span><span class="at"> </span><span class="dv">30</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-3"><a></a><span class="at">  </span><span class="fu">age</span><span class="kw">:</span><span class="at"> </span><span class="dv">30</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a></a><span class="fu">{</span></span>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a></a><span class="fu">{</span></span>
 <span id="cb9-2"><a></a>  <span class="dt">"user"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb9-3"><a></a>    <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Alice"</span><span class="fu">,</span></span>
 <span id="cb9-4"><a></a>    <span class="dt">"age"</span><span class="fu">:</span> <span class="dv">30</span></span>
 <span id="cb9-5"><a></a>  <span class="fu">}</span></span>
-<span id="cb9-6"><a></a><span class="fu">}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-6"><a></a><span class="fu">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1572,7 +1572,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <li class="fragment"><p>Différents <span class="blue2"><strong>types</strong></span> à disposition (numériques, <em>strings</em>, booléens, listes)</p></li>
 </ul>
 <div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Pod</span></span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Pod</span></span>
 <span id="cb10-2"><a></a><span class="fu">metadata</span><span class="kw">:</span></span>
 <span id="cb10-3"><a></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> my-api-pod</span></span>
 <span id="cb10-4"><a></a><span class="fu">spec</span><span class="kw">:</span></span>
@@ -1585,7 +1585,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb10-11"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> DEBUG</span></span>
 <span id="cb10-12"><a></a><span class="at">      </span><span class="fu">value</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb10-13"><a></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
-<span id="cb10-14"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">containerPort</span><span class="kw">:</span><span class="at"> </span><span class="dv">8000</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-14"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">containerPort</span><span class="kw">:</span><span class="at"> </span><span class="dv">8000</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="validation-et-erreurs-fréquentes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1783,7 +1783,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <div class="code-with-filename-file">
 <pre><strong>.github/workflows/ci.yaml</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename=".github/workflows/ci.yaml"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Build Docker image</span></span>
+<div class="sourceCode" id="cb11" data-filename=".github/workflows/ci.yaml"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Build Docker image</span></span>
 <span id="cb11-2"><a></a></span>
 <span id="cb11-3"><a></a><span class="fu">on</span><span class="kw">:</span></span>
 <span id="cb11-4"><a></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
@@ -1814,7 +1814,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
 <span id="cb11-29"><a></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
 <span id="cb11-30"><a></a><span class="at">          </span><span class="fu">push</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb11-31"><a></a><span class="at">          </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> ${{ steps.meta.outputs.tags }}</span></span>
-<span id="cb11-32"><a></a><span class="at">          </span><span class="fu">labels</span><span class="kw">:</span><span class="at"> ${{ steps.meta.outputs.labels }}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-32"><a></a><span class="at">          </span><span class="fu">labels</span><span class="kw">:</span><span class="at"> ${{ steps.meta.outputs.labels }}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -2265,7 +2265,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -2339,14 +2339,13 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail email">'
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
