@@ -39,7 +39,7 @@
     "href": "index.html#contexte",
     "title": "De l’expérimentation à la mise en production",
     "section": "Contexte",
-    "text": "Contexte\nLes contributeurs\n\n\nQui sommes-nous ?\n\ndes data scientists de l’Insee\nfrustrés par l’approche souvent purement technique de la data science\nconvaincus que les bonnes pratiques de développement valent à être enseignées\n\n romain.avouac at insee dot fr, lino.galiana at insee dot fr, nathan.randriamanana at insee dot fr"
+    "text": "Contexte\nLes contributeurs\n\nQui sommes-nous ?\n\ndes data scientists de l’Insee\nfrustrés par l’approche souvent purement technique de la data science\nconvaincus que les bonnes pratiques de développement valent à être enseignées\n\n romain.avouac at insee dot fr, lino.galiana at insee dot fr, nathan.randriamanana at insee dot fr"
   },
   {
     "objectID": "index.html#quest-ce-quun-data-scientist",
@@ -74,7 +74,7 @@
     "href": "index.html#contenu-du-cours",
     "title": "De l’expérimentation à la mise en production",
     "section": "Contenu du cours",
-    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux (Linux 101)\nContrôle de version avec Git (Git refresher)\n\nBonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\nMise en production\n\nIntroduction au format YAML\nDéploiement\nMLOps"
+    "text": "Contenu du cours\n\nPré-requis\n\nIntroduction au terminal Linux (Linux 101)\nContrôle de version avec Git (Git refresher)\n\n🅰️ Bonnes pratiques de développement\n\nTravail collaboratif avec Git\nQualité du code\nStructure des projets\nTraitement des données volumineuses\nFavoriser la portabilité d’une application\n\n🅱️ Mise en production\n\nIntroduction au format YAML\nDéploiement\nMLOps"
   },
   {
     "objectID": "index.html#site-web-du-cours",
@@ -84,18 +84,25 @@
     "text": "Site web du cours\n\nhttps://ensae-reproductibilite.github.io/website/\nTout le contenu du cours est en open-source\n\nGitHub \nPull Requests -&gt; bonus"
   },
   {
-    "objectID": "index.html#modalités-pédagogiques",
-    "href": "index.html#modalités-pédagogiques",
+    "objectID": "index.html#objectifs-pédagogiques",
+    "href": "index.html#objectifs-pédagogiques",
     "title": "De l’expérimentation à la mise en production",
-    "section": "Modalités pédagogiques",
-    "text": "Modalités pédagogiques\n\nApprentissage par la pratique\n\nApplication : industrialisation d’un projet de ML\n\nLangage : Python \n\nLangage dominant dans le monde de la donnée\nLes principes présentés sont agnostiques au langage\n\nEnvironnement d’exécution : SSP Cloud\n\nEnvironnement de développement normalisé\nVéritable environnement de production\nAcquisition des bonnes pratiques"
+    "section": "Objectifs pédagogiques",
+    "text": "Objectifs pédagogiques\n\nApprentissage par la pratique\n\nApplication : industrialisation d’un projet de ML\nMaîtrise de différentes étapes importantes 🚅\n\nLangage : Python \n\nLangage dominant dans le monde de la donnée\nLes principes présentés sont agnostiques au langage\n\nEnvironnement d’exécution : SSP Cloud\n\nEnvironnement de développement normalisé\nVéritable environnement de production\nAcquisition des bonnes pratiques"
   },
   {
     "objectID": "index.html#evaluation",
     "href": "index.html#evaluation",
     "title": "De l’expérimentation à la mise en production",
     "section": "Evaluation",
-    "text": "Evaluation\n\nObjectif : mise en pratique réaliste des notions étudiées\n\nProblématique métier\nDonnées réelles"
+    "text": "Evaluation\n\nPas d’évaluation 🎉\nDes connaissances précieuses pour gagner en indépendance face aux concurrents\nObjectif : mise en pratique réaliste des notions étudiées\n\nProblématique métier\nDonnées réelles"
+  },
+  {
+    "objectID": "index.html#ce-que-vous-avez-à-gagner",
+    "href": "index.html#ce-que-vous-avez-à-gagner",
+    "title": "De l’expérimentation à la mise en production",
+    "section": "Ce que vous avez à gagner",
+    "text": "Ce que vous avez à gagner\n\nComprendre les enjeux dans un contexte où l’open source est un atout\nSensibilisation aux bonnes pratiques 💎\nGagner en indépendance pour s’affranchir de solutions propriétaires 🏢\nCapable de collaborer plus facilement sur des projets avec le monde 🌍\nDémystifier par la pratique les étapes d’industrialisation ➡️ séquencer les outils\nGagner en technicité"
   },
   {
     "objectID": "index.html#plan-de-la-partie",
